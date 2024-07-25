@@ -14,7 +14,7 @@ const Feature = () => {
           <SectionHeader
             headerInfo={{
               title: "Inovação e Qualidade",
-              subtitle: "Nossas Principais Ofertas",
+              subtitle: "Nossos principais diferenciais",
               description: `Descubra as principais características que nos tornam a escolha ideal para o desenvolvimento do seu software.`,
             }}
           />

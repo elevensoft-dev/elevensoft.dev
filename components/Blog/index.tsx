@@ -12,8 +12,8 @@ const Blog = async () => {
           <SectionHeader
             headerInfo={{
               title: `NEWS & BLOGS`,
-              subtitle: `Latest News & Blogs`,
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+              subtitle: `Posts e novidades`,
+              description: `Explore nossos posts para ficar atualizado com as últimas novidades, insights e tendências do setor. Aqui você encontrará artigos, dicas e atualizações que podem inspirar e informar.`,
             }}
           />
         </div>
