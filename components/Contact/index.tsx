@@ -1,9 +1,21 @@
 "use client";
+import { getEmails } from "@/app/api/emails/route";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    const test2 = async () => {
+      const test = await getEmails();
+      console.log("AAAAAAAAAAAAAAAAAA", test);
+    };
+
+    test2();
+  }, []);
+  // type-casting here for convenience
+  // in practice, you should validate your inputs
+
   /**
    * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
    * Reason: To fix rehydration error
