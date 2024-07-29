@@ -1,10 +1,17 @@
 "use client";
-import { createSubject, Subject } from "@/app/api/emails/route";
-import { useMutation } from "@tanstack/react-query";
+import { postData } from "@/app/utils/post-data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import { Controller, Resolver, useForm, useFormState } from "react-hook-form";
+import { Controller, Resolver, useForm } from "react-hook-form";
+
+interface Subject {
+  name: string;
+  email: string;
+  subject: string;
+  phone: string;
+  description: string;
+}
 
 const resolver: Resolver<Subject> = async (values) => {
   return {
@@ -51,12 +58,7 @@ const resolver: Resolver<Subject> = async (values) => {
 const Contact = () => {
   const { register, handleSubmit, control } = useForm<Subject>({ resolver });
 
-  const onSubmit = handleSubmit((data) => createSubject(data));
-
-  const { mutateAsync: createSubjectFn, isPending } = useMutation({
-    mutationKey: ["create-subject-key"],
-    mutationFn: onSubmit,
-  });
+  const onSubmit = handleSubmit((data) => postData(data, "/api/emails"));
 
   const [hasMounted, setHasMounted] = React.useState(false);
 
@@ -111,7 +113,7 @@ const Contact = () => {
                 Envia uma mensagem
               </h2>
 
-              <form onSubmit={createSubjectFn}>
+              <form onSubmit={onSubmit}>
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
@@ -193,29 +195,24 @@ const Contact = () => {
                   </div>
 
                   <button
+                    type="submit"
                     aria-label="send message"
-                    className="inline-flex justify-center items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark w-[208px]"
+                    className="inline-flex w-[208px] items-center justify-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
                   >
-                    {isPending ? (
-                      <span className="mx-auto h-4 w-4 animate-spin rounded-full border-2 border-t-2 border-neutral-200 border-t-indigo-500"></span>
-                    ) : (
-                      <>
-                        <span>Enviar mensagem</span>
-                        <svg
-                          className="fill-white"
-                          width="14"
-                          height="14"
-                          viewBox="0 0 14 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
-                            fill=""
-                          />
-                        </svg>
-                      </>
-                    )}
+                    <span>Enviar mensagem</span>
+                    <svg
+                      className="fill-white"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
+                        fill=""
+                      />
+                    </svg>
                   </button>
                 </div>
               </form>
