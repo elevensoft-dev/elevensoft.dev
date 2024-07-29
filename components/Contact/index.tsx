@@ -1,26 +1,65 @@
 "use client";
-import { getEmails } from "@/app/api/emails/route";
+import { createSubject, Subject } from "@/app/api/emails/route";
+import { useMutation } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
+import { Controller, Resolver, useForm, useFormState } from "react-hook-form";
+
+const resolver: Resolver<Subject> = async (values) => {
+  return {
+    values: values ? values : {},
+    errors: !values.name
+      ? {
+          name: {
+            type: "required",
+            message: "Campo obrigatório.",
+          },
+        }
+      : !values.subject
+      ? {
+          subject: {
+            type: "required",
+            message: "Campo obrigatório.",
+          },
+        }
+      : !values.email
+      ? {
+          email: {
+            type: "required",
+            message: "Campo obrigatório.",
+          },
+        }
+      : !values.phone
+      ? {
+          phone: {
+            type: "required",
+            message: "Campo obrigatório.",
+          },
+        }
+      : !values.description
+      ? {
+          description: {
+            type: "required",
+            message: "Campo obrigatório.",
+          },
+        }
+      : {},
+  };
+};
 
 const Contact = () => {
-  useEffect(() => {
-    const test2 = async () => {
-      const test = await getEmails();
-      console.log("AAAAAAAAAAAAAAAAAA", test);
-    };
+  const { register, handleSubmit, control } = useForm<Subject>({ resolver });
 
-    test2();
-  }, []);
-  // type-casting here for convenience
-  // in practice, you should validate your inputs
+  const onSubmit = handleSubmit((data) => createSubject(data));
 
-  /**
-   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
-   * Reason: To fix rehydration error
-   */
+  const { mutateAsync: createSubjectFn, isPending } = useMutation({
+    mutationKey: ["create-subject-key"],
+    mutationFn: onSubmit,
+  });
+
   const [hasMounted, setHasMounted] = React.useState(false);
+
   React.useEffect(() => {
     setHasMounted(true);
   }, []);
@@ -72,21 +111,20 @@ const Contact = () => {
                 Envia uma mensagem
               </h2>
 
-              <form
-                action="https://formbold.com/s/unique_form_id"
-                method="POST"
-              >
+              <form onSubmit={createSubjectFn}>
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
                     placeholder="Nome completo"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    {...register("name")}
                   />
 
                   <input
                     type="email"
                     placeholder="Endereço de email"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    {...register("email")}
                   />
                 </div>
 
@@ -95,12 +133,20 @@ const Contact = () => {
                     type="text"
                     placeholder="Assunto"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    {...register("subject")}
                   />
 
-                  <input
-                    type="text"
-                    placeholder="Número do celular"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  <Controller
+                    name="phone"
+                    control={control}
+                    render={(field) => (
+                      <input
+                        type="text"
+                        placeholder="Número do celular"
+                        className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                        {...register("phone")}
+                      />
+                    )}
                   />
                 </div>
 
@@ -109,6 +155,7 @@ const Contact = () => {
                     placeholder="Mensagem"
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                    {...register("description")}
                   ></textarea>
                 </div>
 
@@ -147,22 +194,28 @@ const Contact = () => {
 
                   <button
                     aria-label="send message"
-                    className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
+                    className="inline-flex justify-center items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark w-[208px]"
                   >
-                    Enviar mensagem
-                    <svg
-                      className="fill-white"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
-                        fill=""
-                      />
-                    </svg>
+                    {isPending ? (
+                      <span className="mx-auto h-4 w-4 animate-spin rounded-full border-2 border-t-2 border-neutral-200 border-t-indigo-500"></span>
+                    ) : (
+                      <>
+                        <span>Enviar mensagem</span>
+                        <svg
+                          className="fill-white"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
+                            fill=""
+                          />
+                        </svg>
+                      </>
+                    )}
                   </button>
                 </div>
               </form>
