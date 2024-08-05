@@ -3,7 +3,9 @@ import { postData } from "@/app/utils/post-data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import { Controller, Resolver, useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 interface Subject {
   name: string;
@@ -13,50 +15,25 @@ interface Subject {
   description: string;
 }
 
-const resolver: Resolver<Subject> = async (values) => {
-  return {
-    values: values ? values : {},
-    errors: !values.name
-      ? {
-          name: {
-            type: "required",
-            message: "Campo obrigatório.",
-          },
-        }
-      : !values.subject
-      ? {
-          subject: {
-            type: "required",
-            message: "Campo obrigatório.",
-          },
-        }
-      : !values.email
-      ? {
-          email: {
-            type: "required",
-            message: "Campo obrigatório.",
-          },
-        }
-      : !values.phone
-      ? {
-          phone: {
-            type: "required",
-            message: "Campo obrigatório.",
-          },
-        }
-      : !values.description
-      ? {
-          description: {
-            type: "required",
-            message: "Campo obrigatório.",
-          },
-        }
-      : {},
-  };
-};
+const subjectSchema = z.object({
+  name: z.string().min(3, { message: "Mínimo 3 caracteres" }),
+  email: z.string().email({ message: "Email inválido" }),
+  subject: z.string().min(5, { message: "Mínimo 5 caracteres" }),
+  phone: z.string().min(8, { message: "Mínimo 8 caracteres" }),
+  description: z.string().min(5, { message: "Mínimo 20 caracteres" }),
+});
+
+type SubjectSchema = z.infer<typeof subjectSchema>;
 
 const Contact = () => {
-  const { register, handleSubmit, control } = useForm<Subject>({ resolver });
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<SubjectSchema>({
+    resolver: zodResolver(subjectSchema),
+  });
 
   const onSubmit = handleSubmit((data) => postData(data, "/api/emails"));
 
@@ -114,13 +91,18 @@ const Contact = () => {
               </h2>
 
               <form onSubmit={onSubmit}>
-                <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
+                <div className="relative mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
                     placeholder="Nome completo"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                     {...register("name")}
                   />
+                  {errors.name?.message && (
+                    <p className="absolute -bottom-5 left-0 text-xs text-red-500">
+                      {errors.name?.message}
+                    </p>
+                  )}
 
                   <input
                     type="email"
@@ -128,15 +110,25 @@ const Contact = () => {
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                     {...register("email")}
                   />
+                  {errors.email?.message && (
+                    <p className="absolute -bottom-5 right-0 text-xs text-red-500">
+                      {errors.email?.message}
+                    </p>
+                  )}
                 </div>
 
-                <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
+                <div className="relative mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
                     placeholder="Assunto"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                     {...register("subject")}
                   />
+                  {errors.subject?.message && (
+                    <p className="absolute -bottom-5 left-0 text-xs text-red-500">
+                      {errors.subject?.message}
+                    </p>
+                  )}
 
                   <Controller
                     name="phone"
@@ -150,15 +142,25 @@ const Contact = () => {
                       />
                     )}
                   />
+                  {errors.phone?.message && (
+                    <p className="absolute -bottom-5 right-0 text-xs text-red-500">
+                      {errors.phone?.message}
+                    </p>
+                  )}
                 </div>
 
-                <div className="mb-11.5 flex">
+                <div className="relative mb-11.5 flex">
                   <textarea
                     placeholder="Mensagem"
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                     {...register("description")}
                   ></textarea>
+                  {errors.description?.message && (
+                    <p className="absolute -bottom-5 left-0 text-xs text-red-500">
+                      {errors.description?.message}
+                    </p>
+                  )}
                 </div>
 
                 <div className="flex flex-wrap gap-4 xl:justify-between ">
