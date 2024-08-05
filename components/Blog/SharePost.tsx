@@ -2,7 +2,7 @@ const SharePost = () => {
   return (
     <>
       <div className="mt-11 flex flex-wrap gap-4 md:items-center md:justify-between md:gap-0">
-        <ul className="flex items-center gap-6">
+        {/* <ul className="flex items-center gap-6">
           <li>
             <p className="text-black dark:text-white">Share On:</p>
           </li>
@@ -98,7 +98,7 @@ const SharePost = () => {
               </svg>
             </a>
           </li>
-        </ul>
+        </ul> */}
 
         <ul className="flex items-center gap-4">
           <li>
@@ -113,7 +113,7 @@ const SharePost = () => {
             </a>
 
             <a href="#" className="duration-300 ease-in-out hover:text-primary">
-              #saas
+              #networking
             </a>
           </li>
         </ul>
