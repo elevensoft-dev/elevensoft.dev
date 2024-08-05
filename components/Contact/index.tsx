@@ -30,7 +30,7 @@ const Contact = () => {
     register,
     handleSubmit,
     control,
-    formState: { errors },
+    formState: { errors, isSubmitSuccessful },
   } = useForm<SubjectSchema>({
     resolver: zodResolver(subjectSchema),
   });
@@ -218,6 +218,7 @@ const Contact = () => {
                   </button>
                 </div>
               </form>
+              {isSubmitSuccessful && <div>aaa</div>}
             </motion.div>
 
             <motion.div
@@ -253,15 +254,19 @@ const Contact = () => {
                   Endereço de email
                 </h3>
                 <p>
-                  <a href="#">ola@elevensoft.dev</a>
+                  <a href="mailto:ola@elevensoft.dev?subject=Interessado em construir projeto&body=Olá, sou o [Nome do Cliente]. Gostaria de conversar sobre minha proposta.">
+                    ola@elevensoft.dev
+                  </a>
                 </p>
               </div>
               <div>
                 <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Phone Number
+                  Telefone
                 </h4>
                 <p>
-                  <a href="#">+55 48 98816-8221</a>
+                  <a href="tel:+5548988168221" target="_blank">
+                    +55 48 98816-8221
+                  </a>
                 </p>
               </div>
             </motion.div>
