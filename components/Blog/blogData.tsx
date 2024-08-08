@@ -3,7 +3,7 @@ import { Blog } from "@/types/blog";
 const BlogData: Blog[] = [
   {
     _id: 1,
-    mainImage: "/images/blog/blog-01.png",
+    mainImage: "/images/blog/handshake.png",
     metadata:
       "No acelerado universo da tecnologia da informação, uma parceria bem-sucedida entre clientes e desenvolvedores de                    software é essencial. Essa colaboração pode determinar o                   sucesso de projetos personalizados, que demandam uma                    compreensão profunda das necessidades e desafios específicos                    de cada cliente. Neste artigo, vamos explorar estratégias                    que os clientes de TI podem adotar para colaborar de maneira                    mais eficiente com equipes de desenvolvimento, assegurando                    resultados que combinem inovação, funcionalidade e                    satisfação do usuário final.",
     title:
@@ -270,7 +270,7 @@ const BlogData: Blog[] = [
   },
   {
     _id: 2,
-    mainImage: "/images/blog/blog-02.png",
+    mainImage: "/images/blog/challenge.png",
     title:
       "No competitivo cenário empresarial atual, a inovação em tecnologia da informação (TI) é um fator crucial para a sobrevivência e o crescimento das organizações. Entre as várias ferramentas disponíveis, os softwares personalizados emergem como soluções poderosas para empresas que buscam se destacar e operar de maneira mais eficiente. A necessidade de adotar softwares sob medida não é apenas uma tendência, mas uma exigência para aquelas que desejam manter-se competitivas na era digital.",
     metadata:
@@ -462,7 +462,7 @@ const BlogData: Blog[] = [
   },
   {
     _id: 3,
-    mainImage: "/images/blog/blog-03.png",
+    mainImage: "/images/blog/proactive.jpg",
     title: "O que é Proatividade e Como desenvolvê-la em 10 passos",
     metadata:
       "Proatividade é a habilidade de prever problemas, encontrar soluções e promover mudanças de forma autônoma. Ser proativo significa antecipar-se às demandas e desafios, fazendo as coisas acontecerem de maneira eficiente e criativa.",
@@ -830,7 +830,7 @@ const BlogData: Blog[] = [
   },
   {
     _id: 4,
-    mainImage: "/images/blog/blog-03.png",
+    mainImage: "/images/blog/plan.jpg",
     title: "Free advertising for your online business",
     metadata:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
@@ -838,7 +838,7 @@ const BlogData: Blog[] = [
   },
   {
     _id: 5,
-    mainImage: "/images/blog/blog-04.png",
+    mainImage: "/images/blog/strategic.png",
     title: "9 simple ways to improve your design skills",
     metadata:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
@@ -846,7 +846,7 @@ const BlogData: Blog[] = [
   },
   {
     _id: 6,
-    mainImage: "/images/blog/blog-01.png",
+    mainImage: "/images/blog/plan-2.png",
     title: "Tips to quickly improve your coding speed.",
     metadata:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
