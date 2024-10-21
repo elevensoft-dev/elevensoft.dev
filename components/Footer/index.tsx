@@ -30,14 +30,11 @@ const Footer = () => {
               >
                 <a href="/" className="flex items-center gap-x-1">
                   <Image
-                    src="/images/logo/logo-orange.png"
+                    src="/images/logo/logo-light.png"
                     alt="logo"
-                    width={50}
+                    width={180}
                     height={30}
                   />
-                  <span className="text-itemtitle font-bold text-neutral-800 dark:text-neutral-100">
-                    Eleven
-                  </span>
                 </a>
 
                 <p className="mb-10 mt-5">

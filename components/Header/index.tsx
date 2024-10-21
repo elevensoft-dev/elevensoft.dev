@@ -14,7 +14,6 @@ const Header = () => {
 
   const pathUrl = usePathname();
 
-  // Sticky menu
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
       setStickyMenu(true);
@@ -39,15 +38,12 @@ const Header = () => {
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/" className="flex items-center gap-x-1">
             <Image
-              src="/images/logo/logo-orange.png"
+              src="/images/logo/logo-light.png"
               alt="logo"
-              width={50}
+              width={100}
               height={30}
               className="w-full dark:block"
             />
-            <span className="text-itemtitle font-bold text-neutral-800 dark:text-neutral-100">
-              Eleven
-            </span>
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}
