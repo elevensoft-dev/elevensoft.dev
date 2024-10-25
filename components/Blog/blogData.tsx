@@ -2,6 +2,77 @@ import { Blog } from "@/types/blog";
 
 const BlogData: Blog[] = [
   {
+    _id: 5,
+    mainImage: "/images/blog/netscape-logo.svg",
+    title:
+      "O Impacto do Lançamento do Netscape Navigator na Popularização da Internet",
+    metadata:
+      "No dia 31 de outubro de 1994, o mundo testemunhou o lançamento de um software que transformaria para sempre a maneira como interagimos com a tecnologia: o Netscape Navigator. Mais do que apenas um navegador da web, o Netscape foi um verdadeiro catalisador para a popularização da internet e o início da era digital como a conhecemos.",
+    content: `
+      <h2 class="mb-5 mt-11 text-3xl font-semibold text-black dark:text-white 2xl:text-sectiontitle2">
+        O Impacto do Lançamento do Netscape Navigator na Popularização da Internet
+      </h2>
+      <ul class="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
+        <li>
+          <span class="text-black dark:text-white">Author: </span>
+          Larissa Souza
+        </li>
+        <li>
+          <span class="text-black dark:text-white">
+            Publicado em: 25/10/2024
+          </span>
+        </li>
+        <li>
+          <span class="text-black dark:text-white">
+            Categoria: Blog
+          </span>
+        </li>
+      </ul>
+      <div class="blog-details">
+        <p>
+          No dia 31 de outubro de 1994, o mundo testemunhou o lançamento de um software que transformaria para sempre a maneira como interagimos com a tecnologia: o Netscape Navigator. Mais do que apenas um navegador da web, o Netscape foi um verdadeiro catalisador para a popularização da internet e o início da era digital como a conhecemos.
+        </p>
+        <p>
+          Até aquele momento, a internet era restrita a um público técnico, composta principalmente por acadêmicos, governos e profissionais de tecnologia. O Netscape Navigator, no entanto, trouxe uma interface gráfica intuitiva e amigável, permitindo que qualquer pessoa, com pouco conhecimento técnico, pudesse navegar pela web com facilidade. Isso democratizou o acesso à informação e fez com que a internet se tornasse uma ferramenta essencial para o dia a dia.
+        </p>
+        <h3 class="pt-8">
+          Por que o Netscape foi tão revolucionário?
+        </h3>
+        <p>
+          O Netscape foi pioneiro em várias inovações que hoje são parte integrante da nossa experiência online. Entre elas, a capacidade de exibir gráficos, textos e links em uma interface única e visualmente atraente. Além disso, o Netscape foi o primeiro navegador a suportar roteiros no lado do cliente, abrindo caminho para o desenvolvimento de páginas web dinâmicas e interativas.
+        </p>
+        <p>
+          Outro diferencial foi sua alta velocidade de navegação, algo impressionante para os padrões da época. Enquanto outros navegadores lutavam para processar as novas tecnologias da web, o Netscape conseguiu manter-se rápido e eficiente, ganhando rapidamente uma base de usuários global.
+        </p>
+        <h3 class="pt-8">
+          O início da "Guerra dos Navegadores"
+        </h3>
+        <p>
+          O sucesso do Netscape foi tão grande que em pouco tempo ele dominou cerca de 80% do mercado de navegadores. Esse sucesso chamou a atenção de gigantes como a Microsoft, que em resposta lançou o Internet Explorer. Nascia, então, a famosa “Guerra dos Navegadores”, uma competição que moldou a evolução da web durante anos.
+        </p>
+        <p>
+          Embora o Netscape tenha eventualmente perdido essa guerra, ele deixou um legado profundo. Seu código-fonte serviu de base para o Mozilla Firefox, outro navegador que contribuiu para o desenvolvimento da web livre e aberta.
+        </p>
+        <h3 class="pt-8">
+          O legado do Netscape e o futuro da navegação
+        </h3>
+        <p>
+          A influência do Netscape pode ser sentida até hoje, não apenas nos navegadores modernos, mas em toda a filosofia por trás da web aberta, acessível e conectada. Ele ajudou a definir padrões e práticas que seguimos até agora, como a importância de interfaces amigáveis, acessibilidade e o desenvolvimento web – dinâmico.
+        </p>
+        <p>
+          Na Eleven Soft, sabemos que a tecnologia está em constante evolução. Assim como o Netscape transformou o cenário tecnológico, acreditamos que a inovação é a chave para o futuro do desenvolvimento de software e sistemas digitais. Inspirados por esse legado, permanecemos comprometidos em criar soluções que ajudem empresas e indivíduos a navegarem de forma eficiente pelo mundo digital em constante mudança.
+        </p>
+         <p>
+          Aproveite para refletir sobre como a navegação web evoluiu desde os dias do Netscape, e como ela continua a impactar a maneira como interagimos com a internet.
+        </p>
+        <h3 class="pt-8">Conclusão</h3>
+        <p>
+          O lançamento do Netscape Navigator em 1994 foi um marco na história da tecnologia. Ele não apenas popularizou a internet, como também abriu as portas para uma nova era de inovação. Navegadores, desde então, evoluíram tremendamente, e cada avanço nos aproxima mais do futuro digital que estamos construindo. E você, já pensou em como a internet mudaria sem essa revolução?
+        </p>
+      </div>
+    `,
+  },
+  {
     _id: 1,
     mainImage: "/images/blog/handshake.png",
     metadata:
