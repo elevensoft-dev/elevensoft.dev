@@ -15,7 +15,7 @@ const BlogData: Blog[] = [
       <ul class="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
         <li>
           <span class="text-black dark:text-white">Author: </span>
-          Larissa Souza
+          Larissa Amaral
         </li>
         <li>
           <span class="text-black dark:text-white">
@@ -544,7 +544,7 @@ const BlogData: Blog[] = [
        <ul class="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
           <li>
             <span class="text-black dark:text-white">Author: </span>
-            Larissa Souza
+            Larissa Amaral
           </li>
           <li>
             <span class="text-black dark:text-white">
@@ -685,7 +685,7 @@ const BlogData: Blog[] = [
                     1.
                   </span>
                   <span class="text-lg">
-                    Exercite a observação e a escuta atenta 
+                    Exercite a observação e a escuta atenta
                   </span>
                 </h4>
                 <p>
@@ -913,7 +913,7 @@ const BlogData: Blog[] = [
       <ul class="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
         <li>
           <span class="text-black dark:text-white">Author: </span>
-          Larissa Souza
+          Larissa Amaral
         </li>
         <li>
           <span class="text-black dark:text-white">
