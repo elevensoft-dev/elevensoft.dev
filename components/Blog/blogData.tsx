@@ -2,15 +2,15 @@ import { Blog } from "@/types/blog";
 
 const BlogData: Blog[] = [
   {
-    _id: 5,
-    mainImage: "/images/blog/netscape-logo.svg",
+    _id: 6,
+    mainImage: "/images/blog/esh-ico.jpg",
     title:
-      "O Impacto do Lançamento do Netscape Navigator na Popularização da Internet",
+      "Por que o ESH é a Solução Definitiva para Gerenciamento de Acessos Remotos?",
     metadata:
-      "No dia 31 de outubro de 1994, o mundo testemunhou o lançamento de um software que transformaria para sempre a maneira como interagimos com a tecnologia: o Netscape Navigator. Mais do que apenas um navegador da web, o Netscape foi um verdadeiro catalisador para a popularização da internet e o início da era digital como a conhecemos.",
+      "Imagine uma plataforma que combina simplicidade, segurança e controle absoluto sobre os acessos remotos da sua infraestrutura. Parece bom demais para ser verdade? Não com o ESH, o agregador de conexões centralizado que está revolucionando a maneira como empresas monitoram e gerenciam servidores. Se você está cansado de soluções complicadas, ineficazes ou que deixam brechas na segurança, continue lendo. O ESH não é apenas mais uma ferramenta no mercado – é a ferramenta que você precisa.",
     content: `
       <h2 class="mb-5 mt-11 text-3xl font-semibold text-black dark:text-white 2xl:text-sectiontitle2">
-        O Impacto do Lançamento do Netscape Navigator na Popularização da Internet
+       Por que o ESH é a Solução Definitiva para Gerenciamento de Acessos Remotos?
       </h2>
       <ul class="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
         <li>
@@ -19,7 +19,7 @@ const BlogData: Blog[] = [
         </li>
         <li>
           <span class="text-black dark:text-white">
-            Publicado em: 25/10/2024
+            Publicado em: 16/11/2024
           </span>
         </li>
         <li>
@@ -29,46 +29,189 @@ const BlogData: Blog[] = [
         </li>
       </ul>
       <div class="blog-details">
-        <p>
-          No dia 31 de outubro de 1994, o mundo testemunhou o lançamento de um software que transformaria para sempre a maneira como interagimos com a tecnologia: o Netscape Navigator. Mais do que apenas um navegador da web, o Netscape foi um verdadeiro catalisador para a popularização da internet e o início da era digital como a conhecemos.
-        </p>
-        <p>
-          Até aquele momento, a internet era restrita a um público técnico, composta principalmente por acadêmicos, governos e profissionais de tecnologia. O Netscape Navigator, no entanto, trouxe uma interface gráfica intuitiva e amigável, permitindo que qualquer pessoa, com pouco conhecimento técnico, pudesse navegar pela web com facilidade. Isso democratizou o acesso à informação e fez com que a internet se tornasse uma ferramenta essencial para o dia a dia.
-        </p>
         <h3 class="pt-8">
-          Por que o Netscape foi tão revolucionário?
+          Problemas Que o ESH Resolve
         </h3>
-        <p>
-          O Netscape foi pioneiro em várias inovações que hoje são parte integrante da nossa experiência online. Entre elas, a capacidade de exibir gráficos, textos e links em uma interface única e visualmente atraente. Além disso, o Netscape foi o primeiro navegador a suportar roteiros no lado do cliente, abrindo caminho para o desenvolvimento de páginas web dinâmicas e interativas.
-        </p>
-        <p>
-          Outro diferencial foi sua alta velocidade de navegação, algo impressionante para os padrões da época. Enquanto outros navegadores lutavam para processar as novas tecnologias da web, o Netscape conseguiu manter-se rápido e eficiente, ganhando rapidamente uma base de usuários global.
-        </p>
+
+        <ul>
+          <li class="flex flex-col">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                1.
+              </span>
+              <span class="text-lg">
+                Falta de Controle e Visibilidade
+              </span>
+            </h4>
+            <p>
+              Você sabe exatamente quem acessou o quê e quando? Sem uma visão centralizada, pode ser difícil rastrear atividades e prevenir problemas.
+            </p>
+          </li>
+
+          <li class="flex flex-col">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                2.
+              </span>
+              <span class="text-lg">
+                Gestão Fragmentada
+              </span>
+            </h4>
+            <p>
+              Alternar entre múltiplos protocolos e ferramentas não é apenas demorado – é um convite ao erro.
+            </p>
+          </li>
+
+          <li class="flex flex-col">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                2.
+              </span>
+              <span class="text-lg">
+                Riscos de Segurança
+              </span>
+            </h4>
+            <p>
+              Sem monitoramento adequado, vulnerabilidades passam despercebidas, expondo sua empresa a invasões ou vazamentos.
+            </p>
+          </li>
+        </ul>
+
         <h3 class="pt-8">
-          O início da "Guerra dos Navegadores"
+          Os Diferenciais do ESH
         </h3>
-        <p>
-          O sucesso do Netscape foi tão grande que em pouco tempo ele dominou cerca de 80% do mercado de navegadores. Esse sucesso chamou a atenção de gigantes como a Microsoft, que em resposta lançou o Internet Explorer. Nascia, então, a famosa “Guerra dos Navegadores”, uma competição que moldou a evolução da web durante anos.
-        </p>
-        <p>
-          Embora o Netscape tenha eventualmente perdido essa guerra, ele deixou um legado profundo. Seu código-fonte serviu de base para o Mozilla Firefox, outro navegador que contribuiu para o desenvolvimento da web livre e aberta.
-        </p>
+
+        <ul>
+          <li class="flex flex-col">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                1.
+              </span>
+              <span class="text-lg">
+                Monitoramento em Tempo Real
+              </span>
+            </h4>
+            <p>
+              Acompanhe tudo que está acontecendo nos servidores da sua empresa enquanto acontece. Com reprodução de sessões, nada passa despercebido.
+            </p>
+          </li>
+
+          <li class="flex flex-col">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                2.
+              </span>
+              <span class="text-lg">
+                Registro Completo de Logs
+              </span>
+            </h4>
+            <p>
+              Registre todos os comandos e saídas de sessões em um histórico seguro e auditável. Nunca mais perca tempo procurando o que aconteceu ou quem foi responsável.
+            </p>
+          </li>
+
+          <li class="flex flex-col">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                3.
+              </span>
+              <span class="text-lg">
+                Controle Granular com Tags
+              </span>
+            </h4>
+            <p>
+              Com o ESH, você atribui permissões específicas baseadas em tags. Assim, cada usuário vê apenas o que deve ver – e nada mais.
+            </p>
+          </li>
+
+          <li class="flex flex-col">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                4.
+              </span>
+            <span class="text-lg">
+              Interface Intuitiva e Personalizável
+            </span>
+          </h4>
+          <p>
+            A navegação nunca foi tão fácil. Com menus interativos, você encontra servidores, grupos e logs em segundos.
+          </p>
+        </li>
+
+        <li class="flex flex-col">
+          <h4 class="flex items-center gap-x-2">
+            <span class="text-lg font-light opacity-50">
+              5.
+            </span>
+            <span class="text-lg">
+              Economia de Tempo e Recursos
+            </span>
+          </h4>
+          <p>
+            Ao centralizar tudo em uma única ferramenta, sua equipe trabalha de forma mais eficiente, sem perda de tempo alternando entre múltiplas plataformas.
+          </p>
+        </li>
+
+        </ul>
+
         <h3 class="pt-8">
-          O legado do Netscape e o futuro da navegação
+          Como o ESH Pode Beneficiar Sua Empresa
         </h3>
+
         <p>
-          A influência do Netscape pode ser sentida até hoje, não apenas nos navegadores modernos, mas em toda a filosofia por trás da web aberta, acessível e conectada. Ele ajudou a definir padrões e práticas que seguimos até agora, como a importância de interfaces amigáveis, acessibilidade e o desenvolvimento web – dinâmico.
-        </p>
-        <p>
-          Na Eleven Soft, sabemos que a tecnologia está em constante evolução. Assim como o Netscape transformou o cenário tecnológico, acreditamos que a inovação é a chave para o futuro do desenvolvimento de software e sistemas digitais. Inspirados por esse legado, permanecemos comprometidos em criar soluções que ajudem empresas e indivíduos a navegarem de forma eficiente pelo mundo digital em constante mudança.
-        </p>
-         <p>
-          Aproveite para refletir sobre como a navegação web evoluiu desde os dias do Netscape, e como ela continua a impactar a maneira como interagimos com a internet.
-        </p>
-        <h3 class="pt-8">Conclusão</h3>
-        <p>
-          O lançamento do Netscape Navigator em 1994 foi um marco na história da tecnologia. Ele não apenas popularizou a internet, como também abriu as portas para uma nova era de inovação. Navegadores, desde então, evoluíram tremendamente, e cada avanço nos aproxima mais do futuro digital que estamos construindo. E você, já pensou em como a internet mudaria sem essa revolução?
-        </p>
+          Imagine o impacto do ESH no seu dia a dia:
+        </p
+
+        <ul>
+          <li class="flex flex-col">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                -
+              </span>
+              <span class="text-lg">
+              A segurança da sua infraestrutura reforçada como nunca.
+              </span>
+            </h4>
+            <p>
+              Ao centralizar tudo em uma única ferramenta, sua equipe trabalha de forma mais eficiente, sem perda de tempo alternando entre múltiplas plataformas.
+            </p>
+          </li>
+
+
+          <li class="flex flex-col">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                -
+              </span>
+              <span class="text-lg">
+              A segurança da sua infraestrutura reforçada como nunca.
+              </span>
+            </h4>
+            <p>
+              Economia de horas semanais na gestão de acessos.
+            </p>
+          </li>
+
+
+          <li class="flex flex-col">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                -
+              </span>
+              <span class="text-lg">
+              A segurança da sua infraestrutura reforçada como nunca.
+              </span>
+            </h4>
+            <p>
+              Um ambiente de trabalho mais produtivo e organizado.
+            </p>
+          </li>
+        </ul>
+
+        <p>Além disso, o <b>ESH foi projetado para escalar com sua empresa,</b> atendendo desde pequenas equipes até grandes corporações com milhares de servidores.</p>
+
+        <p>💬 Quer saber mais? <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://wa.me/message/X2DMDA457ASDN1">Clique aqui para falar com um especialista</a></p>
+
       </div>
     `,
   },
@@ -1024,7 +1167,7 @@ const BlogData: Blog[] = [
         </p>
       </div>
     `,
-  },
+  }
 ];
 
 export default BlogData;
