@@ -56,7 +56,7 @@ const Footer = () => {
                 <a
                   aria-label="send email button"
                   className="flex w-max py-2.5 text-itemtitle2 text-black hover:underline dark:text-white"
-                  href="mailto:ola@elevensoft.dev?subject=Tenho interesse em construir um projeto&cc=kusterzito@gmail.com&body=Bom dia! Sou [SEU_NOME_AQUI] e gostaria de discutir a respeito de [SEU_ASSUNTO]"
+                  href="mailto:ola@elevensoft.dev?subject=Tenho interesse em construir um projeto&body=Bom dia! Sou [SEU_NOME_AQUI] e gostaria de discutir a respeito de [SEU_ASSUNTO]"
                   target="_blank"
                 >
                   ola@elevensoft.dev
