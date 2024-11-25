@@ -6,6 +6,7 @@ import Lines from "@/components/Lines";
 import ScrollToTop from "@/components/ScrollToTop";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
+import ReactGA from 'react-ga';
 import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +14,8 @@ import ToasterContext from "../context/ToastContext";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 const queryClient = new QueryClient();
+
+ReactGA.initialize("GTM-K8J33FKL");
 
 export default function RootLayout({
   children,
