@@ -7,9 +7,8 @@ import Feature from "@/components/Features";
 import FeaturesTab from "@/components/FeaturesTab";
 import Hero from "@/components/Hero";
 import Integration from "@/components/Integration";
-import { QueryClient } from "@tanstack/react-query";
 import { Metadata } from "next";
-import { useState } from "react";
+import ReactGA from "react-ga4";
 
 export const metadata: Metadata = {
   title: "Eleven Soft",
@@ -18,6 +17,11 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  ReactGA.send({
+    hitType: "pageview",
+    page: "/",
+    title: "Acessou a landing page",
+  });
 
   return (
     <main>
