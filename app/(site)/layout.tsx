@@ -17,8 +17,9 @@ const inter = Inter({ subsets: ["latin"] });
 import ToasterContext from "../context/ToastContext";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-const queryClient = new QueryClient();
+import { useEffect } from "react";
 
+const queryClient = new QueryClient();
 const tagManagerArgs = {
   gtmId: "GTM-K8J33FKL",
   events: {
@@ -26,8 +27,12 @@ const tagManagerArgs = {
   },
 };
 
-ReactGA.initialize("G-V3LL1X7H9R");
-TagManager.initialize(tagManagerArgs);
+useEffect(() => {
+  if (document) {
+    ReactGA.initialize("G-V3LL1X7H9R");
+    TagManager.initialize(tagManagerArgs);
+  }
+}, []);
 
 export default function RootLayout({
   children,
