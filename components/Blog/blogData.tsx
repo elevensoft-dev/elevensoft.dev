@@ -2,6 +2,83 @@ import { Blog } from "@/types/blog";
 
 const BlogData: Blog[] = [
   {
+    _id: 7,
+    mainImage: "/images/blog/server-ico.png",
+    title:
+      "Mantenha Suas Sessões SSH Vivas com o ESH",
+    metadata:
+      "Um dos desafios comuns ao gerenciar conexões SSH, especialmente em ambientes empresariais, é a interrupção inesperada de sessões. Isso pode ser causado por inatividade ou pela configuração padrão do SSH, que termina conexões quando não detecta atividade por um certo período. Essa situação não apenas atrapalha o fluxo de trabalho, mas também pode impactar a produtividade e a experiência do usuário.",
+    content: `
+      <div class="blog-details">
+        <h2 class="mb-5 mt-11 text-3xl font-semibold text-black dark:text-white 2xl:text-sectiontitle2">
+          Como o ESH Resolve o Problema de Sessões SSH Encerradas?
+        </h2>
+        <ul class="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
+          <li>
+            <span class="text-black dark:text-white">Autor: </span>
+            Equipe Eleven Soft
+          </li>
+          <li>
+            <span class="text-black dark:text-white">
+              Publicado em: 25/11/2024
+            </span>
+          </li>
+          <li>
+            <span class="text-black dark:text-white">
+              Categoria: Blog
+            </span>
+          </li>
+        </ul>
+        <div class="blog-details">
+          <h3 class="pt-8 text-2xl font-semibold text-black dark:text-white">
+            O Problema: Sessões SSH Encerradas Prematuramente
+          </h3>
+          <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">
+            Quem trabalha com SSH sabe como é frustrante quando a sessão é encerrada automaticamente devido à inatividade. Isso pode causar perda de progresso e interrupções nas tarefas. Esse comportamento é causado por configurações padrão que encerram conexões para economizar recursos no servidor.
+          </p>
+
+          <h3 class="pt-8 text-2xl font-semibold text-black dark:text-white">
+            A Solução Rápida: ServerAliveInterval
+          </h3>
+          <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">
+            Uma solução eficaz é configurar o <code class="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-orange-600">ServerAliveInterval</code> no arquivo
+            <code class="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-orange-600">~/.ssh/config</code>. Adicione as linhas abaixo:
+          </p>
+          <pre class="mt-6 p-4 bg-gray-100 dark:bg-gray-800 rounded text-sm text-gray-800 dark:text-gray-300">
+        Host *
+          ServerAliveInterval 60
+          ServerAliveCountMax 3
+          </pre>
+          <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">
+            Isso mantém a conexão ativa enviando pacotes de "vida" a cada 60 segundos, evitando encerramentos automáticos.
+          </p>
+
+          <h3 class="pt-8 text-2xl font-semibold text-black dark:text-white">
+            Por que Escolher o ESH?
+          </h3>
+          <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">
+            O <span class="text-orange-600 font-semibold">ESH</span> vai além de soluções manuais. Ele é projetado para garantir estabilidade em conexões SSH,
+            com funcionalidades robustas como:
+          </p>
+          <ul class="mt-6 list-disc list-inside space-y-3 text-lg text-gray-700 dark:text-gray-300">
+            <li>Monitoramento em tempo real das sessões.</li>
+            <li>Reprodução e auditoria de sessões gravadas.</li>
+            <li>Configurações centralizadas que evitam interrupções.</li>
+            <li>Controle de acesso por tags para segurança aprimorada.</li>
+          </ul>
+
+          <h3 class="pt-8 text-2xl font-semibold text-black dark:text-white">
+            Como Começar?
+          </h3>
+          <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">
+            Está pronto para eliminar as frustrações de sessões encerradas? O <span class="text-orange-600 font-semibold">ESH</span> é a solução ideal para sua equipe.
+            <a href="https://esh.elevensoft.dev" class="text-orange-600 underline hover:text-orange-700">Visite nossa página</a> e descubra como ele pode transformar sua experiência SSH.
+          </p>
+        </div>
+      </div>
+    `,
+  },
+  {
     _id: 6,
     mainImage: "/images/blog/esh-ico.jpg",
     title:
