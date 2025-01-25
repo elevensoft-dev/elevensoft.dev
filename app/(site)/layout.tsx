@@ -27,18 +27,17 @@ const tagManagerArgs = {
   },
 };
 
-useEffect(() => {
-  if (document) {
-    ReactGA.initialize("G-V3LL1X7H9R");
-    TagManager.initialize(tagManagerArgs);
-  }
-}, []);
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  useEffect(() => {
+    if (document) {
+      ReactGA.initialize("G-V3LL1X7H9R");
+      TagManager.initialize(tagManagerArgs);
+    }
+  }, []);
   return (
     <QueryClientProvider client={queryClient}>
       <html lang="en" suppressHydrationWarning>

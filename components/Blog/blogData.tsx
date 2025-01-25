@@ -2,10 +2,109 @@ import { Blog } from "@/types/blog";
 
 const BlogData: Blog[] = [
   {
+    _id: 8,
+    mainImage: "/images/blog/tech-trends-2025.png",
+    title:
+      "As 4 Principais Tendências Tecnológicas que Estão Moldando o Desenvolvimento de Software em 2025",
+    metadata:
+      "O universo da tecnologia está em constante transformação, e em 2025, algumas inovações estão se destacando por impactar profundamente o setor de desenvolvimento de software. Desde novas abordagens para criar soluções até tecnologias emergentes que ampliam os limites do possível, essas tendências prometem transformar como os desenvolvedores trabalham. Confira:",
+    content: `
+      <h2 class="mb-5 mt-11 text-3xl font-semibold text-black dark:text-white 2xl:text-sectiontitle2">
+        As 4 Principais Tendências Tecnológicas que Estão Moldando o Desenvolvimento de Software em 2025
+      </h2>
+      <ul class="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
+        <li>
+          <span class="text-black dark:text-white">Author: </span>
+          Larissa Amaral
+        </li>
+        <li>
+          <span class="text-black dark:text-white">
+            Publicado em: 14/01/2025
+          </span>
+        </li>
+        <li>
+          <span class="text-black dark:text-white">
+            Categoria: Tendencias, Tecnologia
+          </span>
+        </li>
+      </ul>
+      <p>
+        O universo da tecnologia está em constante transformação, e em 2025, algumas inovações estão se destacando por impactar profundamente o setor de desenvolvimento de software. Desde novas abordagens para criar soluções até tecnologias emergentes que ampliam os limites do possível, essas tendências prometem transformar como os desenvolvedores trabalham. Confira:
+      </p>
+      <div class="blog-details">
+        <ul>
+          <li class="flex flex-col pt-8">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                1.
+              </span>
+              <span class="text-lg">
+                Segurança Integrada ao Desenvolvimento (DevSecOps)
+              </span>
+            </h4>
+            <p>
+              Com a crescente sofisticação dos ataques cibernéticos, as equipes estão incorporando práticas de segurança diretamente nos fluxos de trabalho. Isso inclui o uso de ferramentas automatizadas para monitorar vulnerabilidades e a integração de testes de segurança durante todo o processo de criação do software.
+            </p>
+          </li>
+
+           <li class="flex flex-col pt-8">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                2.
+              </span>
+              <span class="text-lg">
+                Avanço dos Aplicativos Nativos em Nuvem
+              </span>
+            </h4>
+            <p>
+              Os aplicativos projetados especificamente para a nuvem estão se consolidando como o padrão. Graças à sua escalabilidade e capacidade de adaptação, essas soluções estão dominando o mercado. A adoção de microsserviços e tecnologias como Kubernetes e Docker tem sido fundamental para oferecer aplicações mais ágeis e resilientes.
+            </p>
+          </li>
+
+          <li class="flex flex-col pt-8">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                3.
+              </span>
+              <span class="text-lg">
+                Automatização e Testes com Inteligência Artificial
+              </span>
+            </h4>
+            <p>
+              O uso da inteligência artificial na fase de testes está se tornando uma realidade indispensável. Ferramentas de IA ajudam a prever cenários de falha e identificam erros de maneira mais rápida e eficaz, otimizando os ciclos de desenvolvimento. Além disso, a automação baseada em IA está ajudando a reduzir o tempo e os custos envolvidos na entrega de produtos de alta qualidade.
+            </p>
+          </li>
+          <li class="flex flex-col pt-8">
+            <h4 class="flex items-center gap-x-2">
+              <span class="text-lg font-light opacity-50">
+                4.
+              </span>
+              <span class="text-lg">
+                Expansão da Realidade Aumentada e Virtual
+              </span>
+            </h4>
+            <p>
+              Tecnologias de realidade aumentada (RA) e realidade virtual (RV) continuam a se expandir em diferentes setores. A criação de experiências imersivas não é mais restrita ao entretenimento; aplicações em áreas como educação, saúde e treinamento corporativo estão se popularizando. Para desenvolvedores, isso significa explorar novos horizontes e dominar ferramentas especializadas para construir soluções inovadoras.
+            </p>
+          </li>
+        </ul>
+  
+        <h3>
+          Conclusão
+        </h3>
+  
+        <p>
+          Estar atento às mudanças tecnológicas é essencial para se manter competitivo no mercado de software. As inovações de 2025 não apenas transformam processos, mas também abrem novas possibilidades para quem está disposto a se adaptar e explorar essas oportunidades. A chave para o sucesso é abraçar essas tendências e utilizá-las para criar soluções cada vez mais ágeis, seguras e eficientes.
+        </p>
+  
+        <p>💬 Quer saber mais? <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://wa.me/message/X2DMDA457ASDN1">Clique aqui para falar com um especialista</a></p>
+      </div>
+    `,
+  },
+  {
     _id: 7,
     mainImage: "/images/blog/server-ico.png",
-    title:
-      "Mantenha Suas Sessões SSH Vivas com o ESH",
+    title: "Mantenha Suas Sessões SSH Vivas com o ESH",
     metadata:
       "Um dos desafios comuns ao gerenciar conexões SSH, especialmente em ambientes empresariais, é a interrupção inesperada de sessões. Isso pode ser causado por inatividade ou pela configuração padrão do SSH, que termina conexões quando não detecta atividade por um certo período. Essa situação não apenas atrapalha o fluxo de trabalho, mas também pode impactar a produtividade e a experiência do usuário.",
     content: `
@@ -1242,106 +1341,6 @@ const BlogData: Blog[] = [
         <p>
           Desenvolver um sistema próprio é uma escolha inteligente e estratégica para empresas que buscam soluções específicas para melhorar processos internos e externos, além de se destacar no mercado. Para aproveitar todos esses benefícios, é essencial contar com uma empresa especializada no assunto.
         </p>
-      </div>
-    `,
-  },
-  {
-    _id: 7,
-    mainImage: "/images/blog/tech-trends-2025.png",
-    title:
-      "As 4 Principais Tendências Tecnológicas que Estão Moldando o Desenvolvimento de Software em 2025",
-    metadata:
-      "O universo da tecnologia está em constante transformação, e em 2025, algumas inovações estão se destacando por impactar profundamente o setor de desenvolvimento de software. Desde novas abordagens para criar soluções até tecnologias emergentes que ampliam os limites do possível, essas tendências prometem transformar como os desenvolvedores trabalham. Confira:",
-    content: `
-      <h2 class="mb-5 mt-11 text-3xl font-semibold text-black dark:text-white 2xl:text-sectiontitle2">
-        As 4 Principais Tendências Tecnológicas que Estão Moldando o Desenvolvimento de Software em 2025
-      </h2>
-      <ul class="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
-        <li>
-          <span class="text-black dark:text-white">Author: </span>
-          Larissa Amaral
-        </li>
-        <li>
-          <span class="text-black dark:text-white">
-            Publicado em: 14/01/2025
-          </span>
-        </li>
-        <li>
-          <span class="text-black dark:text-white">
-            Categoria: Tendencias, Tecnologia
-          </span>
-        </li>
-      </ul>
-      <p>
-        O universo da tecnologia está em constante transformação, e em 2025, algumas inovações estão se destacando por impactar profundamente o setor de desenvolvimento de software. Desde novas abordagens para criar soluções até tecnologias emergentes que ampliam os limites do possível, essas tendências prometem transformar como os desenvolvedores trabalham. Confira:
-      </p>
-      <div class="blog-details">
-        <ul>
-          <li class="flex flex-col pt-8">
-            <h4 class="flex items-center gap-x-2">
-              <span class="text-lg font-light opacity-50">
-                1.
-              </span>
-              <span class="text-lg">
-                Segurança Integrada ao Desenvolvimento (DevSecOps)
-              </span>
-            </h4>
-            <p>
-              Com a crescente sofisticação dos ataques cibernéticos, as equipes estão incorporando práticas de segurança diretamente nos fluxos de trabalho. Isso inclui o uso de ferramentas automatizadas para monitorar vulnerabilidades e a integração de testes de segurança durante todo o processo de criação do software.
-            </p>
-          </li>
-
-           <li class="flex flex-col pt-8">
-            <h4 class="flex items-center gap-x-2">
-              <span class="text-lg font-light opacity-50">
-                2.
-              </span>
-              <span class="text-lg">
-                Avanço dos Aplicativos Nativos em Nuvem
-              </span>
-            </h4>
-            <p>
-              Os aplicativos projetados especificamente para a nuvem estão se consolidando como o padrão. Graças à sua escalabilidade e capacidade de adaptação, essas soluções estão dominando o mercado. A adoção de microsserviços e tecnologias como Kubernetes e Docker tem sido fundamental para oferecer aplicações mais ágeis e resilientes.
-            </p>
-          </li>
-
-          <li class="flex flex-col pt-8">
-            <h4 class="flex items-center gap-x-2">
-              <span class="text-lg font-light opacity-50">
-                3.
-              </span>
-              <span class="text-lg">
-                Automatização e Testes com Inteligência Artificial
-              </span>
-            </h4>
-            <p>
-              O uso da inteligência artificial na fase de testes está se tornando uma realidade indispensável. Ferramentas de IA ajudam a prever cenários de falha e identificam erros de maneira mais rápida e eficaz, otimizando os ciclos de desenvolvimento. Além disso, a automação baseada em IA está ajudando a reduzir o tempo e os custos envolvidos na entrega de produtos de alta qualidade.
-            </p>
-          </li>
-          <li class="flex flex-col pt-8">
-            <h4 class="flex items-center gap-x-2">
-              <span class="text-lg font-light opacity-50">
-                4.
-              </span>
-              <span class="text-lg">
-                Expansão da Realidade Aumentada e Virtual
-              </span>
-            </h4>
-            <p>
-              Tecnologias de realidade aumentada (RA) e realidade virtual (RV) continuam a se expandir em diferentes setores. A criação de experiências imersivas não é mais restrita ao entretenimento; aplicações em áreas como educação, saúde e treinamento corporativo estão se popularizando. Para desenvolvedores, isso significa explorar novos horizontes e dominar ferramentas especializadas para construir soluções inovadoras.
-            </p>
-          </li>
-        </ul>
-  
-        <h3>
-          Conclusão
-        </h3>
-  
-        <p>
-          Estar atento às mudanças tecnológicas é essencial para se manter competitivo no mercado de software. As inovações de 2025 não apenas transformam processos, mas também abrem novas possibilidades para quem está disposto a se adaptar e explorar essas oportunidades. A chave para o sucesso é abraçar essas tendências e utilizá-las para criar soluções cada vez mais ágeis, seguras e eficientes.
-        </p>
-  
-        <p>💬 Quer saber mais? <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://wa.me/message/X2DMDA457ASDN1">Clique aqui para falar com um especialista</a></p>
       </div>
     `,
   },
