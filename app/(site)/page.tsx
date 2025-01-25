@@ -13,7 +13,6 @@ import ReactGA from "react-ga4";
 export const metadata: Metadata = {
   title: "Eleven Soft",
   description: "Home of Eleven Soft",
-  // other metadata
 };
 
 export default function Home() {
