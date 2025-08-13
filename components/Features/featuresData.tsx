@@ -3,44 +3,51 @@ import { Feature } from "@/types/feature";
 const featuresData: Feature[] = [
   {
     id: 1,
-    icon: "/images/icon/icon-01.svg",
-    title: "Soluções Sob Medida",
-    description:
-      "Soluções sob medida que atendem às necessidades específicas do seu negócio.",
+    icon: "🔒",
+    title: "VPNs Lentas e Instáveis",
+    description: "Conexões que travam, desconectam e deixam sua equipe vulnerável no momento mais crítico.",
   },
   {
     id: 2,
-    icon: "/images/icon/icon-02.svg",
-    title: "Interface Intuitiva",
-    description:
-      "Designs atraentes e fáceis de usar para uma experiência de usuário impecável.",
+    icon: "📊",
+    title: "Senhas em Planilhas",
+    description: "Credenciais espalhadas em arquivos desprotegidos, acessíveis a qualquer pessoa com acesso ao sistema.",
   },
   {
     id: 3,
-    icon: "/images/icon/icon-03.svg",
-    title: "Segurança Avançada",
-    description:
-      "Implementamos as melhores práticas para proteger seus dados e sistemas.",
+    icon: "⚡",
+    title: "Scripts Manuais",
+    description: "Execuções manuais propensas a erros, sem auditoria e com risco de comandos perigosos.",
   },
   {
     id: 4,
-    icon: "/images/icon/icon-04.svg",
-    title: "Suporte Dedicado",
-    description:
-      "Nossa equipe está disponível para ajudar você em cada etapa do processo..",
+    icon: "🚪",
+    title: "Acesso Sem Controle",
+    description: "Funcionários entrando e saindo de servidores sem rastreamento ou supervisão adequada.",
   },
   {
     id: 5,
-    icon: "/images/icon/icon-05.svg",
-    title: "Desempenho Otimizado",
-    description: "Sistemas rápidos e eficientes que garantem alta performance.",
+    icon: "🔍",
+    title: "Visibilidade Zero",
+    description: "Não há como saber quem fez o quê, quando e onde. Pontos cegos por toda parte.",
   },
   {
     id: 6,
-    icon: "/images/icon/icon-06.svg",
-    title: "Tecnologia de Ponta",
-    description:
-      "Utilizamos as mais recentes tecnologias para manter seu software atualizado e inovador.",
+    icon: "⚠️",
+    title: "Alertas Inexistentes",
+    description: "Atividades suspeitas passam despercebidas até que seja tarde demais.",
+  },
+  {
+    id: 7,
+    icon: "📝",
+    title: "Auditoria Manual",
+    description: "Horas perdidas revisando logs e tentando reconstruir o que aconteceu.",
+  },
+  {
+    id: 8,
+    icon: "💸",
+    title: "Custos Ocultos",
+    description: "O preço real da fragmentação: tempo, riscos e multas por não conformidade.",
   },
 ];
 

@@ -1,31 +1,53 @@
-import React from "react";
-import { FeatureTab } from "@/types/featureTab";
 import Image from "next/image";
+import { FeatureTab } from "@/types/featureTab";
 
-const FeaturesTabItem = ({ featureTab }: { featureTab: FeatureTab }) => {
-  const { title, desc1, desc2, image, imageDark } = featureTab;
+interface FeaturesTabItemProps {
+  feature: FeatureTab;
+}
+
+const FeaturesTabItem = ({ feature }: FeaturesTabItemProps) => {
+  const { title, subtitle, description, features, image, link } = feature;
 
   return (
-    <>
-      <div className="flex items-center gap-8 lg:gap-19">
-        <div className="md:w-1/2">
-          <h2 className="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">
-            {title}
-          </h2>
-          <p className="mb-5">{desc1}</p>
-          <p className="w-11/12">{desc2}</p>
-        </div>
-        <div className="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
-          <Image src={image} alt={title} fill className="dark:hidden" />
-          <Image
-            src={imageDark}
-            alt={title}
-            fill
-            className="hidden dark:block"
-          />
+    <div className="w-full">
+      <div className="wow fadeInUp" data-wow-delay=".15s">
+        <div className="group relative overflow-hidden rounded-lg bg-neutral-900 border border-neutral-700 shadow-lg">
+          <div className="relative aspect-[370/278] overflow-hidden">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+          <div className="p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
+            <h4 className="text-lg font-semibold text-orange-400 mb-3">
+              {subtitle}
+            </h4>
+            <p className="text-neutral-300 mb-6">
+              {description}
+            </p>
+            
+            <ul className="space-y-2 mb-6">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-center text-neutral-300">
+                  <span className="mr-2 text-green-400">✓</span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href={link}
+              className="inline-flex items-center justify-center rounded-md bg-orange-400 px-6 py-2 text-black font-medium hover:bg-orange-500 transition-colors"
+            >
+              Saiba Mais
+            </a>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

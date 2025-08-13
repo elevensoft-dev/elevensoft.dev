@@ -6,13 +6,12 @@ import FAQ from "@/components/FAQ";
 import Feature from "@/components/Features";
 import FeaturesTab from "@/components/FeaturesTab";
 import Hero from "@/components/Hero";
-import Integration from "@/components/Integration";
 import { Metadata } from "next";
 import ReactGA from "react-ga4";
 
 export const metadata: Metadata = {
-  title: "Eleven Soft",
-  description: "Home of Eleven Soft",
+  title: "Elevensoft - Soberania Digital",
+  description: "Recupere sua Soberania Digital. A era da segurança fragmentada acabou. Unifique seu controle, elimine riscos e blinde sua infraestrutura com a plataforma Elevensoft.",
 };
 
 export default function Home() {
@@ -25,16 +24,11 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      {/* <Brands /> */}
       <Feature />
       <About />
       <FeaturesTab />
-      {/* <FunFact /> */}
-      <Integration />
       <CTA />
       <FAQ />
-      {/* <Testimonial /> */}
-      {/* <Pricing /> */}
       <Contact />
       <Blog />
     </main>

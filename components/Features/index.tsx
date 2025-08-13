@@ -2,35 +2,32 @@
 import React from "react";
 import featuresData from "./featuresData";
 import SingleFeature from "./SingleFeature";
-import SectionHeader from "../Common/SectionHeader";
+import SectionHeader from "@/components/Common/SectionHeader";
 
 const Feature = () => {
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
-      <section id="features" className="py-20 lg:py-25 xl:py-30">
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+      <section id="features" className="py-20 lg:py-25 xl:py-30 bg-neutral-900">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* <!-- Section Title Start --> */}
           <SectionHeader
-            headerInfo={{
-              title: "Inovação e Qualidade",
-              subtitle: "Nossos principais diferenciais",
-              description: `Descubra as principais características que nos tornam a escolha ideal para o desenvolvimento do seu software.`,
-            }}
+            title="Sua Segurança é um Quebra-Cabeça Frágil?"
+            subtitle="O caos de dezenas de ferramentas desconexas, senhas em planilhas, scripts manuais, VPNs lentas e a constante ansiedade de não saber quem tem acesso a quê."
+            variant="danger"
+            className="mb-15"
           />
           {/* <!-- Section Title End --> */}
 
-          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
-            {/* <!-- Features item Start --> */}
-
-            {featuresData.map((feature, key) => (
-              <SingleFeature feature={feature} key={key} />
+          {/* <!-- Features List Start --> */}
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {featuresData.map((feature) => (
+              <SingleFeature key={feature.id} feature={feature} />
             ))}
-            {/* <!-- Features item End --> */}
           </div>
+          {/* <!-- Features List End --> */}
         </div>
       </section>
-
       {/* <!-- ===== Features End ===== --> */}
     </>
   );

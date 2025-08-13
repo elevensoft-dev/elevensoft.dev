@@ -1,8 +1,9 @@
-export type FeatureTab = {
-  id: string;
+export interface FeatureTab {
+  id: number;
   title: string;
-  desc1: string;
-  desc2: string;
+  subtitle: string;
+  description: string;
+  features: string[];
   image: string;
-  imageDark: string;
-};
+  link: string;
+}

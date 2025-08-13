@@ -7,85 +7,35 @@ const CTA = () => {
   return (
     <>
       {/* <!-- ===== CTA Start ===== --> */}
-      <section className="overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0">
-        <div className="mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#fffbf8] to-[#fff9de] px-7.5 py-12.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark md:px-12.5 xl:px-17.5 xl:py-0">
-          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_left md:w-[70%] lg:w-1/2"
-            >
-              <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
-                Conecte-se com a Eleven & Aumente sua produtividade
+      <section className="py-20 lg:py-25 xl:py-30 bg-neutral-950">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-orange-400 to-red-500 px-8 py-10 md:px-12 md:py-15">
+            <div className="relative z-10 mx-auto max-w-4xl text-center">
+              <h2 className="mb-5 text-3xl font-bold text-black md:text-4xl lg:text-5xl xl:text-6xl">
+                Pronto para abandonar o caos?
               </h2>
-              <p>
-                Oferecemos ferramentas inovadoras e integradas, projetadas para
-                otimizar seus processos e maximizar seus resultados, adaptadas
-                às necessidades únicas do seu negócio.
+              <p className="mb-8 text-lg text-black/90 md:text-xl">
+                Agende uma demonstração e descubra como a plataforma Elevensoft pode transformar sua segurança fragmentada em uma fortaleza unificada.
               </p>
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right lg:w-[45%]"
-            >
-              <div className="flex items-center justify-end xl:justify-between">
-                <Image
-                  width={299}
-                  height={299}
-                  src="/images/shape/shape-06.png"
-                  alt="Saly"
-                  className="hidden xl:block"
-                />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="https://wa.me/message/X2DMDA457ASDN1"
                   target="_blank"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
+                  className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-orange-500 font-medium hover:bg-gray-100 transition-colors"
                 >
-                  Começar agora
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/images/icon/icon-arrow-dark.svg"
-                    alt="Arrow"
-                    className="dark:hidden"
-                  />
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/images/icon/icon-arrow-light.svg"
-                    alt="Arrow"
-                    className="hidden dark:block"
-                  />
+                  Agendar Demonstração
+                </a>
+                <a
+                  href="/precos"
+                  className="inline-flex items-center justify-center rounded-md border-2 border-white px-8 py-3 text-white font-medium hover:bg-white hover:text-orange-500 transition-colors"
+                >
+                  Ver Preços
                 </a>
               </div>
-            </motion.div>
+              <p className="mt-6 text-sm text-black/80">
+                <strong>ROI estimado de 2.156%</strong> - A era da segurança fragmentada acabou
+              </p>
+            </div>
           </div>
         </div>
       </section>
