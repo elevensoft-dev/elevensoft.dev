@@ -39,7 +39,9 @@ const FeaturesTabItem = ({ feature }: FeaturesTabItemProps) => {
             </ul>
 
             <a
-              href={link}
+              href={feature.name === "ESH" ? "https://esh.elevensoft.dev/" : feature.link}
+              target={feature.name === "ESH" ? "_blank" : "_self"}
+              rel={feature.name === "ESH" ? "noopener noreferrer" : ""}
               className="inline-flex items-center justify-center rounded-md bg-orange-400 px-6 py-2 text-black font-medium hover:bg-orange-500 transition-colors"
             >
               Saiba Mais

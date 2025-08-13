@@ -32,9 +32,14 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/esh" className="text-neutral-300 hover:text-white transition-colors">
+                  <a
+                    href="https://esh.elevensoft.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-300 hover:text-white transition-colors"
+                  >
                     ESH - Controle Central
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link href="/esut" className="text-neutral-300 hover:text-white transition-colors">
