@@ -8,14 +8,14 @@ const Feature = () => {
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
-      <section id="features" className="py-20 lg:py-25 xl:py-30 bg-neutral-900">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-20 lg:py-25 xl:py-30 bg-neutral-900/30 backdrop-blur-sm">
+        <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             title="Sua Segurança é um Quebra-Cabeça Frágil?"
             subtitle="O caos de dezenas de ferramentas desconexas, senhas em planilhas, scripts manuais, VPNs lentas e a constante ansiedade de não saber quem tem acesso a quê."
             variant="danger"
-            className="mb-15"
+            className="mb-16"
           />
           {/* <!-- Section Title End --> */}
 

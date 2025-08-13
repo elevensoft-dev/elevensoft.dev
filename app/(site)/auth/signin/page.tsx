@@ -2,9 +2,8 @@ import Signin from "@/components/Auth/Signin";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Login Page - Solid SaaS Boilerplate",
-  description: "This is Login page for Startup Pro",
-  // other metadata
+  title: "Login - Elevensoft",
+  description: "Acesse sua conta Elevensoft para recuperar sua Soberania Digital",
 };
 
 const SigninPage = () => {

@@ -13,24 +13,8 @@ const Signin = () => {
   return (
     <>
       {/* <!-- ===== SignIn Form Start ===== --> */}
-      <section className="pb-12.5 pt-32.5 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
+      <section className="pb-12.5 pt-32.5 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50 bg-neutral-950">
         <div className="relative z-1 mx-auto max-w-c-1016 px-7.5 pb-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
-          <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
-          <div className="absolute bottom-17.5 left-0 -z-1 h-1/3 w-full">
-            <Image
-              src="/images/shape/shape-dotted-light.svg"
-              alt="Dotted"
-              className="dark:hidden"
-              fill
-            />
-            <Image
-              src="/images/shape/shape-dotted-dark.svg"
-              alt="Dotted"
-              className="hidden dark:block"
-              fill
-            />
-          </div>
-
           <motion.div
             variants={{
               hidden: {
@@ -47,16 +31,16 @@ const Signin = () => {
             whileInView="visible"
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
-            className="animate_top rounded-lg bg-white px-7.5 pt-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black xl:px-15 xl:pt-15"
+            className="animate_top rounded-xl card-modern px-7.5 pt-7.5 shadow-2xl xl:px-15 xl:pt-15"
           >
-            <h2 className="mb-15 text-center text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-              Login to Your Account
+            <h2 className="mb-15 text-center text-3xl font-semibold text-white xl:text-sectiontitle2">
+              Login na Sua Conta
             </h2>
             <div className="flex flex-col">
               <div className="flex items-center gap-8">
                 <button
                   aria-label="sign with google"
-                  className="text-body-color dark:text-body-color-dark dark:shadow-two mb-6 flex w-full items-center justify-center rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none"
+                  className="text-neutral-300 dark:shadow-two mb-6 flex w-full items-center justify-center rounded-xl border border-neutral-700 bg-neutral-800/50 backdrop-blur-sm px-6 py-3 text-base outline-none transition-all duration-300 hover:border-orange-500 hover:bg-orange-500/5 hover:text-orange-400"
                 >
                   <span className="mr-3">
                     <svg
@@ -91,12 +75,12 @@ const Signin = () => {
                       </defs>
                     </svg>
                   </span>
-                  Signup with Google
+                  Login com Google
                 </button>
 
                 <button
                   aria-label="signup with github"
-                  className="text-body-color dark:text-body-color-dark dark:shadow-two mb-6 flex w-full items-center justify-center rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none"
+                  className="text-neutral-300 dark:shadow-two mb-6 flex w-full items-center justify-center rounded-xl border border-neutral-700 bg-neutral-800/50 backdrop-blur-sm px-6 py-3 text-base outline-none transition-all duration-300 hover:border-orange-500 hover:bg-orange-500/5 hover:text-orange-400"
                 >
                   <span className="mr-3">
                     <svg
@@ -109,16 +93,16 @@ const Signin = () => {
                       <path d="M32 1.7998C15 1.7998 1 15.5998 1 32.7998C1 46.3998 9.9 57.9998 22.3 62.1998C23.9 62.4998 24.4 61.4998 24.4 60.7998C24.4 60.0998 24.4 58.0998 24.3 55.3998C15.7 57.3998 13.9 51.1998 13.9 51.1998C12.5 47.6998 10.4 46.6998 10.4 46.6998C7.6 44.6998 10.5 44.6998 10.5 44.6998C13.6 44.7998 15.3 47.8998 15.3 47.8998C18 52.6998 22.6 51.2998 24.3 50.3998C24.6 48.3998 25.4 46.9998 26.3 46.1998C19.5 45.4998 12.2 42.7998 12.2 30.9998C12.2 27.5998 13.5 24.8998 15.4 22.7998C15.1 22.0998 14 18.8998 15.7 14.5998C15.7 14.5998 18.4 13.7998 24.3 17.7998C26.8 17.0998 29.4 16.6998 32.1 16.6998C34.8 16.6998 37.5 16.9998 39.9 17.7998C45.8 13.8998 48.4 14.5998 48.4 14.5998C50.1 18.7998 49.1 22.0998 48.7 22.7998C50.7 24.8998 51.9 27.6998 51.9 30.9998C51.9 42.7998 44.6 45.4998 37.8 46.1998C38.9 47.1998 39.9 49.1998 39.9 51.9998C39.9 56.1998 39.8 59.4998 39.8 60.4998C39.8 61.2998 40.4 62.1998 41.9 61.8998C54.1 57.7998 63 46.2998 63 32.5998C62.9 15.5998 49 1.7998 32 1.7998Z" />
                     </svg>
                   </span>
-                  Signup with Github
+                  Login com Github
                 </button>
               </div>
             </div>
             <div className="mb-10 flex items-center justify-center">
-              <span className="dark:bg-stroke-dark hidden h-[1px] w-full max-w-[200px] bg-stroke dark:bg-strokedark sm:block"></span>
-              <p className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base">
-                Or, login with your email
+              <span className="hidden h-[1px] w-full max-w-[200px] bg-neutral-700 sm:block"></span>
+              <p className="text-neutral-300 w-full px-5 text-center text-base">
+                Ou, faça login com seu email
               </p>
-              <span className="dark:bg-stroke-dark hidden h-[1px] w-full max-w-[200px] bg-stroke dark:bg-strokedark sm:block"></span>
+              <span className="hidden h-[1px] w-full max-w-[200px] bg-neutral-700 sm:block"></span>
             </div>
 
             <form>
@@ -129,18 +113,18 @@ const Signin = () => {
                   name="email"
                   value={data.email}
                   onChange={(e) => setData({ ...data, email: e.target.value })}
-                  className="w-full border-b border-stroke !bg-white pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:!bg-black dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  className="w-full border-b border-neutral-700 !bg-neutral-800/50 backdrop-blur-sm pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
                 />
 
                 <input
                   type="password"
-                  placeholder="Password"
+                  placeholder="Senha"
                   name="password"
                   value={data.password}
                   onChange={(e) =>
                     setData({ ...data, password: e.target.value })
                   }
-                  className="w-full border-b border-stroke !bg-white pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:!bg-black dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  className="w-full border-b border-neutral-700 !bg-neutral-800/50 backdrop-blur-sm pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
                 />
               </div>
 
@@ -152,7 +136,7 @@ const Signin = () => {
                       type="checkbox"
                       className="peer sr-only"
                     />
-                    <span className="group mt-1 flex h-5 min-w-[20px] items-center justify-center rounded border-gray-300 bg-gray-100 text-blue-600 peer-checked:bg-primary dark:border-gray-600 dark:bg-gray-700">
+                    <span className="group mt-1 flex h-5 min-w-[20px] items-center justify-center rounded border-neutral-600 bg-neutral-700 text-orange-400 peer-checked:bg-orange-500">
                       <svg
                         className="opacity-0 peer-checked:group-[]:opacity-100"
                         width="10"
@@ -171,24 +155,24 @@ const Signin = () => {
                     </span>
                     <label
                       htmlFor="default-checkbox"
-                      className="flex max-w-[425px] cursor-pointer select-none pl-3"
+                      className="flex max-w-[425px] cursor-pointer select-none pl-3 text-neutral-300"
                     >
-                      Keep me signed in
+                      Manter conectado
                     </label>
                   </div>
 
-                  <a href="#" className="hover:text-primary">
-                    Forgot Password?
+                  <a href="#" className="hover:text-orange-400 text-neutral-300 transition-colors duration-200">
+                    Esqueceu a senha?
                   </a>
                 </div>
 
                 <button
                   aria-label="login with email and password"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                  className="btn-gradient rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)]"
                 >
-                  Log in
+                  Entrar
                   <svg
-                    className="fill-white"
+                    className="fill-black"
                     width="14"
                     height="14"
                     viewBox="0 0 14 14"

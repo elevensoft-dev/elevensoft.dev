@@ -8,12 +8,12 @@ const FeaturesTab = () => {
     <>
       {/* <!-- ===== Features Tab Start ===== --> */}
       <section className="py-20 lg:py-25 xl:py-30 bg-neutral-950">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             title="Os Pilares da Soberania Digital"
             subtitle="Por que montar um exército de mercenários desorganizados quando você pode ter as legiões unificadas e disciplinadas da Elevensoft?"
-            className="mb-15"
+            className="mb-16"
           />
           {/* <!-- Section Title End --> */}
 

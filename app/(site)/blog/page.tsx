@@ -3,18 +3,29 @@ import BlogItem from "@/components/Blog/BlogItem";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Eleven Soft - Blog",
-  description: "Blog page of Eleven Soft",
-  // other metadata
+  title: "Blog - Elevensoft",
+  description: "Notícias, tendências e insights sobre Soberania Digital da Elevensoft",
 };
 
 const BlogPage = async () => {
   return (
     <>
       {/* <!-- ===== Blog Grid Start ===== --> */}
-      <section className="py-20 lg:py-25 xl:py-30">
-        <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
-          <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+      <section className="py-20 lg:py-25 xl:py-30 bg-neutral-950">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold lg:text-5xl xl:text-6xl mb-6">
+              Blog da{" "}
+              <span className="gradient-text-primary">
+                Soberania Digital
+              </span>
+            </h1>
+            <p className="text-xl text-neutral-300 leading-relaxed max-w-3xl mx-auto">
+              Insights, tendências e estratégias para recuperar o controle total da sua infraestrutura
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
             {BlogData.map((post, key) => (
               <BlogItem key={key} blog={post} />
             ))}

@@ -40,17 +40,19 @@ export default function RootLayout({
   }, []);
   return (
     <QueryClientProvider client={queryClient}>
-      <html lang="en" suppressHydrationWarning>
-        <body className={`dark:bg-black ${inter.className}`}>
+      <html lang="pt-BR" suppressHydrationWarning>
+        <body className={`bg-neutral-950 text-white ${inter.className}`}>
           <ThemeProvider
             enableSystem={false}
             attribute="class"
-            defaultTheme="light"
+            defaultTheme="dark"
           >
             <Lines />
             <Header />
             <ToasterContext />
-            {children}
+            <main className="min-h-screen">
+              {children}
+            </main>
             <Footer />
             <ScrollToTop />
           </ThemeProvider>

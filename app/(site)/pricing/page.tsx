@@ -63,38 +63,40 @@ export default function PrecosPage() {
   const suitePrice = isAnnual ? 3990 : 399;
 
   return (
-    <main className="py-20 lg:py-25 xl:py-30">
-      <div className="mx-auto max-w-c-1315 px-4 md:px-8 2xl:px-0">
+    <main className="py-20 lg:py-25 xl:py-30 bg-neutral-950">
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-20">
-          <h1 className="mb-6 text-4xl font-bold text-black dark:text-white lg:text-5xl xl:text-6xl">
+          <h1 className="mb-6 text-4xl font-bold lg:text-5xl xl:text-6xl">
             A Oferta{" "}
-            <span className="text-orange-500">Irrecusável</span>
+            <span className="gradient-text-primary">
+              Irrecusável
+            </span>
           </h1>
-          <p className="mx-auto max-w-3xl text-lg text-body-color dark:text-body-color-dark">
+          <p className="mx-auto max-w-3xl text-xl text-neutral-300 leading-relaxed">
             Clareza e Valor. Transparência radical para produtos individuais e, mais importante, para os pacotes de batalha.
           </p>
         </div>
 
         {/* Toggle Preços */}
         <div className="text-center mb-16">
-          <div className="inline-flex bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+          <div className="inline-flex bg-neutral-800/50 backdrop-blur-sm rounded-xl p-1 border border-neutral-700/50">
             <button
               onClick={() => setIsAnnual(false)}
-              className={`px-6 py-2 rounded-md transition-colors ${
+              className={`px-6 py-2 rounded-lg transition-all duration-300 ${
                 !isAnnual
-                  ? "bg-white dark:bg-gray-700 text-orange-500 shadow-sm"
-                  : "text-gray-600 dark:text-gray-400"
+                  ? "bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold shadow-lg"
+                  : "text-neutral-300 hover:text-white"
               }`}
             >
               Mensal
             </button>
             <button
               onClick={() => setIsAnnual(true)}
-              className={`px-6 py-2 rounded-md transition-colors ${
+              className={`px-6 py-2 rounded-lg transition-all duration-300 ${
                 isAnnual
-                  ? "bg-white dark:bg-gray-700 text-orange-500 shadow-sm"
-                  : "text-gray-600 dark:text-gray-400"
+                  ? "bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold shadow-lg"
+                  : "text-neutral-300 hover:text-white"
               }`}
             >
               Anual (2 meses grátis)
@@ -104,31 +106,31 @@ export default function PrecosPage() {
 
         {/* Produtos Individuais */}
         <div className="mb-20">
-          <h2 className="text-2xl font-bold text-center mb-12">Produtos Individuais</h2>
+          <h2 className="text-2xl font-bold text-center mb-12 text-white">Produtos Individuais</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product) => (
-              <div key={product.name} className="bg-white dark:bg-blacksection rounded-lg border border-stroke dark:border-strokedark p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-black dark:text-white mb-2">{product.name}</h3>
-                <p className="text-sm text-body-color dark:text-body-color-dark mb-4">{product.description}</p>
+              <div key={product.name} className="card-modern">
+                <h3 className="text-xl font-bold text-white mb-2">{product.name}</h3>
+                <p className="text-sm text-neutral-300 mb-4">{product.description}</p>
                 <div className="mb-6">
-                  <span className="text-3xl font-bold text-black dark:text-white">
+                  <span className="text-3xl font-bold text-white">
                     R$ {isAnnual ? product.annualPrice : product.monthlyPrice}
                   </span>
-                  <span className="text-body-color dark:text-body-color-dark">
+                  <span className="text-neutral-300">
                     /{isAnnual ? "ano" : "mês"}
                   </span>
                 </div>
                 <ul className="space-y-2 mb-6">
                   {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-body-color dark:text-body-color-dark">
-                      <span className="mr-2 text-green-500">✓</span>
+                    <li key={index} className="flex items-center text-sm text-neutral-300">
+                      <span className="mr-2 text-green-400">✓</span>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <a
                   href={`/${product.name.toLowerCase()}`}
-                  className="w-full inline-flex items-center justify-center rounded-md bg-orange-500 px-4 py-2 text-white font-medium hover:bg-orange-600 transition-colors"
+                  className="w-full inline-flex items-center justify-center rounded-xl bg-neutral-800/50 hover:bg-neutral-700/50 px-4 py-2 text-orange-400 font-medium transition-all duration-300 hover:scale-105"
                 >
                   Saiba Mais
                 </a>
@@ -139,58 +141,61 @@ export default function PrecosPage() {
 
         {/* Suíte de Soberania */}
         <div className="mb-20">
-          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">SUÍTE DE SOBERANIA</h2>
-            <p className="text-xl mb-6">O Pacote Gorila - ESH + ESUT</p>
-            <div className="mb-6">
-              <span className="text-4xl font-bold">R$ {suitePrice}</span>
-              <span className="text-xl">/{isAnnual ? "ano" : "mês"}</span>
+          <div className="bg-gradient-to-r from-orange-500 to-yellow-500 rounded-2xl p-8 text-black text-center shadow-2xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-yellow-400 opacity-20"></div>
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold mb-4">SUÍTE DE SOBERANIA</h2>
+              <p className="text-xl mb-6">O Pacote Gorila - ESH + ESUT</p>
+              <div className="mb-6">
+                <span className="text-4xl font-bold">R$ {suitePrice}</span>
+                <span className="text-xl">/{isAnnual ? "ano" : "mês"}</span>
+              </div>
+              <div className="bg-white/20 rounded-xl p-4 mb-6 backdrop-blur-sm">
+                <h3 className="font-bold mb-2">Bônus de Guerra:</h3>
+                <p>Inclui <strong>50% de desconto</strong> na implantação do ESH e <strong>100% de cortesia</strong> na implantação do ESUT.</p>
+              </div>
+              <a
+                href="https://wa.me/message/X2DMDA457ASDN1"
+                target="_blank"
+                className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-3 text-orange-500 font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                Adquirir Suíte
+              </a>
             </div>
-            <div className="bg-white/20 rounded-lg p-4 mb-6">
-              <h3 className="font-bold mb-2">Bônus de Guerra:</h3>
-              <p>Inclui <strong>50% de desconto</strong> na implantação do ESH e <strong>100% de cortesia</strong> na implantação do ESUT.</p>
-            </div>
-            <a
-              href="https://wa.me/message/X2DMDA457ASDN1"
-              target="_blank"
-              className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-orange-500 font-medium hover:bg-gray-100 transition-colors"
-            >
-              Adquirir Suíte
-            </a>
           </div>
         </div>
 
         {/* Calculadora de ROI */}
         <div className="mb-20">
-          <h2 className="text-2xl font-bold text-center mb-12">Calculadora de ROI</h2>
-          <div className="bg-white dark:bg-blacksection rounded-lg border border-stroke dark:border-strokedark p-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-12 text-white">Calculadora de ROI</h2>
+          <div className="card-modern max-w-2xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label className="block text-sm font-medium text-black dark:text-white mb-2">
+                <label className="block text-sm font-medium text-white mb-2">
                   Quantas horas sua equipe gasta com auditorias por mês?
                 </label>
                 <input
                   type="number"
-                  className="w-full px-3 py-2 border border-stroke dark:border-strokedark rounded-md bg-white dark:bg-blacksection text-black dark:text-white"
+                  className="w-full px-3 py-2 border border-neutral-700 rounded-xl bg-neutral-800/50 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-300"
                   placeholder="Ex: 40"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-black dark:text-white mb-2">
+                <label className="block text-sm font-medium text-white mb-2">
                   Qual o custo/hora médio da sua equipe técnica?
                 </label>
                 <input
                   type="number"
-                  className="w-full px-3 py-2 border border-stroke dark:border-strokedark rounded-md bg-white dark:bg-blacksection text-black dark:text-white"
+                  className="w-full px-3 py-2 border border-neutral-700 rounded-xl bg-neutral-800/50 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-300"
                   placeholder="Ex: 150"
                 />
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-orange-100 dark:bg-orange-900/20 rounded-lg p-4">
-                <p className="text-lg">
+              <div className="bg-neutral-800/50 backdrop-blur-sm rounded-xl p-4 border border-neutral-700/50">
+                <p className="text-lg text-neutral-300">
                   Com a Suíte Elevensoft, você pode economizar até{" "}
-                  <strong className="text-orange-600 dark:text-orange-400">R$ X.XXX por ano</strong>.
+                  <strong className="text-orange-400">R$ X.XXX por ano</strong>.
                 </p>
               </div>
             </div>
@@ -199,18 +204,18 @@ export default function PrecosPage() {
 
         {/* CTA Final */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-6">Pronto para recuperar sua Soberania Digital?</h3>
+          <h3 className="text-2xl font-bold mb-6 text-white">Pronto para recuperar sua Soberania Digital?</h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://wa.me/message/X2DMDA457ASDN1"
               target="_blank"
-              className="inline-flex items-center justify-center rounded-md bg-orange-500 px-8 py-3 text-white font-medium hover:bg-orange-600 transition-colors"
+              className="btn-gradient rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.3)]"
             >
               Agendar Demonstração
             </a>
             <a
               href="/o-jeito-elevensoft"
-              className="inline-flex items-center justify-center rounded-md border-2 border-orange-500 px-8 py-3 text-orange-500 font-medium hover:bg-orange-500 hover:text-white transition-colors"
+              className="rounded-full border-2 border-neutral-700 px-8 py-4 text-neutral-300 font-semibold hover:bg-neutral-800/50 hover:border-neutral-600 hover:text-white transition-all duration-300 backdrop-blur-sm"
             >
               Ver Comparativo
             </a>

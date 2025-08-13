@@ -11,7 +11,7 @@ const FeaturesTabItem = ({ feature }: FeaturesTabItemProps) => {
   return (
     <div className="w-full">
       <div className="wow fadeInUp" data-wow-delay=".15s">
-        <div className="group relative overflow-hidden rounded-lg bg-neutral-900 border border-neutral-700 shadow-lg">
+        <div className="group relative overflow-hidden rounded-xl card-modern hover:shadow-[0_0_40px_rgba(255,138,41,0.1)] transition-all duration-300">
           <div className="relative aspect-[370/278] overflow-hidden">
             <Image
               src={image}
@@ -25,7 +25,7 @@ const FeaturesTabItem = ({ feature }: FeaturesTabItemProps) => {
             <h4 className="text-lg font-semibold text-orange-400 mb-3">
               {subtitle}
             </h4>
-            <p className="text-neutral-300 mb-6">
+            <p className="text-neutral-300 mb-6 leading-relaxed">
               {description}
             </p>
             
@@ -42,7 +42,7 @@ const FeaturesTabItem = ({ feature }: FeaturesTabItemProps) => {
               href={feature.name === "ESH" ? "https://esh.elevensoft.dev/" : feature.link}
               target={feature.name === "ESH" ? "_blank" : "_self"}
               rel={feature.name === "ESH" ? "noopener noreferrer" : ""}
-              className="inline-flex items-center justify-center rounded-md bg-orange-400 px-6 py-2 text-black font-medium hover:bg-orange-500 transition-colors"
+              className="inline-flex items-center justify-center rounded-xl bg-neutral-800/50 hover:bg-neutral-700/50 px-6 py-2 text-white font-medium transition-all duration-300 hover:scale-105"
             >
               Saiba Mais
             </a>

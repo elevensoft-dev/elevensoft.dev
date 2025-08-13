@@ -56,24 +56,8 @@ const Contact = () => {
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
-      <section id="support" className="px-4 md:px-8 2xl:px-0">
+      <section id="support" className="px-6 md:px-8 2xl:px-0 py-20 lg:py-25 xl:py-30 bg-neutral-950">
         <div className="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
-          <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#ffe9de47] dark:bg-gradient-to-t dark:to-[#422e25]"></div>
-          <div className="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
-            <Image
-              src="./images/shape/shape-dotted-light.svg"
-              alt="Dotted"
-              className="dark:hidden"
-              fill
-            />
-            <Image
-              src="./images/shape/shape-dotted-dark.svg"
-              alt="Dotted"
-              className="hidden dark:block"
-              fill
-            />
-          </div>
-
           <div className="flex flex-col-reverse flex-wrap gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20">
             {!isSubmitting &&
               !isLoading &&
@@ -95,9 +79,9 @@ const Contact = () => {
                   whileInView="visible"
                   transition={{ duration: 1, delay: 0.1 }}
                   viewport={{ once: true }}
-                  className="animate_top w-full rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
+                  className="animate_top w-full rounded-xl bg-neutral-900/50 backdrop-blur-sm p-7.5 shadow-2xl border border-neutral-800/50 dark:bg-neutral-900/50 md:w-3/5 lg:w-3/4 xl:p-15"
                 >
-                  <h2 className="mb-15 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
+                  <h2 className="mb-15 text-3xl font-semibold text-white xl:text-sectiontitle2">
                     Envia uma mensagem
                   </h2>
 
@@ -106,11 +90,11 @@ const Contact = () => {
                       <input
                         type="text"
                         placeholder="Nome completo"
-                        className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                        className="w-full border-b border-neutral-700 bg-transparent pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
                         {...register("name")}
                       />
                       {errors.name?.message && (
-                        <p className="absolute -bottom-5 left-0 text-xs text-red-500">
+                        <p className="absolute -bottom-5 left-0 text-xs text-red-400">
                           {errors.name?.message}
                         </p>
                       )}
@@ -118,11 +102,11 @@ const Contact = () => {
                       <input
                         type="email"
                         placeholder="Endereço de email"
-                        className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                        className="w-full border-b border-neutral-700 bg-transparent pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
                         {...register("email")}
                       />
                       {errors.email?.message && (
-                        <p className="absolute -bottom-5 right-0 text-xs text-red-500">
+                        <p className="absolute -bottom-5 right-0 text-xs text-red-400">
                           {errors.email?.message}
                         </p>
                       )}
@@ -132,11 +116,11 @@ const Contact = () => {
                       <input
                         type="text"
                         placeholder="Assunto"
-                        className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                        className="w-full border-b border-neutral-700 bg-transparent pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
                         {...register("subject")}
                       />
                       {errors.subject?.message && (
-                        <p className="absolute -bottom-5 left-0 text-xs text-red-500">
+                        <p className="absolute -bottom-5 left-0 text-xs text-red-400">
                           {errors.subject?.message}
                         </p>
                       )}
@@ -148,13 +132,13 @@ const Contact = () => {
                           <input
                             type="text"
                             placeholder="Número do celular"
-                            className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                            className="w-full border-b border-neutral-700 bg-transparent pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
                             {...register("phone")}
                           />
                         )}
                       />
                       {errors.phone?.message && (
-                        <p className="absolute -bottom-5 right-0 text-xs text-red-500">
+                        <p className="absolute -bottom-5 right-0 text-xs text-red-400">
                           {errors.phone?.message}
                         </p>
                       )}
@@ -164,11 +148,11 @@ const Contact = () => {
                       <textarea
                         placeholder="Mensagem"
                         rows={4}
-                        className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                        className="w-full border-b border-neutral-700 bg-transparent text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none"
                         {...register("description")}
                       ></textarea>
                       {errors.description?.message && (
-                        <p className="absolute -bottom-5 left-0 text-xs text-red-500">
+                        <p className="absolute -bottom-5 left-0 text-xs text-red-400">
                           {errors.description?.message}
                         </p>
                       )}
@@ -181,7 +165,7 @@ const Contact = () => {
                           type="checkbox"
                           className="peer sr-only"
                         />
-                        <span className="group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded border-gray-300 bg-gray-100 text-blue-600 peer-checked:bg-primary dark:border-gray-600 dark:bg-gray-700">
+                        <span className="group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded border-neutral-600 bg-neutral-700 text-orange-400 peer-checked:bg-orange-500">
                           <svg
                             className="opacity-0 peer-checked:group-[]:opacity-100"
                             width="10"
@@ -200,7 +184,7 @@ const Contact = () => {
                         </span>
                         <label
                           htmlFor="default-checkbox"
-                          className="flex max-w-[425px] cursor-pointer select-none pl-5"
+                          className="flex max-w-[425px] cursor-pointer select-none pl-5 text-neutral-300"
                         >
                           Concordo com termos de "Formulário" e consente com o
                           uso de cookies no navegador.
@@ -210,11 +194,11 @@ const Contact = () => {
                       <button
                         type="submit"
                         aria-label="send message"
-                        className="inline-flex w-[208px] items-center justify-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
+                        className="btn-gradient rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)]"
                       >
                         <span>Enviar mensagem</span>
                         <svg
-                          className="fill-white"
+                          className="fill-black"
                           width="14"
                           height="14"
                           viewBox="0 0 14 14"
@@ -232,14 +216,14 @@ const Contact = () => {
                 </motion.div>
               )}
             {(isSubmitting || isLoading) && (
-              <div className="flex min-h-[620px] w-full animate-pulse items-center justify-center rounded-lg bg-orange-100">
-                <span className="h-10 w-10 animate-spin rounded-full border-2 border-neutral-300 border-t-orange-600 dark:border-neutral-700"></span>
+              <div className="flex min-h-[620px] w-full animate-pulse items-center justify-center rounded-xl bg-neutral-800/50 backdrop-blur-sm">
+                <span className="h-10 w-10 animate-spin rounded-full border-2 border-neutral-600 border-t-orange-500"></span>
               </div>
             )}
             {isSubmitSuccessful && (
-              <div className="min-h-[620px] w-full">
-                <h1 className="text-xl font-bold">Tudo certo!</h1>
-                <p className="text-base opacity-50">
+              <div className="min-h-[620px] w-full card-modern flex flex-col items-center justify-center">
+                <h1 className="text-xl font-bold text-white mb-2">Tudo certo!</h1>
+                <p className="text-base text-neutral-300">
                   Sua mensagem foi enviada ao time comercial!
                 </p>
               </div>
@@ -263,32 +247,32 @@ const Contact = () => {
               viewport={{ once: true }}
               className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
             >
-              <h2 className="mb-12.5 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
+              <h2 className="mb-12.5 text-3xl font-semibold text-white xl:text-sectiontitle2">
                 Encontre a gente
               </h2>
 
               <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                <h3 className="mb-4 text-metatitle3 font-medium text-white">
                   Nossa localização
                 </h3>
-                <p>Pedra Branca, Palhoça - Santa Catarina</p>
+                <p className="text-neutral-300">Pedra Branca, Palhoça - Santa Catarina</p>
               </div>
               <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                <h3 className="mb-4 text-metatitle3 font-medium text-white">
                   Endereço de email
                 </h3>
-                <p>
-                  <a href="mailto:ola@elevensoft.dev?subject=Interessado em construir projeto&body=Olá, sou o [Nome do Cliente]. Gostaria de conversar sobre minha proposta.">
+                <p className="text-neutral-300">
+                  <a href="mailto:ola@elevensoft.dev?subject=Interessado em construir projeto&body=Olá, sou o [Nome do Cliente]. Gostaria de conversar sobre minha proposta." className="hover:text-orange-400 transition-colors duration-200">
                     ola@elevensoft.dev
                   </a>
                 </p>
               </div>
               <div>
-                <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                <h4 className="mb-4 text-metatitle3 font-medium text-white">
                   Telefone
                 </h4>
-                <p>
-                  <a href="tel:+5548988168221" target="_blank">
+                <p className="text-neutral-300">
+                  <a href="tel:+5548988168221" target="_blank" className="hover:text-orange-400 transition-colors duration-200">
                     +55 48 98816-8221
                   </a>
                 </p>

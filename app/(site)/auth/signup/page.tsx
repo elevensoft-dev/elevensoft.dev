@@ -2,9 +2,8 @@ import Signup from "@/components/Auth/Signup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sign Up Page - Solid SaaS Boilerplate",
-  description: "This is Sign Up page for Startup Pro",
-  // other metadata
+  title: "Cadastro - Elevensoft",
+  description: "Crie sua conta Elevensoft para começar sua jornada de Soberania Digital",
 };
 
 export default function Register() {

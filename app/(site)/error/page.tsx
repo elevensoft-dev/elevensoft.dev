@@ -2,14 +2,14 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Error Page - Solid SaaS Boilerplate",
-  description: "This is Error page for Solid Pro",
+  title: "Página de Erro - Elevensoft",
+  description: "Página de erro da Elevensoft",
   // other metadata
 };
 
 const ErroPage = () => {
   return (
-    <section className="overflow-hidden pb-25 pt-45 lg:pb-32.5 lg:pt-50 xl:pb-37.5 xl:pt-55">
+    <section className="overflow-hidden pb-25 pt-45 lg:pb-32.5 lg:pt-50 xl:pb-37.5 xl:pt-55 bg-neutral-950">
       <div className="animate_top mx-auto max-w-[518px] text-center">
         <Image
           src="/images/shape/404.svg"
@@ -19,21 +19,21 @@ const ErroPage = () => {
           height={400}
         />
 
-        <h2 className="mb-5 text-2xl font-semibold text-black dark:text-white md:text-4xl">
-          This Page Does Not Exist
+        <h2 className="mb-5 text-2xl font-semibold text-white md:text-4xl">
+          Esta Página Não Existe
         </h2>
-        <p className="mb-7.5">
-          The page you were looking for appears to have been moved, deleted or
-          does not exist.
+        <p className="mb-7.5 text-neutral-300 leading-relaxed">
+          A página que você estava procurando parece ter sido movida, deletada ou
+          não existe.
         </p>
 
         <a
           href="/"
-          className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+          className="btn-gradient rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)]"
         >
-          Return to Home
+          Voltar para o Início
           <svg
-            className="fill-white"
+            className="fill-black"
             width="14"
             height="14"
             viewBox="0 0 14 14"

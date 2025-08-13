@@ -8,15 +8,17 @@ export const metadata: Metadata = {
 export default function TheElevensoftWayPage() {
   return (
     <main className="py-20 lg:py-25 xl:py-30 bg-neutral-950">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-20">
-          <h1 className="mb-6 text-4xl font-bold text-white lg:text-5xl xl:text-6xl">
+          <h1 className="mb-6 text-4xl font-bold lg:text-5xl xl:text-6xl">
             O{" "}
-            <span className="text-orange-400">Massacre</span>{" "}
+            <span className="gradient-text-primary">
+              Massacre
+            </span>{" "}
             da Concorrência
           </h1>
-          <p className="mx-auto max-w-3xl text-lg text-neutral-300">
+          <p className="mx-auto max-w-3xl text-xl text-neutral-300 leading-relaxed">
             Onde humilhamos a concorrência – não apenas outras empresas, mas a própria <em>ideia</em> de uma abordagem fragmentada.
           </p>
         </div>
@@ -27,20 +29,20 @@ export default function TheElevensoftWayPage() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="border-b border-neutral-700">
-                  <th className="p-4 text-left font-bold text-white bg-neutral-800">
+                  <th className="p-4 text-left font-bold text-white bg-neutral-800/50 backdrop-blur-sm">
                     Comparativo
                   </th>
-                  <th className="p-4 text-center font-bold text-red-400 bg-red-900/20">
+                  <th className="p-4 text-center font-bold text-red-400 bg-red-900/20 backdrop-blur-sm">
                     O Jeito Fragmentado
                     <br />
                     <span className="text-sm font-normal">(O Caos)</span>
                   </th>
-                  <th className="p-4 text-center font-bold text-yellow-400 bg-yellow-900/20">
+                  <th className="p-4 text-center font-bold text-yellow-400 bg-yellow-900/20 backdrop-blur-sm">
                     O Jeito do Concorrente Gigante
                     <br />
                     <span className="text-sm font-normal">(O Lento)</span>
                   </th>
-                  <th className="p-4 text-center font-bold text-green-400 bg-green-900/20">
+                  <th className="p-4 text-center font-bold text-green-400 bg-green-900/20 backdrop-blur-sm">
                     O Jeito Elevensoft
                     <br />
                     <span className="text-sm font-normal">(A Soberania)</span>
@@ -49,7 +51,7 @@ export default function TheElevensoftWayPage() {
               </thead>
               <tbody>
                 <tr className="border-b border-neutral-700">
-                  <td className="p-4 font-semibold text-white bg-neutral-800">
+                  <td className="p-4 font-semibold text-white bg-neutral-800/50 backdrop-blur-sm">
                     Componentes
                   </td>
                   <td className="p-4 text-center text-neutral-300">
@@ -76,7 +78,7 @@ export default function TheElevensoftWayPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-neutral-700">
-                  <td className="p-4 font-semibold text-white bg-neutral-800">
+                  <td className="p-4 font-semibold text-white bg-neutral-800/50 backdrop-blur-sm">
                     Custo
                   </td>
                   <td className="p-4 text-center text-neutral-300">
@@ -96,7 +98,7 @@ export default function TheElevensoftWayPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-neutral-700">
-                  <td className="p-4 font-semibold text-white bg-neutral-800">
+                  <td className="p-4 font-semibold text-white bg-neutral-800/50 backdrop-blur-sm">
                     Visibilidade
                   </td>
                   <td className="p-4 text-center text-neutral-300">
@@ -116,7 +118,7 @@ export default function TheElevensoftWayPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-neutral-700">
-                  <td className="p-4 font-semibold text-white bg-neutral-800">
+                  <td className="p-4 font-semibold text-white bg-neutral-800/50 backdrop-blur-sm">
                     Suporte
                   </td>
                   <td className="p-4 text-center text-neutral-300">
@@ -136,7 +138,7 @@ export default function TheElevensoftWayPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-neutral-700">
-                  <td className="p-4 font-semibold text-white bg-neutral-800">
+                  <td className="p-4 font-semibold text-white bg-neutral-800/50 backdrop-blur-sm">
                     Tempo de Implementação
                   </td>
                   <td className="p-4 text-center text-neutral-300">
@@ -156,7 +158,7 @@ export default function TheElevensoftWayPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-neutral-700">
-                  <td className="p-4 font-semibold text-white bg-neutral-800">
+                  <td className="p-4 font-semibold text-white bg-neutral-800/50 backdrop-blur-sm">
                     ROI
                   </td>
                   <td className="p-4 text-center text-neutral-300">
@@ -185,29 +187,29 @@ export default function TheElevensoftWayPage() {
           <h2 className="text-3xl font-bold text-center mb-12 text-white">Por que a Elevensoft é Superior?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="bg-blue-900/20 rounded-lg p-6 mb-4 border border-blue-800">
+              <div className="bg-neutral-800/50 backdrop-blur-sm rounded-xl p-6 mb-4 border border-neutral-700/50">
                 <div className="text-3xl mb-2">🛡️</div>
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Unificação Real</h3>
-              <p className="text-neutral-300">
+              <p className="text-neutral-300 leading-relaxed">
                 Não apenas integração superficial, mas uma plataforma verdadeiramente unificada onde cada componente foi projetado para trabalhar em harmonia.
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-green-900/20 rounded-lg p-6 mb-4 border border-green-800">
+              <div className="bg-neutral-800/50 backdrop-blur-sm rounded-xl p-6 mb-4 border border-neutral-700/50">
                 <div className="text-3xl mb-2">🇧🇷</div>
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Made in Brazil</h3>
-              <p className="text-neutral-300">
+              <p className="text-neutral-300 leading-relaxed">
                 Desenvolvido no Brasil, para o Brasil. Suporte local, preços em Reais, e entendimento real das necessidades do mercado brasileiro.
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-orange-900/20 rounded-lg p-6 mb-4 border border-orange-800">
+              <div className="bg-neutral-800/50 backdrop-blur-sm rounded-xl p-6 mb-4 border border-neutral-700/50">
                 <div className="text-3xl mb-2">⚡</div>
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Velocidade de Execução</h3>
-              <p className="text-neutral-300">
+              <p className="text-neutral-300 leading-relaxed">
                 Implementação em 30-60 dias, não em 6-12 meses. Tempo é dinheiro, e nós economizamos ambos.
               </p>
             </div>
@@ -221,19 +223,19 @@ export default function TheElevensoftWayPage() {
             <a
               href="https://wa.me/message/X2DMDA457ASDN1"
               target="_blank"
-              className="inline-flex items-center justify-center rounded-md bg-orange-400 px-8 py-3 text-black font-medium hover:bg-orange-500 transition-colors"
+              className="btn-gradient rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.3)]"
             >
               Agendar Demonstração
             </a>
             <a
               href="/precos"
-              className="inline-flex items-center justify-center rounded-md border-2 border-orange-400 px-8 py-3 text-orange-400 font-medium hover:bg-orange-400 hover:text-black transition-colors"
+              className="rounded-full border-2 border-neutral-700 px-8 py-4 text-neutral-300 font-semibold hover:bg-neutral-800/50 hover:border-neutral-600 hover:text-white transition-all duration-300 backdrop-blur-sm"
             >
               Ver Preços
             </a>
           </div>
           <p className="mt-6 text-sm text-neutral-400">
-            <strong>ROI estimado de 2.156%</strong> - A era da segurança fragmentada acabou
+            <strong className="text-yellow-400">ROI estimado de 2.156%</strong> - A era da segurança fragmentada acabou
           </p>
         </div>
       </div>

@@ -5,10 +5,10 @@
 /* third-party libraries CSS */
 
 .testimonial-01 .swiper-pagination-bullet {
-  @apply h-2.5 w-2.5 bg-stroke opacity-100;
+  @apply h-2.5 w-2.5 bg-neutral-800 opacity-100;
 }
 .testimonial-01 .swiper-pagination-bullet-active {
-  @apply w-5 rounded-full bg-primary;
+  @apply w-5 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500;
 }
 
 .testimonial-01 .swiper-pagination {
@@ -21,16 +21,44 @@
 
 @layer base {
   body {
-    @apply relative z-1 font-inter text-regular font-normal text-waterloo dark:text-manatee;
+    @apply relative z-1 font-inter text-regular font-normal text-neutral-300 bg-neutral-950;
+  }
+  
+  /* Gradientes de texto */
+  .gradient-text {
+    @apply bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-primary {
+    @apply bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent;
+  }
+  
+  /* Botões com gradiente */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:from-orange-600 hover:to-yellow-600 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)];
+  }
+  
+  .btn-gradient-sm {
+    @apply bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold px-4 py-2 rounded-lg transition-all duration-300 hover:from-orange-600 hover:to-yellow-600 hover:scale-105;
+  }
+  
+  /* Cards modernos */
+  .card-modern {
+    @apply bg-neutral-900/50 backdrop-blur-sm border border-neutral-800/50 rounded-xl p-6 transition-all duration-300 hover:bg-neutral-800/50 hover:border-neutral-700/50 hover:shadow-2xl;
+  }
+  
+  /* Seções com fundo */
+  .section-bg {
+    @apply bg-neutral-900/30 backdrop-blur-sm border border-neutral-800/30 rounded-2xl;
   }
 }
 
 @layer components {
   .dropdown {
-    @apply -left-7.5 mt-2 hidden min-w-max flex-col gap-4 rounded-md border border-stroke bg-white px-8 py-5 shadow-solid-13 duration-300 ease-in dark:border-strokedark dark:bg-black xl:invisible xl:absolute
+    @apply -left-7.5 mt-2 hidden min-w-max flex-col gap-4 rounded-xl border border-neutral-800 bg-neutral-900/95 backdrop-blur-xl px-8 py-5 shadow-2xl duration-300 ease-in xl:invisible xl:absolute
     xl:mt-0 xl:flex xl:w-[250px] xl:translate-y-10 xl:opacity-0
-    xl:before:absolute xl:before:-top-1.5 xl:before:left-10 xl:before:h-3 xl:before:w-3 xl:before:rotate-45 xl:before:border-l xl:before:border-t xl:before:border-stroke xl:before:bg-white xl:group-hover:visible xl:group-hover:translate-y-6.5 
-    xl:group-hover:opacity-100 xl:dark:before:border-strokedark xl:dark:before:bg-black;
+    xl:before:absolute xl:before:-top-1.5 xl:before:left-10 xl:before:h-3 xl:before:w-3 xl:before:rotate-45 xl:before:border-l xl:before:border-t xl:before:border-neutral-800 xl:before:bg-neutral-900 xl:group-hover:visible xl:group-hover:translate-y-6.5 
+    xl:group-hover:opacity-100;
   }
 }
 
@@ -58,51 +86,51 @@
 }
 
 .blog-details-docs {
-  @apply rounded-lg border border-white p-7.5 shadow-solid-3 transition-all dark:border-strokedark  dark:bg-blacksection xl:p-12.5;
+  @apply rounded-xl border border-neutral-800 p-7.5 shadow-2xl transition-all bg-neutral-900/50 backdrop-blur-sm xl:p-12.5;
 }
 
 .blog-details p {
-  @apply mb-8 text-base leading-relaxed text-titlebgdark dark:text-waterloo;
+  @apply mb-8 text-base leading-relaxed text-neutral-300;
 }
 
 .blog-details p strong {
-  @apply text-primary dark:text-waterloo;
+  @apply text-orange-400;
 }
 .blog-details h3 strong,
 .blog-details h3 {
-  @apply mb-10 text-xl !font-semibold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight;
+  @apply mb-10 text-xl !font-semibold leading-tight text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight;
 }
 
 .blog-details h4 strong,
 .blog-details h4 {
-  @apply text-xl !font-semibold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight;
+  @apply text-xl !font-semibold leading-tight text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight;
 }
 
 .blog-details h5 strong,
 .blog-details h5 {
-  @apply mb-3 text-lg !font-semibold leading-tight text-black dark:text-white sm:text-xl;
+  @apply mb-3 text-lg !font-semibold leading-tight text-white sm:text-xl;
 }
 
 .blog-details h1 {
-  @apply mb-4 text-3xl !font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px] lg:text-4xl xl:text-[45px];
+  @apply mb-4 text-3xl !font-bold !leading-tight text-white sm:text-4xl md:text-[45px] lg:text-4xl xl:text-[45px];
 }
 .blog-details h2 strong,
 .blog-details h2 {
-  @apply mb-4 text-[26px] !font-bold !leading-tight text-black dark:text-white sm:text-3xl md:text-4xl;
+  @apply mb-4 text-[26px] !font-bold !leading-tight text-white sm:text-3xl md:text-4xl;
 }
 
 .blog-details ul,
 .blog-details ol {
-  @apply mb-10 list-inside list-disc text-titlebgdark;
+  @apply mb-10 list-inside list-disc text-neutral-300;
 }
 
 .blog-details li,
 .blog-details li {
-  @apply mb-2 text-base text-titlebgdark dark:text-waterloo;
+  @apply mb-2 text-base text-neutral-300;
 }
 
 .blog-details blockquote {
-  @apply relative z-10 mb-10 overflow-hidden rounded-sm bg-manatee p-8 text-center text-base font-medium italic text-black dark:bg-titlebgdark md:py-9 lg:px-10;
+  @apply relative z-10 mb-10 overflow-hidden rounded-xl bg-neutral-800/50 backdrop-blur-sm p-8 text-center text-base font-medium italic text-neutral-200 md:py-9 lg:px-10;
 }
 
 .blog-details blockquote::after {
@@ -112,16 +140,16 @@
 
 .blog-details blockquote::before {
   content: "";
-  @apply absolute left-0 top-0 h-[106px] w-[140px] bg-[url(/images/blog/quote-shape-1.svg)] bg-contain bg-left-top bg-no-repeat dark:bg-[url(/images/blog/quote-shape-1.svg)];
+  @apply absolute left-0 top-0 h-[106px] w-[140px] bg-[url(/images/blog/quote-shape-1.svg)] bg-contain bg-left-top bg-no-repeat;
 }
 
 pre {
-  @apply relative mb-2 rounded-lg bg-strokedark px-4 py-2;
+  @apply relative mb-2 rounded-lg bg-neutral-900 px-4 py-2;
 }
 .prism-copy-button {
-  @apply absolute right-2 top-2 h-[26px] rounded bg-white px-4 text-primary;
+  @apply absolute right-2 top-2 h-[26px] rounded bg-neutral-800 text-orange-400;
 }
 
 .active-tab {
-  @apply bg-stroke text-black dark:bg-blackho dark:text-white;
+  @apply bg-neutral-800 text-white;
 }

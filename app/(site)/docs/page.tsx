@@ -2,19 +2,18 @@ import SidebarLink from "@/components/Docs/SidebarLink";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Docs Page - Solid SaaS Boilerplate",
-  description: "This is Docs page for Solid Pro",
-  // other metadata
+  title: "Documentação - Elevensoft",
+  description: "Documentação completa da plataforma Elevensoft para Soberania Digital",
 };
 
 export default function DocsPage() {
   return (
     <>
-      <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
-        <div className="container mx-auto">
+      <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32 bg-neutral-950">
+        <div className="container mx-auto px-6">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-1/4">
-              <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4  transition-all  dark:border-strokedark dark:bg-blacksection">
+              <div className="sticky top-[74px] rounded-xl border border-neutral-800/50 p-4 shadow-2xl transition-all bg-neutral-900/95 backdrop-blur-xl">
                 <ul className="space-y-2">
                   <SidebarLink />
                 </ul>
@@ -22,23 +21,20 @@ export default function DocsPage() {
             </div>
 
             <div className="w-full px-4 lg:w-3/4">
-              <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                <h1>Welcome to Startup Documentation</h1>
+              <div className="blog-details blog-details-docs shadow-2xl dark:bg-neutral-900 rounded-xl bg-neutral-900/50 backdrop-blur-sm px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px] border border-neutral-800/50">
+                <h1 className="text-white mb-6">Bem-vindo à Documentação Elevensoft</h1>
 
-                <p className="text-body-color dark:text-body-color-dark text-base">
-                  This document serves as a simple template to showcase a sample
-                  layout and format. It is solely created for demonstration
-                  purposes and is not intended for any official use.
+                <p className="text-neutral-300 text-base leading-relaxed mb-4">
+                  Esta documentação serve como guia completo para implementar e utilizar 
+                  a plataforma Elevensoft para Soberania Digital.
                 </p>
-                <p className="text-body-color dark:text-body-color-dark text-base">
-                  Please visit:{" "}
+                <p className="text-neutral-300 text-base leading-relaxed">
+                  Para suporte técnico e demonstrações, entre em contato:{" "}
                   <b>
-                    <a href="https://nextjstemplates.com/docs">
-                      nextjstemplates.com/docs
+                    <a href="https://wa.me/message/X2DMDA457ASDN1" className="text-orange-400 hover:text-orange-300 transition-colors">
+                      WhatsApp Elevensoft
                     </a>
-                  </b>{" "}
-                  to check out the real docs, setup guide and even video
-                  instructions
+                  </b>
                 </p>
               </div>
             </div>

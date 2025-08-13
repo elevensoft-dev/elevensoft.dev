@@ -4,18 +4,18 @@ import Image from "next/image";
 const SingleTestimonial = ({ review }: { review: Testimonial }) => {
   const { name, designation, image, content } = review;
   return (
-    <div className="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:bg-blacksection dark:shadow-none">
-      <div className="mb-7.5 flex justify-between border-b border-stroke pb-6 dark:border-strokedark">
+    <div className="card-modern p-9 pt-7.5 hover:shadow-[0_0_40px_rgba(255,138,41,0.1)] transition-all duration-300">
+      <div className="mb-7.5 flex justify-between border-b border-neutral-800/50 pb-6">
         <div>
-          <h3 className="mb-1.5 text-metatitle3 text-black dark:text-white">
+          <h3 className="mb-1.5 text-metatitle3 text-white">
             {name}
           </h3>
-          <p>{designation}</p>
+          <p className="text-neutral-300">{designation}</p>
         </div>
-        <Image width={60} height={50} className="" src={image} alt={name} />
+        <Image width={60} height={50} className="rounded-lg" src={image} alt={name} />
       </div>
 
-      <p>{content}</p>
+      <p className="text-neutral-300 leading-relaxed">{content}</p>
     </div>
   );
 };

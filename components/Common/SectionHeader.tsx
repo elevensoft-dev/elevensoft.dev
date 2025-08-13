@@ -12,13 +12,13 @@ const SectionHeader = ({ title, subtitle, className = "", variant = "default" }:
   const getVariantStyles = () => {
     switch (variant) {
       case "warning":
-        return "text-orange-600 dark:text-orange-400";
+        return "text-orange-400";
       case "danger":
-        return "text-red-600 dark:text-red-400";
+        return "text-orange-400";
       case "success":
-        return "text-green-600 dark:text-green-400";
+        return "text-green-400";
       default:
-        return "text-black dark:text-white";
+        return "text-white";
     }
   };
 
@@ -28,7 +28,7 @@ const SectionHeader = ({ title, subtitle, className = "", variant = "default" }:
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg text-body-color dark:text-body-color-dark">
+        <p className="text-lg text-neutral-300 leading-relaxed">
           {subtitle}
         </p>
       )}

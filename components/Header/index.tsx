@@ -25,20 +25,20 @@ export default function Header() {
     if (item.submenu) {
       return (
         <div key={item.id} className="relative group">
-          <button className="transition-colors hover:text-white flex items-center gap-1">
+          <button className="transition-colors hover:text-white flex items-center gap-1 text-neutral-300">
             {item.title}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div className="absolute top-full left-0 mt-2 w-48 bg-neutral-900 border border-neutral-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <div className="absolute top-full left-0 mt-2 w-48 bg-neutral-900/95 backdrop-blur-xl border border-neutral-800/50 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             {item.submenu.map((subItem) => (
               <a
                 key={subItem.id}
                 href={subItem.title === "ESH" ? "https://esh.elevensoft.dev/" : subItem.path}
                 target={subItem.title === "ESH" ? "_blank" : "_self"}
                 rel={subItem.title === "ESH" ? "noopener noreferrer" : ""}
-                className="block px-4 py-2 text-sm text-neutral-300 hover:text-white hover:bg-neutral-800 transition-colors"
+                className="block px-4 py-2 text-sm text-neutral-300 hover:text-white hover:bg-neutral-800/50 transition-all duration-200 rounded-lg mx-2 my-1"
               >
                 {subItem.title}
               </a>
@@ -51,7 +51,7 @@ export default function Header() {
         <Link
           key={item.id}
           href={item.path}
-          className={`transition-colors hover:text-white ${
+          className={`transition-colors hover:text-white text-neutral-300 ${
             pathname === item.path ? 'text-white' : ''
           }`}
         >
@@ -98,15 +98,14 @@ export default function Header() {
 
   return (
     <header
-      className={`z-30 sticky top-0 w-full transition-colors duration-300 border-b border-transparent ${
-        isScrolled ? 'bg-neutral-950/80 backdrop-blur border-neutral-800' : 'bg-transparent'
+      className={`z-30 sticky top-0 w-full transition-all duration-300 border-b border-transparent ${
+        isScrolled ? 'bg-neutral-950/95 backdrop-blur-xl border-neutral-800/50' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-5">
+      <div className="container mx-auto flex h-16 items-center justify-between px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <img src="/images/logo/logo-light.png" alt="Logo Eleven, letra E" className="w-28 h-14" />
-          
         </Link>
 
         {/* Desktop Navigation */}
@@ -118,7 +117,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link
             href="/precos"
-            className="rounded-full bg-orange-400 text-black text-sm px-5 py-2.5 font-semibold transition-transform hover:scale-105"
+            className="btn-gradient-sm rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)]"
           >
             Começar
           </Link>
@@ -126,7 +125,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white hover:text-orange-400 transition-colors duration-200"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -137,8 +136,8 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-neutral-950 border-t border-neutral-800">
-          <div className="container mx-auto px-5 py-4">
+        <div className="md:hidden bg-neutral-950/95 backdrop-blur-xl border-t border-neutral-800/50">
+          <div className="container mx-auto px-6 py-4">
             {menuData?.map(renderMobileMenuItem)}
           </div>
         </div>

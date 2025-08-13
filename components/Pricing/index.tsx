@@ -6,67 +6,59 @@ const Pricing = () => {
   return (
     <>
       {/* <!-- ===== Pricing Table Start ===== --> */}
-      <section className="overflow-hidden pb-20 pt-15 lg:pb-25 xl:pb-30">
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+      <section className="overflow-hidden pb-20 pt-15 lg:pb-25 xl:pb-30 bg-neutral-950">
+        <div className="mx-auto max-w-c-1315 px-6 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
           <div className="animate_top mx-auto text-center">
             <SectionHeader
               headerInfo={{
-                title: `PRICING PLANS`,
-                subtitle: `Simple Pricing`,
-                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+                title: `PLANOS DE PREÇOS`,
+                subtitle: `Preços Simples`,
+                description: `Escolha o plano que melhor se adapta às suas necessidades de segurança e soberania digital.`,
               }}
             />
           </div>
           {/* <!-- Section Title End --> */}
         </div>
 
-        <div className="relative mx-auto mt-15 max-w-[1207px] px-4 md:px-8 xl:mt-20 xl:px-0">
-          <div className="absolute -bottom-15 -z-1 h-full w-full">
-            <Image
-              fill
-              src="./images/shape/shape-dotted-light.svg"
-              alt="Dotted"
-              className="dark:hidden"
-            />
-          </div>
-          <div className="flex flex-wrap justify-center gap-7.5 lg:flex-nowrap xl:gap-12.5">
+        <div className="relative mx-auto mt-16 max-w-[1207px] px-6 md:px-8 xl:mt-20 xl:px-0">
+          <div className="flex flex-wrap justify-center gap-8 lg:flex-nowrap xl:gap-12">
             {/* <!-- Pricing Item --> */}
-            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                $10{" "}
-                <span className="text-regular text-waterloo dark:text-manatee">
-                  /month
+            <div className="animate_top group relative rounded-xl border border-neutral-800/50 bg-neutral-900/50 backdrop-blur-sm p-8 shadow-2xl hover:shadow-[0_0_40px_rgba(255,138,41,0.1)] transition-all duration-300 hover:border-neutral-700/50 hover:bg-neutral-800/50 md:w-[45%] lg:w-1/3 xl:p-12">
+              <h3 className="mb-8 text-3xl font-bold text-white xl:text-sectiontitle3">
+                R$ 997{" "}
+                <span className="text-regular text-neutral-300">
+                  /mês
                 </span>
               </h3>
-              <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                Small Pack
+              <h4 className="mb-3 text-para2 font-medium text-white">
+                Plano Básico
               </h4>
-              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+              <p className="text-neutral-300">Ideal para pequenas empresas iniciando sua jornada de soberania digital.</p>
 
-              <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
+              <div className="mt-9 border-t border-neutral-800/50 pb-12 pt-9">
                 <ul>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    300 GB Storage
+                  <li className="mb-4 text-neutral-300 last:mb-0">
+                    ✅ Acesso ao ESH
                   </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Unlimited Photos and Videos
+                  <li className="mb-4 text-neutral-300 last:mb-0">
+                    ✅ Suporte por email
                   </li>
-                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                    Exclusive Support
+                  <li className="mb-4 text-neutral-300 opacity-40 last:mb-0">
+                    ❌ Suporte prioritário
                   </li>
-                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                    Custom Branding Strategy
+                  <li className="mb-4 text-neutral-300 opacity-40 last:mb-0">
+                    ❌ Treinamento personalizado
                   </li>
                 </ul>
               </div>
 
               <button
                 aria-label="Get the Plan button"
-                className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
+                className="group/btn inline-flex items-center gap-2.5 font-medium text-orange-400 transition-all duration-300 hover:text-orange-300"
               >
                 <span className="duration-300 group-hover/btn:pr-2">
-                  Get the Plan
+                  Escolher Plano
                 </span>
                 <svg
                   width="14"
@@ -83,96 +75,83 @@ const Pricing = () => {
             </div>
 
             {/* <!-- Pricing Item --> */}
-            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-              <div className="absolute -right-3.5 top-7.5 -rotate-90 rounded-bl-full rounded-tl-full bg-primary px-4.5 py-1.5 text-metatitle font-medium uppercase text-white">
+            <div className="animate_top group relative rounded-xl border border-neutral-800/50 bg-neutral-900/50 backdrop-blur-sm p-8 shadow-2xl hover:shadow-[0_0_40px_rgba(255,138,41,0.2)] transition-all duration-300 hover:border-neutral-700/50 hover:bg-neutral-800/50 md:w-[45%] lg:w-1/3 xl:p-12">
+              <div className="absolute -right-3.5 top-8 -rotate-90 rounded-bl-full rounded-tl-full bg-gradient-to-r from-orange-500 to-yellow-500 px-4.5 py-1.5 text-metatitle font-medium uppercase text-black">
                 popular
               </div>
 
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                $59{" "}
-                <span className="text-regular text-waterloo dark:text-manatee">
-                  /month
+              <h3 className="mb-8 text-3xl font-bold text-white xl:text-sectiontitle3">
+                R$ 1.997{" "}
+                <span className="text-regular text-neutral-300">
+                  /mês
                 </span>
               </h3>
-              <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                Medium Pack
+              <h4 className="mb-3 text-para2 font-medium text-white">
+                Plano Profissional
               </h4>
-              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+              <p className="text-neutral-300">Solução completa para empresas que buscam controle total e segurança máxima.</p>
 
-              <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
+              <div className="mt-9 border-t border-neutral-800/50 pb-12 pt-9">
                 <ul>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    300 GB Storage
+                  <li className="mb-4 text-neutral-300 last:mb-0">
+                    ✅ Acesso completo à plataforma
                   </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Unlimited Photos and Videos
+                  <li className="mb-4 text-neutral-300 last:mb-0">
+                    ✅ Suporte prioritário 24/7
                   </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Exclusive Support
+                  <li className="mb-4 text-neutral-300 last:mb-0">
+                    ✅ Treinamento da equipe
                   </li>
-                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                    Custom Branding Strategy
+                  <li className="mb-4 text-neutral-300 opacity-40 last:mb-0">
+                    ❌ Consultoria estratégica
                   </li>
                 </ul>
               </div>
 
               <button
                 aria-label="Get the Plan button"
-                className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
+                className="btn-gradient rounded-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.3)]"
               >
-                <span className="duration-300 group-hover/btn:pr-2">
-                  Get the Plan
-                </span>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z"
-                    fill="currentColor"
-                  />
-                </svg>
+                Escolher Plano
               </button>
             </div>
 
             {/* <!-- Pricing Item --> */}
-            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                $189{" "}
-                <span className="text-regular text-waterloo dark:text-manatee">
-                  /month
+            <div className="animate_top group relative rounded-xl border border-neutral-800/50 bg-neutral-900/50 backdrop-blur-sm p-8 shadow-2xl hover:shadow-[0_0_40px_rgba(255,138,41,0.1)] transition-all duration-300 hover:border-neutral-700/50 hover:bg-neutral-800/50 md:w-[45%] lg:w-1/3 xl:p-12">
+              <h3 className="mb-8 text-3xl font-bold text-white xl:text-sectiontitle3">
+                R$ 4.997{" "}
+                <span className="text-regular text-neutral-300">
+                  /mês
                 </span>
               </h3>
-              <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                Large Pack
+              <h4 className="mb-3 text-para2 font-medium text-white">
+                Plano Enterprise
               </h4>
-              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+              <p className="text-neutral-300">Para grandes corporações que exigem o máximo em segurança e personalização.</p>
 
-              <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
+              <div className="mt-9 border-t border-neutral-800/50 pb-12 pt-9">
                 <ul>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    300 GB Storage
+                  <li className="mb-4 text-neutral-300 last:mb-0">
+                    ✅ Tudo do plano Profissional
                   </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Unlimited Photos and Videos
+                  <li className="mb-4 text-neutral-300 last:mb-0">
+                    ✅ Consultoria estratégica
                   </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Exclusive Support
+                  <li className="mb-4 text-neutral-300 last:mb-0">
+                    ✅ Implementação personalizada
                   </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Custom Branding Strategy
+                  <li className="mb-4 text-neutral-300 last:mb-0">
+                    ✅ SLA garantido
                   </li>
                 </ul>
               </div>
 
               <button
                 aria-label="Get the Plan button"
-                className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
+                className="group/btn inline-flex items-center gap-2.5 font-medium text-orange-400 transition-all duration-300 hover:text-orange-300"
               >
                 <span className="duration-300 group-hover/btn:pr-2">
-                  Get the Plan
+                  Escolher Plano
                 </span>
                 <svg
                   width="14"
