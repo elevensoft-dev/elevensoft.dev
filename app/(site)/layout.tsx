@@ -3,7 +3,9 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Lines from "@/components/Lines";
+import ParticlesBackground from "@/components/ParticlesBackground";
 import ScrollToTop from "@/components/ScrollToTop";
+import SmoothScroll from "@/components/SmoothScroll";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 
@@ -47,6 +49,8 @@ export default function RootLayout({
             attribute="class"
             defaultTheme="dark"
           >
+            <ParticlesBackground />
+            <SmoothScroll />
             <Lines />
             <Header />
             <ToasterContext />
