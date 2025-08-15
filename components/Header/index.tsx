@@ -215,9 +215,9 @@ export default function Header() {
                 transition={{ duration: 0.3 }}
               >
                 <img 
-                  src="/images/logo/logo-light.png" 
+                  src="/uploads/logo/Logo_E_Eleven_Cor.png" 
                   alt="Logo Eleven, letra E" 
-                  className="w-36 h-18 transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(255,138,41,0.5)]" 
+                  className="w-18 h-18 transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(255,138,41,0.5)]" 
                 />
                 {/* Brilho sutil no logo */}
                 <motion.div
@@ -225,17 +225,6 @@ export default function Header() {
                   animate={{ opacity: [0, 0.3, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 />
-              </motion.div>
-              
-              {/* Texto da marca */}
-              <motion.div
-                className="hidden xl:block"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-              >
-                <div className="text-2xl font-bold gradient-text">ELEVENSOFT</div>
-                <div className="text-sm text-neutral-400 font-medium">Soberania Digital</div>
               </motion.div>
             </Link>
           </motion.div>
