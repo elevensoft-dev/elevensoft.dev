@@ -15,8 +15,8 @@ const FAQ = () => {
   return (
     <>
       {/* <!-- ===== FAQ Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30 bg-neutral-950">
-        <div className="relative mx-auto max-w-c-1235 px-6 md:px-8 xl:px-0">
+      <section className="section-elegant overflow-hidden bg-neutral-950">
+        <div className="container-elegant relative z-10">
           <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-32.5">
             <motion.div
               variants={{
@@ -37,7 +37,7 @@ const FAQ = () => {
               className="animate_left md:w-2/5 lg:w-1/2"
             >
               <span className="font-medium uppercase text-orange-400">
-                Nosso FAQ
+                FAQ Elevensoft
               </span>
               <h2 className="relative mb-6 text-3xl font-bold text-white xl:text-hero">
                 Perguntas{" "}
@@ -45,13 +45,16 @@ const FAQ = () => {
                   Frequentes
                 </span>
               </h2>
+              <p className="mb-8 text-neutral-300 leading-relaxed text-lg max-w-2xl">
+                Tire suas dúvidas sobre a Plataforma Elevensoft e como ela pode transformar sua segurança digital.
+              </p>
 
               <a
                 href="https://wa.me/message/X2DMDA457ASDN1"
                 target="_blank"
                 className="group mt-7.5 inline-flex items-center gap-2.5 text-orange-400 hover:text-orange-300 transition-colors duration-200"
               >
-                <span className="duration-300 group-hover:pr-2">Saber mais</span>
+                <span className="duration-300 group-hover:pr-2">Agendar Demonstração</span>
                 <svg
                   width="14"
                   height="14"

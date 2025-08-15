@@ -346,12 +346,32 @@
   
   /* Container com padding responsivo */
   .container-elegant {
-    @apply mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16;
+    @apply w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20;
   }
   
-  /* Seção com espaçamento elegante */
+  /* Container para o header com padding responsivo */
+  .container-hero {
+    @apply w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20;
+  }
+  
+  /* Container para o footer com espaçamento responsivo */
+  .container-wide {
+    @apply w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20;
+  }
+  
+  /* Seção com espaçamento elegante e responsivo */
   .section-elegant {
-    @apply py-20 lg:py-24 xl:py-32;
+    @apply py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32;
+  }
+  
+  /* Seção com espaçamento compacto */
+  .section-compact {
+    @apply py-12 sm:py-16 lg:py-20 xl:py-24;
+  }
+  
+  /* Seção com espaçamento generoso */
+  .section-generous {
+    @apply py-20 sm:py-24 lg:py-28 xl:py-32 2xl:py-36;
   }
   
   /* Badge de destaque */
@@ -374,10 +394,6 @@
 }
 
 @media (max-width: 768px) {
-  .container-elegant {
-    @apply px-4;
-  }
-  
   .section-elegant {
     @apply py-16 lg:py-20;
   }
@@ -455,8 +471,4 @@
 
 .testimonial-01 .swiper-pagination {
   @apply relative pt-[50px];
-}
-
-#supportCheckbox:checked ~ div span {
-  @apply opacity-100;
 }

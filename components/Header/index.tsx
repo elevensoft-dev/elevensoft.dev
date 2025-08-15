@@ -9,6 +9,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const pathname = usePathname();
 
   useEffect(() => {
@@ -19,8 +20,16 @@ export default function Header() {
       }
     }
 
+    function handleMouseMove(e: MouseEvent) {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    }
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, [isScrolled]);
 
   const renderMenuItem = (item: any) => {
@@ -32,8 +41,20 @@ export default function Header() {
           whileHover={{ y: -2 }}
           transition={{ duration: 0.2 }}
         >
-          <button className="transition-all duration-300 hover:text-white flex items-center gap-2 text-neutral-300 font-medium group-hover:text-orange-400">
-            {item.title}
+          {/* Área de ponte inferior para conectar com o submenu */}
+          <div className="absolute -bottom-4 left-0 right-0 h-4 bg-transparent" />
+          
+          <button className="relative overflow-hidden transition-all duration-300 flex items-center gap-2 text-neutral-300 font-medium group">
+            <span className="relative z-10">{item.title}</span>
+            {/* Efeito de preenchimento da esquerda para direita */}
+            <motion.span
+              className="absolute inset-0 text-orange-400 font-medium pointer-events-none"
+              initial={{ clipPath: 'inset(0 100% 0 0)' }}
+              whileHover={{ clipPath: 'inset(0 0% 0 0)' }}
+              transition={{ duration: 3, ease: "easeInOut" }}
+            >
+              {item.title}
+            </motion.span>
             <motion.svg 
               className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" 
               fill="none" 
@@ -44,13 +65,16 @@ export default function Header() {
             </motion.svg>
           </button>
           
-          {/* Submenu com animação */}
+          {/* Submenu com animações elegantes */}
           <motion.div 
-            className="absolute top-full left-0 mt-4 w-56 bg-neutral-900/95 backdrop-blur-xl border border-neutral-800/50 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden"
-            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            className="absolute top-full left-0 mt-0 w-56 bg-neutral-900/95 backdrop-blur-xl border border-neutral-800/50 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden"
+            initial={{ opacity: 0, y: 2, scale: 0.99 }}
             whileHover={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
           >
+            {/* Área de ponte superior para manter o submenu visível */}
+            <div className="absolute -top-4 left-0 right-0 h-4 bg-transparent" />
+            
             {/* Linha decorativa superior */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
             
@@ -94,11 +118,20 @@ export default function Header() {
         >
           <Link
             href={item.path}
-            className={`relative transition-all duration-300 hover:text-white text-neutral-300 font-medium ${
+            className={`relative overflow-hidden transition-all duration-300 text-neutral-300 font-medium ${
               pathname === item.path ? 'text-white' : ''
             } group`}
           >
-            {item.title}
+            <span className="relative z-10">{item.title}</span>
+            {/* Efeito de preenchimento da esquerda para direita */}
+            <motion.span
+              className="absolute inset-0 text-orange-400 font-medium pointer-events-none"
+              initial={{ clipPath: 'inset(0 100% 0 0)' }}
+              whileHover={{ clipPath: 'inset(0 0% 0 0)' }}
+              transition={{ duration: 3, ease: "easeInOut" }}
+            >
+              {item.title}
+            </motion.span>
             {/* Linha de destaque para item ativo */}
             {pathname === item.path && (
               <motion.div
@@ -181,12 +214,21 @@ export default function Header() {
   };
 
   return (
-    <motion.header
-      className={`z-30 sticky top-0 w-full transition-all duration-500 border-b ${
-        isScrolled 
-          ? 'bg-neutral-950/95 backdrop-blur-xl border-neutral-800/50 shadow-2xl' 
-          : 'bg-transparent border-transparent'
-      }`}
+    <>
+      {/* Aura laranja que segue o mouse */}
+      <div
+        className="fixed inset-0 pointer-events-none z-50"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 138, 41, 0.15), transparent 40%)`
+        }}
+      />
+      
+      <motion.header
+        className={`z-40 sticky top-0 w-full transition-all duration-500 border-b ${
+          isScrolled 
+            ? 'bg-neutral-950/95 backdrop-blur-xl border-neutral-800/50 shadow-2xl' 
+            : 'bg-transparent border-transparent'
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -363,5 +405,6 @@ export default function Header() {
         )}
       </AnimatePresence>
     </motion.header>
+    </>
   );
 }

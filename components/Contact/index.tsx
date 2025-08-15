@@ -56,226 +56,418 @@ const Contact = () => {
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
-      <section id="support" className="px-6 md:px-8 2xl:px-0 py-20 lg:py-25 xl:py-30 bg-neutral-950">
-        <div className="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
-          <div className="flex flex-col-reverse flex-wrap gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20">
-            {!isSubmitting &&
-              !isLoading &&
-              !isSubmitSuccessful &&
-              validatingFields && (
-                <motion.div
-                  variants={{
-                    hidden: {
-                      opacity: 0,
-                      y: -20,
-                    },
+      <section id="support" className="section-elegant bg-neutral-950 relative overflow-hidden">
+        {/* Background decorativo */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,138,41,0.03),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,193,7,0.03),transparent_50%)]"></div>
+        
+        <div className="container-elegant relative z-10">
+          <div className="text-center mb-16 lg:mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <span className="inline-block px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
+                📧 Entre em Contato
+              </span>
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6">
+                Vamos Conversar sobre{" "}
+                <span className="gradient-text">Soberania Digital</span>
+              </h2>
+              <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+                Agende uma demonstração personalizada e descubra como a Plataforma Elevensoft pode transformar sua segurança digital.
+              </p>
+            </motion.div>
+          </div>
 
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                    },
-                  }}
-                  initial="hidden"
-                  whileInView="visible"
-                  transition={{ duration: 1, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="animate_top w-full rounded-xl bg-neutral-900/50 backdrop-blur-sm p-7.5 shadow-2xl border border-neutral-800/50 dark:bg-neutral-900/50 md:w-3/5 lg:w-3/4 xl:p-15"
-                >
-                  <h2 className="mb-15 text-3xl font-semibold text-white xl:text-sectiontitle2">
-                    Envia uma mensagem
-                  </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20">
+            {/* Formulário Principal */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="lg:col-span-7 xl:col-span-8"
+            >
+              <div className="bg-neutral-900/60 backdrop-blur-xl border border-neutral-800/50 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+                {/* Linha decorativa superior */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
+                
+                {/* Elementos decorativos de fundo */}
+                <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"></div>
 
-                  <form onSubmit={onSubmit}>
-                    <div className="relative mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
-                      <input
-                        type="text"
-                        placeholder="Nome completo"
-                        className="w-full border-b border-neutral-700 bg-transparent pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
-                        {...register("name")}
-                      />
-                      {errors.name?.message && (
-                        <p className="absolute -bottom-5 left-0 text-xs text-red-400">
-                          {errors.name?.message}
-                        </p>
-                      )}
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                  <span className="text-3xl">✉️</span>
+                  Envie sua Mensagem
+                </h3>
 
-                      <input
-                        type="email"
-                        placeholder="Endereço de email"
-                        className="w-full border-b border-neutral-700 bg-transparent pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
-                        {...register("email")}
-                      />
-                      {errors.email?.message && (
-                        <p className="absolute -bottom-5 right-0 text-xs text-red-400">
-                          {errors.email?.message}
-                        </p>
-                      )}
-                    </div>
-
-                    <div className="relative mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
-                      <input
-                        type="text"
-                        placeholder="Assunto"
-                        className="w-full border-b border-neutral-700 bg-transparent pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
-                        {...register("subject")}
-                      />
-                      {errors.subject?.message && (
-                        <p className="absolute -bottom-5 left-0 text-xs text-red-400">
-                          {errors.subject?.message}
-                        </p>
-                      )}
-
-                      <Controller
-                        name="phone"
-                        control={control}
-                        render={(field) => (
-                          <input
-                            type="text"
-                            placeholder="Número do celular"
-                            className="w-full border-b border-neutral-700 bg-transparent pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
-                            {...register("phone")}
-                          />
+                {!isSubmitting && !isLoading && !isSubmitSuccessful && (
+                  <form onSubmit={onSubmit} className="space-y-6">
+                    {/* Nome e Email */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="relative">
+                        <label className="block text-sm font-medium text-neutral-300 mb-2">
+                          Nome Completo *
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Digite seu nome completo"
+                          className={`w-full px-4 py-4 bg-neutral-800/50 border-2 rounded-xl text-white placeholder:text-neutral-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
+                            errors.name ? 'border-red-500' : 'border-neutral-700 hover:border-neutral-600'
+                          }`}
+                          {...register("name")}
+                        />
+                        {errors.name?.message && (
+                          <motion.p 
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="absolute -bottom-6 left-0 text-sm text-red-400 flex items-center gap-2"
+                          >
+                            <span className="w-2 h-2 bg-red-400 rounded-full"></span>
+                            {errors.name?.message}
+                          </motion.p>
                         )}
-                      />
-                      {errors.phone?.message && (
-                        <p className="absolute -bottom-5 right-0 text-xs text-red-400">
-                          {errors.phone?.message}
-                        </p>
-                      )}
+                      </div>
+
+                      <div className="relative">
+                        <label className="block text-sm font-medium text-neutral-300 mb-2">
+                          Email *
+                        </label>
+                        <input
+                          type="email"
+                          placeholder="seu@email.com"
+                          className={`w-full px-4 py-4 bg-neutral-800/50 border-2 rounded-xl text-white placeholder:text-neutral-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
+                            errors.email ? 'border-red-500' : 'border-neutral-700 hover:border-neutral-600'
+                          }`}
+                          {...register("email")}
+                        />
+                        {errors.email?.message && (
+                          <motion.p 
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="absolute -bottom-6 left-0 text-sm text-red-400 flex items-center gap-2"
+                          >
+                            <span className="w-2 h-2 bg-red-400 rounded-full"></span>
+                            {errors.email?.message}
+                          </motion.p>
+                        )}
+                      </div>
                     </div>
 
-                    <div className="relative mb-11.5 flex">
+                    {/* Assunto e Telefone */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="relative">
+                        <label className="block text-sm font-medium text-neutral-300 mb-2">
+                          Assunto *
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Qual é o assunto?"
+                          className={`w-full px-4 py-4 bg-neutral-800/50 border-2 rounded-xl text-white placeholder:text-neutral-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
+                            errors.subject ? 'border-red-500' : 'border-neutral-700 hover:border-neutral-600'
+                          }`}
+                          {...register("subject")}
+                        />
+                        {errors.subject?.message && (
+                          <motion.p 
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="absolute -bottom-6 left-0 text-sm text-red-400 flex items-center gap-2"
+                          >
+                            <span className="w-2 h-2 bg-red-400 rounded-full"></span>
+                            {errors.subject?.message}
+                          </motion.p>
+                        )}
+                      </div>
+
+                      <div className="relative">
+                        <label className="block text-sm font-medium text-neutral-300 mb-2">
+                          Telefone *
+                        </label>
+                        <input
+                          type="tel"
+                          placeholder="(48) 99999-9999"
+                          className={`w-full px-4 py-4 bg-neutral-800/50 border-2 rounded-xl text-white placeholder:text-neutral-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
+                            errors.phone ? 'border-red-500' : 'border-neutral-700 hover:border-neutral-600'
+                          }`}
+                          {...register("phone")}
+                        />
+                        {errors.phone?.message && (
+                          <motion.p 
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="absolute -bottom-6 left-0 text-sm text-red-400 flex items-center gap-2"
+                          >
+                            <span className="w-2 h-2 bg-red-400 rounded-full"></span>
+                            {errors.phone?.message}
+                          </motion.p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Mensagem */}
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-neutral-300 mb-2">
+                        Mensagem *
+                      </label>
                       <textarea
-                        placeholder="Mensagem"
-                        rows={4}
-                        className="w-full border-b border-neutral-700 bg-transparent text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none"
+                        placeholder="Conte-nos sobre sua necessidade de segurança digital..."
+                        rows={5}
+                        className={`w-full px-4 py-4 bg-neutral-800/50 border-2 rounded-xl text-white placeholder:text-neutral-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 resize-none ${
+                          errors.description ? 'border-red-500' : 'border-neutral-700 hover:border-neutral-600'
+                        }`}
                         {...register("description")}
                       ></textarea>
                       {errors.description?.message && (
-                        <p className="absolute -bottom-5 left-0 text-xs text-red-400">
+                        <motion.p 
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="absolute -bottom-6 left-0 text-sm text-red-400 flex items-center gap-2"
+                        >
+                          <span className="w-2 h-2 bg-red-400 rounded-full"></span>
                           {errors.description?.message}
-                        </p>
+                        </motion.p>
                       )}
                     </div>
 
-                    <div className="flex flex-wrap gap-4 xl:justify-between ">
-                      <div className="mb-4 flex md:mb-0">
+                    {/* Checkbox e Botão */}
+                    <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pt-4">
+                      <div className="flex items-start gap-3">
                         <input
-                          id="default-checkbox"
+                          id="terms-checkbox"
                           type="checkbox"
                           className="peer sr-only"
+                          required
                         />
-                        <span className="group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded border-neutral-600 bg-neutral-700 text-orange-400 peer-checked:bg-orange-500">
-                          <svg
-                            className="opacity-0 peer-checked:group-[]:opacity-100"
-                            width="10"
-                            height="8"
-                            viewBox="0 0 10 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M9.70704 0.792787C9.89451 0.980314 9.99983 1.23462 9.99983 1.49979C9.99983 1.76495 9.89451 2.01926 9.70704 2.20679L4.70704 7.20679C4.51951 7.39426 4.26521 7.49957 4.00004 7.49957C3.73488 7.49957 3.48057 7.39426 3.29304 7.20679L0.293041 4.20679C0.110883 4.01818 0.0100885 3.76558 0.0123669 3.50339C0.0146453 3.24119 0.119814 2.99038 0.305222 2.80497C0.490631 2.61956 0.741443 2.51439 1.00364 2.51211C1.26584 2.50983 1.51844 2.61063 1.70704 2.79279L4.00004 5.08579L8.29304 0.792787C8.48057 0.605316 8.73488 0.5 9.00004 0.5C9.26521 0.5 9.51951 0.605316 9.70704 0.792787Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <label
-                          htmlFor="default-checkbox"
-                          className="flex max-w-[425px] cursor-pointer select-none pl-5 text-neutral-300"
+                        <label 
+                          htmlFor="terms-checkbox"
+                          className="flex items-start gap-3 cursor-pointer group"
                         >
-                          Concordo com termos de "Formulário" e consente com o
-                          uso de cookies no navegador.
+                          <span className="flex-shrink-0 w-5 h-5 border-2 border-neutral-600 rounded transition-all duration-300 peer-checked:bg-orange-500 peer-checked:border-orange-500 group-hover:border-orange-400 flex items-center justify-center">
+                            <svg
+                              className="w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity duration-300"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                            >
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          </span>
+                          <span className="text-sm text-neutral-300 leading-relaxed">
+                            Concordo com os{" "}
+                            <a href="/termos" className="text-orange-400 hover:text-orange-300 underline">
+                              termos de uso
+                            </a>{" "}
+                            e{" "}
+                            <a href="/privacidade" className="text-orange-400 hover:text-orange-300 underline">
+                              política de privacidade
+                            </a>
+                          </span>
                         </label>
                       </div>
 
-                      <button
+                      <motion.button
                         type="submit"
-                        aria-label="send message"
-                        className="btn-gradient rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)]"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold rounded-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,138,41,0.4)] flex items-center gap-3"
                       >
-                        <span>Enviar mensagem</span>
-                        <svg
-                          className="fill-black"
-                          width="14"
-                          height="14"
-                          viewBox="0 0 14 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <span>Enviar Mensagem</span>
+                        <motion.svg 
+                          className="w-5 h-5" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity }}
                         >
-                          <path
-                            d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
-                            fill=""
-                          />
-                        </svg>
-                      </button>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </motion.svg>
+                      </motion.button>
                     </div>
                   </form>
-                </motion.div>
-              )}
-            {(isSubmitting || isLoading) && (
-              <div className="flex min-h-[620px] w-full animate-pulse items-center justify-center rounded-xl bg-neutral-800/50 backdrop-blur-sm">
-                <span className="h-10 w-10 animate-spin rounded-full border-2 border-neutral-600 border-t-orange-500"></span>
-              </div>
-            )}
-            {isSubmitSuccessful && (
-              <div className="min-h-[620px] w-full card-modern flex flex-col items-center justify-center">
-                <h1 className="text-xl font-bold text-white mb-2">Tudo certo!</h1>
-                <p className="text-base text-neutral-300">
-                  Sua mensagem foi enviada ao time comercial!
-                </p>
-              </div>
-            )}
+                )}
 
+                {/* Estados de Loading e Sucesso */}
+                {(isSubmitting || isLoading) && (
+                  <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="flex flex-col items-center justify-center py-16"
+                  >
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                      className="w-16 h-16 border-4 border-neutral-700 border-t-orange-500 rounded-full mb-6"
+                    />
+                    <p className="text-xl text-white font-medium">Enviando sua mensagem...</p>
+                    <p className="text-neutral-400">Aguarde um momento</p>
+                  </motion.div>
+                )}
+
+                {isSubmitSuccessful && (
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="flex flex-col items-center justify-center py-16 text-center"
+                  >
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                      className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mb-6"
+                    >
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </motion.div>
+                    <h3 className="text-2xl font-bold text-white mb-3">Mensagem Enviada!</h3>
+                    <p className="text-neutral-300 max-w-md">
+                      Obrigado pelo contato! Nossa equipe entrará em contato em até 24 horas.
+                    </p>
+                  </motion.div>
+                )}
+              </div>
+            </motion.div>
+
+            {/* Informações de Contato */}
             <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 2, delay: 0.1 }}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
+              className="lg:col-span-5 xl:col-span-4"
             >
-              <h2 className="mb-12.5 text-3xl font-semibold text-white xl:text-sectiontitle2">
-                Encontre a gente
-              </h2>
+              <div className="bg-neutral-900/60 backdrop-blur-xl border border-neutral-800/50 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden h-full">
+                {/* Linha decorativa superior */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
+                
+                {/* Elementos decorativos de fundo */}
+                <div className="absolute -top-20 -left-20 w-40 h-40 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl"></div>
 
-              <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-white">
-                  Nossa localização
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                  <span className="text-3xl">📍</span>
+                  Encontre a Gente
                 </h3>
-                <p className="text-neutral-300">Pedra Branca, Palhoça - Santa Catarina</p>
-              </div>
-              <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-white">
-                  Endereço de email
-                </h3>
-                <p className="text-neutral-300">
-                  <a href="mailto:ola@elevensoft.dev?subject=Interessado em construir projeto&body=Olá, sou o [Nome do Cliente]. Gostaria de conversar sobre minha proposta." className="hover:text-orange-400 transition-colors duration-200">
-                    ola@elevensoft.dev
-                  </a>
-                </p>
-              </div>
-              <div>
-                <h4 className="mb-4 text-metatitle3 font-medium text-white">
-                  Telefone
-                </h4>
-                <p className="text-neutral-300">
-                  <a href="tel:+5548988168221" target="_blank" className="hover:text-orange-400 transition-colors duration-200">
-                    +55 48 98816-8221
-                  </a>
-                </p>
+
+                <div className="space-y-8">
+                  {/* Localização */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    viewport={{ once: true }}
+                    className="group"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-2xl">🏢</span>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
+                          Nossa Localização
+                        </h4>
+                        <p className="text-neutral-300 leading-relaxed">
+                          Pedra Branca, Palhoça - Santa Catarina
+                        </p>
+                        <p className="text-sm text-neutral-400 mt-1">
+                          Centro de inovação e tecnologia
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Email */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="group"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-2xl">📧</span>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
+                          Email
+                        </h4>
+                        <a 
+                          href="mailto:ola@elevensoft.dev?subject=Interessado na Plataforma Elevensoft&body=Olá! Gostaria de saber mais sobre como a Elevensoft pode ajudar minha empresa com segurança digital." 
+                          className="text-orange-400 hover:text-orange-300 transition-colors duration-300 text-lg font-medium break-all"
+                        >
+                          ola@elevensoft.dev
+                        </a>
+                        <p className="text-sm text-neutral-400 mt-1">
+                          Resposta em até 24 horas
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Telefone */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="group"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-2xl">📱</span>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
+                          WhatsApp
+                        </h4>
+                        <a 
+                          href="https://wa.me/message/X2DMDA457ASDN1" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-orange-400 hover:text-orange-300 transition-colors duration-300 text-lg font-medium flex items-center gap-2"
+                        >
+                          +55 48 98816-8221
+                          <span className="text-sm">→</span>
+                        </a>
+                        <p className="text-sm text-neutral-400 mt-1">
+                          Atendimento direto via WhatsApp
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* CTA Adicional */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    viewport={{ once: true }}
+                    className="pt-6 border-t border-neutral-800/50"
+                  >
+                    <div className="bg-gradient-to-r from-orange-500/10 to-yellow-500/10 border border-orange-500/20 rounded-2xl p-6 text-center">
+                      <h5 className="text-lg font-semibold text-white mb-3">
+                        🚀 Pronto para a Soberania Digital?
+                      </h5>
+                      <p className="text-neutral-300 mb-4 text-sm">
+                        Agende uma demonstração personalizada e descubra como transformar sua segurança.
+                      </p>
+                      <a
+                        href="https://wa.me/message/X2DMDA457ASDN1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold rounded-xl hover:shadow-[0_0_20px_rgba(255,138,41,0.4)] transition-all duration-300"
+                      >
+                        <span>Agendar Demo</span>
+                        <span className="text-lg">→</span>
+                      </a>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
             </motion.div>
           </div>
