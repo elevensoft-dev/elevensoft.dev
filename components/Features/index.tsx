@@ -86,7 +86,6 @@ const Feature = () => {
               >
                 <SingleFeature 
                   feature={feature} 
-                  index={index}
                 />
               </motion.div>
             ))}

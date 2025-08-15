@@ -82,11 +82,11 @@ export default function Header() {
     </div>
   );
 
-  // Renderizar item do menu simples
+  // Render simple menu item
   const renderMenuItem = (item: MenuItem) => (
     <Link
       key={item.id}
-      href={item.path}
+      href={item.path || '#'}
       className={`relative px-4 py-2 text-neutral-300 hover:text-white transition-all duration-300 hover:scale-105 group ${
         currentPath === item.path ? 'text-white' : ''
       }`}
@@ -135,7 +135,7 @@ export default function Header() {
       return (
         <Link
           key={item.id}
-          href={item.path}
+          href={item.path || '#'}
           className={`block transition-all duration-200 py-3 text-lg relative ${
             currentPath === item.path 
               ? 'text-white' 

@@ -5,7 +5,7 @@ import BlogData from "@/components/Blog/blogData";
 
 const SingleBlogPage = async ({ params }: { params: { id: number } }) => {
   const blogMetadata = BlogData.find((blog) => blog._id === Number(params.id));
-  console.log("blogMetadata", blogMetadata);
+  // Blog metadata loaded
 
   return (
     <>

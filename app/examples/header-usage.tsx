@@ -3,7 +3,7 @@
 import Header from "../components/header";
 import { useHeader } from "../hooks/use-header";
 
-// Exemplo 1: Uso básico do header
+// Example 1: Basic header usage
 export function BasicHeaderExample() {
   return (
     <div className="min-h-screen bg-neutral-950">
@@ -15,7 +15,7 @@ export function BasicHeaderExample() {
   );
 }
 
-// Exemplo 2: Header com controle de estado personalizado
+// Example 2: Header with custom state control
 export function CustomHeaderExample() {
   const { isScrolled, scrollProgress } = useHeader();
 
@@ -23,7 +23,7 @@ export function CustomHeaderExample() {
     <div className="min-h-screen bg-neutral-950">
       <Header />
       
-      {/* Indicador personalizado de scroll */}
+      {/* Custom scroll indicator */}
       {isScrolled && (
         <div className="fixed top-4 right-4 bg-neutral-900/90 backdrop-blur-sm border border-neutral-800/50 rounded-full px-4 py-2 text-white text-sm z-50">
           Scroll: {Math.round(scrollProgress)}%
@@ -33,14 +33,14 @@ export function CustomHeaderExample() {
       <main className="pt-20 px-6">
         <h1 className="text-4xl font-bold text-white">Header Personalizado</h1>
         <p className="text-neutral-300 mt-4">
-          Este exemplo mostra como usar o hook useHeader para criar funcionalidades personalizadas.
+          This example shows how to use the useHeader hook to create custom functionality.
         </p>
       </main>
     </div>
   );
 }
 
-// Exemplo 3: Header com tema personalizado
+// Example 3: Header with custom theme
 export function ThemedHeaderExample() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 to-purple-950">
@@ -48,20 +48,19 @@ export function ThemedHeaderExample() {
       <main className="pt-20 px-6">
         <h1 className="text-4xl font-bold text-white">Header com Tema Azul</h1>
         <p className="text-blue-200 mt-4">
-          Para personalizar o tema, edite o arquivo header-config.ts
+          To customize the theme, edit the header-config.ts file
         </p>
       </main>
     </div>
   );
 }
 
-// Exemplo 4: Header com navegação personalizada
+// Example 4: Header with custom navigation
 export function CustomNavigationExample() {
   const { closeMobileMenu } = useHeader();
 
   const handleCustomAction = () => {
-    // Ação personalizada
-    console.log('Ação personalizada executada');
+    // Custom action executed
     closeMobileMenu();
   };
 
@@ -81,22 +80,22 @@ export function CustomNavigationExample() {
   );
 }
 
-// Exemplo 5: Header com múltiplas instâncias (não recomendado, mas possível)
+// Example 5: Header with multiple instances (not recommended, but possible)
 export function MultipleHeadersExample() {
   return (
     <div className="min-h-screen bg-neutral-950">
-      {/* Header principal */}
+      {/* Main header */}
       <Header />
       
-      {/* Conteúdo principal */}
+      {/* Main content */}
       <main className="pt-20 px-6">
         <h1 className="text-4xl font-bold text-white">Múltiplos Headers</h1>
         <p className="text-neutral-300 mt-4">
-          Este exemplo mostra como usar múltiplas instâncias do header (não recomendado para produção).
+          This example shows how to use multiple header instances (not recommended for production).
         </p>
       </main>
       
-      {/* Header secundário (exemplo de uso em modal ou sidebar) */}
+      {/* Secondary header (example usage in modal or sidebar) */}
       <div className="fixed bottom-0 left-0 w-full bg-neutral-900/95 backdrop-blur-xl border-t border-neutral-800/50 p-4">
         <div className="container mx-auto flex items-center justify-between">
           <span className="text-white">Header Secundário</span>

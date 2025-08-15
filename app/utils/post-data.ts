@@ -9,8 +9,8 @@ export const postData = async (data: any, route: string) => {
     });
 
     const result = await response.json();
-    console.log(result);
+    // Data posted successfully
   } catch (error) {
-    console.error("Error:", error);
+    // Error occurred while posting data
   }
 };

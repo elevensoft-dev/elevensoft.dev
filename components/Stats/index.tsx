@@ -11,7 +11,7 @@ interface Stat {
 
 const Stats = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true });
 
   const stats: Stat[] = [
     {

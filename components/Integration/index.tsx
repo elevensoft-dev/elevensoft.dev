@@ -10,11 +10,8 @@ const Integration = () => {
         <div className="mx-auto max-w-c-1390 px-6 md:px-8 2xl:px-0">
           {/* <!-- Section Title Start --> */}
           <SectionHeader
-            headerInfo={{
-              title: `Soluções`,
-              subtitle: `Software e serviço projetados para cada segmento`,
-              description: `Produtos meticulosamente projetados para atender às necessidades específicas de cada segmento de mercado, garantindo soluções personalizadas que impulsionam a eficiência e o crescimento dos nossos clientes.`,
-            }}
+            title="Soluções"
+            subtitle="Software e serviço projetados para cada segmento"
           />
 
           {/* <!-- Section Title End --> */}

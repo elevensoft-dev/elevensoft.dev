@@ -1,5 +1,5 @@
 export const headerConfig = {
-  // Cores do tema
+  // Theme colors
   colors: {
     primary: {
       from: 'from-orange-500',
@@ -24,7 +24,7 @@ export const headerConfig = {
     },
   },
 
-  // Animações e transições
+  // Animations and transitions
   animations: {
     duration: 'duration-300',
     durationSlow: 'duration-500',
@@ -35,7 +35,7 @@ export const headerConfig = {
     },
   },
 
-  // Breakpoints responsivos
+  // Responsive breakpoints
   breakpoints: {
     mobile: 'lg:hidden',
     desktop: 'hidden lg:flex',
@@ -49,17 +49,17 @@ export const headerConfig = {
     dropdown: 'z-50',
   },
 
-  // Altura do header
+  // Header height
   height: 'h-20',
 
-  // Padding e espaçamentos
+  // Padding and spacing
   spacing: {
     container: 'px-6',
     nav: 'gap-2',
     button: 'px-6 py-3',
   },
 
-  // Efeitos de sombra
+  // Shadow effects
   shadows: {
     button: 'hover:shadow-[0_0_40px_rgba(255,138,41,0.4)]',
     header: 'shadow-2xl',

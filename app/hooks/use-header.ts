@@ -12,7 +12,7 @@ export const useHeader = (): HeaderHook => {
     currentPath: pathname,
   });
 
-  // Gerenciar scroll e backdrop blur
+  // Manage scroll and backdrop blur
   const handleScroll = useCallback(() => {
     const scrollY = window.scrollY;
     const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -25,7 +25,7 @@ export const useHeader = (): HeaderHook => {
     }));
   }, []);
 
-  // Atualizar página atual quando mudar
+  // Update current page when pathname changes
   useEffect(() => {
     setState(prev => ({
       ...prev,
@@ -33,7 +33,7 @@ export const useHeader = (): HeaderHook => {
     }));
   }, [pathname]);
 
-  // Gerenciar dropdowns
+  // Manage dropdowns
   const toggleDropdown = useCallback((dropdownId: string) => {
     setState(prev => ({
       ...prev,
@@ -41,7 +41,7 @@ export const useHeader = (): HeaderHook => {
     }));
   }, []);
 
-  // Fechar dropdowns ao clicar fora
+  // Close dropdowns when clicking outside
   const closeDropdowns = useCallback(() => {
     setState(prev => ({
       ...prev,
@@ -49,7 +49,7 @@ export const useHeader = (): HeaderHook => {
     }));
   }, []);
 
-  // Toggle menu mobile
+  // Toggle mobile menu
   const toggleMobileMenu = useCallback(() => {
     setState(prev => ({
       ...prev,
@@ -57,7 +57,7 @@ export const useHeader = (): HeaderHook => {
     }));
   }, []);
 
-  // Fechar menu mobile
+  // Close mobile menu
   const closeMobileMenu = useCallback(() => {
     setState(prev => ({
       ...prev,
@@ -65,7 +65,7 @@ export const useHeader = (): HeaderHook => {
     }));
   }, []);
 
-  // Fechar menu mobile ao redimensionar
+  // Close mobile menu on resize
   const handleResize = useCallback(() => {
     if (window.innerWidth >= 768) {
       setState(prev => ({
@@ -81,7 +81,7 @@ export const useHeader = (): HeaderHook => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleResize);
     
-    // Fechar dropdowns ao clicar fora
+    // Close dropdowns when clicking outside
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       if (!target.closest('[data-dropdown]')) {

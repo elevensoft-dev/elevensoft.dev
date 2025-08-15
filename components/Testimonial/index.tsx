@@ -19,11 +19,8 @@ const Testimonial = () => {
           {/* <!-- Section Title Start --> */}
           <div className="animate_top mx-auto text-center">
             <SectionHeader
-              headerInfo={{
-                title: `DEPOIMENTOS`,
-                subtitle: `O que nossos clientes dizem`,
-                description: `Descubra como a plataforma Elevensoft está transformando a segurança digital de empresas ao redor do mundo.`,
-              }}
+              title="DEPOIMENTOS"
+              subtitle="O que nossos clientes dizem"
             />
           </div>
           {/* <!-- Section Title End --> */}

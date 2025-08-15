@@ -6,7 +6,7 @@ import { useState } from "react";
 const Footer = () => {
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
   
-  // Ano atual dinâmico
+  // Current year for dynamic copyright
   const currentYear = new Date().getFullYear();
 
   const footerSections = [

@@ -11,11 +11,8 @@ const Pricing = () => {
           {/* <!-- Section Title Start --> */}
           <div className="animate_top mx-auto text-center">
             <SectionHeader
-              headerInfo={{
-                title: `PLANOS DE PREÇOS`,
-                subtitle: `Preços Simples`,
-                description: `Escolha o plano que melhor se adapta às suas necessidades de segurança e soberania digital.`,
-              }}
+              title="PLANOS DE PREÇOS"
+              subtitle="Preços Simples"
             />
           </div>
           {/* <!-- Section Title End --> */}
