@@ -86,7 +86,7 @@ const CTA = () => {
             
             <div className="relative z-10 mx-auto max-w-4xl text-center">
               <motion.h2 
-                className="mb-6 text-3xl font-bold text-black md:text-4xl lg:text-5xl xl:text-6xl leading-tight"
+                className="title-responsive-lg text-black font-bold leading-tight"
                 variants={itemVariants}
               >
                 Pronto para abandonar o caos?

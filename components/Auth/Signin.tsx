@@ -33,7 +33,7 @@ const Signin = () => {
             viewport={{ once: true }}
             className="animate_top rounded-xl card-modern px-7.5 pt-7.5 shadow-2xl xl:px-15 xl:pt-15"
           >
-            <h2 className="mb-15 text-center text-3xl font-semibold text-white xl:text-sectiontitle2">
+            <h2 className="title-section text-center mb-15">
               Login na Sua Conta
             </h2>
             <div className="flex flex-col">

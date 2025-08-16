@@ -11,7 +11,7 @@ export default function PlatformPage() {
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-20">
-          <h1 className="mb-6 text-4xl font-bold lg:text-5xl xl:text-6xl">
+          <h1 className="title-product-hero">
             A Visão Estratégica da{" "}
             <span className="gradient-text-primary">
               Soberania Digital
@@ -23,10 +23,12 @@ export default function PlatformPage() {
           </p>
         </div>
 
-        {/* Diagrama Interativo */}
+        {/* Interactive Diagram */}
         <div className="mb-20">
           <div className="card-modern">
-            <h2 className="text-2xl font-bold text-center mb-8 text-white">Plataforma Unificada Elevensoft</h2>
+            <h2 className="title-product-section">
+              Plataforma Unificada Elevensoft
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl p-6 mb-4 shadow-lg">
@@ -68,10 +70,12 @@ export default function PlatformPage() {
           </div>
         </div>
 
-        {/* Narrativa da Sinergia */}
+        {/* Synergy Narrative */}
         <div className="space-y-12">
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-8 text-white">A Jornada da Soberania Digital</h2>
+            <h2 className="title-product-section">
+              A Jornada da Soberania Digital
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -81,7 +85,7 @@ export default function PlatformPage() {
                   <span className="text-2xl">1</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="title-product-feature">
                     Passo 1: BLINDE A FUNDAÇÃO com EL GUARDIAN
                   </h3>
                   <p className="text-neutral-300 leading-relaxed">
@@ -96,7 +100,7 @@ export default function PlatformPage() {
                   <span className="text-2xl">2</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="title-product-feature">
                     Passo 2: CONTROLE AS CHAVES DO REINO com KEYRING
                   </h3>
                   <p className="text-neutral-300 leading-relaxed">
@@ -112,8 +116,8 @@ export default function PlatformPage() {
                   <span className="text-2xl">3</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    Passo 3: DOMINE O ACESSO com ESH
+                  <h3 className="title-product-feature">
+                    Passo 3: CENTRALIZE O CONTROLE com ESH
                   </h3>
                   <p className="text-neutral-300 leading-relaxed">
                     O cérebro que centraliza, audita e comanda todo o acesso humano à infraestrutura crítica.
@@ -126,8 +130,8 @@ export default function PlatformPage() {
                   <span className="text-2xl">4</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    Passo 4: EXECUTE COM PRECISÃO CIRÚRGICA com ESUT
+                  <h3 className="title-product-feature">
+                    Passo 4: EXECUTE COM PRECISÃO com ESUT
                   </h3>
                   <p className="text-neutral-300 leading-relaxed">
                     O executor que transforma políticas complexas em ações simples, guiadas e à prova de erros no terminal.
@@ -138,9 +142,11 @@ export default function PlatformPage() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-20">
-          <h3 className="text-2xl font-bold mb-6 text-white">Pronto para recuperar sua Soberania Digital?</h3>
+        {/* Final CTA */}
+        <div className="text-center">
+          <h3 className="title-product-feature">
+            Pronto para recuperar sua Soberania Digital?
+          </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://wa.me/message/X2DMDA457ASDN1"

@@ -56,10 +56,10 @@ const Hero = () => {
   return (
     <>
       <section className="relative overflow-hidden py-32 lg:py-40 xl:py-48 min-h-screen flex items-center">
-        {/* Background com gradiente galáctico */}
+        {/* Background with galactic gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-950 to-neutral-900"></div>
         
-        {/* Elementos de fundo decorativos com movimento */}
+        {/* Decorative background elements with movement */}
         <div 
           className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,138,41,0.08),transparent_50%)]"
           style={{
@@ -73,7 +73,7 @@ const Hero = () => {
           }}
         ></div>
         
-        {/* Grid de fundo tecnológico */}
+        {/* Technological background grid */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
             backgroundImage: `
@@ -85,7 +85,7 @@ const Hero = () => {
           }}></div>
         </div>
 
-        {/* Partículas flutuantes */}
+        {/* Floating particles */}
         <motion.div
           className="absolute top-20 left-20 w-2 h-2 bg-orange-400 rounded-full opacity-60"
           animate={{ y: [-20, 20, -20], opacity: [0.6, 1, 0.6] }}
@@ -110,7 +110,7 @@ const Hero = () => {
             animate="visible"
           >
             <motion.div className="lg:w-1/2" variants={itemVariants}>
-              {/* Badge de destaque */}
+              {/* Highlight badge */}
               <motion.div 
                 className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 text-black mb-6"
                 whileHover={{ scale: 1.05 }}
@@ -120,13 +120,13 @@ const Hero = () => {
                 🚨 A ERA DA SEGURANÇA FRAGMENTADA ACABOU
               </motion.div>
 
-              {/* Título principal com efeito de digitação */}
+              {/* Main title with typing effect */}
               <motion.h1 
-                className="mb-8 text-4xl font-bold lg:text-5xl xl:text-6xl leading-tight"
+                className="title-gradient-hero title-animate-fade"
                 variants={itemVariants}
               >
                 Recupere sua{" "}
-                <span className="gradient-text relative">
+                <span className="gradient-text-hero relative">
                   Soberania Digital
                   <motion.div
                     className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full"
@@ -137,7 +137,7 @@ const Hero = () => {
                 </span>
               </motion.h1>
 
-              {/* Descrição com animação de fade */}
+              {/* Description with fade animation */}
               <motion.p 
                 className="mb-10 text-xl leading-relaxed text-neutral-300"
                 variants={itemVariants}
@@ -148,7 +148,7 @@ const Hero = () => {
                 Unifique seu controle, elimine riscos e blinde sua infraestrutura com a plataforma Elevensoft.
               </motion.p>
 
-              {/* Botões com animações */}
+              {/* Buttons with animations */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 mb-8"
                 variants={itemVariants}
@@ -192,7 +192,7 @@ const Hero = () => {
                 </motion.a>
               </motion.div>
 
-              {/* ROI destacado */}
+              {/* Highlighted ROI */}
               <motion.div 
                 className="inline-flex items-center px-6 py-3 rounded-2xl bg-neutral-900/60 backdrop-blur-xl border border-orange-500/20"
                 variants={itemVariants}
@@ -206,7 +206,7 @@ const Hero = () => {
               </motion.div>
             </motion.div>
 
-            {/* Lado direito com plataforma */}
+            {/* Right side with platform */}
             <motion.div 
               className="lg:w-1/2 mt-12 lg:mt-0" 
               variants={itemVariants}
@@ -218,11 +218,11 @@ const Hero = () => {
                   variants={floatingVariants}
                 >
                   <div className="card-modern p-8 relative overflow-hidden">
-                    {/* Linha decorativa superior */}
+                    {/* Top decorative line */}
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60"></div>
                     
                     <motion.h3 
-                      className="text-2xl font-bold mb-6 text-white"
+                      className="title-card text-center"
                       whileHover={{ scale: 1.02 }}
                     >
                       Plataforma Unificada
@@ -269,7 +269,7 @@ const Hero = () => {
                   </div>
                 </motion.div>
                 
-                {/* Elementos decorativos flutuantes */}
+                {/* Floating decorative elements */}
                 <motion.div 
                   className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-full blur-2xl"
                   animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}

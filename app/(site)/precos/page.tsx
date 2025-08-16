@@ -67,9 +67,9 @@ export default function PricingPage() {
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-20">
-          <h1 className="mb-6 text-4xl font-bold lg:text-5xl xl:text-6xl">
+          <h1 className="title-product-hero">
             A Oferta{" "}
-            <span className="gradient-text">Irrecusável</span>
+            <span className="gradient-text-hero">Irrecusável</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-neutral-300 leading-relaxed">
             Clareza e Valor. Transparência radical para produtos individuais e, mais importante, para os pacotes de batalha.
@@ -102,9 +102,11 @@ export default function PricingPage() {
           </div>
         </div>
 
-        {/* Produtos Individuais */}
+        {/* Individual Products */}
         <div className="mb-20">
-          <h2 className="text-2xl font-bold text-center mb-12 text-white">Produtos Individuais</h2>
+          <h2 className="title-product-section">
+            Produtos Individuais
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product) => (
               <div key={product.name} className="card-modern hover:shadow-[0_0_40px_rgba(255,138,41,0.1)] transition-all duration-300">
@@ -139,15 +141,17 @@ export default function PricingPage() {
           </div>
         </div>
 
-        {/* Suíte de Soberania */}
+        {/* Sovereignty Suite */}
         <div className="mb-20">
           <div className="bg-gradient-to-r from-orange-500 to-yellow-500 rounded-2xl p-8 text-black text-center shadow-2xl">
-            {/* Elementos decorativos de fundo */}
+            {/* Background decorative elements */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.1),transparent_50%)]"></div>
             
             <div className="relative z-10">
-              <h2 className="text-3xl font-bold mb-4">SUÍTE DE SOBERANIA</h2>
+              <h2 className="title-product-section text-black">
+                SUÍTE DE SOBERANIA
+              </h2>
               <p className="text-xl mb-6">O Pacote Gorila - ESH + ESUT</p>
               <div className="mb-6">
                 <span className="text-4xl font-bold">R$ {suitePrice}</span>
@@ -168,9 +172,11 @@ export default function PricingPage() {
           </div>
         </div>
 
-        {/* Calculadora de ROI */}
+        {/* ROI Calculator */}
         <div className="mb-20">
-          <h2 className="text-2xl font-bold text-center mb-12 text-white">Calculadora de ROI</h2>
+          <h2 className="title-product-section">
+            Calculadora de ROI
+          </h2>
           <div className="card-modern p-8 max-w-2xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
@@ -205,9 +211,11 @@ export default function PricingPage() {
           </div>
         </div>
 
-        {/* CTA Final */}
+        {/* Final CTA */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-6 text-white">Pronto para recuperar sua Soberania Digital?</h3>
+          <h3 className="title-product-feature">
+            Pronto para recuperar sua Soberania Digital?
+          </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://wa.me/message/X2DMDA457ASDN1"

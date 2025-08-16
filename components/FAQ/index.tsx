@@ -1,7 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import FAQItem from "./FAQItem";
 import faqData from "./faqData";
 
@@ -14,7 +13,7 @@ const FAQ = () => {
 
   return (
     <>
-      {/* <!-- ===== FAQ Start ===== --> */}
+      {/* FAQ Section */}
       <section className="section-elegant overflow-hidden bg-neutral-950">
         <div className="container-elegant relative z-10">
           <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-32.5">
@@ -24,7 +23,6 @@ const FAQ = () => {
                   opacity: 0,
                   x: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -39,9 +37,9 @@ const FAQ = () => {
               <span className="font-medium uppercase text-orange-400">
                 FAQ Elevensoft
               </span>
-              <h2 className="relative mb-6 text-3xl font-bold text-white xl:text-hero">
+              <h2 className="title-section">
                 Perguntas{" "}
-                <span className="gradient-text">
+                <span className="gradient-text-hero">
                   Frequentes
                 </span>
               </h2>
@@ -75,7 +73,6 @@ const FAQ = () => {
                   opacity: 0,
                   x: 20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -99,7 +96,6 @@ const FAQ = () => {
           </div>
         </div>
       </section>
-      {/* <!-- ===== FAQ End ===== --> */}
     </>
   );
 };

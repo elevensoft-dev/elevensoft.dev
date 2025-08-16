@@ -6,18 +6,21 @@ import featuresTabData from "./featuresTabData";
 const FeaturesTab = () => {
   return (
     <>
-      {/* <!-- ===== Features Tab Start ===== --> */}
-      <section className="py-20 lg:py-25 xl:py-30 bg-neutral-950">
-        <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
-          {/* <!-- Section Title Start --> */}
-          <SectionHeader
-            title="Os Pilares da Soberania Digital"
-            subtitle="Por que montar um exército de mercenários desorganizados quando você pode ter as legiões unificadas e disciplinadas da Elevensoft?"
-            className="mb-16"
-          />
-          {/* <!-- Section Title End --> */}
+      {/* Features Tab Section */}
+      <section className="section-elegant bg-neutral-950">
+        <div className="container-elegant">
+          {/* Section Title */}
+          <div className="mb-16">
+            <h2 className="title-section text-center">
+              Os Pilares da{" "}
+              <span className="gradient-text-hero">Soberania Digital</span>
+            </h2>
+            <p className="text-xl text-neutral-300 max-w-4xl mx-auto leading-relaxed text-center">
+              Por que montar um exército de mercenários desorganizados quando você pode ter as legiões unificadas e disciplinadas da Elevensoft?
+            </p>
+          </div>
 
-          {/* <!-- Features Tab Start --> */}
+          {/* Features Tab Grid */}
           <div className="mx-auto max-w-6xl">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:gap-12">
               {featuresTabData.map((feature) => (
@@ -25,10 +28,8 @@ const FeaturesTab = () => {
               ))}
             </div>
           </div>
-          {/* <!-- Features Tab End --> */}
         </div>
       </section>
-      {/* <!-- ===== Features Tab End ===== --> */}
     </>
   );
 };

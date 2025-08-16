@@ -97,7 +97,7 @@ const About = () => {
                 <SectionHeader
                   title="Nós Construímos a Fortaleza"
                   subtitle="Um ecossistema unificado, verticalizado e impenetrável que devolve o controle absoluto ao seu dono."
-                  variant="success"
+                  variant="default"
                   className="text-left"
                 />
               </motion.div>

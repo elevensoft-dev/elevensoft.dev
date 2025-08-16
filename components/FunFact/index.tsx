@@ -31,10 +31,11 @@ const FunFact = () => {
             viewport={{ once: true }}
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
           >
-            <h2 className="mb-4 text-3xl font-bold text-white xl:text-sectiontitle3">
-              Confiado por Empresas Globais
+            <h2 className="title-section text-center">
+              Confiado por{" "}
+              <span className="gradient-text-hero">Empresas Globais</span>
             </h2>
-            <p className="mx-auto lg:w-11/12 text-neutral-300 leading-relaxed">
+            <p className="mx-auto lg:w-11/12 text-neutral-300 leading-relaxed text-lg">
               Nossa plataforma de Soberania Digital está sendo utilizada por empresas ao redor do mundo, 
               transformando a segurança fragmentada em fortalezas unificadas.
             </p>
@@ -59,7 +60,7 @@ const FunFact = () => {
               viewport={{ once: true }}
               className="animate_top text-center"
             >
-              <h3 className="mb-2.5 text-3xl font-bold text-white xl:text-sectiontitle3">
+              <h3 className="title-responsive-lg text-white mb-2.5">
                 2.156%
               </h3>
               <p className="text-lg lg:text-para2 text-neutral-300">ROI Médio dos Clientes</p>
@@ -82,7 +83,7 @@ const FunFact = () => {
               viewport={{ once: true }}
               className="animate_top text-center"
             >
-              <h3 className="mb-2.5 text-3xl font-bold text-white xl:text-sectiontitle3">
+              <h3 className="title-responsive-lg text-white mb-2.5">
                 99.9%
               </h3>
               <p className="text-lg lg:text-para2 text-neutral-300">Uptime Garantido</p>

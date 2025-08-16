@@ -6,8 +6,8 @@ import BlogData from "./blogData";
 const RelatedPost = async () => {
   return (
     <>
-      <div className="animate_top rounded-md border border-stroke bg-white p-9 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
-        <h4 className="mb-7.5 text-2xl font-semibold text-black dark:text-white">
+      <div className="card-modern p-9">
+        <h4 className="title-feature mb-7.5">
           Posts relacionados
         </h4>
 
@@ -24,7 +24,7 @@ const RelatedPost = async () => {
                   "No image"
                 )}
               </div>
-              <h5 className="text-md font-medium text-black transition-all duration-300 hover:text-primary dark:text-white dark:hover:text-primary">
+              <h5 className="text-md font-medium text-white transition-all duration-300 hover:text-orange-400">
                 <Link href={`/blog/${post?._id}`}>
                   {" "}
                   {post.title.slice(0, 40)}...
