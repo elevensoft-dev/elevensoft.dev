@@ -42,11 +42,11 @@ const CTA = () => {
     <>
       {/* <!-- ===== CTA Start ===== --> */}
       <section className="section-elegant dark:bg-neutral-950 light:bg-neutral-50 relative overflow-hidden">
-        {/* Background decorativo */}
+        {/* Decorative background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,138,41,0.02),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,193,7,0.02),transparent_50%)]"></div>
         
-        {/* Partículas flutuantes */}
+        {/* Floating particles */}
         <motion.div
           className="absolute top-20 left-20 w-1 h-1 bg-orange-400 rounded-full opacity-60"
           animate={{ y: [-20, 20, -20], opacity: [0.6, 1, 0.6] }}
@@ -68,11 +68,11 @@ const CTA = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            {/* Elementos decorativos de fundo */}
+            {/* Background decorative elements */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.1),transparent_50%)]"></div>
             
-            {/* Grid de fundo sutil */}
+            {/* Subtle background grid */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute inset-0" style={{
                 backgroundImage: `
@@ -126,7 +126,7 @@ const CTA = () => {
                 </motion.a>
                 
                 <motion.a
-                  href="/precos"
+                  href="/pricing"
                   className="inline-flex items-center justify-center rounded-2xl border-2 border-white px-8 py-4 text-white font-bold hover:bg-white hover:text-orange-500 transition-all duration-300 hover:scale-105 group"
                   whileHover={{ y: -3 }}
                   whileTap={{ scale: 0.95 }}
@@ -159,7 +159,7 @@ const CTA = () => {
               </motion.div>
             </div>
             
-            {/* Elementos decorativos flutuantes */}
+            {/* Floating decorative elements */}
             <motion.div 
               className="absolute -top-4 -right-4 w-24 h-24 bg-white/20 rounded-full blur-2xl"
               animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
@@ -171,7 +171,7 @@ const CTA = () => {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             />
             
-            {/* Linhas decorativas */}
+            {/* Decorative lines */}
             <motion.div 
               className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-16 bg-gradient-to-b from-transparent via-white to-transparent opacity-30"
               animate={{ height: [64, 96, 64] }}

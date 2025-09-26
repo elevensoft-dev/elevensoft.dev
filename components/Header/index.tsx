@@ -298,7 +298,7 @@ export default function Header() {
               whileTap={{ scale: 0.95 }}
             >
               <Link
-                href="/precos"
+                href="/pricing"
                 className="relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold rounded-2xl transition-all duration-300 overflow-hidden group"
                 style={{ 
                   boxShadow: isHovered 
@@ -396,7 +396,7 @@ export default function Header() {
                 transition={{ delay: 0.2, duration: 0.3 }}
               >
                 <Link
-                  href="/precos"
+                  href="/pricing"
                   className="block w-full text-center px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold rounded-2xl transition-all duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

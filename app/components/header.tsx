@@ -189,7 +189,7 @@ export default function Header() {
                   {/* CTA Button */}
         <div className="hidden md:flex items-center gap-4">
           <Link
-            href="/precos"
+            href="/pricing"
             className="relative group px-6 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.4)] hover:scale-105 overflow-hidden"
           >
             <span className="relative z-10">Começar</span>
@@ -249,7 +249,7 @@ export default function Header() {
               {/* CTA Mobile */}
               <div className="pt-6 border-t border-neutral-800/50">
                 <Link
-                  href="/precos"
+                  href="/pricing"
                   className="relative group block w-full text-center px-6 py-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.4)] overflow-hidden"
                   onClick={closeMobileMenu}
                 >

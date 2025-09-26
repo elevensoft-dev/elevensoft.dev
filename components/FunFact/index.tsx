@@ -9,7 +9,7 @@ const FunFact = () => {
       {/* <!-- ===== Funfact Start ===== --> */}
       <section className="px-6 py-20 md:px-8 lg:py-22.5 2xl:px-0 dark:bg-neutral-950 light:bg-neutral-50">
         <div className="relative z-1 mx-auto max-w-c-1390 rounded-2xl dark:bg-gradient-to-t dark:from-neutral-900/50 dark:to-neutral-800/50 light:bg-gradient-to-t light:from-neutral-100/50 light:to-neutral-200/50 backdrop-blur-sm py-22.5 dark:border-neutral-800/50 light:border-neutral-200/50 border shadow-2xl xl:py-27.5">
-          {/* Elementos decorativos de fundo */}
+          {/* Background decorative elements */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,138,41,0.1),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,193,7,0.1),transparent_50%)]"></div>
 

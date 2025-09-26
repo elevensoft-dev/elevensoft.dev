@@ -15,7 +15,7 @@ const Footer = () => {
       title: "Plataforma",
       icon: "🛡️",
       links: [
-        { name: "Visão Estratégica", href: "/plataforma" },
+        { name: "Visão Estratégica", href: "/platform" },
         { name: "ESH - Controle Central", href: "https://esh.elevensoft.dev/", external: true },
         { name: "ESUT - Execução Segura", href: "/esut" },
         { name: "KEYRING - Inteligência", href: "/keyring" },
@@ -27,12 +27,12 @@ const Footer = () => {
       title: "Empresa",
       icon: "🏢",
       links: [
-        { name: "Sobre Nós", href: "/sobre" },
-        { name: "Segurança", href: "/seguranca" },
+        { name: "Sobre Nós", href: "/about" },
+        { name: "Segurança", href: "/security" },
         { name: "O Jeito Elevensoft", href: "/o-jeito-elevensoft" },
-        { name: "Preços", href: "/precos" },
+        { name: "Preços", href: "/pricing" },
         { name: "Blog", href: "/blog" },
-        { name: "Carreiras", href: "/carreiras" },
+        { name: "Carreiras", href: "/careers" },
       ]
     },
     {
@@ -96,7 +96,7 @@ const Footer = () => {
     <>
       {/* <!-- ===== Footer Start ===== --> */}
       <footer className="dark:bg-gradient-to-br dark:from-neutral-950 dark:via-neutral-900/50 dark:to-neutral-950 light:bg-gradient-to-br light:from-neutral-50 light:via-neutral-100/50 light:to-neutral-50 relative overflow-hidden dark:border-t-neutral-800/50 light:border-t-neutral-200/50 border-t w-screen-expanded">
-        {/* Background decorativo */}
+        {/* Decorative background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(255,138,41,0.02),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,193,7,0.02),transparent_50%)]"></div>
         
@@ -363,14 +363,14 @@ const Footer = () => {
                 viewport={{ once: true }}
               >
                 <Link 
-                  href="/privacidade" 
+                  href="/privacy" 
                   className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group"
                 >
                   <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   Política de Privacidade
                 </Link>
                 <Link 
-                  href="/termos" 
+                  href="/terms" 
                   className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group"
                 >
                   <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>

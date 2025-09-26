@@ -8,7 +8,7 @@ export const menuData = [
   {
     id: 2,
     title: "Plataforma",
-    path: "/plataforma",
+    path: "/platform",
     newTab: false,
   },
   {
@@ -45,7 +45,7 @@ export const menuData = [
   {
     id: 4,
     title: "Preços",
-    path: "/precos",
+    path: "/pricing",
     newTab: false,
   },
   {
@@ -57,13 +57,13 @@ export const menuData = [
   {
     id: 6,
     title: "Segurança",
-    path: "/seguranca",
+    path: "/security",
     newTab: false,
   },
   {
     id: 7,
     title: "Sobre",
-    path: "/sobre",
+    path: "/about",
     newTab: false,
   },
   {

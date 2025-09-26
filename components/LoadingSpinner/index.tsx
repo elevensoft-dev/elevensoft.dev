@@ -5,14 +5,14 @@ const LoadingSpinner = () => {
   return (
     <div className="fixed inset-0 bg-neutral-950 flex items-center justify-center z-50">
       <div className="relative">
-        {/* Círculo externo */}
+        {/* Outer circle */}
         <motion.div
           className="w-24 h-24 border-4 border-neutral-800 rounded-full"
           animate={{ rotate: 360 }}
           transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
         />
         
-        {/* Círculo interno com gradiente */}
+        {/* Inner circle with gradient */}
         <motion.div
           className="absolute inset-2 border-4 border-transparent rounded-full"
           style={{
@@ -23,7 +23,7 @@ const LoadingSpinner = () => {
           transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
         />
         
-        {/* Círculo central */}
+        {/* Central circle */}
         <motion.div
           className="absolute inset-4 bg-neutral-950 rounded-full flex items-center justify-center"
           animate={{ scale: [1, 1.1, 1] }}
@@ -40,7 +40,7 @@ const LoadingSpinner = () => {
         </motion.div>
       </div>
       
-      {/* Texto de loading */}
+      {/* Loading text */}
       <motion.div
         className="absolute bottom-20 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ const LoadingSpinner = () => {
         </motion.p>
       </motion.div>
       
-      {/* Partículas de fundo */}
+      {/* Background particles */}
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}

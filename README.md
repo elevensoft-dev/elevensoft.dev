@@ -57,11 +57,11 @@ This is not just a website. This is **"The Gorilla Manifesto 2.0"** - a digital 
 ### **Phase 1: The Institutional Citadel**
 
 - **`/` (Homepage)**: "The Throne Room" - War declaration and doctrine presentation
-- **`/plataforma`**: "The Unified Arsenal" - Platform integration showcase
-- **`/precos`**: "The Treasure Room" - Transparent pricing with battle packages
+- **`/platform`**: "The Unified Arsenal" - Platform integration showcase
+- **`/pricing`**: "The Treasure Room" - Transparent pricing with battle packages
 - **`/o-jeito-elevensoft`**: "The Arena" - Competitor humiliation and comparison
-- **`/seguranca`**: "The Vault" - El Guardian philosophy and security standards
-- **`/sobre`**: "The Legend" - Founders' story and company mission
+- **`/security`**: "The Vault" - El Guardian philosophy and security standards
+- **`/about`**: "The Legend" - Founders' story and company mission
 - **`/esh`, `/esut`, `/keyring`, `/el-guardian`**: "War Rooms" - Individual product deep-dives
 
 ## 🎨 Design Philosophy

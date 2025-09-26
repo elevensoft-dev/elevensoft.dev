@@ -10,7 +10,7 @@ export const menuData = [
   {
     id: 2,
     title: "Preços",
-    path: "/precos",
+    path: "/pricing",
     newTab: false,
   },
   {

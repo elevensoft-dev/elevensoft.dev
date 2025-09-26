@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://elevensoft.dev/carreiras",
+    url: "https://elevensoft.dev/careers",
     title: "Carreiras - Elevensoft",
     description: "Junte-se à equipe da Elevensoft e faça parte da revolução da Soberania Digital.",
     siteName: "Elevensoft",

@@ -16,7 +16,7 @@
 
   <!-- Plataforma -->
   <url>
-    <loc>https://elevensoft.dev/plataforma</loc>
+    <loc>https://elevensoft.dev/platform</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -54,7 +54,7 @@
 
   <!-- Sobre -->
   <url>
-    <loc>https://elevensoft.dev/sobre</loc>
+    <loc>https://elevensoft.dev/about</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -62,7 +62,7 @@
 
   <!-- Preços -->
   <url>
-    <loc>https://elevensoft.dev/precos</loc>
+    <loc>https://elevensoft.dev/pricing</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -70,7 +70,7 @@
 
   <!-- Segurança -->
   <url>
-    <loc>https://elevensoft.dev/seguranca</loc>
+    <loc>https://elevensoft.dev/security</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -176,7 +176,7 @@
 
   <!-- Carreiras -->
   <url>
-    <loc>https://elevensoft.dev/carreiras</loc>
+    <loc>https://elevensoft.dev/careers</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -184,14 +184,14 @@
 
   <!-- Páginas Legais -->
   <url>
-    <loc>https://elevensoft.dev/privacidade</loc>
+    <loc>https://elevensoft.dev/privacy</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://elevensoft.dev/termos</loc>
+    <loc>https://elevensoft.dev/terms</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

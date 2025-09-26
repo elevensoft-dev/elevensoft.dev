@@ -80,7 +80,7 @@ export default function NotFoundPage() {
           </Link>
 
           <Link
-            href="/plataforma"
+            href="/platform"
             className="group card-modern hover:shadow-[0_0_40px_rgba(255,138,41,0.1)] transition-all duration-300"
           >
             <div className="text-center">

@@ -57,7 +57,7 @@ const Contact = () => {
     <>
       {/* <!-- ===== Contact Start ===== --> */}
       <section id="support" className="section-elegant dark:bg-neutral-950 light:bg-neutral-50 relative overflow-hidden">
-        {/* Background decorativo */}
+        {/* Decorative background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,138,41,0.03),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,193,7,0.03),transparent_50%)]"></div>
         
@@ -83,7 +83,7 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20">
-            {/* Formulário Principal */}
+            {/* Main Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -92,10 +92,10 @@ const Contact = () => {
               className="lg:col-span-7 xl:col-span-8"
             >
               <div className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
-                {/* Linha decorativa superior */}
+                {/* Top decorative line */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
                 
-                {/* Elementos decorativos de fundo */}
+                {/* Background decorative elements */}
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"></div>
 
@@ -106,7 +106,7 @@ const Contact = () => {
 
                 {!isSubmitting && !isLoading && !isSubmitSuccessful && (
                   <form onSubmit={onSubmit} className="space-y-6">
-                    {/* Nome e Email */}
+                    {/* Name and Email */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="relative">
                         <label className="block text-sm font-medium dark:text-neutral-300 light:text-neutral-700 mb-2">
@@ -157,7 +157,7 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    {/* Assunto e Telefone */}
+                    {/* Subject and Phone */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="relative">
                         <label className="block text-sm font-medium dark:text-neutral-300 light:text-neutral-700 mb-2">
@@ -208,7 +208,7 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    {/* Mensagem */}
+                    {/* Message */}
                     <div className="relative">
                       <label className="block text-sm font-medium text-neutral-300 mb-2">
                         Mensagem *
@@ -233,7 +233,7 @@ const Contact = () => {
                       )}
                     </div>
 
-                    {/* Checkbox e Botão */}
+                    {/* Checkbox and Button */}
                     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pt-4">
                       <div className="flex items-start gap-3">
                         <input
@@ -257,11 +257,11 @@ const Contact = () => {
                           </span>
                           <span className="text-sm dark:text-neutral-300 light:text-neutral-700 leading-relaxed">
                             Concordo com os{" "}
-                            <a href="/termos" className="text-orange-400 hover:text-orange-300 underline">
+                            <a href="/terms" className="text-orange-400 hover:text-orange-300 underline">
                               termos de uso
                             </a>{" "}
                             e{" "}
-                            <a href="/privacidade" className="text-orange-400 hover:text-orange-300 underline">
+                            <a href="/privacy" className="text-orange-400 hover:text-orange-300 underline">
                               política de privacidade
                             </a>
                           </span>
@@ -290,7 +290,7 @@ const Contact = () => {
                   </form>
                 )}
 
-                {/* Estados de Loading e Sucesso */}
+                {/* Loading and Success States */}
                 {(isSubmitting || isLoading) && (
                   <motion.div 
                     initial={{ opacity: 0 }}
@@ -332,7 +332,7 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* Informações de Contato */}
+            {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -341,10 +341,10 @@ const Contact = () => {
               className="lg:col-span-5 xl:col-span-4"
             >
               <div className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden h-full">
-                {/* Linha decorativa superior */}
+                {/* Top decorative line */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
                 
-                {/* Elementos decorativos de fundo */}
+                {/* Background decorative elements */}
                 <div className="absolute -top-20 -left-20 w-40 h-40 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl"></div>
 
@@ -354,7 +354,7 @@ const Contact = () => {
                 </h3>
 
                 <div className="space-y-8">
-                  {/* Localização */}
+                  {/* Location */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -441,7 +441,7 @@ const Contact = () => {
                     </div>
                   </motion.div>
 
-                  {/* CTA Adicional */}
+                  {/* Additional CTA */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

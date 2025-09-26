@@ -142,7 +142,7 @@ const About = () => {
                 variants={itemVariants}
               >
                 <motion.a
-                  href="/plataforma"
+                  href="/platform"
                   className="btn-gradient inline-flex items-center group"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}

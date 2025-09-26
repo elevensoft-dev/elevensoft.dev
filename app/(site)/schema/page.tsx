@@ -185,13 +185,13 @@ const breadcrumbSchema = {
       "@type": "ListItem", 
       "position": 2,
       "name": "Plataforma",
-      "item": "https://elevensoft.dev/plataforma"
+      "item": "https://elevensoft.dev/platform"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Produtos",
-      "item": "https://elevensoft.dev/precos"
+      "item": "https://elevensoft.dev/pricing"
     }
   ]
 };

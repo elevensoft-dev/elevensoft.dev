@@ -154,7 +154,7 @@ const Hero = () => {
                 variants={itemVariants}
               >
                 <motion.a
-                  href="/plataforma"
+                  href="/platform"
                   className="btn-gradient group relative overflow-hidden"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -173,7 +173,7 @@ const Hero = () => {
                 </motion.a>
                 
                 <motion.a
-                  href="/precos"
+                  href="/pricing"
                   className="btn-secondary group"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}

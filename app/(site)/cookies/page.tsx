@@ -425,7 +425,7 @@ export default function CookiesPolicyPage() {
               Gerenciar Cookies
             </a>
             <a
-              href="/privacidade"
+              href="/privacy"
               className="inline-flex items-center justify-center rounded-xl border-2 border-neutral-700 px-8 py-3 text-neutral-300 font-medium hover:bg-neutral-800/50 hover:border-neutral-600 hover:text-white transition-all duration-300 backdrop-blur-sm"
             >
               Política de Privacidade

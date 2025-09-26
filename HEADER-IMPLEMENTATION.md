@@ -21,11 +21,11 @@
 ```tsx
 import Header from "../components/header";
 
-export default function MinhaPagina() {
+export default function MyPage() {
   return (
     <div>
       <Header />
-      {/* Seu conteúdo aqui */}
+      {/* Your content here */}
     </div>
   );
 }
@@ -35,7 +35,7 @@ export default function MinhaPagina() {
 ```tsx
 import { useHeader } from "../hooks/use-header";
 
-function MinhaComponente() {
+function MyComponent() {
   const { isScrolled, scrollProgress, toggleMobileMenu } = useHeader();
   
   return (

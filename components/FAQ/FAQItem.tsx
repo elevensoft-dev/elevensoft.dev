@@ -1,13 +1,12 @@
-type FaqData = {
+import { FAQ } from "@/types/faq";
+
+type FaqData = FAQ & {
   activeFaq: number;
-  id: number;
   handleFaqToggle: (id: number) => void;
-  quest: string;
-  ans: string;
 };
 
 const FAQItem = ({ faqData }: { faqData: FaqData }) => {
-  const { activeFaq, id, handleFaqToggle, quest, ans } = faqData;
+  const { activeFaq, id, handleFaqToggle, question, answer } = faqData;
 
   return (
     <>
@@ -18,7 +17,7 @@ const FAQItem = ({ faqData }: { faqData: FaqData }) => {
           }}
           className="flex cursor-pointer items-center justify-between px-6 py-5 text-metatitle3 font-medium dark:text-white light:text-neutral-900 hover:text-orange-400 transition-colors duration-200 lg:px-9 lg:py-7.5"
         >
-          {quest}
+          {question}
 
           {activeFaq === id ? (
             <svg
@@ -53,7 +52,7 @@ const FAQItem = ({ faqData }: { faqData: FaqData }) => {
             activeFaq === id ? "block" : "hidden"
           }`}
         >
-          {ans}
+          {answer}
         </p>
       </div>
     </>
