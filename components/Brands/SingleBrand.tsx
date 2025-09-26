@@ -30,7 +30,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
         <Image
           className="opacity-65 transition-all duration-300 hover:opacity-100"
           src={imageLight}
-          alt={name}
+          alt={`Logo da empresa parceira ${name}`}
           fill
         />
       </motion.a>

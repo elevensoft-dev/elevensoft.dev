@@ -1,8 +1,50 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "KEYRING - Elevensoft",
-  description: "Serviço de Inteligência. O mestre das chaves que gerencia a identidade, a autenticação e o licenciamento de todo o ecossistema.",
+  title: "KEYRING - Serviço de Inteligência | Gestão de Identidades e Acessos - Elevensoft",
+  description: "KEYRING é o serviço de inteligência que gerencia identidades, autenticação e licenciamento de todo o ecossistema. Centralize, controle e gerencie todas as identidades em uma única plataforma.",
+  keywords: "KEYRING, gestão de identidades, autenticação multifator, controle de acesso, licenciamento, identidade digital, acesso baseado em roles, compliance, integração de sistemas, soberania digital, segurança de infraestrutura",
+  authors: [{ name: "Elevensoft" }],
+  creator: "Elevensoft",
+  publisher: "Elevensoft",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://elevensoft.dev/keyring",
+    title: "KEYRING - Serviço de Inteligência | Gestão de Identidades e Acessos",
+    description: "Centralize, controle e gerencie todas as identidades, autenticações e licenciamentos em uma única plataforma integrada. O KEYRING é o serviço de inteligência que protege seu ecossistema.",
+    siteName: "Elevensoft",
+    images: [
+      {
+        url: "https://elevensoft.dev/images/features/bg_3.png",
+        width: 1200,
+        height: 630,
+        alt: "KEYRING - Serviço de Inteligência - Gestão de Identidades",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@elevensoft",
+    creator: "@elevensoft",
+    title: "KEYRING - Serviço de Inteligência | Gestão de Identidades e Acessos",
+    description: "Centralize, controle e gerencie todas as identidades, autenticações e licenciamentos em uma única plataforma integrada.",
+    images: ["https://elevensoft.dev/images/features/bg_3.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://elevensoft.dev/keyring",
+  },
 };
 
 export default function KeyringPage() {

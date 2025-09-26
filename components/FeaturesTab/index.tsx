@@ -11,10 +11,10 @@ const FeaturesTab = () => {
         <div className="container-elegant">
           {/* Section Title */}
           <div className="mb-16">
-            <h2 className="title-section text-center">
+            <h4 className="title-section text-center">
               Os Pilares da{" "}
               <span className="gradient-text-hero">Soberania Digital</span>
-            </h2>
+            </h4>
             <p className="text-xl dark:text-neutral-300 light:text-neutral-700 max-w-4xl mx-auto leading-relaxed text-center">
               Por que montar um exército de mercenários desorganizados quando você pode ter as legiões unificadas e disciplinadas da Elevensoft?
             </p>

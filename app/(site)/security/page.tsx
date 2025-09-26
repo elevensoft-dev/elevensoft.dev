@@ -1,8 +1,50 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Segurança - Elevensoft",
-  description: "Descubra a filosofia por trás do El Guardian e como nossa paranoia com segurança é a tranquilidade do nosso cliente.",
+  title: "Segurança - Fundação Blindada | EL GUARDIAN - Elevensoft",
+  description: "Descubra a filosofia por trás do EL GUARDIAN e como nossa paranoia com segurança é a tranquilidade do nosso cliente. A soberania começa em casa com proteção de código e auditoria contínua.",
+  keywords: "EL GUARDIAN, segurança de código, proteção de infraestrutura, auditoria de segurança, compliance, ISO 27001, OWASP, GDPR, segurança de nível militar, fundação blindada, soberania digital, proteção de sistemas críticos",
+  authors: [{ name: "Elevensoft" }],
+  creator: "Elevensoft",
+  publisher: "Elevensoft",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://elevensoft.dev/security",
+    title: "Segurança - Fundação Blindada | EL GUARDIAN",
+    description: "Descubra a filosofia por trás do EL GUARDIAN e como nossa paranoia com segurança é a tranquilidade do nosso cliente. A soberania começa em casa.",
+    siteName: "Elevensoft",
+    images: [
+      {
+        url: "https://elevensoft.dev/images/features/bg_1.png",
+        width: 1200,
+        height: 630,
+        alt: "EL GUARDIAN - Fundação Blindada - Segurança de Nível Militar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@elevensoft",
+    creator: "@elevensoft",
+    title: "Segurança - Fundação Blindada | EL GUARDIAN",
+    description: "Descubra a filosofia por trás do EL GUARDIAN e como nossa paranoia com segurança é a tranquilidade do nosso cliente.",
+    images: ["https://elevensoft.dev/images/features/bg_1.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://elevensoft.dev/security",
+  },
 };
 
 export default function SecurityPage() {

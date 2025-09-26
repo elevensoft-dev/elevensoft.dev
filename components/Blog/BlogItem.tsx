@@ -27,8 +27,8 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
         viewport={{ once: true }}
         className="animate_top rounded-xl card-modern hover:shadow-[0_0_40px_rgba(255,138,41,0.1)] transition-all duration-300"
       >
-        <Link href={`/blog/`} className="relative block w-full h-32">
-          <Image src={mainImage} alt={title} fill className="object-contain rounded-t-xl" />
+        <Link href={`/blog/${blog._id}`} className="relative block w-full h-32">
+          <Image src={mainImage} alt={`Imagem do artigo: ${title}`} fill className="object-contain rounded-t-xl" />
         </Link>
 
         <div className="px-4">

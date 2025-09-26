@@ -1,8 +1,50 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Plataforma - Elevensoft",
-  description: "Descubra como ESH, ESUT, Keyring e El Guardian se integram para formar um escudo impenetrável de Soberania Digital.",
+  title: "Plataforma Elevensoft | ESH + ESUT + KEYRING + EL GUARDIAN - Soberania Digital Unificada",
+  description: "Descubra como ESH, ESUT, KEYRING e EL GUARDIAN se integram para formar um escudo impenetrável de Soberania Digital. Plataforma unificada que centraliza controle de acesso, auditoria em tempo real e segurança de infraestrutura crítica.",
+  keywords: "plataforma elevensoft, ESH ESUT KEYRING EL GUARDIAN, soberania digital unificada, controle de acesso centralizado, auditoria em tempo real, segurança de infraestrutura crítica, plataforma de segurança integrada, ecossistema de segurança, infraestrutura blindada, controle total de sistemas",
+  authors: [{ name: "Elevensoft" }],
+  creator: "Elevensoft",
+  publisher: "Elevensoft",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://elevensoft.dev/platform",
+    title: "Plataforma Elevensoft | ESH + ESUT + KEYRING + EL GUARDIAN",
+    description: "Descubra como ESH, ESUT, KEYRING e EL GUARDIAN se integram para formar um escudo impenetrável de Soberania Digital.",
+    siteName: "Elevensoft",
+    images: [
+      {
+        url: "https://elevensoft.dev/images/hero/hero-light.svg",
+        width: 1200,
+        height: 630,
+        alt: "Plataforma Elevensoft - Soberania Digital Unificada",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@elevensoft",
+    creator: "@elevensoft",
+    title: "Plataforma Elevensoft | ESH + ESUT + KEYRING + EL GUARDIAN",
+    description: "Descubra como ESH, ESUT, KEYRING e EL GUARDIAN se integram para formar um escudo impenetrável de Soberania Digital.",
+    images: ["https://elevensoft.dev/images/hero/hero-light.svg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://elevensoft.dev/platform",
+  },
 };
 
 export default function PlatformPage() {

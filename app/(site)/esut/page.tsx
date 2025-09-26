@@ -1,8 +1,50 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ESUT - Eleven Shell Utility Tool - Elevensoft",
-  description: "Execução Segura, Erro Zero. O executor que transforma políticas complexas em ações simples, guiadas e à prova de erros no terminal.",
+  title: "ESUT - Eleven Shell Utility Tool | Execução Segura, Erro Zero - Elevensoft",
+  description: "ESUT (Eleven Shell Utility Tool) é o executor que transforma políticas complexas em ações simples, guiadas e à prova de erros no terminal. Elimine comandos perigosos e execute com precisão cirúrgica.",
+  keywords: "ESUT, Eleven Shell Utility Tool, execução segura, terminal seguro, comandos guiados, prevenção de erros, auditoria de comandos, políticas de segurança, infraestrutura crítica, soberania digital, controle de acesso, segurança de sistemas",
+  authors: [{ name: "Elevensoft" }],
+  creator: "Elevensoft",
+  publisher: "Elevensoft",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://elevensoft.dev/esut",
+    title: "ESUT - Eleven Shell Utility Tool | Execução Segura, Erro Zero",
+    description: "Transforme seu terminal em uma ferramenta de execução guiada, à prova de erros e com auditoria completa. O ESUT é o executor que transforma políticas complexas em ações simples e seguras.",
+    siteName: "Elevensoft",
+    images: [
+      {
+        url: "https://elevensoft.dev/images/features/bg_2.png",
+        width: 1200,
+        height: 630,
+        alt: "ESUT - Eleven Shell Utility Tool - Execução Segura",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@elevensoft",
+    creator: "@elevensoft",
+    title: "ESUT - Eleven Shell Utility Tool | Execução Segura, Erro Zero",
+    description: "Transforme seu terminal em uma ferramenta de execução guiada, à prova de erros e com auditoria completa.",
+    images: ["https://elevensoft.dev/images/features/bg_2.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://elevensoft.dev/esut",
+  },
 };
 
 export default function ESUTPage() {

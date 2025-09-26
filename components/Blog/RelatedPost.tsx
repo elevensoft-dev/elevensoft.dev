@@ -19,7 +19,7 @@ const RelatedPost = async () => {
             >
               <div className="max-w-45 relative h-18 w-45">
                 {post.mainImage ? (
-                  <Image fill src={post.mainImage} alt="Blog" className="object-contain" />
+                  <Image fill src={post.mainImage} alt={`Imagem do artigo relacionado: ${post.title}`} className="object-contain" />
                 ) : (
                   "No image"
                 )}

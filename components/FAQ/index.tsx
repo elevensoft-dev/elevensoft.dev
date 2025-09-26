@@ -37,12 +37,12 @@ const FAQ = () => {
               <span className="font-medium uppercase text-orange-400">
                 FAQ Elevensoft
               </span>
-              <h2 className="title-section">
+              <h4 className="title-section">
                 Perguntas{" "}
                 <span className="gradient-text-hero">
                   Frequentes
                 </span>
-              </h2>
+              </h4>
               <p className="mb-8 dark:text-neutral-300 light:text-neutral-700 leading-relaxed text-lg max-w-2xl">
                 Tire suas dúvidas sobre a Plataforma Elevensoft e como ela pode transformar sua segurança digital.
               </p>

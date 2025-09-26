@@ -1,0 +1,38 @@
+{
+  "name": "Elevensoft - Soberania Digital",
+  "short_name": "Elevensoft",
+  "description": "Recupere sua Soberania Digital com a plataforma Elevensoft. ESH, ESUT, KEYRING e EL GUARDIAN unificam controle de acesso, auditoria em tempo real e segurança de infraestrutura crítica.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff8a29",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "security"],
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/logo/logo-light.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

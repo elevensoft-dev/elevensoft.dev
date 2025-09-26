@@ -95,6 +95,7 @@ const About = () => {
                   subtitle="Um ecossistema unificado, verticalizado e impenetrável que devolve o controle absoluto ao seu dono."
                   variant="default"
                   className="text-left"
+                  level={3}
                 />
               </motion.div>
               

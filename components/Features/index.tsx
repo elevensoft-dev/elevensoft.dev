@@ -57,10 +57,10 @@ const Feature = () => {
             viewport={{ once: true }}
             className="mb-20"
           >
-            <h2 className="title-section text-center">
+            <h3 className="title-section text-center">
               Sua Segurança é um{" "}
               <span className="gradient-text-hero">Quebra-Cabeça Frágil</span>?
-            </h2>
+            </h3>
             <p className="text-xl dark:text-neutral-300 light:text-neutral-700 max-w-4xl mx-auto leading-relaxed">
               O caos de dezenas de ferramentas desconexas, senhas em planilhas, scripts manuais, VPNs lentas e a constante ansiedade de não saber quem tem acesso a quê.
             </p>

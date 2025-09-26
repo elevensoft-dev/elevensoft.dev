@@ -21,10 +21,10 @@ const FeaturesTabItem = ({ feature }: FeaturesTabItemProps) => {
             />
           </div>
           <div className="p-8">
-            <h3 className="title-feature mb-4">{title}</h3>
-            <h4 className="text-lg font-semibold text-orange-400 mb-3">
+            <h5 className="title-feature mb-4">{title}</h5>
+            <h6 className="text-lg font-semibold text-orange-400 mb-3">
               {subtitle}
-            </h4>
+            </h6>
             <p className="dark:text-neutral-300 light:text-neutral-700 mb-6 leading-relaxed">
               {description}
             </p>

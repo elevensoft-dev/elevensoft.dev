@@ -2,6 +2,86 @@ import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
 import Image from "next/image";
 import BlogData from "@/components/Blog/blogData";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const blogPost = BlogData.find((blog) => blog._id === Number(resolvedParams.id));
+  
+  if (!blogPost) {
+    return {
+      title: "Post não encontrado - Elevensoft",
+      description: "O post solicitado não foi encontrado.",
+    };
+  }
+
+  const dateMatch = blogPost.content.match(/Publicado em: (\d{2}\/\d{2}\/\d{4})/);
+  const publishedDate = dateMatch ? dateMatch[1] : "2024-01-01";
+  
+  const [day, month, year] = publishedDate.split('/');
+  const isoDate = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+
+  const keywords = [
+    "soberania digital",
+    "segurança de infraestrutura", 
+    "controle de acesso",
+    "auditoria de sistemas",
+    "ESH", "ESUT", "KEYRING", "EL GUARDIAN",
+    "plataforma de segurança unificada",
+    "infraestrutura crítica",
+    "acesso remoto seguro"
+  ];
+
+  return {
+    title: `${blogPost.title} - Elevensoft Blog`,
+    description: blogPost.metadata || `Descubra insights sobre ${blogPost.title} na Elevensoft. Especialistas em Soberania Digital e segurança de infraestrutura crítica.`,
+    keywords: keywords.join(", "),
+    authors: [{ name: "Elevensoft" }],
+    creator: "Elevensoft",
+    publisher: "Elevensoft",
+    openGraph: {
+      type: "article",
+      locale: "pt_BR",
+      url: `https://elevensoft.dev/blog/${resolvedParams.id}`,
+      title: blogPost.title,
+      description: blogPost.metadata || `Insights sobre ${blogPost.title} da Elevensoft.`,
+      siteName: "Elevensoft",
+      images: [
+        {
+          url: `https://elevensoft.dev${blogPost.mainImage}`,
+          width: 1200,
+          height: 630,
+          alt: blogPost.title,
+        },
+      ],
+      publishedTime: isoDate,
+      modifiedTime: isoDate,
+      authors: ["Elevensoft"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@elevensoft",
+      creator: "@elevensoft",
+      title: blogPost.title,
+      description: blogPost.metadata || `Insights sobre ${blogPost.title} da Elevensoft.`,
+      images: [`https://elevensoft.dev${blogPost.mainImage}`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    alternates: {
+      canonical: `https://elevensoft.dev/blog/${resolvedParams.id}`,
+    },
+  };
+}
 
 const SingleBlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const resolvedParams = await params;
@@ -77,8 +157,8 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ id: string }> }) =
                 <div className="mb-10 w-full overflow-hidden ">
                   <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <Image
-                      src={"/images/blog/blog-01.png"}
-                      alt="Kobe Steel plant that supplied"
+                      src={blogMetadata?.mainImage || "/images/blog/blog-01.png"}
+                      alt={blogMetadata?.title || "Artigo do blog Elevensoft sobre Soberania Digital"}
                       fill
                       className="rounded-md object-cover object-center"
                     />
