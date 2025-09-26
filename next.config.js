@@ -2,7 +2,6 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     domains: ["localhost"],
     remotePatterns: [
@@ -14,7 +13,9 @@ const nextConfig = {
     ],
   },
   experimental: {
-    serverActions: true
+    serverActions: {
+      allowedOrigins: ["localhost:3000"]
+    }
   }
 };
 

@@ -12,7 +12,6 @@ export default function Header() {
     isScrolled,
     isMobileMenuOpen,
     activeDropdown,
-    scrollProgress,
     currentPath,
     toggleDropdown,
     closeDropdowns,
@@ -156,7 +155,7 @@ export default function Header() {
   return (
     <>
       {/* Barra de Progresso */}
-      <ScrollProgress progress={scrollProgress} />
+      <ScrollProgress />
 
       {/* Header Principal */}
       <header

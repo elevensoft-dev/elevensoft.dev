@@ -8,20 +8,16 @@ export const useHeader = (): HeaderHook => {
     isScrolled: false,
     isMobileMenuOpen: false,
     activeDropdown: null,
-    scrollProgress: 0,
     currentPath: pathname,
   });
 
   // Manage scroll and backdrop blur
   const handleScroll = useCallback(() => {
     const scrollY = window.scrollY;
-    const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (scrollY / windowHeight) * 100;
     
     setState(prev => ({
       ...prev,
       isScrolled: scrollY > 20,
-      scrollProgress: Math.min(progress, 100),
     }));
   }, []);
 

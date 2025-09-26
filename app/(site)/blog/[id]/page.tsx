@@ -3,8 +3,9 @@ import SharePost from "@/components/Blog/SharePost";
 import Image from "next/image";
 import BlogData from "@/components/Blog/blogData";
 
-const SingleBlogPage = async ({ params }: { params: { id: number } }) => {
-  const blogMetadata = BlogData.find((blog) => blog._id === Number(params.id));
+const SingleBlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const resolvedParams = await params;
+  const blogMetadata = BlogData.find((blog) => blog._id === Number(resolvedParams.id));
   // Blog metadata loaded
 
   return (

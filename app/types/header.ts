@@ -10,7 +10,6 @@ export interface HeaderState {
   isScrolled: boolean;
   isMobileMenuOpen: boolean;
   activeDropdown: string | null;
-  scrollProgress: number;
   currentPath: string;
 }
 

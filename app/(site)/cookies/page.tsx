@@ -418,15 +418,12 @@ export default function CookiesPolicyPage() {
             Configure suas Preferências
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => {
-                // Aqui seria implementada a funcionalidade de abrir o modal de cookies
-                console.log('Abrir configurações de cookies');
-              }}
+            <a
+              href="#cookie-settings"
               className="btn-gradient rounded-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)]"
             >
               Gerenciar Cookies
-            </button>
+            </a>
             <a
               href="/privacidade"
               className="inline-flex items-center justify-center rounded-xl border-2 border-neutral-700 px-8 py-3 text-neutral-300 font-medium hover:bg-neutral-800/50 hover:border-neutral-600 hover:text-white transition-all duration-300 backdrop-blur-sm"
