@@ -161,13 +161,13 @@ const About = () => {
 
             {/* <!-- About Image Start --> */}
             <motion.div 
-              className="lg:w-1/2 mt-16 lg:mt-0" 
+              className="lg:w-1/2 mt-12 lg:mt-0" 
               variants={rightItemVariants}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <div className="relative">
                 <motion.div 
-                  className="relative z-10 mx-auto max-w-[500px] text-center"
+                  className="relative z-10 mx-auto max-w-[400px] sm:max-w-[500px] text-center"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >

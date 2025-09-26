@@ -260,7 +260,7 @@ export default function Header() {
                 <img 
                   src="/uploads/logo/Logo_E_Eleven_Cor.png" 
                   alt="Logo Eleven, letra E" 
-                  className="w-18 h-18 transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(255,138,41,0.5)]" 
+                  className="w-12 h-12 sm:w-16 sm:h-16 lg:w-18 lg:h-18 transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(255,138,41,0.5)]" 
                 />
                 {/* Brilho sutil no logo */}
                 <motion.div

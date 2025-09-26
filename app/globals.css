@@ -121,7 +121,7 @@
 
 /* Primary Page Titles (H1) - Main page headlines */
 .title-primary {
-  @apply text-4xl font-bold lg:text-5xl xl:text-6xl leading-tight;
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight;
   margin-bottom: 1.5rem;
 }
 
@@ -135,7 +135,7 @@
 
 /* Section Titles (H2) - Major content sections */
 .title-section {
-  @apply text-3xl font-bold leading-tight;
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
   margin-bottom: 2rem;
 }
 
@@ -149,7 +149,7 @@
 
 /* Subsection Titles (H3) - Content subsections */
 .title-subsection {
-  @apply text-2xl font-semibold leading-tight;
+  @apply text-lg sm:text-xl md:text-2xl font-semibold leading-tight;
   margin-bottom: 1.5rem;
 }
 
@@ -163,7 +163,7 @@
 
 /* Feature Titles (H4) - Individual features or items */
 .title-feature {
-  @apply text-xl font-semibold leading-tight;
+  @apply text-base sm:text-lg md:text-xl font-semibold leading-tight;
   margin-bottom: 1rem;
 }
 
@@ -177,7 +177,7 @@
 
 /* Card Titles (H3-H4) - Titles within cards or components */
 .title-card {
-  @apply text-lg font-semibold leading-tight;
+  @apply text-sm sm:text-base md:text-lg font-semibold leading-tight;
   margin-bottom: 0.75rem;
 }
 
@@ -312,7 +312,7 @@
 
 /* Hero Title with Full Gradient */
 .title-gradient-hero {
-  @apply text-4xl font-bold lg:text-5xl xl:text-6xl leading-tight;
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight;
   background: linear-gradient(135deg, rgb(255 255 255) 0%, rgb(255 138 41) 50%, rgb(255 193 7) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -322,7 +322,7 @@
 
 /* Section Title with Primary Gradient */
 .title-gradient-section {
-  @apply text-3xl font-bold leading-tight;
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
   background: linear-gradient(135deg, rgb(255 138 41) 0%, rgb(255 193 7) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -332,7 +332,7 @@
 
 /* Subsection Title with Secondary Gradient */
 .title-gradient-subsection {
-  @apply text-2xl font-semibold leading-tight;
+  @apply text-lg sm:text-xl md:text-2xl font-semibold leading-tight;
   background: linear-gradient(135deg, rgb(255 193 7) 0%, rgb(255 138 41) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -342,7 +342,7 @@
 
 /* Feature Title with Tech Gradient */
 .title-gradient-feature {
-  @apply text-xl font-semibold leading-tight;
+  @apply text-base sm:text-lg md:text-xl font-semibold leading-tight;
   background: linear-gradient(135deg, rgb(59 130 246) 0%, rgb(255 138 41) 50%, rgb(255 193 7) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -478,7 +478,7 @@
  */
 
   .btn-gradient {
-    @apply bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold px-8 py-4 rounded-2xl transition-all duration-300;
+    @apply bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-4 rounded-2xl transition-all duration-300 min-h-[44px];
     box-shadow: 0 4px 20px rgb(255 138 41 / 0.3);
     position: relative;
     overflow: hidden;
@@ -511,7 +511,7 @@
   }
   
   .btn-gradient-sm {
-    @apply bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold px-6 py-3 rounded-xl transition-all duration-300;
+    @apply bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-xl transition-all duration-300 min-h-[44px];
     box-shadow: 0 2px 15px rgb(255 138 41 / 0.3);
   }
   
@@ -523,7 +523,7 @@
   
 /* Secondary buttons with elegant styling */
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-2xl border-2 px-8 py-4 font-semibold transition-all duration-300 backdrop-blur-sm;
+    @apply inline-flex items-center justify-center rounded-2xl border-2 px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-4 font-semibold transition-all duration-300 backdrop-blur-sm min-h-[44px];
   }
   
   /* Dark theme secondary buttons */
@@ -593,16 +593,89 @@
  */
 
   .container-elegant {
-  @apply mx-auto max-w-7xl px-6 sm:px-6 lg:px-8;
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.container-responsive {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
 }
 
 .section-elegant {
-  @apply py-20 lg:py-25 xl:py-30;
+  @apply py-12 sm:py-16 lg:py-20 xl:py-24;
+}
+
+.section-responsive {
+  @apply py-12 sm:py-16 lg:py-20 xl:py-24;
 }
 
 .bg-gradient-tech {
   background: linear-gradient(135deg, rgb(10 10 10) 0%, rgb(23 23 23) 50%, rgb(38 38 38) 100%);
 }
+
+/* ===== RESPONSIVE UTILITIES ===== */
+/* 
+ * Responsive utilities for different screen sizes
+ * Use these for adaptive layouts
+ */
+
+/* Touch-friendly elements */
+.touch-friendly {
+  @apply min-h-[44px] min-w-[44px];
+}
+
+.touch-button {
+  @apply min-h-[44px] px-4 py-3 sm:px-6 sm:py-4;
+}
+
+/* Responsive text sizing */
+.text-responsive-sm {
+  @apply text-sm sm:text-base lg:text-lg;
+}
+
+.text-responsive-base {
+  @apply text-base sm:text-lg lg:text-xl;
+}
+
+.text-responsive-lg {
+  @apply text-lg sm:text-xl lg:text-2xl;
+}
+
+/* Responsive spacing */
+.space-responsive {
+  @apply space-y-4 sm:space-y-6 lg:space-y-8;
+}
+
+.gap-responsive {
+  @apply gap-4 sm:gap-6 lg:gap-8;
+}
+
+/* Responsive grid utilities */
+.grid-responsive-2 {
+  @apply grid grid-cols-1 sm:grid-cols-2;
+}
+
+.grid-responsive-3 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.grid-responsive-4 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4;
+}
+
+/* Responsive flex utilities */
+.flex-responsive-col {
+  @apply flex flex-col sm:flex-row;
+}
+
+.flex-responsive-wrap {
+  @apply flex flex-wrap sm:flex-nowrap;
+}
+
+/* ===== RESPONSIVE UTILITIES ===== */
+/* 
+ * Responsive utilities for different screen sizes
+ * Use these for adaptive layouts
+ */
 
 /* ===== RESPONSIVE UTILITIES ===== */
 /* 
@@ -635,5 +708,30 @@
   
   .title-responsive-md {
     @apply text-5xl font-bold;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  .card-modern {
+    @apply p-4 sm:p-6;
+  }
+  
+  .btn-gradient,
+  .btn-secondary {
+    @apply text-sm px-4 py-3;
+  }
+  
+  .section-elegant {
+    @apply py-8 sm:py-12;
   }
 }

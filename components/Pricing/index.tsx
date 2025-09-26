@@ -19,9 +19,9 @@ const Pricing = () => {
           </div>
 
           <div className="relative mx-auto max-w-6xl">
-            <div className="flex flex-wrap justify-center gap-8 lg:flex-nowrap xl:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-12">
               {/* Pricing Item */}
-              <div className="card-modern group relative p-8 xl:p-12 md:w-[45%] lg:w-1/3">
+              <div className="card-modern group relative p-6 sm:p-8 xl:p-12">
                 <h3 className="title-responsive-md dark:text-white light:text-neutral-900 mb-8">
                   R$ 997{" "}
                   <span className="text-regular dark:text-neutral-300 light:text-neutral-700">
@@ -52,7 +52,7 @@ const Pricing = () => {
 
                 <button
                   aria-label="Get the Plan button"
-                  className="group/btn inline-flex items-center gap-2.5 font-medium text-orange-400 transition-all duration-300 hover:text-orange-300"
+                  className="group/btn inline-flex items-center gap-2.5 font-medium text-orange-400 transition-all duration-300 hover:text-orange-300 touch-button"
                 >
                   <span className="duration-300 group-hover/btn:pr-2">
                     Escolher Plano
@@ -145,7 +145,7 @@ const Pricing = () => {
 
                 <button
                   aria-label="Get the Plan button"
-                  className="group/btn inline-flex items-center gap-2.5 font-medium text-orange-400 transition-all duration-300 hover:text-orange-300"
+                  className="group/btn inline-flex items-center gap-2.5 font-medium text-orange-400 transition-all duration-300 hover:text-orange-300 touch-button"
                 >
                   <span className="duration-300 group-hover/btn:pr-2">
                     Escolher Plano

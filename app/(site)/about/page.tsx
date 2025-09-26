@@ -7,24 +7,24 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="py-20 lg:py-25 xl:py-30 dark:bg-neutral-950 light:bg-neutral-50">
-      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+    <main className="py-12 sm:py-16 lg:py-20 xl:py-24 dark:bg-neutral-950 light:bg-neutral-50">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="title-landing-hero">
             A{" "}
             <span className="gradient-text-hero">Lenda</span>{" "}
             da Elevensoft
           </h1>
-          <p className="mx-auto max-w-3xl text-lg text-neutral-300 leading-relaxed">
+          <p className="mx-auto max-w-3xl text-base sm:text-lg text-neutral-300 leading-relaxed">
             Conheça a história dos fundadores, a dor que nos levou a forjar essas ferramentas 
             e a humanização da nossa missão de Soberania Digital.
           </p>
         </div>
 
         {/* Founders History */}
-        <div className="mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="mb-12 sm:mb-16 lg:mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             <div>
               <h2 className="title-landing-section">
                 A Dor que Nos Levou à Guerra

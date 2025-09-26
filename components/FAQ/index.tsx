@@ -16,7 +16,7 @@ const FAQ = () => {
       {/* FAQ Section */}
       <section className="section-elegant overflow-hidden dark:bg-neutral-950 light:bg-neutral-50">
         <div className="container-elegant relative z-10">
-          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-32.5">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16">
             <motion.div
               variants={{
                 hidden: {
@@ -32,7 +32,7 @@ const FAQ = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_left md:w-2/5 lg:w-1/2"
+              className="lg:w-1/2"
             >
               <span className="font-medium uppercase text-orange-400">
                 FAQ Elevensoft
@@ -82,7 +82,7 @@ const FAQ = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_right md:w-3/5 lg:w-1/2"
+              className="lg:w-1/2"
             >
               <div className="card-modern">
                 {faqData.map((faq, key) => (

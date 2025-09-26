@@ -82,7 +82,7 @@ const Contact = () => {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16">
             {/* Main Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -91,7 +91,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="lg:col-span-7 xl:col-span-8"
             >
-              <div className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+              <div className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl relative overflow-hidden">
                 {/* Top decorative line */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
                 
@@ -99,7 +99,7 @@ const Contact = () => {
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"></div>
 
-                <h3 className="text-2xl lg:text-3xl font-bold dark:text-white light:text-neutral-900 mb-8 flex items-center gap-3">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold dark:text-white light:text-neutral-900 mb-6 sm:mb-8 flex items-center gap-3">
                   <span className="text-3xl">✉️</span>
                   Envie sua Mensagem
                 </h3>
@@ -340,7 +340,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="lg:col-span-5 xl:col-span-4"
             >
-              <div className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden h-full">
+              <div className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl relative overflow-hidden h-full">
                 {/* Top decorative line */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
                 
@@ -348,7 +348,7 @@ const Contact = () => {
                 <div className="absolute -top-20 -left-20 w-40 h-40 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl"></div>
 
-                <h3 className="text-2xl lg:text-3xl font-bold dark:text-white light:text-neutral-900 mb-8 flex items-center gap-3">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold dark:text-white light:text-neutral-900 mb-6 sm:mb-8 flex items-center gap-3">
                   <span className="text-3xl">📍</span>
                   Encontre a Gente
                 </h3>

@@ -18,7 +18,7 @@ const Blog = async () => {
         </div>
 
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">
             {BlogData.slice(0, 3).map((blog, key) => (
               <BlogItem blog={blog} key={key} />
             ))}

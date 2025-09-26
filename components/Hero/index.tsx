@@ -55,7 +55,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative overflow-hidden py-32 lg:py-40 xl:py-48 min-h-screen flex items-center">
+      <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24 xl:py-32 min-h-screen flex items-center">
         {/* Background with galactic gradient */}
         <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900 light:bg-gradient-to-br light:from-neutral-50 light:via-neutral-100 light:to-neutral-200"></div>
         
@@ -139,7 +139,7 @@ const Hero = () => {
 
               {/* Description with fade animation */}
               <motion.p 
-                className="mb-10 text-xl leading-relaxed dark:text-neutral-300 light:text-neutral-700"
+                className="mb-8 sm:mb-10 text-lg sm:text-xl leading-relaxed dark:text-neutral-300 light:text-neutral-700"
                 variants={itemVariants}
               >
                 A Elevensoft não vende produtos. Nós entregamos{" "}
@@ -150,7 +150,7 @@ const Hero = () => {
 
               {/* Buttons with animations */}
               <motion.div 
-                className="flex flex-col sm:flex-row gap-4 mb-8"
+                className="flex flex-col sm:flex-row gap-4 mb-6 sm:mb-8"
                 variants={itemVariants}
               >
                 <motion.a

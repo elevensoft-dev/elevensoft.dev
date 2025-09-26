@@ -154,7 +154,7 @@ const Footer = () => {
                       <img 
                         src="/images/logo/logo-light.png" 
                         alt="Logo Eleven, letra E" 
-                        className="w-36 h-18 transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(255,138,41,0.5)]" 
+                        className="w-24 h-12 sm:w-32 sm:h-16 lg:w-36 lg:h-18 transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(255,138,41,0.5)]" 
                       />
                       {/* Brilho sutil no logo */}
                       <motion.div
