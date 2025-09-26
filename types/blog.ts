@@ -17,4 +17,15 @@ export type Blog = {
   tags?: string[];
   publishedAt?: string;
   content: string;
+  // SEO properties
+  seoTitle?: string;
+  seoDescription?: string;
+  seoKeywords?: string;
+  // Blog properties
+  readTime?: string;
+  views?: number;
+  likes?: number;
+  isPublished?: boolean;
+  isFeatured?: boolean;
+  category?: string;
 };

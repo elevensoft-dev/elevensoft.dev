@@ -2,6 +2,318 @@ import { Blog } from "@/types/blog";
 
 const BlogData: Blog[] = [
   {
+    _id: 9,
+    mainImage: "/images/blog/seta.webp",
+    title:
+      "Alternativas ao Teleport e JumpServer para Empresas Brasileiras: Como Escolher a Melhor Solução de Controle de Acesso",
+    metadata:
+      "Descubra as melhores alternativas ao Teleport e JumpServer para empresas brasileiras. Análise completa de custo, complexidade e funcionalidades para escolher a solução ideal de controle de acesso e auditoria de sistemas.",
+    content: `
+      <h2 class="mb-5 mt-11 text-3xl font-semibold text-black dark:text-white 2xl:text-sectiontitle2">
+        Alternativas ao Teleport e JumpServer para Empresas Brasileiras: Como Escolher a Melhor Solução de Controle de Acesso
+      </h2>
+      <ul class="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
+        <li>
+          <span class="text-black dark:text-white">Author: </span>
+          Equipe Elevensoft
+        </li>
+        <li>
+          <span class="text-black dark:text-white">
+            Publicado em: 26/09/2025
+          </span>
+        </li>
+        <li>
+          <span class="text-black dark:text-white">
+            Categoria: Segurança, Infraestrutura, Controle de Acesso
+          </span>
+        </li>
+      </ul>
+      
+      <p class="mb-6 text-lg leading-relaxed">
+        Garantir <strong>segurança e auditoria</strong> nos acessos a servidores e ativos de rede virou prioridade para qualquer empresa em crescimento. Nesse cenário, duas ferramentas aparecem com frequência: <strong>Teleport</strong> e <strong>JumpServer</strong>.
+      </p>
+      
+      <p class="mb-6 text-lg leading-relaxed">
+        Mas será que elas são as melhores opções para empresas brasileiras? E que alternativas existem para equilibrar <strong>custo</strong>, <strong>complexidade</strong> e <strong>compliance</strong>?
+      </p>
+
+      <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-8">
+        <h3 class="text-xl font-semibold mb-4 text-blue-900 dark:text-blue-100">🎯 Por que comparar Teleport e JumpServer?</h3>
+        <p class="mb-4">
+          O <strong>Teleport</strong> é referência mundial em acesso seguro com princípios de <em>Zero Trust</em>. O <strong>JumpServer</strong>, por sua vez, é o principal projeto <strong>open-source</strong> de bastion host, bastante usado por equipes que buscam evitar custos de licença.
+        </p>
+        <p>
+          Ambos resolvem parte do problema, mas cada um cobra a conta de um jeito:
+        </p>
+        <ul class="mt-4 space-y-2">
+          <li>• <strong>Teleport</strong> = segurança de ponta, mas com custo alto em dólar</li>
+          <li>• <strong>JumpServer</strong> = gratuito no papel, mas exige tempo e dedicação constantes da equipe técnica</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-6 mt-12 text-black dark:text-white">O que realmente importa: custo total e complexidade</h3>
+      
+      <p class="mb-6">
+        Não adianta olhar só para o preço de tabela (ou a falta dele). O impacto real está no <strong>custo total de propriedade (TCO)</strong> e na <strong>complexidade de operação</strong>.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h4 class="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">📊 Critérios de Comparação</h4>
+          <ul class="space-y-2 text-sm">
+            <li>• <strong>Modelo de licenciamento</strong> (pago, gratuito, por usuário, por recurso)</li>
+            <li>• <strong>Protocolos suportados</strong> (SSH, RDP, bancos de dados, Kubernetes, web)</li>
+            <li>• <strong>Auditoria</strong> (replay de sessões em vídeo ou texto, logs de comandos)</li>
+            <li>• <strong>Arquitetura</strong> (quantos serviços e dependências precisa manter)</li>
+            <li>• <strong>Tempo de implantação</strong> (curva de aprendizado e setup inicial)</li>
+            <li>• <strong>Fit Brasil</strong> (custo em Reais, suporte local e aderência à LGPD)</li>
+          </ul>
+        </div>
+        
+        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg">
+          <h4 class="text-lg font-semibold mb-4 text-red-900 dark:text-red-100">⚠️ O Contexto Brasileiro</h4>
+          <ul class="space-y-2 text-sm">
+            <li>• <strong>Custo em dólar</strong>: inviável para PMEs que precisam de previsibilidade</li>
+            <li>• <strong>Suporte local</strong>: barreiras de idioma e fuso horário</li>
+            <li>• <strong>Compliance</strong>: LGPD e ISO 27001 exigem auditoria clara</li>
+            <li>• <strong>Simplicidade</strong>: soluções muito complexas drenam energia da equipe</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-6 mt-12 text-black dark:text-white">Teleport: segurança premium, preço premium</h3>
+      
+      <p class="mb-6">
+        O <strong>Teleport</strong> usa certificados efêmeros de curta duração, eliminando credenciais fixas. É o que há de mais moderno em segurança de acesso remoto.
+      </p>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full border-collapse border border-gray-300 dark:border-gray-600">
+          <thead>
+            <tr class="bg-gray-100 dark:bg-gray-700">
+              <th class="border border-gray-300 dark:border-gray-600 p-3 text-left">Aspecto</th>
+              <th class="border border-gray-300 dark:border-gray-600 p-3 text-left">Teleport</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Protocolos</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">SSH, RDP, Kubernetes, bancos de dados e web</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Recursos</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Replay de sessões, RBAC avançado e integração com SSO corporativo</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Complexidade</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Requer infraestrutura dedicada e time especializado</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Preço</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Licenciamento por usuário ativo mensal (MAU), sempre em dólar</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg mb-8">
+        <p class="text-yellow-800 dark:text-yellow-200">
+          <strong>Para empresas médias brasileiras</strong>, o Teleport costuma ser sofisticado demais para a necessidade real e caro demais para o orçamento.
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-6 mt-12 text-black dark:text-white">JumpServer: grátis que sai caro</h3>
+      
+      <p class="mb-6">
+        O <strong>JumpServer</strong> é open-source, modular e cobre bem os protocolos mais usados (SSH, RDP, bancos de dados, Kubernetes). Também oferece replay de sessões e logs detalhados.
+      </p>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full border-collapse border border-gray-300 dark:border-gray-600">
+          <thead>
+            <tr class="bg-gray-100 dark:bg-gray-700">
+              <th class="border border-gray-300 dark:border-gray-600 p-3 text-left">Aspecto</th>
+              <th class="border border-gray-300 dark:border-gray-600 p-3 text-left">JumpServer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Arquitetura</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Exige vários serviços (Core, Koko, Guacamole, Redis, MySQL)</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Custo oculto</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Gratuito na licença, mas caro em horas-homens de DevOps</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Versão Enterprise</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Adiciona recursos extras, mas o preço também é em moeda estrangeira</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg mb-8">
+        <p class="text-orange-800 dark:text-orange-200">
+          Ótima opção para quem tem tempo e equipe sobrando para manter, mas não para empresas que precisam de <strong>simplicidade e agilidade</strong>.
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-6 mt-12 text-black dark:text-white">Onde o ESH se encaixa</h3>
+      
+      <p class="mb-6">
+        É aqui que surge o <strong>ESH</strong>: uma alternativa feita sob medida para empresas brasileiras que precisam de segurança e auditoria, sem pagar em dólar e sem implantar ferramentas gigantescas.
+      </p>
+
+      <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg mb-8">
+        <h4 class="text-lg font-semibold mb-4 text-green-900 dark:text-green-100">✅ Vantagens do ESH</h4>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 dark:text-green-400 mr-2">•</span>
+            <div>
+              <strong>Foco</strong>: acessos a servidores, roteadores, OLTs e ativos de rede
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 dark:text-green-400 mr-2">•</span>
+            <div>
+              <strong>Simplicidade</strong>: deploy rápido, sem agentes e sem dezenas de serviços paralelos
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 dark:text-green-400 mr-2">•</span>
+            <div>
+              <strong>Replay de sessões</strong>: gravação leve em texto, com replay fiel de cada comando
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 dark:text-green-400 mr-2">•</span>
+            <div>
+              <strong>Custo previsível</strong>: preço em Reais, sem surpresas cambiais
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <p class="mb-6">
+        O ESH preenche a lacuna entre a sofisticação cara do Teleport e a complexidade desgastante do JumpServer.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-6 mt-12 text-black dark:text-white">Comparativo Final</h3>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full border-collapse border border-gray-300 dark:border-gray-600">
+          <thead>
+            <tr class="bg-gray-100 dark:bg-gray-700">
+              <th class="border border-gray-300 dark:border-gray-600 p-3 text-left">Critério</th>
+              <th class="border border-gray-300 dark:border-gray-600 p-3 text-left">Teleport</th>
+              <th class="border border-gray-300 dark:border-gray-600 p-3 text-left">JumpServer</th>
+              <th class="border border-gray-300 dark:border-gray-600 p-3 text-left">ESH</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Licenciamento</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Pago por usuário ativo mensal (US$)</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">OSS gratuito + EE sob cotação</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Preço em Reais, previsível</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Protocolos</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">SSH, RDP, K8s, DB, web</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">SSH, RDP, DB, K8s, RemoteApp</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">SSH, RDP, ativos de rede</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Auditoria</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Replay completo + RBAC avançado</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Replay completo + logs de comandos</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Replay fiel em texto</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Arquitetura</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Auth + Proxy; infra dedicada</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Modular; múltiplos serviços + Redis/MySQL</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Simples; deploy rápido</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Custo Total (TCO)</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Licença em dólar + infra</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">OSS gratuito, mas alto custo humano</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Baixo custo operacional</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Fit Brasil</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Baixo (preço em dólar)</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Médio (comunidade ativa)</td>
+              <td class="border border-gray-300 dark:border-gray-600 p-3">Alto (suporte local)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-6 mt-12 text-black dark:text-white">Conclusão</h3>
+      
+      <p class="mb-6">
+        Na hora de escolher sua solução de controle de acessos, pense além da lista de recursos:
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg text-center">
+          <h4 class="text-lg font-semibold mb-2 text-red-900 dark:text-red-100">Teleport</h4>
+          <p class="text-sm text-red-800 dark:text-red-200">Segurança premium, mas pesado no bolso</p>
+        </div>
+        
+        <div class="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg text-center">
+          <h4 class="text-lg font-semibold mb-2 text-orange-900 dark:text-orange-100">JumpServer</h4>
+          <p class="text-sm text-orange-800 dark:text-orange-200">Gratuito, mas caro de manter</p>
+        </div>
+        
+        <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg text-center">
+          <h4 class="text-lg font-semibold mb-2 text-green-900 dark:text-green-100">ESH</h4>
+          <p class="text-sm text-green-800 dark:text-green-200">Segurança robusta, operação leve e custo previsível</p>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 dark:bg-blue-900/20 p-8 rounded-lg text-center">
+        <h4 class="text-xl font-semibold mb-4 text-blue-900 dark:text-blue-100">🎯 Pronto para tomar a decisão certa?</h4>
+        <p class="mb-6 text-blue-800 dark:text-blue-200">
+          Se você quer dormir tranquilo sabendo quem acessou o quê, quando e como — sem perder tempo ou orçamento —, o ESH é a escolha pragmática:
+        </p>
+        <p class="text-2xl font-bold text-blue-900 dark:text-blue-100">
+          <strong>controle total, risco zero.</strong>
+        </p>
+      </div>
+
+      <div class="mt-12 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <h4 class="text-lg font-semibold mb-4">📚 Recursos Adicionais</h4>
+        <ul class="space-y-2 text-sm">
+          <li>• <a href="/esut" class="text-blue-600 dark:text-blue-400 hover:underline">Conheça o ESUT - Sistema de Auditoria em Tempo Real</a></li>
+          <li>• <a href="/keyring" class="text-blue-600 dark:text-blue-400 hover:underline">Descubra o KEYRING - Gestão de Credenciais</a></li>
+          <li>• <a href="/security" class="text-blue-600 dark:text-blue-400 hover:underline">Saiba mais sobre Segurança e Compliance</a></li>
+          <li>• <a href="/contact" class="text-blue-600 dark:text-blue-400 hover:underline">Fale com nossos especialistas</a></li>
+        </ul>
+      </div>
+    `,
+    author: {
+      name: "Gilson Camargo -  CEO",
+      image: "/images/user/user-01.png",
+      bio: "Equipe técnica da Elevensoft especializada em segurança e infraestrutura"
+    },
+    publishedAt: "2025-09-26",
+    tags: ["Teleport", "JumpServer", "Controle de Acesso", "Segurança", "Auditoria", "Bastion Host", "Zero Trust", "LGPD", "Compliance"],
+    slug: "alternativas-teleport-jumpserver-empresas-brasileiras",
+    readTime: "8 min",
+    views: 0,
+    likes: 0,
+    isPublished: true,
+    isFeatured: true,
+    category: "Segurança",
+    seoTitle: "Alternativas ao Teleport e JumpServer para Empresas Brasileiras | Elevensoft",
+    seoDescription: "Descubra as melhores alternativas ao Teleport e JumpServer para empresas brasileiras. Análise completa de custo, complexidade e funcionalidades para escolher a solução ideal de controle de acesso e auditoria de sistemas.",
+    seoKeywords: "teleport alternativa, jumpserver alternativa, controle de acesso, bastion host, segurança de infraestrutura, auditoria de sistemas, LGPD compliance, zero trust, acesso remoto seguro, gestão de credenciais"
+  },
+  {
     _id: 8,
     mainImage: "/images/blog/tech-trends-2025.png",
     title:
@@ -100,6 +412,23 @@ const BlogData: Blog[] = [
         <p>💬 Quer saber mais? <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://wa.me/message/X2DMDA457ASDN1">Clique aqui para falar com um especialista</a></p>
       </div>
     `,
+    author: {
+      name: "Larissa Amaral",
+      image: "/images/user/user-01.png",
+      bio: "Especialista em tecnologia e desenvolvimento de software"
+    },
+    publishedAt: "2025-01-14",
+    tags: ["Tendências", "Tecnologia", "Desenvolvimento", "Software", "2025", "Inovação"],
+    slug: "tendencias-tecnologicas-desenvolvimento-software-2025",
+    readTime: "6 min",
+    views: 0,
+    likes: 0,
+    isPublished: true,
+    isFeatured: false,
+    category: "Tecnologia",
+    seoTitle: "4 Principais Tendências Tecnológicas 2025 | Desenvolvimento de Software",
+    seoDescription: "Descubra as 4 principais tendências tecnológicas que estão moldando o desenvolvimento de software em 2025. DevSecOps, aplicativos nativos em nuvem, IA e realidade aumentada.",
+    seoKeywords: "tendências tecnológicas 2025, desenvolvimento de software, DevSecOps, aplicativos nativos nuvem, inteligência artificial, realidade aumentada, tecnologia"
   },
   {
     _id: 7,
@@ -176,6 +505,23 @@ const BlogData: Blog[] = [
         </div>
       </div>
     `,
+    author: {
+      name: "Equipe Eleven Soft",
+      image: "/images/user/user-01.png",
+      bio: "Equipe técnica especializada em soluções de infraestrutura e segurança"
+    },
+    publishedAt: "2024-11-25",
+    tags: ["ESH", "SSH", "Conexões", "Sessões", "Infraestrutura", "Segurança"],
+    slug: "mantenha-sessoes-ssh-vivas-esh",
+    readTime: "4 min",
+    views: 0,
+    likes: 0,
+    isPublished: true,
+    isFeatured: false,
+    category: "Infraestrutura",
+    seoTitle: "Mantenha Suas Sessões SSH Vivas com o ESH | Elevensoft",
+    seoDescription: "Descubra como o ESH resolve o problema de sessões SSH encerradas automaticamente. Solução completa para manter conexões estáveis e monitorar acessos remotos.",
+    seoKeywords: "sessões SSH, ESH, conexões SSH, ServerAliveInterval, monitoramento SSH, acesso remoto, infraestrutura"
   },
   {
     _id: 6,
