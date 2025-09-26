@@ -45,13 +45,13 @@ const About = () => {
     },
     {
       icon: "🔑",
-      title: "KEYRING - Serviço de Inteligência",
+      title: "KEYRING - Gerenciador de Licenças",
       description: "O mestre das chaves que gerencia a identidade, a autenticação e o licenciamento de todo o ecossistema.",
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: "🛡️",
-      title: "EL GUARDIAN - Fundação Blindada",
+      title: "EL GUARDIAN - Ofuscador PHP",
       description: "A prova filosófica do nosso compromisso. Nós não protegemos apenas o seu ambiente; nós blindamos o nosso próprio código.",
       color: "from-green-500 to-emerald-500"
     }

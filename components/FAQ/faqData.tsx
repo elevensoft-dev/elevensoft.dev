@@ -4,12 +4,12 @@ const faqData: FAQ[] = [
   {
     id: 1,
     question: "O que é a Plataforma Elevensoft e como ela funciona?",
-    answer: "A Plataforma Elevensoft é um ecossistema unificado de segurança digital que integra quatro produtos principais: ESH (Controle Central), ESUT (Execução Segura), KEYRING (Inteligência) e EL GUARDIAN (Fundação). Juntos, eles formam uma solução completa que elimina a fragmentação de segurança, oferecendo controle absoluto e soberania digital para sua infraestrutura.",
+    answer: "A Plataforma Elevensoft é um ecossistema unificado de segurança digital que integra quatro produtos principais: ESH (Controle Central), ESUT (Execução Segura), KEYRING (Gerenciador de Licenças) e EL GUARDIAN (Ofuscador PHP). Juntos, eles formam uma solução completa que elimina a fragmentação de segurança, oferecendo controle absoluto e soberania digital para sua infraestrutura.",
   },
   {
     id: 2,
     question: "Qual é a diferença entre ESH, ESUT, KEYRING e EL GUARDIAN?",
-    answer: "Cada produto tem uma função específica: ESH é o centro de controle que unifica tudo; ESUT executa as operações de segurança de forma segura; KEYRING gerencia chaves e credenciais com inteligência; EL GUARDIAN é a base fundamental que protege a infraestrutura. Juntos, eles criam uma fortaleza digital impenetrável.",
+    answer: "Cada produto tem uma função específica: ESH é o centro de controle que unifica tudo; ESUT executa as operações de segurança de forma segura; KEYRING gerencia licenças de software com flexibilidade total; EL GUARDIAN ofusca códigos PHP para proteção. Juntos, eles criam uma fortaleza digital impenetrável.",
   },
   {
     id: 3,

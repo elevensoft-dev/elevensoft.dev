@@ -37,7 +37,7 @@ const featuresTabData: FeatureTab[] = [
     subtitle: "Serviço de Inteligência",
     description: "O mestre das chaves que gerencia a identidade, a autenticação e o licenciamento de todo o ecossistema. Controle total sobre quem acessa o quê.",
     features: [
-      "Gestão centralizada de identidades",
+        "Criação e edição de licenças de software",
       "Autenticação multifator integrada",
       "Controle de acesso baseado em roles",
       "Licenciamento e compliance",
@@ -52,7 +52,7 @@ const featuresTabData: FeatureTab[] = [
     subtitle: "Fundação Blindada",
     description: "A prova filosófica do nosso compromisso. Nós não protegemos apenas o seu ambiente; nós blindamos o nosso próprio código, porque a soberania começa em casa.",
     features: [
-      "Proteção do código fonte",
+        "Ofuscação completa de código PHP",
       "Auditoria de segurança contínua",
       "Prevenção de vulnerabilidades",
       "Compliance com padrões internacionais",

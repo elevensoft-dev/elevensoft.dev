@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EL GUARDIAN - Elevensoft",
-  description: "Fundação Blindada. A prova filosófica do nosso compromisso. Nós não protegemos apenas o seu ambiente; nós blindamos o nosso próprio código.",
+  title: "EL GUARDIAN - Ofuscador de Códigos PHP | Elevensoft",
+  description: "Ofuscador de códigos PHP completo. Proteja seu código contra engenharia reversa com múltiplos algoritmos de ofuscação e interface intuitiva.",
 };
 
 export default function ElGuardianPage() {
@@ -13,14 +13,14 @@ export default function ElGuardianPage() {
         <div className="text-center mb-20">
           <h1 className="title-product-hero">
             EL GUARDIAN -{" "}
-            <span className="gradient-text-primary">Fundação Blindada</span>
+            <span className="gradient-text-primary">Ofuscador de Códigos PHP</span>
           </h1>
           <h2 className="title-product-section">
-            A Prova Filosófica do Nosso Compromisso
+            Proteção Completa Contra Engenharia Reversa
           </h2>
           <p className="mx-auto max-w-3xl text-lg dark:text-neutral-300 light:text-neutral-700 leading-relaxed">
-            Nós não protegemos apenas o seu ambiente; nós blindamos o nosso próprio código. 
-            O EL GUARDIAN é a fundação que garante que nossa plataforma seja tão segura quanto prometemos.
+            Ofusque seus códigos PHP com múltiplos algoritmos avançados. 
+            O EL GUARDIAN protege sua propriedade intelectual preservando a funcionalidade original do código.
           </p>
         </div>
 

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Segurança - Fundação Blindada | EL GUARDIAN - Elevensoft",
   description: "Descubra a filosofia por trás do EL GUARDIAN e como nossa paranoia com segurança é a tranquilidade do nosso cliente. A soberania começa em casa com proteção de código e auditoria contínua.",
-  keywords: "EL GUARDIAN, segurança de código, proteção de infraestrutura, auditoria de segurança, compliance, ISO 27001, OWASP, GDPR, segurança de nível militar, fundação blindada, soberania digital, proteção de sistemas críticos",
+  keywords: "EL GUARDIAN, ofuscador PHP, proteção de código, engenharia reversa, ofuscação de código, segurança de código, propriedade intelectual, soberania digital, proteção de sistemas críticos",
   authors: [{ name: "Elevensoft" }],
   creator: "Elevensoft",
   publisher: "Elevensoft",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         url: "https://elevensoft.dev/images/features/bg_1.png",
         width: 1200,
         height: 630,
-        alt: "EL GUARDIAN - Fundação Blindada - Segurança de Nível Militar",
+        alt: "EL GUARDIAN - Ofuscador PHP - Proteção Contra Engenharia Reversa",
       },
     ],
   },

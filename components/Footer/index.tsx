@@ -18,8 +18,8 @@ const Footer = () => {
         { name: "Visão Estratégica", href: "/platform" },
         { name: "ESH - Controle Central", href: "https://esh.elevensoft.dev/", external: true },
         { name: "ESUT - Execução Segura", href: "/esut" },
-        { name: "KEYRING - Inteligência", href: "/keyring" },
-        { name: "EL GUARDIAN - Fundação", href: "/el-guardian" },
+        { name: "KEYRING - Gerenciador de Licenças", href: "/keyring" },
+        { name: "EL GUARDIAN - Ofuscador PHP", href: "/el-guardian" },
       ]
     },
     {

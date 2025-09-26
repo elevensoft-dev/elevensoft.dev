@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "KEYRING - Serviço de Inteligência | Gestão de Identidades e Acessos - Elevensoft",
-  description: "KEYRING é o serviço de inteligência que gerencia identidades, autenticação e licenciamento de todo o ecossistema. Centralize, controle e gerencie todas as identidades em uma única plataforma.",
-  keywords: "KEYRING, gestão de identidades, autenticação multifator, controle de acesso, licenciamento, identidade digital, acesso baseado em roles, compliance, integração de sistemas, soberania digital, segurança de infraestrutura",
+  title: "KEYRING - Gerenciador de Licenças | Gestão Completa de Licenças de Software - Elevensoft",
+  description: "KEYRING é o gerenciador de licenças completo que permite criar, editar e gerenciar licenças de software com features JSON flexíveis. Controle total do ciclo de vida das licenças em uma única plataforma.",
+  keywords: "KEYRING, gerenciador de licenças, licenças de software, gestão de licenças, features JSON, ciclo de vida de licenças, painel de licenças, extensão de licenças, soberania digital, segurança de infraestrutura",
   authors: [{ name: "Elevensoft" }],
   creator: "Elevensoft",
   publisher: "Elevensoft",
@@ -11,15 +11,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://elevensoft.dev/keyring",
-    title: "KEYRING - Serviço de Inteligência | Gestão de Identidades e Acessos",
-    description: "Centralize, controle e gerencie todas as identidades, autenticações e licenciamentos em uma única plataforma integrada. O KEYRING é o serviço de inteligência que protege seu ecossistema.",
+    title: "KEYRING - Gerenciador de Licenças | Gestão Completa de Licenças de Software",
+    description: "Crie, edite e gerencie licenças de software com total flexibilidade usando modelos JSON. Controle completo do ciclo de vida das licenças em uma única plataforma integrada.",
     siteName: "Elevensoft",
     images: [
       {
         url: "https://elevensoft.dev/images/features/bg_3.png",
         width: 1200,
         height: 630,
-        alt: "KEYRING - Serviço de Inteligência - Gestão de Identidades",
+        alt: "KEYRING - Gerenciador de Licenças - Gestão Completa de Licenças",
       },
     ],
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@elevensoft",
     creator: "@elevensoft",
-    title: "KEYRING - Serviço de Inteligência | Gestão de Identidades e Acessos",
+    title: "KEYRING - Gerenciador de Licenças | Gestão Completa de Licenças de Software",
     description: "Centralize, controle e gerencie todas as identidades, autenticações e licenciamentos em uma única plataforma integrada.",
     images: ["https://elevensoft.dev/images/features/bg_3.png"],
   },
@@ -149,7 +149,7 @@ export default function KeyringPage() {
         {/* Features Section */}
         <div className="mb-20">
           <h2 className="title-product-section">
-            Controle Total sobre Identidades e Acessos
+            Gestão Completa de Licenças de Software
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="card-modern">
@@ -157,11 +157,11 @@ export default function KeyringPage() {
                 <div className="text-3xl mb-2">🏢</div>
               </div>
               <h3 className="title-product-feature">
-                Gestão Centralizada de Identidades
+                Criação e Edição de Licenças
               </h3>
               <p className="text-neutral-300 leading-relaxed">
-                Single source of truth para todas as identidades. 
-                Crie, modifique e remova usuários de um único painel central.
+                Crie e edite licenças de software com total flexibilidade. 
+                Defina períodos de validade, recursos e restrições de uso.
               </p>
             </div>
 

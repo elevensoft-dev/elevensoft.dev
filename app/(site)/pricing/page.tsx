@@ -34,28 +34,28 @@ export default function PricingPage() {
     },
     {
       name: "KEYRING",
-      description: "Serviço de Inteligência",
+      description: "Gerenciador de Licenças Completo",
       monthlyPrice: 149,
       annualPrice: 1490,
       features: [
-        "Gestão centralizada de identidades",
-        "Autenticação multifator integrada",
-        "Controle de acesso baseado em roles",
-        "Licenciamento e compliance",
-        "Integração com sistemas existentes"
+        "Criação e edição de licenças de software",
+        "Features sob demanda com modelos JSON flexíveis",
+        "Painel completo de status de licenças",
+        "Adição e extensão de licenças existentes",
+        "Gestão completa do ciclo de vida das licenças"
       ]
     },
     {
       name: "EL GUARDIAN",
-      description: "Fundação Blindada",
+      description: "Ofuscador de Códigos PHP",
       monthlyPrice: 99,
       annualPrice: 990,
       features: [
-        "Proteção do código fonte",
-        "Auditoria de segurança contínua",
-        "Prevenção de vulnerabilidades",
-        "Compliance com padrões internacionais",
-        "Transparência total de segurança"
+        "Ofuscação completa de código PHP",
+        "Proteção contra engenharia reversa",
+        "Múltiplos algoritmos de ofuscação",
+        "Preservação da funcionalidade original",
+        "Interface intuitiva para configuração"
       ]
     }
   ];

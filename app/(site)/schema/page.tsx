@@ -115,8 +115,8 @@ const organizationSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "SoftwareApplication",
-          "name": "KEYRING - Serviço de Inteligência", 
-          "description": "Gestão centralizada de identidades e autenticação",
+          "name": "KEYRING - Gerenciador de Licenças", 
+          "description": "Gerenciamento completo de licenças de software com features JSON",
           "applicationCategory": "SecurityApplication",
           "operatingSystem": "Linux, Windows, macOS"
         },
@@ -133,8 +133,8 @@ const organizationSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "SoftwareApplication",
-          "name": "EL GUARDIAN - Fundação Blindada",
-          "description": "Proteção do código fonte e auditoria de segurança contínua",
+          "name": "EL GUARDIAN - Ofuscador PHP",
+          "description": "Ofuscação completa de códigos PHP contra engenharia reversa",
           "applicationCategory": "SecurityApplication", 
           "operatingSystem": "Linux, Windows, macOS"
         },
@@ -357,8 +357,8 @@ export default function SchemaMarkupPage() {
                 <ul className="list-disc list-inside space-y-2 text-neutral-300 ml-4">
                   <li>ESH - Eleven Shell Hub</li>
                   <li>ESUT - Eleven Shell Utility Tool</li>
-                  <li>KEYRING - Serviço de Inteligência</li>
-                  <li>EL GUARDIAN - Fundação Blindada</li>
+                  <li>KEYRING - Gerenciador de Licenças</li>
+                  <li>EL GUARDIAN - Ofuscador PHP</li>
                 </ul>
                 <div className="mt-4 p-3 bg-green-500/10 border border-green-500/20 rounded-lg">
                   <p className="text-green-400 text-sm">
