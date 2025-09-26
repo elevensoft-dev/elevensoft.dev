@@ -19,10 +19,6 @@ const About = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
     },
   };
 
@@ -31,10 +27,6 @@ const About = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
     },
   };
 
@@ -86,7 +78,11 @@ const About = () => {
             viewport={{ once: true }}
           >
             {/* <!-- About Content Start --> */}
-            <motion.div className="lg:w-1/2" variants={itemVariants}>
+            <motion.div 
+              className="lg:w-1/2" 
+              variants={itemVariants}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -167,6 +163,7 @@ const About = () => {
             <motion.div 
               className="lg:w-1/2 mt-16 lg:mt-0" 
               variants={rightItemVariants}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <div className="relative">
                 <motion.div 

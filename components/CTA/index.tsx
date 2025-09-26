@@ -8,10 +8,6 @@ const CTA = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
     },
   };
 
@@ -20,10 +16,6 @@ const CTA = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
     },
   };
 
@@ -66,7 +58,7 @@ const CTA = () => {
             whileInView="visible"
             viewport={{ once: true }}
             whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             {/* Background decorative elements */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]"></div>
