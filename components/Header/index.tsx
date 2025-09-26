@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { menuData } from "./menuData";
+import ThemeToggler from "./ThemeToggler";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -224,7 +225,7 @@ export default function Header() {
       />
       
       <motion.header
-        className={`z-40 sticky top-0 w-full transition-all duration-500 border-b ${
+        className={`z-40 sticky top-2 w-full transition-all duration-500 border-b ${
           isScrolled 
             ? 'bg-neutral-950/95 backdrop-blur-xl border-neutral-800/50 shadow-2xl' 
             : 'bg-transparent border-transparent'
@@ -281,13 +282,15 @@ export default function Header() {
             {menuData?.map(renderMenuItem)}
           </motion.nav>
 
-          {/* CTA Button com efeitos avançados */}
+          {/* Theme Toggler e CTA Button */}
           <motion.div 
             className="flex items-center gap-3"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
+            {/* Theme Toggler */}
+            <ThemeToggler />
             <motion.div
               onHoverStart={() => setIsHovered(true)}
               onHoverEnd={() => setIsHovered(false)}

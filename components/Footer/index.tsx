@@ -32,6 +32,7 @@ const Footer = () => {
         { name: "O Jeito Elevensoft", href: "/o-jeito-elevensoft" },
         { name: "Preços", href: "/precos" },
         { name: "Blog", href: "/blog" },
+        { name: "Carreiras", href: "/carreiras" },
       ]
     },
     {
@@ -362,18 +363,25 @@ const Footer = () => {
                 viewport={{ once: true }}
               >
                 <Link 
-                  href="/seguranca" 
+                  href="/privacidade" 
                   className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group"
                 >
                   <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  Política de Segurança
+                  Política de Privacidade
                 </Link>
                 <Link 
-                  href="/sobre" 
+                  href="/termos" 
                   className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group"
                 >
                   <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   Termos de Uso
+                </Link>
+                <Link 
+                  href="/cookies" 
+                  className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group"
+                >
+                  <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  Política de Cookies
                 </Link>
               </motion.div>
             </motion.div>
