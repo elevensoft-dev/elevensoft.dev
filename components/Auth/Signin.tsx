@@ -13,7 +13,7 @@ const Signin = () => {
   return (
     <>
       {/* <!-- ===== SignIn Form Start ===== --> */}
-      <section className="pb-12.5 pt-32.5 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50 bg-neutral-950">
+      <section className="pb-12.5 pt-32.5 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50 dark:bg-neutral-950 light:bg-neutral-50">
         <div className="relative z-1 mx-auto max-w-c-1016 px-7.5 pb-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
           <motion.div
             variants={{
@@ -40,7 +40,7 @@ const Signin = () => {
               <div className="flex items-center gap-8">
                 <button
                   aria-label="sign with google"
-                  className="text-neutral-300 dark:shadow-two mb-6 flex w-full items-center justify-center rounded-xl border border-neutral-700 bg-neutral-800/50 backdrop-blur-sm px-6 py-3 text-base outline-none transition-all duration-300 hover:border-orange-500 hover:bg-orange-500/5 hover:text-orange-400"
+                  className="dark:text-neutral-300 light:text-neutral-700 dark:shadow-two mb-6 flex w-full items-center justify-center rounded-xl dark:border-neutral-700 light:border-neutral-300 dark:bg-neutral-800/50 light:bg-neutral-100/50 backdrop-blur-sm px-6 py-3 text-base outline-none transition-all duration-300 hover:border-orange-500 hover:bg-orange-500/5 hover:text-orange-400"
                 >
                   <span className="mr-3">
                     <svg
@@ -80,7 +80,7 @@ const Signin = () => {
 
                 <button
                   aria-label="signup with github"
-                  className="text-neutral-300 dark:shadow-two mb-6 flex w-full items-center justify-center rounded-xl border border-neutral-700 bg-neutral-800/50 backdrop-blur-sm px-6 py-3 text-base outline-none transition-all duration-300 hover:border-orange-500 hover:bg-orange-500/5 hover:text-orange-400"
+                  className="dark:text-neutral-300 light:text-neutral-700 dark:shadow-two mb-6 flex w-full items-center justify-center rounded-xl dark:border-neutral-700 light:border-neutral-300 dark:bg-neutral-800/50 light:bg-neutral-100/50 backdrop-blur-sm px-6 py-3 text-base outline-none transition-all duration-300 hover:border-orange-500 hover:bg-orange-500/5 hover:text-orange-400"
                 >
                   <span className="mr-3">
                     <svg
@@ -98,11 +98,11 @@ const Signin = () => {
               </div>
             </div>
             <div className="mb-10 flex items-center justify-center">
-              <span className="hidden h-[1px] w-full max-w-[200px] bg-neutral-700 sm:block"></span>
-              <p className="text-neutral-300 w-full px-5 text-center text-base">
+              <span className="hidden h-[1px] w-full max-w-[200px] dark:bg-neutral-700 light:bg-neutral-300 sm:block"></span>
+              <p className="dark:text-neutral-300 light:text-neutral-700 w-full px-5 text-center text-base">
                 Ou, faça login com seu email
               </p>
-              <span className="hidden h-[1px] w-full max-w-[200px] bg-neutral-700 sm:block"></span>
+              <span className="hidden h-[1px] w-full max-w-[200px] dark:bg-neutral-700 light:bg-neutral-300 sm:block"></span>
             </div>
 
             <form>
@@ -113,7 +113,7 @@ const Signin = () => {
                   name="email"
                   value={data.email}
                   onChange={(e) => setData({ ...data, email: e.target.value })}
-                  className="w-full border-b border-neutral-700 !bg-neutral-800/50 backdrop-blur-sm pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
+                  className="w-full dark:border-b-neutral-700 light:border-b-neutral-300 border-b dark:!bg-neutral-800/50 light:!bg-neutral-100/50 backdrop-blur-sm pb-3.5 dark:text-white light:text-neutral-900 dark:placeholder:text-neutral-400 light:placeholder:text-neutral-500 focus:border-orange-500 focus:placeholder:text-orange-400 focus-visible:outline-none lg:w-1/2"
                 />
 
                 <input
@@ -124,7 +124,7 @@ const Signin = () => {
                   onChange={(e) =>
                     setData({ ...data, password: e.target.value })
                   }
-                  className="w-full border-b border-neutral-700 !bg-neutral-800/50 backdrop-blur-sm pb-3.5 text-white placeholder:text-neutral-400 focus:border-orange-500 focus:placeholder:text-neutral-300 focus-visible:outline-none lg:w-1/2"
+                  className="w-full dark:border-b-neutral-700 light:border-b-neutral-300 border-b dark:!bg-neutral-800/50 light:!bg-neutral-100/50 backdrop-blur-sm pb-3.5 dark:text-white light:text-neutral-900 dark:placeholder:text-neutral-400 light:placeholder:text-neutral-500 focus:border-orange-500 focus:placeholder:text-orange-400 focus-visible:outline-none lg:w-1/2"
                 />
               </div>
 
@@ -136,7 +136,7 @@ const Signin = () => {
                       type="checkbox"
                       className="peer sr-only"
                     />
-                    <span className="group mt-1 flex h-5 min-w-[20px] items-center justify-center rounded border-neutral-600 bg-neutral-700 text-orange-400 peer-checked:bg-orange-500">
+                    <span className="group mt-1 flex h-5 min-w-[20px] items-center justify-center rounded dark:border-neutral-600 light:border-neutral-400 dark:bg-neutral-700 light:bg-neutral-200 text-orange-400 peer-checked:bg-orange-500">
                       <svg
                         className="opacity-0 peer-checked:group-[]:opacity-100"
                         width="10"
@@ -155,13 +155,13 @@ const Signin = () => {
                     </span>
                     <label
                       htmlFor="default-checkbox"
-                      className="flex max-w-[425px] cursor-pointer select-none pl-3 text-neutral-300"
+                      className="flex max-w-[425px] cursor-pointer select-none pl-3 dark:text-neutral-300 light:text-neutral-700"
                     >
                       Manter conectado
                     </label>
                   </div>
 
-                  <a href="#" className="hover:text-orange-400 text-neutral-300 transition-colors duration-200">
+                  <a href="#" className="hover:text-orange-400 dark:text-neutral-300 light:text-neutral-700 transition-colors duration-200">
                     Esqueceu a senha?
                   </a>
                 </div>

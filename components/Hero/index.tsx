@@ -57,7 +57,7 @@ const Hero = () => {
     <>
       <section className="relative overflow-hidden py-32 lg:py-40 xl:py-48 min-h-screen flex items-center">
         {/* Background with galactic gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-950 to-neutral-900"></div>
+        <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900 light:bg-gradient-to-br light:from-neutral-50 light:via-neutral-100 light:to-neutral-200"></div>
         
         {/* Decorative background elements with movement */}
         <div 
@@ -139,7 +139,7 @@ const Hero = () => {
 
               {/* Description with fade animation */}
               <motion.p 
-                className="mb-10 text-xl leading-relaxed text-neutral-300"
+                className="mb-10 text-xl leading-relaxed dark:text-neutral-300 light:text-neutral-700"
                 variants={itemVariants}
               >
                 A Elevensoft não vende produtos. Nós entregamos{" "}
@@ -194,13 +194,13 @@ const Hero = () => {
 
               {/* Highlighted ROI */}
               <motion.div 
-                className="inline-flex items-center px-6 py-3 rounded-2xl bg-neutral-900/60 backdrop-blur-xl border border-orange-500/20"
+                className="inline-flex items-center px-6 py-3 rounded-2xl dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-orange-500/20 light:border-orange-500/30 border"
                 variants={itemVariants}
                 whileHover={{ scale: 1.02 }}
                 style={{ boxShadow: '0 0 30px rgba(255, 138, 41, 0.2)' }}
               >
                 <span className="text-2xl mr-3">🚀</span>
-                <span className="text-neutral-300">
+                <span className="dark:text-neutral-300 light:text-neutral-700">
                   <strong className="text-yellow-400 font-bold">ROI estimado de 2.156%</strong> - Pronto para abandonar o caos?
                 </span>
               </motion.div>
@@ -237,7 +237,7 @@ const Hero = () => {
                       ].map((item, index) => (
                         <motion.div
                           key={item.name}
-                          className="bg-neutral-800/60 backdrop-blur-xl rounded-xl p-4 border border-neutral-700/50 hover:border-orange-500/50 transition-all duration-300 group cursor-pointer"
+                          className="dark:bg-neutral-800/60 light:bg-white/60 backdrop-blur-xl rounded-xl p-4 dark:border-neutral-700/50 light:border-neutral-300/50 border hover:border-orange-500/50 transition-all duration-300 group cursor-pointer"
                           whileHover={{ 
                             scale: 1.05, 
                             y: -5,
@@ -251,7 +251,7 @@ const Hero = () => {
                           <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
                             {item.icon}
                           </div>
-                          <div className="text-sm text-neutral-300 font-medium group-hover:text-orange-400 transition-colors duration-300">
+                          <div className="text-sm dark:text-neutral-300 light:text-neutral-700 font-medium group-hover:text-orange-400 transition-colors duration-300">
                             {item.name}
                           </div>
                         </motion.div>

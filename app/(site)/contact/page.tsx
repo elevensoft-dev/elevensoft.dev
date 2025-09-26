@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="bg-neutral-950">
+    <div className="dark:bg-neutral-950 light:bg-neutral-50">
       <Contact />
     </div>
   );

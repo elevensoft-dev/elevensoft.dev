@@ -6,14 +6,14 @@ import SectionHeader from "../Common/SectionHeader";
 const Integration = () => {
   return (
     <>
-      <section className="section-elegant bg-neutral-950">
+      <section className="section-elegant dark:bg-neutral-950 light:bg-neutral-50">
         <div className="container-elegant">
           {/* Section Title */}
           <div className="mb-16">
             <h2 className="title-section text-center">
               <span className="gradient-text-hero">Soluções</span>
             </h2>
-            <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed text-center">
+            <p className="text-xl dark:text-neutral-300 light:text-neutral-700 max-w-3xl mx-auto leading-relaxed text-center">
               Software e serviço projetados para cada segmento
             </p>
           </div>
@@ -38,7 +38,7 @@ const Integration = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/6"
               >
-                <div className="inline-block rounded-xl bg-neutral-800/50 backdrop-blur-sm p-4.5 shadow-lg border border-neutral-700/50 hover:bg-neutral-700/50 hover:border-neutral-600/50 transition-all duration-300">
+                <div className="inline-block rounded-xl dark:bg-neutral-800/50 light:bg-neutral-100/50 backdrop-blur-sm p-4.5 shadow-lg dark:border-neutral-700/50 light:border-neutral-300/50 border hover:bg-orange-500/10 hover:border-orange-500/50 transition-all duration-300">
                   <Image
                     width={50}
                     height={50}
@@ -85,7 +85,7 @@ const Integration = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/6"
               >
-                <div className="inline-block rounded-xl bg-neutral-800/50 backdrop-blur-sm p-4.5 shadow-lg border border-neutral-700/50 hover:bg-neutral-700/50 hover:border-neutral-600/50 transition-all duration-300">
+                <div className="inline-block rounded-xl dark:bg-neutral-800/50 light:bg-neutral-100/50 backdrop-blur-sm p-4.5 shadow-lg dark:border-neutral-700/50 light:border-neutral-300/50 border hover:bg-orange-500/10 hover:border-orange-500/50 transition-all duration-300">
                   <Image
                     width={50}
                     height={50}
@@ -134,7 +134,7 @@ const Integration = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/6"
               >
-                <div className="inline-block rounded-xl bg-neutral-800/50 backdrop-blur-sm p-4.5 shadow-lg border border-neutral-700/50 hover:bg-neutral-700/50 hover:border-neutral-600/50 transition-all duration-300">
+                <div className="inline-block rounded-xl dark:bg-neutral-800/50 light:bg-neutral-100/50 backdrop-blur-sm p-4.5 shadow-lg dark:border-neutral-700/50 light:border-neutral-300/50 border hover:bg-orange-500/10 hover:border-orange-500/50 transition-all duration-300">
                   <Image
                     width={50}
                     height={50}
@@ -202,7 +202,7 @@ const Integration = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/6"
               >
-                <div className="inline-block rounded-xl bg-neutral-800/50 backdrop-blur-sm p-4.5 shadow-lg border border-neutral-700/50 hover:bg-neutral-700/50 hover:border-neutral-600/50 transition-all duration-300">
+                <div className="inline-block rounded-xl dark:bg-neutral-800/50 light:bg-neutral-100/50 backdrop-blur-sm p-4.5 shadow-lg dark:border-neutral-700/50 light:border-neutral-300/50 border hover:bg-orange-500/10 hover:border-orange-500/50 transition-all duration-300">
                   <Image
                     width={50}
                     height={50}
@@ -251,7 +251,7 @@ const Integration = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/6"
               >
-                <div className="inline-block rounded-xl bg-neutral-800/50 backdrop-blur-sm p-4.5 shadow-lg border border-neutral-700/50 hover:bg-neutral-700/50 hover:border-neutral-600/50 transition-all duration-300">
+                <div className="inline-block rounded-xl dark:bg-neutral-800/50 light:bg-neutral-100/50 backdrop-blur-sm p-4.5 shadow-lg dark:border-neutral-700/50 light:border-neutral-300/50 border hover:bg-orange-500/10 hover:border-orange-500/50 transition-all duration-300">
                   <Image
                     width={50}
                     height={50}
@@ -300,7 +300,7 @@ const Integration = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/6"
               >
-                <div className="inline-block rounded-xl bg-neutral-800/50 backdrop-blur-sm p-4.5 shadow-lg border border-neutral-700/50 hover:bg-neutral-700/50 hover:border-neutral-600/50 transition-all duration-300">
+                <div className="inline-block rounded-xl dark:bg-neutral-800/50 light:bg-neutral-100/50 backdrop-blur-sm p-4.5 shadow-lg dark:border-neutral-700/50 light:border-neutral-300/50 border hover:bg-orange-500/10 hover:border-orange-500/50 transition-all duration-300">
                   <Image
                     width={50}
                     height={50}

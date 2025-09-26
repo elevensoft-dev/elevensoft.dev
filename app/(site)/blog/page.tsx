@@ -11,7 +11,7 @@ const BlogPage = async () => {
   return (
     <>
       {/* <!-- ===== Blog Grid Start ===== --> */}
-      <section className="py-20 lg:py-25 xl:py-30 bg-neutral-950">
+      <section className="py-20 lg:py-25 xl:py-30 dark:bg-neutral-950 light:bg-neutral-50">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold lg:text-5xl xl:text-6xl mb-6">
@@ -20,7 +20,7 @@ const BlogPage = async () => {
                 Soberania Digital
               </span>
             </h1>
-            <p className="text-xl text-neutral-300 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl dark:text-neutral-300 light:text-neutral-700 leading-relaxed max-w-3xl mx-auto">
               Insights, tendências e estratégias para recuperar o controle total da sua infraestrutura
             </p>
           </div>

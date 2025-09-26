@@ -68,7 +68,7 @@ const About = () => {
   return (
     <>
       {/* <!-- ===== About Start ===== --> */}
-      <section id="about" className="section-elegant bg-neutral-950 relative overflow-hidden">
+      <section id="about" className="section-elegant dark:bg-neutral-950 light:bg-neutral-50 relative overflow-hidden">
         {/* Background decorativo */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_90%,rgba(255,138,41,0.02),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_10%,rgba(255,193,7,0.02),transparent_50%)]"></div>

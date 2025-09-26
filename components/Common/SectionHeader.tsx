@@ -18,7 +18,7 @@ const SectionHeader = ({ title, subtitle, className = "", variant = "default" }:
       case "success":
         return "text-green-400";
       default:
-        return "text-white";
+        return "dark:text-white light:text-neutral-900";
     }
   };
 
@@ -28,7 +28,7 @@ const SectionHeader = ({ title, subtitle, className = "", variant = "default" }:
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg text-neutral-300 leading-relaxed">
+        <p className="text-lg dark:text-neutral-300 light:text-neutral-700 leading-relaxed">
           {subtitle}
         </p>
       )}

@@ -31,7 +31,7 @@ const Feature = () => {
   return (
     <>
       {/* Features Section */}
-      <section id="features" className="section-elegant bg-gradient-tech relative overflow-hidden">
+      <section id="features" className="section-elegant dark:bg-gradient-tech light:bg-neutral-50 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(255,138,41,0.03),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,193,7,0.03),transparent_50%)]"></div>
@@ -61,7 +61,7 @@ const Feature = () => {
               Sua Segurança é um{" "}
               <span className="gradient-text-hero">Quebra-Cabeça Frágil</span>?
             </h2>
-            <p className="text-xl text-neutral-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl dark:text-neutral-300 light:text-neutral-700 max-w-4xl mx-auto leading-relaxed">
               O caos de dezenas de ferramentas desconexas, senhas em planilhas, scripts manuais, VPNs lentas e a constante ansiedade de não saber quem tem acesso a quê.
             </p>
           </motion.div>
@@ -89,7 +89,7 @@ const Feature = () => {
                   {/* Icon with enhanced styling */}
                   <div className="text-center mb-6">
                     <motion.div 
-                      className="w-16 h-16 bg-gradient-to-br from-neutral-800/80 to-neutral-700/80 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-neutral-700/50 group-hover:border-orange-500/50 transition-all duration-300 mx-auto"
+                      className="w-16 h-16 dark:bg-gradient-to-br dark:from-neutral-800/80 dark:to-neutral-700/80 light:bg-gradient-to-br light:from-neutral-200/80 light:to-neutral-300/80 backdrop-blur-xl rounded-2xl flex items-center justify-center dark:border-neutral-700/50 light:border-neutral-300/50 border group-hover:border-orange-500/50 transition-all duration-300 mx-auto"
                       whileHover={{ 
                         scale: 1.1,
                         boxShadow: '0 10px 30px rgba(255, 138, 41, 0.2)'

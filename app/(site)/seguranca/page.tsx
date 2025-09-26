@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function SecurityPage() {
   return (
-    <main className="py-20 lg:py-25 xl:py-30 bg-neutral-950">
+    <main className="py-20 lg:py-25 xl:py-30 dark:bg-neutral-950 light:bg-neutral-50">
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-20">
@@ -18,7 +18,7 @@ export default function SecurityPage() {
             </span>{" "}
             da Elevensoft
           </h1>
-          <p className="mx-auto max-w-3xl text-xl text-neutral-300 leading-relaxed">
+          <p className="mx-auto max-w-3xl text-xl dark:text-neutral-300 light:text-neutral-700 leading-relaxed">
             Descubra a filosofia por trás do El Guardian e como nossa paranoia com segurança é a tranquilidade do nosso cliente.
             A soberania começa em casa.
           </p>

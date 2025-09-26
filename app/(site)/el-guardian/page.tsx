@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function ElGuardianPage() {
   return (
-    <main className="py-20 lg:py-25 xl:py-30 bg-neutral-950">
+    <main className="py-20 lg:py-25 xl:py-30 dark:bg-neutral-950 light:bg-neutral-50">
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-20">
@@ -18,7 +18,7 @@ export default function ElGuardianPage() {
           <h2 className="title-product-section">
             A Prova Filosófica do Nosso Compromisso
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-neutral-300 leading-relaxed">
+          <p className="mx-auto max-w-3xl text-lg dark:text-neutral-300 light:text-neutral-700 leading-relaxed">
             Nós não protegemos apenas o seu ambiente; nós blindamos o nosso próprio código. 
             O EL GUARDIAN é a fundação que garante que nossa plataforma seja tão segura quanto prometemos.
           </p>

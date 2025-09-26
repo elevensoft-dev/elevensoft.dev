@@ -56,7 +56,7 @@ const Contact = () => {
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
-      <section id="support" className="section-elegant bg-neutral-950 relative overflow-hidden">
+      <section id="support" className="section-elegant dark:bg-neutral-950 light:bg-neutral-50 relative overflow-hidden">
         {/* Background decorativo */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,138,41,0.03),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,193,7,0.03),transparent_50%)]"></div>
@@ -76,7 +76,7 @@ const Contact = () => {
                 Vamos Conversar sobre{" "}
                 <span className="gradient-text-hero">Soberania Digital</span>
               </h2>
-              <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl dark:text-neutral-300 light:text-neutral-700 max-w-3xl mx-auto leading-relaxed">
                 Agende uma demonstração personalizada e descubra como a Plataforma Elevensoft pode transformar sua segurança digital.
               </p>
             </motion.div>
@@ -91,7 +91,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="lg:col-span-7 xl:col-span-8"
             >
-              <div className="bg-neutral-900/60 backdrop-blur-xl border border-neutral-800/50 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+              <div className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
                 {/* Linha decorativa superior */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
                 
@@ -99,7 +99,7 @@ const Contact = () => {
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"></div>
 
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                <h3 className="text-2xl lg:text-3xl font-bold dark:text-white light:text-neutral-900 mb-8 flex items-center gap-3">
                   <span className="text-3xl">✉️</span>
                   Envie sua Mensagem
                 </h3>
@@ -109,14 +109,14 @@ const Contact = () => {
                     {/* Nome e Email */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="relative">
-                        <label className="block text-sm font-medium text-neutral-300 mb-2">
+                        <label className="block text-sm font-medium dark:text-neutral-300 light:text-neutral-700 mb-2">
                           Nome Completo *
                         </label>
                         <input
                           type="text"
                           placeholder="Digite seu nome completo"
-                          className={`w-full px-4 py-4 bg-neutral-800/50 border-2 rounded-xl text-white placeholder:text-neutral-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
-                            errors.name ? 'border-red-500' : 'border-neutral-700 hover:border-neutral-600'
+                          className={`w-full px-4 py-4 dark:bg-neutral-800/50 light:bg-neutral-100/50 border-2 rounded-xl dark:text-white light:text-neutral-900 dark:placeholder:text-neutral-400 light:placeholder:text-neutral-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
+                            errors.name ? 'border-red-500' : 'dark:border-neutral-700 light:border-neutral-300 hover:border-orange-500'
                           }`}
                           {...register("name")}
                         />
@@ -133,13 +133,13 @@ const Contact = () => {
                       </div>
 
                       <div className="relative">
-                        <label className="block text-sm font-medium text-neutral-300 mb-2">
+                        <label className="block text-sm font-medium dark:text-neutral-300 light:text-neutral-700 mb-2">
                           Email *
                         </label>
                         <input
                           type="email"
                           placeholder="seu@email.com"
-                          className={`w-full px-4 py-4 bg-neutral-800/50 border-2 rounded-xl text-white placeholder:text-neutral-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
+                          className={`w-full px-4 py-4 dark:bg-neutral-800/50 light:bg-neutral-100/50 border-2 rounded-xl dark:text-white light:text-neutral-900 dark:placeholder:text-neutral-400 light:placeholder:text-neutral-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
                             errors.email ? 'border-red-500' : 'border-neutral-700 hover:border-neutral-600'
                           }`}
                           {...register("email")}
@@ -160,13 +160,13 @@ const Contact = () => {
                     {/* Assunto e Telefone */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="relative">
-                        <label className="block text-sm font-medium text-neutral-300 mb-2">
+                        <label className="block text-sm font-medium dark:text-neutral-300 light:text-neutral-700 mb-2">
                           Assunto *
                         </label>
                         <input
                           type="text"
                           placeholder="Qual é o assunto?"
-                          className={`w-full px-4 py-4 bg-neutral-800/50 border-2 rounded-xl text-white placeholder:text-neutral-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
+                          className={`w-full px-4 py-4 dark:bg-neutral-800/50 light:bg-neutral-100/50 border-2 rounded-xl dark:text-white light:text-neutral-900 dark:placeholder:text-neutral-400 light:placeholder:text-neutral-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
                             errors.subject ? 'border-red-500' : 'border-neutral-700 hover:border-neutral-600'
                           }`}
                           {...register("subject")}
@@ -184,13 +184,13 @@ const Contact = () => {
                       </div>
 
                       <div className="relative">
-                        <label className="block text-sm font-medium text-neutral-300 mb-2">
+                        <label className="block text-sm font-medium dark:text-neutral-300 light:text-neutral-700 mb-2">
                           Telefone *
                         </label>
                         <input
                           type="tel"
                           placeholder="(48) 99999-9999"
-                          className={`w-full px-4 py-4 bg-neutral-800/50 border-2 rounded-xl text-white placeholder:text-neutral-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
+                          className={`w-full px-4 py-4 dark:bg-neutral-800/50 light:bg-neutral-100/50 border-2 rounded-xl dark:text-white light:text-neutral-900 dark:placeholder:text-neutral-400 light:placeholder:text-neutral-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/50 ${
                             errors.phone ? 'border-red-500' : 'border-neutral-700 hover:border-neutral-600'
                           }`}
                           {...register("phone")}
@@ -255,7 +255,7 @@ const Contact = () => {
                               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
                           </span>
-                          <span className="text-sm text-neutral-300 leading-relaxed">
+                          <span className="text-sm dark:text-neutral-300 light:text-neutral-700 leading-relaxed">
                             Concordo com os{" "}
                             <a href="/termos" className="text-orange-400 hover:text-orange-300 underline">
                               termos de uso
@@ -302,8 +302,8 @@ const Contact = () => {
                       transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                       className="w-16 h-16 border-4 border-neutral-700 border-t-orange-500 rounded-full mb-6"
                     />
-                    <p className="text-xl text-white font-medium">Enviando sua mensagem...</p>
-                    <p className="text-neutral-400">Aguarde um momento</p>
+                    <p className="text-xl dark:text-white light:text-neutral-900 font-medium">Enviando sua mensagem...</p>
+                    <p className="dark:text-neutral-400 light:text-neutral-600">Aguarde um momento</p>
                   </motion.div>
                 )}
 
@@ -323,8 +323,8 @@ const Contact = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </motion.div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Mensagem Enviada!</h3>
-                    <p className="text-neutral-300 max-w-md">
+                    <h3 className="text-2xl font-bold dark:text-white light:text-neutral-900 mb-3">Mensagem Enviada!</h3>
+                    <p className="dark:text-neutral-300 light:text-neutral-700 max-w-md">
                       Obrigado pelo contato! Nossa equipe entrará em contato em até 24 horas.
                     </p>
                   </motion.div>
@@ -340,7 +340,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="lg:col-span-5 xl:col-span-4"
             >
-              <div className="bg-neutral-900/60 backdrop-blur-xl border border-neutral-800/50 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden h-full">
+              <div className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden h-full">
                 {/* Linha decorativa superior */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
                 
@@ -348,7 +348,7 @@ const Contact = () => {
                 <div className="absolute -top-20 -left-20 w-40 h-40 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl"></div>
 
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                <h3 className="text-2xl lg:text-3xl font-bold dark:text-white light:text-neutral-900 mb-8 flex items-center gap-3">
                   <span className="text-3xl">📍</span>
                   Encontre a Gente
                 </h3>
@@ -367,13 +367,13 @@ const Contact = () => {
                         <span className="text-2xl">🏢</span>
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
+                        <h4 className="text-lg font-semibold dark:text-white light:text-neutral-900 mb-2 group-hover:text-orange-400 transition-colors duration-300">
                           Nossa Localização
                         </h4>
-                        <p className="text-neutral-300 leading-relaxed">
+                        <p className="dark:text-neutral-300 light:text-neutral-700 leading-relaxed">
                           Pedra Branca, Palhoça - Santa Catarina
                         </p>
-                        <p className="text-sm text-neutral-400 mt-1">
+                        <p className="text-sm dark:text-neutral-400 light:text-neutral-600 mt-1">
                           Centro de inovação e tecnologia
                         </p>
                       </div>
@@ -393,7 +393,7 @@ const Contact = () => {
                         <span className="text-2xl">📧</span>
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
+                        <h4 className="text-lg font-semibold dark:text-white light:text-neutral-900 mb-2 group-hover:text-orange-400 transition-colors duration-300">
                           Email
                         </h4>
                         <a 
@@ -402,7 +402,7 @@ const Contact = () => {
                         >
                           ola@elevensoft.dev
                         </a>
-                        <p className="text-sm text-neutral-400 mt-1">
+                        <p className="text-sm dark:text-neutral-400 light:text-neutral-600 mt-1">
                           Resposta em até 24 horas
                         </p>
                       </div>
@@ -422,7 +422,7 @@ const Contact = () => {
                         <span className="text-2xl">📱</span>
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
+                        <h4 className="text-lg font-semibold dark:text-white light:text-neutral-900 mb-2 group-hover:text-orange-400 transition-colors duration-300">
                           WhatsApp
                         </h4>
                         <a 
@@ -434,7 +434,7 @@ const Contact = () => {
                           +55 48 98816-8221
                           <span className="text-sm">→</span>
                         </a>
-                        <p className="text-sm text-neutral-400 mt-1">
+                        <p className="text-sm dark:text-neutral-400 light:text-neutral-600 mt-1">
                           Atendimento direto via WhatsApp
                         </p>
                       </div>
@@ -447,13 +447,13 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="pt-6 border-t border-neutral-800/50"
+                    className="pt-6 dark:border-t-neutral-800/50 light:border-t-neutral-200/50 border-t"
                   >
                     <div className="bg-gradient-to-r from-orange-500/10 to-yellow-500/10 border border-orange-500/20 rounded-2xl p-6 text-center">
-                      <h5 className="text-lg font-semibold text-white mb-3">
+                      <h5 className="text-lg font-semibold dark:text-white light:text-neutral-900 mb-3">
                         🚀 Pronto para a Soberania Digital?
                       </h5>
-                      <p className="text-neutral-300 mb-4 text-sm">
+                      <p className="dark:text-neutral-300 light:text-neutral-700 mb-4 text-sm">
                         Agende uma demonstração personalizada e descubra como transformar sua segurança.
                       </p>
                       <a

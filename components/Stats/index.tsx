@@ -58,7 +58,7 @@ const Stats = () => {
 
   return (
     <>
-      <section className="section-elegant bg-neutral-950 relative overflow-hidden">
+      <section className="section-elegant dark:bg-neutral-950 light:bg-neutral-50 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(255,138,41,0.02),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,193,7,0.02),transparent_50%)]"></div>
@@ -87,7 +87,7 @@ const Stats = () => {
             <h2 className="title-section text-center">
               Números que <span className="gradient-text-hero">Impressionam</span>
             </h2>
-            <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
+            <p className="text-xl dark:text-neutral-300 light:text-neutral-700 max-w-3xl mx-auto">
               A Elevensoft não apenas promete - nós entregamos resultados mensuráveis que transformam a segurança da sua empresa.
             </p>
           </motion.div>
@@ -108,10 +108,10 @@ const Stats = () => {
                 whileHover={{ y: -10, scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="bg-neutral-900/60 backdrop-blur-xl border border-neutral-800/50 rounded-2xl p-8 transition-all duration-300 group-hover:border-orange-500/30 group-hover:bg-neutral-800/60 group-hover:shadow-2xl group-hover:shadow-orange-500/10">
+                <div className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-2xl p-8 transition-all duration-300 group-hover:border-orange-500/30 group-hover:bg-orange-500/5 group-hover:shadow-2xl group-hover:shadow-orange-500/10">
                   {/* Icon */}
                   <motion.div
-                    className="text-5xl mb-4 mx-auto w-20 h-20 bg-gradient-to-br from-neutral-800/80 to-neutral-700/80 rounded-2xl flex items-center justify-center border border-neutral-700/50 group-hover:border-orange-500/30 transition-all duration-300"
+                    className="text-5xl mb-4 mx-auto w-20 h-20 dark:bg-gradient-to-br dark:from-neutral-800/80 dark:to-neutral-700/80 light:bg-gradient-to-br light:from-neutral-200/80 light:to-neutral-300/80 rounded-2xl flex items-center justify-center dark:border-neutral-700/50 light:border-neutral-300/50 border group-hover:border-orange-500/30 transition-all duration-300"
                     whileHover={{ 
                       scale: 1.1,
                       boxShadow: '0 10px 30px rgba(255, 138, 41, 0.2)'
@@ -122,7 +122,7 @@ const Stats = () => {
 
                   {/* Number */}
                   <motion.div
-                    className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300"
+                    className="text-4xl md:text-5xl font-bold dark:text-white light:text-neutral-900 mb-2 group-hover:text-orange-400 transition-colors duration-300"
                     initial={{ scale: 0.5, opacity: 0 }}
                     animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }}
                     transition={{ delay: index * 0.1 + 0.3, duration: 0.5, type: "spring", stiffness: 100 }}
@@ -136,7 +136,7 @@ const Stats = () => {
                   </motion.div>
 
                   {/* Label */}
-                  <p className="text-neutral-300 text-lg font-medium group-hover:text-white transition-colors duration-300">
+                  <p className="dark:text-neutral-300 light:text-neutral-700 text-lg font-medium group-hover:text-orange-400 transition-colors duration-300">
                     {stat.label}
                   </p>
 
@@ -160,9 +160,9 @@ const Stats = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-neutral-900/60 backdrop-blur-xl border border-orange-500/20">
+            <div className="inline-flex items-center px-8 py-4 rounded-2xl dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-orange-500/20 light:border-orange-500/30 border">
               <span className="text-2xl mr-3">📊</span>
-              <span className="text-neutral-300">
+              <span className="dark:text-neutral-300 light:text-neutral-700">
                 <strong className="text-orange-400 font-bold">Quer ver mais números?</strong> Agende uma demonstração personalizada.
               </span>
             </div>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const ErroPage = () => {
   return (
-    <section className="overflow-hidden pb-25 pt-45 lg:pb-32.5 lg:pt-50 xl:pb-37.5 xl:pt-55 bg-neutral-950">
+    <section className="overflow-hidden pb-25 pt-45 lg:pb-32.5 lg:pt-50 xl:pb-37.5 xl:pt-55 dark:bg-neutral-950 light:bg-neutral-50">
       <div className="animate_top mx-auto max-w-[518px] text-center">
         <Image
           src="/images/shape/404.svg"
@@ -19,10 +19,10 @@ const ErroPage = () => {
           height={400}
         />
 
-        <h2 className="mb-5 text-2xl font-semibold text-white md:text-4xl">
+        <h2 className="mb-5 text-2xl font-semibold dark:text-white light:text-neutral-900 md:text-4xl">
           Esta Página Não Existe
         </h2>
-        <p className="mb-7.5 text-neutral-300 leading-relaxed">
+        <p className="mb-7.5 dark:text-neutral-300 light:text-neutral-700 leading-relaxed">
           A página que você estava procurando parece ter sido movida, deletada ou
           não existe.
         </p>

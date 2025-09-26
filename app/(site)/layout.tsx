@@ -123,7 +123,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`bg-neutral-950 text-white ${inter.className}`} suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

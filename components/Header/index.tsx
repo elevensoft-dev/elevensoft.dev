@@ -45,7 +45,7 @@ export default function Header() {
           {/* Área de ponte inferior para conectar com o submenu */}
           <div className="absolute -bottom-4 left-0 right-0 h-4 bg-transparent" />
           
-          <button className="relative overflow-hidden transition-all duration-300 flex items-center gap-2 text-neutral-300 font-medium group">
+          <button className="relative overflow-hidden transition-all duration-300 flex items-center gap-2 dark:text-neutral-300 light:text-neutral-700 font-medium group">
             <span className="relative z-10">{item.title}</span>
             {/* Efeito de preenchimento da esquerda para direita */}
             <motion.span
@@ -68,7 +68,7 @@ export default function Header() {
           
           {/* Submenu com animações elegantes */}
           <motion.div 
-            className="absolute top-full left-0 mt-0 w-56 bg-neutral-900/95 backdrop-blur-xl border border-neutral-800/50 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden"
+            className="absolute top-full left-0 mt-0 w-56 dark:bg-neutral-900/95 light:bg-white/95 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden"
             initial={{ opacity: 0, y: 2, scale: 0.99 }}
             whileHover={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.2 }}
@@ -86,7 +86,7 @@ export default function Header() {
                   href={subItem.title === "ESH" ? "https://esh.elevensoft.dev/" : subItem.path}
                   target={subItem.title === "ESH" ? "_blank" : "_self"}
                   rel={subItem.title === "ESH" ? "noopener noreferrer" : ""}
-                  className="block px-4 py-3 text-sm text-neutral-300 hover:text-white hover:bg-neutral-800/50 transition-all duration-200 rounded-xl mx-1 my-1 group/item"
+                  className="block px-4 py-3 text-sm dark:text-neutral-300 light:text-neutral-700 hover:text-orange-500 hover:bg-orange-500/10 transition-all duration-200 rounded-xl mx-1 my-1 group/item"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
@@ -119,8 +119,8 @@ export default function Header() {
         >
           <Link
             href={item.path}
-            className={`relative overflow-hidden transition-all duration-300 text-neutral-300 font-medium ${
-              pathname === item.path ? 'text-white' : ''
+            className={`relative overflow-hidden transition-all duration-300 dark:text-neutral-300 light:text-neutral-700 font-medium ${
+              pathname === item.path ? 'dark:text-white light:text-neutral-900' : ''
             } group`}
           >
             <span className="relative z-10">{item.title}</span>
@@ -166,7 +166,7 @@ export default function Header() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="text-white font-semibold mb-2 flex items-center">
+          <div className="dark:text-white light:text-neutral-900 font-semibold mb-2 flex items-center">
             <span className="text-orange-400 mr-2">▶</span>
             {item.title}
           </div>
@@ -177,7 +177,7 @@ export default function Header() {
                 href={subItem.title === "ESH" ? "https://esh.elevensoft.dev/" : subItem.path}
                 target={subItem.title === "ESH" ? "_blank" : "_self"}
                 rel={subItem.title === "ESH" ? "noopener noreferrer" : ""}
-                className="block text-neutral-300 hover:text-orange-400 transition-all duration-300 py-2 px-3 rounded-lg hover:bg-neutral-800/30"
+                className="block dark:text-neutral-300 light:text-neutral-700 hover:text-orange-400 transition-all duration-300 py-2 px-3 rounded-lg hover:bg-orange-500/10"
                 onClick={() => setIsMobileMenuOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -203,7 +203,7 @@ export default function Header() {
         >
           <Link
             href={item.path}
-            className="block text-neutral-300 hover:text-orange-400 transition-all duration-300 py-2 px-3 rounded-lg hover:bg-neutral-800/30 flex items-center"
+            className="block dark:text-neutral-300 light:text-neutral-700 hover:text-orange-400 transition-all duration-300 py-2 px-3 rounded-lg hover:bg-orange-500/10 flex items-center"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -226,8 +226,8 @@ export default function Header() {
       
       <motion.header
         className={`z-40 sticky top-2 w-full transition-all duration-500 border-b ${
-          isScrolled 
-            ? 'bg-neutral-950/95 backdrop-blur-xl border-neutral-800/50 shadow-2xl' 
+          isScrolled
+            ? 'dark:bg-neutral-950/95 light:bg-white/95 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 shadow-2xl'
             : 'bg-transparent border-transparent'
         }`}
       initial={{ y: -100 }}
@@ -274,7 +274,7 @@ export default function Header() {
 
           {/* Desktop Navigation com animações */}
           <motion.nav 
-            className="hidden lg:flex items-center gap-10 text-neutral-300 text-sm"
+            className="hidden lg:flex items-center gap-10 dark:text-neutral-300 light:text-neutral-700 text-sm"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
@@ -331,7 +331,7 @@ export default function Header() {
 
           {/* Mobile Menu Button com animação */}
           <motion.button
-            className="lg:hidden text-white hover:text-orange-400 transition-all duration-300 p-2 rounded-lg hover:bg-neutral-800/30"
+            className="lg:hidden dark:text-white light:text-neutral-900 hover:text-orange-400 transition-all duration-300 p-2 rounded-lg hover:bg-orange-500/10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -373,7 +373,7 @@ export default function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div 
-            className="lg:hidden bg-neutral-950/98 backdrop-blur-xl border-t border-neutral-800/50 overflow-hidden"
+            className="lg:hidden dark:bg-neutral-950/98 light:bg-white/98 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border-t overflow-hidden"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -390,7 +390,7 @@ export default function Header() {
               
               {/* CTA mobile */}
               <motion.div
-                className="mt-6 pt-6 border-t border-neutral-800/50"
+                className="mt-6 pt-6 dark:border-t-neutral-800/50 light:border-t-neutral-200/50 border-t"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.3 }}

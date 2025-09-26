@@ -95,7 +95,7 @@ const Footer = () => {
   return (
     <>
       {/* <!-- ===== Footer Start ===== --> */}
-      <footer className="bg-gradient-to-br from-neutral-950 via-neutral-900/50 to-neutral-950 relative overflow-hidden border-t border-neutral-800/50 w-screen-expanded">
+      <footer className="dark:bg-gradient-to-br dark:from-neutral-950 dark:via-neutral-900/50 dark:to-neutral-950 light:bg-gradient-to-br light:from-neutral-50 light:via-neutral-100/50 light:to-neutral-50 relative overflow-hidden dark:border-t-neutral-800/50 light:border-t-neutral-200/50 border-t w-screen-expanded">
         {/* Background decorativo */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(255,138,41,0.02),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,193,7,0.02),transparent_50%)]"></div>
@@ -168,7 +168,7 @@ const Footer = () => {
 
                 {/* Mensagem centralizada */}
                 <motion.p 
-                  className="mb-8 lg:mb-10 text-neutral-300 leading-relaxed text-lg lg:text-xl max-w-4xl mx-auto"
+                  className="mb-8 lg:mb-10 dark:text-neutral-300 light:text-neutral-700 leading-relaxed text-lg lg:text-xl max-w-4xl mx-auto"
                   variants={itemVariants}
                 >
                   A Elevensoft não vende produtos. Nós entregamos{" "}
@@ -178,13 +178,13 @@ const Footer = () => {
 
                 {/* Card ROI centralizado */}
                 <motion.div
-                  className="inline-flex items-center px-8 py-4 rounded-2xl bg-neutral-900/60 backdrop-blur-xl border border-orange-500/20"
+                  className="inline-flex items-center px-8 py-4 rounded-2xl dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-orange-500/20 light:border-orange-500/30 border"
                   variants={itemVariants}
                   whileHover={{ scale: 1.02 }}
                   style={{ boxShadow: '0 0 30px rgba(255, 138, 41, 0.2)' }}
                 >
                   <span className="text-3xl mr-4">🚀</span>
-                  <span className="text-neutral-300 text-lg">
+                  <span className="dark:text-neutral-300 light:text-neutral-700 text-lg">
                     <strong className="text-yellow-400 font-bold">ROI estimado de 2.156%</strong> - A era da segurança fragmentada acabou
                   </span>
                 </motion.div>
@@ -206,7 +206,7 @@ const Footer = () => {
                       transition={{ duration: 0.2 }}
                     >
                       <span className="text-3xl">{section.icon}</span>
-                      <h4 className="text-xl font-semibold text-white group-hover:text-orange-400 transition-colors duration-300">
+                      <h4 className="text-xl font-semibold dark:text-white light:text-neutral-900 group-hover:text-orange-400 transition-colors duration-300">
                         {section.title}
                       </h4>
                     </motion.div>
@@ -224,7 +224,7 @@ const Footer = () => {
                               href={link.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="group/link flex items-center text-neutral-300 hover:text-orange-400 transition-all duration-300 py-2.5 lg:py-3 px-3 lg:px-4 rounded-lg hover:bg-neutral-800/30 md:justify-center lg:justify-start"
+                              className="group/link flex items-center dark:text-neutral-300 light:text-neutral-700 hover:text-orange-400 transition-all duration-300 py-2.5 lg:py-3 px-3 lg:px-4 rounded-lg hover:bg-orange-500/10 md:justify-center lg:justify-start"
                             >
                               <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 lg:mr-4 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300"></span>
                               {link.name}
@@ -240,7 +240,7 @@ const Footer = () => {
                           ) : (
                             <Link
                               href={link.href}
-                              className="group/link flex items-center text-neutral-300 hover:text-orange-400 transition-all duration-300 py-2.5 lg:py-3 px-3 lg:px-4 rounded-lg hover:bg-neutral-800/30 md:justify-center lg:justify-start"
+                              className="group/link flex items-center dark:text-neutral-300 light:text-neutral-700 hover:text-orange-400 transition-all duration-300 py-2.5 lg:py-3 px-3 lg:px-4 rounded-lg hover:bg-orange-500/10 md:justify-center lg:justify-start"
                             >
                               <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 lg:mr-4 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300"></span>
                               {link.name}
@@ -260,7 +260,7 @@ const Footer = () => {
               variants={itemVariants}
             >
               <motion.div
-                className="bg-neutral-900/60 backdrop-blur-xl border border-neutral-800/50 rounded-3xl p-12 lg:p-16 xl:p-20 relative overflow-hidden text-center max-w-6xl mx-auto"
+                className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-3xl p-12 lg:p-16 xl:p-20 relative overflow-hidden text-center max-w-6xl mx-auto"
                 whileHover={{ 
                   scale: 1.01,
                   borderColor: 'rgba(255, 138, 41, 0.3)'
@@ -272,7 +272,7 @@ const Footer = () => {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
                 
                 <motion.h4 
-                  className="mb-8 lg:mb-10 text-3xl lg:text-4xl xl:text-5xl font-semibold text-white flex items-center justify-center gap-4 lg:gap-6"
+                  className="mb-8 lg:mb-10 text-3xl lg:text-4xl xl:text-5xl font-semibold dark:text-white light:text-neutral-900 flex items-center justify-center gap-4 lg:gap-6"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -281,7 +281,7 @@ const Footer = () => {
                 </motion.h4>
 
                 <motion.p 
-                  className="mb-12 lg:mb-16 text-neutral-300 leading-relaxed text-xl lg:text-2xl max-w-4xl mx-auto"
+                  className="mb-12 lg:mb-16 dark:text-neutral-300 light:text-neutral-700 leading-relaxed text-xl lg:text-2xl max-w-4xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
@@ -328,7 +328,7 @@ const Footer = () => {
               transition={{ duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
             >
-              <div className="h-px bg-gradient-to-r from-transparent via-neutral-700 to-transparent"></div>
+              <div className="h-px dark:bg-gradient-to-r dark:from-transparent dark:via-neutral-700 dark:to-transparent light:bg-gradient-to-r light:from-transparent light:via-neutral-300 light:to-transparent"></div>
               <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full"></div>
             </motion.div>
 
@@ -349,14 +349,14 @@ const Footer = () => {
                 >
                   <span className="text-xs lg:text-sm font-bold text-black">E</span>
                 </motion.div>
-                <p className="text-neutral-400 text-sm lg:text-base">
+                <p className="dark:text-neutral-400 light:text-neutral-600 text-sm lg:text-base">
                   © {currentYear} Elevensoft. Todos os direitos reservados.{" "}
                   <span className="text-orange-400 font-medium">Soberania Digital é nossa missão.</span>
                 </p>
               </motion.div>
 
               <motion.div 
-                className="flex items-center space-x-6 lg:space-x-8 text-sm lg:text-base text-neutral-400"
+                className="flex items-center space-x-6 lg:space-x-8 text-sm lg:text-base dark:text-neutral-400 light:text-neutral-600"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}

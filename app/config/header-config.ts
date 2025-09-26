@@ -10,17 +10,17 @@ export const headerConfig = {
       },
     },
     background: {
-      main: 'bg-neutral-950',
-      secondary: 'bg-neutral-900/50',
+      main: 'dark:bg-neutral-950 light:bg-white',
+      secondary: 'dark:bg-neutral-900/50 light:bg-neutral-100/50',
       transparent: 'bg-transparent',
     },
     border: {
-      primary: 'border-neutral-800/50',
+      primary: 'dark:border-neutral-800/50 light:border-neutral-200/50',
       transparent: 'border-transparent',
     },
     text: {
-      primary: 'text-white',
-      secondary: 'text-neutral-300',
+      primary: 'dark:text-white light:text-neutral-900',
+      secondary: 'dark:text-neutral-300 light:text-neutral-700',
     },
   },
 

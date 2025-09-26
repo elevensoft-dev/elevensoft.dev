@@ -11,12 +11,12 @@ const FAQItem = ({ faqData }: { faqData: FaqData }) => {
 
   return (
     <>
-      <div className="flex flex-col border-b border-neutral-800/50 last-of-type:border-none">
+      <div className="flex flex-col dark:border-b-neutral-800/50 light:border-b-neutral-200/50 border-b last-of-type:border-none">
         <button
           onClick={() => {
             handleFaqToggle(id);
           }}
-          className="flex cursor-pointer items-center justify-between px-6 py-5 text-metatitle3 font-medium text-white hover:text-orange-400 transition-colors duration-200 lg:px-9 lg:py-7.5"
+          className="flex cursor-pointer items-center justify-between px-6 py-5 text-metatitle3 font-medium dark:text-white light:text-neutral-900 hover:text-orange-400 transition-colors duration-200 lg:px-9 lg:py-7.5"
         >
           {quest}
 
@@ -49,7 +49,7 @@ const FAQItem = ({ faqData }: { faqData: FaqData }) => {
           )}
         </button>
         <p
-          className={`border-t border-neutral-800/50 px-6 py-5 text-neutral-300 leading-relaxed lg:px-9 lg:py-7.5 ${
+          className={`dark:border-t-neutral-800/50 light:border-t-neutral-200/50 border-t px-6 py-5 dark:text-neutral-300 light:text-neutral-700 leading-relaxed lg:px-9 lg:py-7.5 ${
             activeFaq === id ? "block" : "hidden"
           }`}
         >

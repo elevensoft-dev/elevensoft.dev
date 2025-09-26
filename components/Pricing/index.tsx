@@ -22,29 +22,29 @@ const Pricing = () => {
             <div className="flex flex-wrap justify-center gap-8 lg:flex-nowrap xl:gap-12">
               {/* Pricing Item */}
               <div className="card-modern group relative p-8 xl:p-12 md:w-[45%] lg:w-1/3">
-                <h3 className="title-responsive-md text-white mb-8">
+                <h3 className="title-responsive-md dark:text-white light:text-neutral-900 mb-8">
                   R$ 997{" "}
-                  <span className="text-regular text-neutral-300">
+                  <span className="text-regular dark:text-neutral-300 light:text-neutral-700">
                     /mês
                   </span>
                 </h3>
                 <h4 className="title-feature mb-3">
                   Plano Básico
                 </h4>
-                <p className="text-neutral-300">Ideal para pequenas empresas iniciando sua jornada de soberania digital.</p>
+                <p className="dark:text-neutral-300 light:text-neutral-700">Ideal para pequenas empresas iniciando sua jornada de soberania digital.</p>
 
-                <div className="mt-9 border-t border-neutral-800/50 pb-12 pt-9">
+                <div className="mt-9 dark:border-t-neutral-800/50 light:border-t-neutral-200/50 border-t pb-12 pt-9">
                   <ul>
-                    <li className="mb-4 text-neutral-300 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 last:mb-0">
                       ✅ Acesso ao ESH
                     </li>
-                    <li className="mb-4 text-neutral-300 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 last:mb-0">
                       ✅ Suporte por email
                     </li>
-                    <li className="mb-4 text-neutral-300 opacity-40 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 opacity-40 last:mb-0">
                       ❌ Suporte prioritário
                     </li>
-                    <li className="mb-4 text-neutral-300 opacity-40 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 opacity-40 last:mb-0">
                       ❌ Treinamento personalizado
                     </li>
                   </ul>
@@ -77,29 +77,29 @@ const Pricing = () => {
                   popular
                 </div>
 
-                <h3 className="title-responsive-md text-white mb-8">
+                <h3 className="title-responsive-md dark:text-white light:text-neutral-900 mb-8">
                   R$ 1.997{" "}
-                  <span className="text-regular text-neutral-300">
+                  <span className="text-regular dark:text-neutral-300 light:text-neutral-700">
                     /mês
                   </span>
                 </h3>
                 <h4 className="title-feature mb-3">
                   Plano Profissional
                 </h4>
-                <p className="text-neutral-300">Solução completa para empresas que buscam controle total e segurança máxima.</p>
+                <p className="dark:text-neutral-300 light:text-neutral-700">Solução completa para empresas que buscam controle total e segurança máxima.</p>
 
-                <div className="mt-9 border-t border-neutral-800/50 pb-12 pt-9">
+                <div className="mt-9 dark:border-t-neutral-800/50 light:border-t-neutral-200/50 border-t pb-12 pt-9">
                   <ul>
-                    <li className="mb-4 text-neutral-300 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 last:mb-0">
                       ✅ Acesso completo à plataforma
                     </li>
-                    <li className="mb-4 text-neutral-300 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 last:mb-0">
                       ✅ Suporte prioritário 24/7
                     </li>
-                    <li className="mb-4 text-neutral-300 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 last:mb-0">
                       ✅ Treinamento da equipe
                     </li>
-                    <li className="mb-4 text-neutral-300 opacity-40 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 opacity-40 last:mb-0">
                       ❌ Consultoria estratégica
                     </li>
                   </ul>
@@ -115,29 +115,29 @@ const Pricing = () => {
 
               {/* Pricing Item */}
               <div className="card-modern group relative p-8 xl:p-12 md:w-[45%] lg:w-1/3">
-                <h3 className="title-responsive-md text-white mb-8">
+                <h3 className="title-responsive-md dark:text-white light:text-neutral-900 mb-8">
                   R$ 4.997{" "}
-                  <span className="text-regular text-neutral-300">
+                  <span className="text-regular dark:text-neutral-300 light:text-neutral-700">
                     /mês
                   </span>
                 </h3>
                 <h4 className="title-feature mb-3">
                   Plano Enterprise
                 </h4>
-                <p className="text-neutral-300">Para grandes corporações que exigem o máximo em segurança e personalização.</p>
+                <p className="dark:text-neutral-300 light:text-neutral-700">Para grandes corporações que exigem o máximo em segurança e personalização.</p>
 
-                <div className="mt-9 border-t border-neutral-800/50 pb-12 pt-9">
+                <div className="mt-9 dark:border-t-neutral-800/50 light:border-t-neutral-200/50 border-t pb-12 pt-9">
                   <ul>
-                    <li className="mb-4 text-neutral-300 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 last:mb-0">
                       ✅ Tudo do plano Profissional
                     </li>
-                    <li className="mb-4 text-neutral-300 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 last:mb-0">
                       ✅ Consultoria estratégica
                     </li>
-                    <li className="mb-4 text-neutral-300 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 last:mb-0">
                       ✅ Implementação personalizada
                     </li>
-                    <li className="mb-4 text-neutral-300 last:mb-0">
+                    <li className="mb-4 dark:text-neutral-300 light:text-neutral-700 last:mb-0">
                       ✅ SLA garantido
                     </li>
                   </ul>

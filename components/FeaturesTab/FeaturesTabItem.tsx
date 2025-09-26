@@ -25,13 +25,13 @@ const FeaturesTabItem = ({ feature }: FeaturesTabItemProps) => {
             <h4 className="text-lg font-semibold text-orange-400 mb-3">
               {subtitle}
             </h4>
-            <p className="text-neutral-300 mb-6 leading-relaxed">
+            <p className="dark:text-neutral-300 light:text-neutral-700 mb-6 leading-relaxed">
               {description}
             </p>
             
             <ul className="space-y-2 mb-6">
               {features.map((feature, index) => (
-                <li key={index} className="flex items-center text-neutral-300">
+                <li key={index} className="flex items-center dark:text-neutral-300 light:text-neutral-700">
                   <span className="mr-2 text-green-400">✓</span>
                   {feature}
                 </li>
@@ -42,7 +42,7 @@ const FeaturesTabItem = ({ feature }: FeaturesTabItemProps) => {
               href={feature.title === "ESH" ? "https://esh.elevensoft.dev/" : feature.link}
               target={feature.title === "ESH" ? "_blank" : "_self"}
               rel={feature.title === "ESH" ? "noopener noreferrer" : ""}
-              className="inline-flex items-center justify-center rounded-xl bg-neutral-800/50 hover:bg-neutral-700/50 px-6 py-2 text-white font-medium transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center justify-center rounded-xl dark:bg-neutral-800/50 light:bg-neutral-100/50 hover:bg-orange-500/10 px-6 py-2 dark:text-white light:text-neutral-900 font-medium transition-all duration-300 hover:scale-105"
             >
               Saiba Mais
             </a>

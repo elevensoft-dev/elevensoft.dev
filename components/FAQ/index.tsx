@@ -14,7 +14,7 @@ const FAQ = () => {
   return (
     <>
       {/* FAQ Section */}
-      <section className="section-elegant overflow-hidden bg-neutral-950">
+      <section className="section-elegant overflow-hidden dark:bg-neutral-950 light:bg-neutral-50">
         <div className="container-elegant relative z-10">
           <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-32.5">
             <motion.div
@@ -43,7 +43,7 @@ const FAQ = () => {
                   Frequentes
                 </span>
               </h2>
-              <p className="mb-8 text-neutral-300 leading-relaxed text-lg max-w-2xl">
+              <p className="mb-8 dark:text-neutral-300 light:text-neutral-700 leading-relaxed text-lg max-w-2xl">
                 Tire suas dúvidas sobre a Plataforma Elevensoft e como ela pode transformar sua segurança digital.
               </p>
 
