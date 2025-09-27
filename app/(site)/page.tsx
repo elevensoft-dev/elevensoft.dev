@@ -7,12 +7,13 @@ import Feature from "@/components/Features";
 import FeaturesTab from "@/components/FeaturesTab";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
+import TestimonialSection from "@/components/Testimonial/TestimonialSection";
 import { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  title: "Elevensoft - Soberania Digital | Plataforma Unificada de Segurança de Infraestrutura",
-  description: "Recupere sua Soberania Digital com a plataforma Elevensoft. ESH, ESUT, KEYRING e EL GUARDIAN unificam controle de acesso, auditoria em tempo real e segurança de infraestrutura crítica. Elimine fragmentação e blinde sua infraestrutura.",
-  keywords: "soberania digital, infraestrutura crítica, controle de acesso unificado, auditoria de sistemas em tempo real, segurança de infraestrutura, plataforma de segurança unificada, ESH Eleven Shell Hub, ESUT Eleven Shell Utility Tool, KEYRING gestão de identidades, EL GUARDIAN proteção de código, acesso remoto seguro, monitoramento de sessões, políticas de segurança, compliance de sistemas, zero trust security, privileged access management, infrastructure access management",
+  title: "Elevensoft - Plataforma Unificada de Segurança Empresarial | ESH + ESUT + KEYRING + EL GUARDIAN",
+  description: "Transforme sua infraestrutura de segurança fragmentada em um ecossistema unificado e inteligente. A plataforma Elevensoft integra controle de acesso, auditoria em tempo real e gestão de identidades em uma solução elegante e robusta, desenvolvida especificamente para o mercado brasileiro.",
+  keywords: "plataforma de segurança unificada, controle de acesso empresarial, auditoria de sistemas em tempo real, gestão de identidades, segurança de infraestrutura, ESH Eleven Shell Hub, ESUT Eleven Shell Utility Tool, KEYRING gestão de licenças, EL GUARDIAN proteção de código, acesso remoto seguro, monitoramento de sessões, políticas de segurança, compliance de sistemas, zero trust security, privileged access management, infrastructure access management, segurança empresarial Brasil",
   authors: [{ name: "Elevensoft" }],
   creator: "Elevensoft",
   publisher: "Elevensoft",
@@ -23,15 +24,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://elevensoft.dev",
-    title: "Elevensoft - Soberania Digital | Plataforma Unificada de Segurança",
-    description: "Recupere sua Soberania Digital. A era da segurança fragmentada acabou. Unifique seu controle, elimine riscos e blinde sua infraestrutura com ESH, ESUT, KEYRING e EL GUARDIAN.",
+    title: "Elevensoft - Plataforma Unificada de Segurança Empresarial",
+    description: "Transforme sua infraestrutura de segurança fragmentada em um ecossistema unificado e inteligente. Solução desenvolvida especificamente para o mercado brasileiro.",
     siteName: "Elevensoft",
     images: [
       {
         url: "https://elevensoft.dev/images/logo/logo-light.svg",
         width: 1200,
         height: 630,
-        alt: "Elevensoft - Soberania Digital - Plataforma Unificada de Segurança",
+        alt: "Elevensoft - Plataforma Unificada de Segurança Empresarial",
         type: "image/svg+xml",
       },
     ],
@@ -40,8 +41,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@elevensoft",
     creator: "@elevensoft",
-    title: "Elevensoft - Soberania Digital | Plataforma Unificada de Segurança",
-    description: "Recupere sua Soberania Digital. A era da segurança fragmentada acabou. Unifique seu controle, elimine riscos e blinde sua infraestrutura.",
+    title: "Elevensoft - Plataforma Unificada de Segurança Empresarial",
+    description: "Transforme sua infraestrutura de segurança fragmentada em um ecossistema unificado e inteligente. Solução desenvolvida para o mercado brasileiro.",
     images: ["https://elevensoft.dev/images/logo/logo-light.svg"],
   },
   robots: {
@@ -88,7 +89,7 @@ export default function Home() {
     "alternateName": "Eleven Soft",
     "url": "https://elevensoft.dev",
     "logo": "https://elevensoft.dev/images/logo/logo-light.svg",
-    "description": "Especialistas em Soberania Digital. Plataforma unificada de segurança e controle de infraestrutura crítica.",
+    "description": "Especialistas em segurança empresarial. Plataforma unificada de controle de acesso, auditoria em tempo real e gestão de identidades.",
     "foundingDate": "2020",
     "address": {
       "@type": "PostalAddress",
@@ -119,21 +120,22 @@ export default function Home() {
       "https://twitter.com/elevensoft"
     ],
     "knowsAbout": [
-      "Soberania Digital",
-      "Segurança de Infraestrutura",
-      "Controle de Acesso",
-      "Auditoria de Sistemas",
+      "Segurança Empresarial",
+      "Controle de Acesso Unificado",
+      "Auditoria de Sistemas em Tempo Real",
+      "Gestão de Identidades",
       "DevSecOps",
-      "Cibersegurança"
+      "Cibersegurança",
+      "Compliance de Sistemas"
     ]
   };
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Elevensoft - Soberania Digital",
+    "name": "Elevensoft - Plataforma Unificada de Segurança Empresarial",
     "url": "https://elevensoft.dev",
-    "description": "Recupere sua Soberania Digital. A era da segurança fragmentada acabou. Unifique seu controle, elimine riscos e blinde sua infraestrutura.",
+    "description": "Transforme sua infraestrutura de segurança fragmentada em um ecossistema unificado e inteligente. Solução desenvolvida especificamente para o mercado brasileiro.",
     "publisher": {
       "@type": "Organization",
       "name": "Elevensoft",
@@ -150,7 +152,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Plataforma Elevensoft",
-    "description": "Plataforma unificada de segurança de infraestrutura com ESH, ESUT, KEYRING e EL GUARDIAN",
+    "description": "Plataforma unificada de segurança empresarial com ESH, ESUT, KEYRING e EL GUARDIAN",
     "url": "https://elevensoft.dev/platform",
     "applicationCategory": "SecurityApplication",
     "operatingSystem": "Linux, Windows, macOS",
@@ -199,6 +201,9 @@ export default function Home() {
         </section>
         <section id="about">
           <About />
+        </section>
+        <section id="testimonials">
+          <TestimonialSection />
         </section>
         <section id="features-tab">
           <FeaturesTab />

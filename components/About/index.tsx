@@ -61,11 +61,10 @@ const About = () => {
     <>
       {/* <!-- ===== About Start ===== --> */}
       <section id="about" className="section-elegant dark:bg-neutral-950 light:bg-neutral-50 relative overflow-hidden">
-        {/* Background decorativo */}
+
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_90%,rgba(255,138,41,0.02),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_10%,rgba(255,193,7,0.02),transparent_50%)]"></div>
         
-        {/* Linhas decorativas */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent via-orange-500 to-transparent opacity-30"></div>
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-32 bg-gradient-to-t from-transparent via-orange-500 to-transparent opacity-30"></div>
 
@@ -91,8 +90,8 @@ const About = () => {
                 className="mb-12"
               >
                 <SectionHeader
-                  title="Nós Construímos a Fortaleza"
-                  subtitle="Um ecossistema unificado, verticalizado e impenetrável que devolve o controle absoluto ao seu dono."
+                  title="Nossa Solução Integrada"
+                  subtitle="Uma plataforma unificada que centraliza controle de acesso, auditoria em tempo real e gestão de identidades, desenvolvida especificamente para o mercado brasileiro."
                   variant="default"
                   className="text-left"
                   level={3}
@@ -172,60 +171,37 @@ const About = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="card-modern p-8 relative overflow-hidden">
-                    {/* Linha decorativa superior */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60"></div>
-                    
-                    <motion.h3 
-                      className="text-2xl font-bold mb-6 text-white"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6 }}
-                      viewport={{ once: true }}
-                    >
-                      Plataforma Unificada
-                    </motion.h3>
-                    
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      {[
-                        { icon: "🛡️", name: "ESH", color: "from-blue-500 to-cyan-500" },
-                        { icon: "⚡", name: "ESUT", color: "from-orange-500 to-red-500" },
-                        { icon: "🔑", name: "KEYRING", color: "from-purple-500 to-pink-500" },
-                        { icon: "🛡️", name: "EL GUARDIAN", color: "from-green-500 to-emerald-500" }
-                      ].map((item, index) => (
-                        <motion.div
-                          key={item.name}
-                          className="bg-neutral-800/60 backdrop-blur-xl rounded-xl p-4 border border-neutral-700/50 hover:border-orange-500/50 transition-all duration-300 group cursor-pointer"
-                          whileHover={{ 
-                            scale: 1.05, 
-                            y: -5,
-                            boxShadow: '0 10px 30px rgba(255, 138, 41, 0.2)'
-                          }}
-                          whileTap={{ scale: 0.95 }}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.3 + index * 0.1 }}
-                          viewport={{ once: true }}
-                        >
-                          <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                            {item.icon}
-                          </div>
-                          <div className="text-sm text-neutral-300 font-medium group-hover:text-orange-400 transition-colors duration-300">
-                            {item.name}
-                          </div>
-                        </motion.div>
-                      ))}
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl backdrop-blur-xl bg-neutral-900/80 border border-neutral-800/50">
+                    {/* Rotating border effect */}
+                    <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                      <motion.div
+                        className="absolute inset-0 rounded-2xl"
+                        style={{
+                          background: 'conic-gradient(from 0deg, transparent, transparent, rgba(255, 138, 41, 0.8), rgba(255, 193, 7, 0.8), rgba(255, 138, 41, 0.8), transparent, transparent)',
+                          padding: '4px',
+                        }}
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                      >
+                        <div className="w-full h-full rounded-2xl bg-neutral-900/80 backdrop-blur-xl"></div>
+                      </motion.div>
                     </div>
                     
-                    <motion.div 
-                      className="text-sm text-neutral-400 italic"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ delay: 0.8 }}
+                    {/* Shield Products Video */}
+                    <motion.video
+                      className="relative z-10 w-full h-80 sm:h-96 lg:h-[500px] object-cover rounded-2xl m-1"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1, ease: "easeOut" }}
                       viewport={{ once: true }}
                     >
-                      Conectados por linhas sólidas e azuis, formando um escudo impenetrável
-                    </motion.div>
+                      <source src="/images/products/escudo-produtos-video.mp4" type="video/mp4" />
+                      Seu navegador não suporta o elemento de vídeo.
+                    </motion.video>
                   </div>
                 </motion.div>
                 

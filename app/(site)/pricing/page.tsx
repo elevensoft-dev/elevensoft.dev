@@ -68,11 +68,12 @@ export default function PricingPage() {
         {/* Hero Section */}
         <div className="text-center mb-20">
           <h1 className="title-product-hero">
-            A Oferta{" "}
-            <span className="gradient-text-hero">Irrecusável</span>
+            Investimento{" "}
+            <span className="gradient-text-hero">Transparente</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-neutral-300 leading-relaxed">
-            Clareza e Valor. Transparência radical para produtos individuais e, mais importante, para os pacotes de batalha.
+            Preços claros e justos para cada produto individual, com pacotes integrados que oferecem 
+            máxima economia e eficiência para sua infraestrutura de segurança.
           </p>
         </div>
 
@@ -150,16 +151,16 @@ export default function PricingPage() {
             
             <div className="relative z-10">
               <h2 className="title-product-section text-black">
-                SUÍTE DE SOBERANIA
+                SUÍTE INTEGRADA
               </h2>
-              <p className="text-xl mb-6">O Pacote Gorila - ESH + ESUT</p>
+              <p className="text-xl mb-6">Solução Completa - ESH + ESUT</p>
               <div className="mb-6">
                 <span className="text-4xl font-bold">R$ {suitePrice}</span>
                 <span className="text-xl">/{isAnnual ? "ano" : "mês"}</span>
               </div>
               <div className="bg-white/20 rounded-xl p-4 mb-6 backdrop-blur-sm">
-                <h3 className="font-bold mb-2">Bônus de Guerra:</h3>
-                <p>Inclui <strong>50% de desconto</strong> na implantação do ESH e <strong>100% de cortesia</strong> na implantação do ESUT.</p>
+                <h3 className="font-bold mb-2">Benefícios Exclusivos:</h3>
+                <p>Inclui <strong>50% de desconto</strong> na implementação do ESH e <strong>implementação gratuita</strong> do ESUT.</p>
               </div>
               <a
                 href="https://wa.me/message/X2DMDA457ASDN1"
@@ -214,7 +215,7 @@ export default function PricingPage() {
         {/* Final CTA */}
         <div className="text-center">
           <h3 className="title-product-feature">
-            Pronto para recuperar sua Soberania Digital?
+            Pronto para transformar sua infraestrutura de segurança?
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

@@ -117,7 +117,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 style={{ boxShadow: '0 4px 20px rgba(255, 138, 41, 0.4)' }}
               >
-                🚨 A ERA DA SEGURANÇA FRAGMENTADA ACABOU
+                ✨ Plataforma Unificada de Segurança Empresarial
               </motion.div>
 
               {/* Main title with typing effect */}
@@ -142,10 +142,10 @@ const Hero = () => {
                 className="mb-8 sm:mb-10 text-lg sm:text-xl leading-relaxed dark:text-neutral-300 light:text-neutral-700"
                 variants={itemVariants}
               >
-                A Elevensoft não vende produtos. Nós entregamos{" "}
-                <strong className="text-orange-400 font-semibold">Soberania Digital</strong>. 
-                Um ecossistema unificado, verticalizado e impenetrável que devolve o controle absoluto ao seu dono.
-                Unifique seu controle, elimine riscos e blinde sua infraestrutura com a plataforma Elevensoft.
+                Transforme sua infraestrutura de segurança fragmentada em um{" "}
+                <strong className="text-orange-400 font-semibold">ecossistema unificado e inteligente</strong>. 
+                Nossa plataforma integra controle de acesso, auditoria em tempo real e gestão de identidades 
+                em uma solução elegante e robusta, desenvolvida especificamente para o mercado brasileiro.
               </motion.p>
 
               {/* Buttons with animations */}
@@ -160,7 +160,7 @@ const Hero = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <span className="relative z-10 flex items-center">
-                    Descobrir a Plataforma
+                    Explorar Solução
                     <motion.svg 
                       className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" 
                       fill="none" 
@@ -179,7 +179,7 @@ const Hero = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <span className="flex items-center">
-                    Ver Preços
+                    Conhecer Investimento
                     <motion.svg 
                       className="ml-2 w-5 h-5 transition-transform group-hover:scale-110" 
                       fill="none" 
@@ -199,9 +199,9 @@ const Hero = () => {
                 whileHover={{ scale: 1.02 }}
                 style={{ boxShadow: '0 0 30px rgba(255, 138, 41, 0.2)' }}
               >
-                <span className="text-2xl mr-3">🚀</span>
+                <span className="text-2xl mr-3">📈</span>
                 <span className="dark:text-neutral-300 light:text-neutral-700">
-                  <strong className="text-yellow-400 font-bold">ROI estimado de 2.156%</strong> - Pronto para abandonar o caos?
+                  <strong className="text-yellow-400 font-bold">ROI comprovado de 2.156%</strong> - Solução validada por empresas líderes
                 </span>
               </motion.div>
             </motion.div>
@@ -217,55 +217,36 @@ const Hero = () => {
                   animate="float"
                   variants={floatingVariants}
                 >
-                  <div className="card-modern p-8 relative overflow-hidden">
-                    {/* Top decorative line */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60"></div>
-                    
-                    <motion.h3 
-                      className="title-card text-center"
-                      whileHover={{ scale: 1.02 }}
-                    >
-                      Plataforma Unificada
-                    </motion.h3>
-                    
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      {[
-                        { icon: "🛡️", name: "ESH", color: "from-blue-500 to-cyan-500" },
-                        { icon: "⚡", name: "ESUT", color: "from-orange-500 to-red-500" },
-                        { icon: "🔑", name: "KEYRING", color: "from-purple-500 to-pink-500" },
-                        { icon: "🛡️", name: "EL GUARDIAN", color: "from-green-500 to-emerald-500" }
-                      ].map((item, index) => (
-                        <motion.div
-                          key={item.name}
-                          className="dark:bg-neutral-800/60 light:bg-white/60 backdrop-blur-xl rounded-xl p-4 dark:border-neutral-700/50 light:border-neutral-300/50 border hover:border-orange-500/50 transition-all duration-300 group cursor-pointer"
-                          whileHover={{ 
-                            scale: 1.05, 
-                            y: -5,
-                            boxShadow: '0 10px 30px rgba(255, 138, 41, 0.2)'
-                          }}
-                          whileTap={{ scale: 0.95 }}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.5 + index * 0.1 }}
-                        >
-                          <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                            {item.icon}
-                          </div>
-                          <div className="text-sm dark:text-neutral-300 light:text-neutral-700 font-medium group-hover:text-orange-400 transition-colors duration-300">
-                            {item.name}
-                          </div>
-                        </motion.div>
-                      ))}
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl backdrop-blur-xl bg-neutral-900/80 border border-neutral-800/50">
+                    {/* Rotating border effect */}
+                    <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                      <motion.div
+                        className="absolute inset-0 rounded-2xl"
+                        style={{
+                          background: 'conic-gradient(from 0deg, transparent, transparent, rgba(255, 138, 41, 0.8), rgba(255, 193, 7, 0.8), rgba(255, 138, 41, 0.8), transparent, transparent)',
+                          padding: '4px',
+                        }}
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                      >
+                        <div className="w-full h-full rounded-2xl bg-neutral-900/80 backdrop-blur-xl"></div>
+                      </motion.div>
                     </div>
                     
-                    <motion.div 
-                      className="text-sm text-neutral-400 italic"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 1 }}
+                    {/* Shield Products Video */}
+                    <motion.video
+                      className="relative z-10 w-full h-80 sm:h-96 lg:h-[500px] object-cover rounded-2xl m-1"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1, ease: "easeOut" }}
                     >
-                      Conectados por linhas sólidas e azuis, formando um escudo impenetrável
-                    </motion.div>
+                      <source src="/images/products/escudo-produtos-video.mp4" type="video/mp4" />
+                      Seu navegador não suporta o elemento de vídeo.
+                    </motion.video>
                   </div>
                 </motion.div>
                 

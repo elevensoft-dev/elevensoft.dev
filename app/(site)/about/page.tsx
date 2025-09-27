@@ -13,12 +13,12 @@ export default function AboutPage() {
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="title-landing-hero">
             A{" "}
-            <span className="gradient-text-hero">Lenda</span>{" "}
+            <span className="gradient-text-hero">História</span>{" "}
             da Elevensoft
           </h1>
           <p className="mx-auto max-w-3xl text-base sm:text-lg text-neutral-300 leading-relaxed">
-            Conheça a história dos fundadores, a dor que nos levou a forjar essas ferramentas 
-            e a humanização da nossa missão de Soberania Digital.
+            Conheça nossa jornada, os desafios que nos levaram a desenvolver essas soluções 
+            e nossa visão para o futuro da segurança empresarial no Brasil.
           </p>
         </div>
 
@@ -27,25 +27,25 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             <div>
               <h2 className="title-landing-section">
-                A Dor que Nos Levou à Guerra
+                Nossa Jornada de Inovação
               </h2>
               <div className="space-y-6">
                 <p className="text-neutral-300 text-lg leading-relaxed">
-                  Em 2020, nossa equipe de infraestrutura enfrentava o mesmo pesadelo que você: 
-                  <strong className="text-orange-400">dezenas de ferramentas desconexas</strong>, senhas espalhadas em planilhas, 
-                  scripts manuais que falhavam no momento mais crítico.
+                  Em 2020, nossa equipe de infraestrutura identificou uma lacuna crítica no mercado brasileiro: 
+                  <strong className="text-orange-400">a fragmentação de soluções de segurança</strong> que obrigava empresas 
+                  a gerenciar múltiplas ferramentas desconexas e custosas.
                 </p>
                 
                 <p className="text-neutral-300 leading-relaxed">
-                  Um incidente de segurança nos custou <strong className="text-red-400">72 horas de downtime</strong> e 
-                  <strong className="text-red-400">R$ 2.3 milhões em perdas</strong>. Foi quando decidimos: 
-                  <em>"Nunca mais."</em>
+                  Após anos de experiência em infraestrutura crítica, percebemos que as soluções existentes 
+                  não atendiam às necessidades específicas do mercado brasileiro, especialmente em termos de 
+                  <strong className="text-orange-400">compliance, suporte local e custos em reais</strong>.
                 </p>
 
                 <p className="text-neutral-300 leading-relaxed">
-                  Começamos a forjar nossas próprias ferramentas. O que começou como uma solução 
-                  interna se transformou na <strong className="text-orange-400">plataforma de Soberania Digital</strong> mais 
-                  avançada do mercado.
+                  Decidimos criar uma solução unificada que integrasse controle de acesso, auditoria em tempo real 
+                  e gestão de identidades em uma <strong className="text-orange-400">plataforma desenvolvida especificamente 
+                  para empresas brasileiras</strong>.
                 </p>
               </div>
             </div>
@@ -59,28 +59,28 @@ export default function AboutPage() {
                   <div className="w-3 h-3 bg-orange-400 rounded-full"></div>
                   <div>
                     <div className="text-white font-semibold">2020</div>
-                    <div className="text-neutral-400 text-sm">Incidente de segurança</div>
+                    <div className="text-neutral-400 text-sm">Identificação da oportunidade</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-3 h-3 bg-orange-400 rounded-full"></div>
                   <div>
                     <div className="text-white font-semibold">2021</div>
-                    <div className="text-neutral-400 text-sm">Desenvolvimento interno</div>
+                    <div className="text-neutral-400 text-sm">Desenvolvimento da plataforma</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-3 h-3 bg-orange-400 rounded-full"></div>
                   <div>
                     <div className="text-white font-semibold">2022</div>
-                    <div className="text-neutral-400 text-sm">Primeiros clientes</div>
+                    <div className="text-neutral-400 text-sm">Primeiros clientes piloto</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-3 h-3 bg-orange-400 rounded-full"></div>
                   <div>
                     <div className="text-white font-semibold">2024</div>
-                    <div className="text-neutral-400 text-sm">Plataforma completa</div>
+                    <div className="text-neutral-400 text-sm">Plataforma consolidada</div>
                   </div>
                 </div>
               </div>
@@ -138,7 +138,7 @@ export default function AboutPage() {
         {/* Team Section */}
         <div className="mb-20">
           <h2 className="title-landing-section">
-            A Equipe que Forja a Soberania
+            Nossa Equipe de Especialistas
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="card-modern text-center hover:shadow-[0_0_40px_rgba(255,138,41,0.1)] transition-all duration-300">
@@ -146,12 +146,12 @@ export default function AboutPage() {
                 🚀
               </div>
               <h3 className="title-feature">
-                João Silva
+                Willian de Souza
               </h3>
-              <p className="text-orange-400 mb-2">CEO & Fundador</p>
+              <p className="text-orange-400 mb-2">CEO & Co-fundador</p>
               <p className="text-neutral-300 text-sm leading-relaxed">
-                Ex-engenheiro de infraestrutura da Petrobras, 
-                especialista em segurança crítica e arquitetura de sistemas.
+                Especialista em infraestrutura crítica e arquitetura de sistemas, 
+                com mais de 10 anos de experiência em segurança empresarial.
               </p>
             </div>
 
@@ -160,12 +160,12 @@ export default function AboutPage() {
                 💻
               </div>
               <h3 className="title-feature">
-                Maria Santos
+                Gilson Camargo
               </h3>
-              <p className="text-orange-400 mb-2">CTO & Co-fundadora</p>
+              <p className="text-orange-400 mb-2">CTO & Co-fundador</p>
               <p className="text-neutral-300 text-sm leading-relaxed">
-                PhD em Ciência da Computação, ex-pesquisadora da USP, 
-                especialista em sistemas distribuídos e segurança.
+                Especialista em desenvolvimento de software e sistemas distribuídos, 
+                com foco em soluções de segurança e integração.
               </p>
             </div>
 
@@ -174,12 +174,12 @@ export default function AboutPage() {
                 🛡️
               </div>
               <h3 className="title-feature">
-                Pedro Costa
+                João Küster
               </h3>
-              <p className="text-orange-400 mb-2">Head de Segurança</p>
+              <p className="text-orange-400 mb-2">Co-fundador</p>
               <p className="text-neutral-300 text-sm leading-relaxed">
-                Ex-analista do Exército Brasileiro, especialista em 
-                criptografia e guerra cibernética defensiva.
+                Especialista em segurança da informação e compliance, 
+                com expertise em auditoria e gestão de riscos.
               </p>
             </div>
           </div>

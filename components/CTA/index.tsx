@@ -81,14 +81,15 @@ const CTA = () => {
                 className="title-responsive-lg text-black font-bold leading-tight"
                 variants={itemVariants}
               >
-                Pronto para abandonar o caos?
+                Transforme sua segurança hoje
               </motion.h2>
               
               <motion.p 
                 className="mb-10 text-lg text-black/90 md:text-xl leading-relaxed max-w-3xl mx-auto"
                 variants={itemVariants}
               >
-                Agende uma demonstração e descubra como a plataforma Elevensoft pode transformar sua segurança fragmentada em uma fortaleza unificada.
+                Agende uma demonstração personalizada e descubra como nossa plataforma pode unificar sua infraestrutura de segurança, 
+                reduzindo riscos e aumentando a eficiência operacional.
               </motion.p>
               
               <motion.div 
@@ -104,7 +105,7 @@ const CTA = () => {
                   style={{ boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)' }}
                 >
                   <span className="flex items-center">
-                    <span className="text-2xl mr-3">💬</span>
+                    <span className="text-2xl mr-3">📅</span>
                     Agendar Demonstração
                     <motion.svg 
                       className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" 
@@ -124,8 +125,8 @@ const CTA = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <span className="flex items-center">
-                    <span className="text-2xl mr-3">💰</span>
-                    Ver Preços
+                    <span className="text-2xl mr-3">💼</span>
+                    Conhecer Investimento
                     <motion.svg 
                       className="ml-2 w-5 h-5 transition-transform group-hover:scale-110" 
                       fill="none" 
@@ -144,9 +145,9 @@ const CTA = () => {
                 whileHover={{ scale: 1.02 }}
                 style={{ boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' }}
               >
-                <span className="text-2xl mr-3">🚀</span>
+                <span className="text-2xl mr-3">📈</span>
                 <span className="text-black font-bold">
-                  <strong>ROI estimado de 2.156%</strong> - A era da segurança fragmentada acabou
+                  <strong>ROI comprovado de 2.156%</strong> - Solução validada por empresas líderes
                 </span>
               </motion.div>
             </div>
