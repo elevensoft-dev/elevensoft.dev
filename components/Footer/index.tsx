@@ -148,8 +148,6 @@ const Footer = () => {
                   <Link href="/" className="inline-flex items-center gap-4 group">
                     <motion.div
                       className="relative"
-                      whileHover={{ rotate: 5 }}
-                      transition={{ duration: 0.3 }}
                     >
                       <img 
                         src="/images/logo/logo-light.png" 
@@ -159,8 +157,6 @@ const Footer = () => {
                       {/* Brilho sutil no logo */}
                       <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                        animate={{ opacity: [0, 0.3, 0] }}
-                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                       />
                     </motion.div>
                   </Link>

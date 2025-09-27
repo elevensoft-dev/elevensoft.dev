@@ -604,6 +604,10 @@
   @apply mx-auto max-w-10xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
 }
 
+.container-hero {
+  @apply mx-auto max-w-9xl px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20;
+}
+
 .section-elegant {
   @apply py-12 sm:py-16 lg:py-20 xl:py-24;
 }
