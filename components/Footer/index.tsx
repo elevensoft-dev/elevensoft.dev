@@ -256,11 +256,11 @@ const Footer = () => {
 
             {/* Seção CTA centralizada */}
             <motion.div 
-              className="mb-16 lg:mb-20"
+              className="mb-12 lg:mb-16"
               variants={itemVariants}
             >
               <motion.div
-                className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-3xl p-12 lg:p-16 xl:p-20 relative overflow-hidden text-center max-w-6xl mx-auto"
+                className="dark:bg-neutral-900/60 light:bg-white/60 backdrop-blur-xl dark:border-neutral-800/50 light:border-neutral-200/50 border rounded-2xl p-8 lg:p-10 xl:p-12 relative overflow-hidden text-center max-w-4xl mx-auto"
                 whileHover={{ 
                   scale: 1.01,
                   borderColor: 'rgba(255, 138, 41, 0.3)'
@@ -272,16 +272,16 @@ const Footer = () => {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
                 
                 <motion.h4 
-                  className="mb-8 lg:mb-10 text-3xl lg:text-4xl xl:text-5xl font-semibold dark:text-white light:text-neutral-900 flex items-center justify-center gap-4 lg:gap-6"
+                  className="mb-6 lg:mb-8 text-2xl lg:text-3xl xl:text-4xl font-semibold dark:text-white light:text-neutral-900 flex items-center justify-center gap-3 lg:gap-4"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <span className="text-5xl lg:text-6xl xl:text-7xl">🚀</span>
+                  <span className="text-3xl lg:text-4xl xl:text-5xl">🚀</span>
                   Pronto para a Soberania?
                 </motion.h4>
 
                 <motion.p 
-                  className="mb-12 lg:mb-16 dark:text-neutral-300 light:text-neutral-700 leading-relaxed text-xl lg:text-2xl max-w-4xl mx-auto"
+                  className="mb-8 lg:mb-10 dark:text-neutral-300 light:text-neutral-700 leading-relaxed text-lg lg:text-xl max-w-3xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
@@ -293,15 +293,15 @@ const Footer = () => {
                 <motion.a
                   href="https://wa.me/message/X2DMDA457ASDN1"
                   target="_blank"
-                  className="btn-gradient inline-flex items-center group text-xl lg:text-2xl px-16 lg:px-20 py-6 lg:py-8 mx-auto"
+                  className="btn-gradient inline-flex items-center group text-lg lg:text-xl px-12 lg:px-16 py-4 lg:py-5 mx-auto"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <span className="flex items-center">
-                    <span className="text-5xl lg:text-6xl mr-4 lg:mr-6">💬</span>
+                    <span className="text-3xl lg:text-4xl mr-3 lg:mr-4">💬</span>
                     Agendar Demonstração
                     <motion.svg 
-                      className="ml-4 lg:ml-6 w-8 lg:w-10 h-8 lg:h-10 transition-transform duration-300 group-hover:translate-x-1" 
+                      className="ml-3 lg:ml-4 w-6 lg:w-7 h-6 lg:h-7 transition-transform duration-300 group-hover:translate-x-1" 
                       fill="none" 
                       stroke="currentColor" 
                       viewBox="0 0 24 24"
@@ -311,9 +311,9 @@ const Footer = () => {
                   </span>
                 </motion.a>
 
-                {/* Elementos decorativos */}
+                {/* Elementos decorativos simplificados */}
                 <motion.div 
-                  className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-full blur-2xl"
+                  className="absolute -top-2 -right-2 w-20 h-20 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full blur-xl"
                   animate="float"
                   variants={floatingVariants}
                 />

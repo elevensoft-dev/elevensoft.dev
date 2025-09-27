@@ -38,21 +38,21 @@ const CTA = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,138,41,0.02),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,193,7,0.02),transparent_50%)]"></div>
         
-        {/* Floating particles */}
+        {/* Subtle floating particles */}
         <motion.div
-          className="absolute top-20 left-20 w-1 h-1 bg-orange-400 rounded-full opacity-60"
-          animate={{ y: [-20, 20, -20], opacity: [0.6, 1, 0.6] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-16 left-16 w-1 h-1 bg-orange-400 rounded-full opacity-30"
+          animate={{ y: [-10, 10, -10], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-20 right-20 w-1.5 h-1.5 bg-yellow-400 rounded-full opacity-40"
-          animate={{ y: [20, -20, 20], opacity: [0.4, 0.8, 0.4] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-16 right-16 w-1 h-1 bg-yellow-400 rounded-full opacity-20"
+          animate={{ y: [10, -10, 10], opacity: [0.2, 0.4, 0.2] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
 
         <div className="container-elegant relative z-10">
           <motion.div 
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-orange-500 via-orange-600 to-yellow-500 px-8 py-16 md:px-12 md:py-20 shadow-2xl"
+            className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-orange-500 via-orange-600 to-yellow-500 px-6 py-10 md:px-8 md:py-12 shadow-xl"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -78,14 +78,14 @@ const CTA = () => {
             
             <div className="relative z-10 mx-auto max-w-4xl text-center">
               <motion.h2 
-                className="title-responsive-lg text-black font-bold leading-tight"
+                className="title-responsive-md text-black font-bold leading-tight"
                 variants={itemVariants}
               >
                 Transforme sua segurança hoje
               </motion.h2>
               
               <motion.p 
-                className="mb-10 text-lg text-black/90 md:text-xl leading-relaxed max-w-3xl mx-auto"
+                className="mb-8 text-base text-black/90 md:text-lg leading-relaxed max-w-2xl mx-auto"
                 variants={itemVariants}
               >
                 Agende uma demonstração personalizada e descubra como nossa plataforma pode unificar sua infraestrutura de segurança, 
@@ -93,13 +93,13 @@ const CTA = () => {
               </motion.p>
               
               <motion.div 
-                className="flex flex-col sm:flex-row gap-6 justify-center mb-8"
+                className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
                 variants={itemVariants}
               >
                 <motion.a
                   href="https://wa.me/message/X2DMDA457ASDN1"
                   target="_blank"
-                  className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 text-orange-500 font-bold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
+                  className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-orange-500 font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg group"
                   whileHover={{ y: -3 }}
                   whileTap={{ scale: 0.95 }}
                   style={{ boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)' }}
@@ -120,7 +120,7 @@ const CTA = () => {
                 
                 <motion.a
                   href="/pricing"
-                  className="inline-flex items-center justify-center rounded-2xl border-2 border-white px-8 py-4 text-white font-bold hover:bg-white hover:text-orange-500 transition-all duration-300 hover:scale-105 group"
+                  className="inline-flex items-center justify-center rounded-xl border-2 border-white px-6 py-3 text-white font-semibold hover:bg-white hover:text-orange-500 transition-all duration-300 hover:scale-105 group"
                   whileHover={{ y: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -140,40 +140,28 @@ const CTA = () => {
               </motion.div>
               
               <motion.div 
-                className="inline-flex items-center px-6 py-3 rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30"
+                className="inline-flex items-center px-4 py-2 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30"
                 variants={itemVariants}
                 whileHover={{ scale: 1.02 }}
-                style={{ boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' }}
+                style={{ boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)' }}
               >
-                <span className="text-2xl mr-3">📈</span>
-                <span className="text-black font-bold">
+                <span className="text-lg mr-2">📈</span>
+                <span className="text-black font-semibold text-sm">
                   <strong>ROI comprovado de 2.156%</strong> - Solução validada por empresas líderes
                 </span>
               </motion.div>
             </div>
             
-            {/* Floating decorative elements */}
+            {/* Simplified decorative elements */}
             <motion.div 
-              className="absolute -top-4 -right-4 w-24 h-24 bg-white/20 rounded-full blur-2xl"
-              animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-2 -right-2 w-16 h-16 bg-white/10 rounded-full blur-xl"
+              animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div 
-              className="absolute -bottom-4 -left-4 w-32 h-32 bg-white/20 rounded-full blur-2xl"
-              animate={{ scale: [1.2, 1, 1.2], opacity: [0.4, 0.2, 0.4] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            />
-            
-            {/* Decorative lines */}
-            <motion.div 
-              className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-16 bg-gradient-to-b from-transparent via-white to-transparent opacity-30"
-              animate={{ height: [64, 96, 64] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div 
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-16 bg-gradient-to-t from-transparent via-white to-transparent opacity-30"
-              animate={{ height: [64, 96, 64] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+              className="absolute -bottom-2 -left-2 w-20 h-20 bg-white/10 rounded-full blur-xl"
+              animate={{ scale: [1.1, 1, 1.1], opacity: [0.2, 0.1, 0.2] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             />
           </motion.div>
         </div>
