@@ -125,7 +125,10 @@ const Hero = () => {
                 className="title-gradient-hero title-animate-fade"
                 variants={itemVariants}
               >
-                Recupere sua{" "}
+                <span className="bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400 bg-clip-text text-transparent">
+                  Recupere
+                </span>{" "}
+                sua{" "}
                 <span className="gradient-text-hero relative">
                   Soberania Digital
                   <motion.div
