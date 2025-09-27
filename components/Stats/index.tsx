@@ -15,9 +15,9 @@ const Stats = () => {
     },
     {
       icon: "⚡",
-      number: "2.156",
+      number: "70",
       suffix: "%",
-      label: "ROI Estimado"
+      label: "Redução em Tempo de Auditoria"
     },
     {
       icon: "🔒",

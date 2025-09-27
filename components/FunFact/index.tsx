@@ -61,9 +61,9 @@ const FunFact = () => {
               className="animate_top text-center"
             >
               <h3 className="title-responsive-lg text-white mb-2.5">
-                2.156%
+                70%
               </h3>
-              <p className="text-lg lg:text-para2 text-neutral-300">ROI Médio dos Clientes</p>
+              <p className="text-lg lg:text-para2 text-neutral-300">Redução em Tempo de Auditoria</p>
             </motion.div>
             <motion.div
               variants={{

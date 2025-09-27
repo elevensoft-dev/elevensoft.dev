@@ -9,7 +9,7 @@ export const testimonialData: Testimonial[] = [
     designation: "CTO @TechCorp",
     image: image1,
     content:
-      "A plataforma Elevensoft transformou completamente nossa segurança. Antes tínhamos 15 ferramentas diferentes, agora temos controle total em um só lugar. ROI de 2.156% em apenas 6 meses.",
+      "A plataforma Elevensoft transformou completamente nossa segurança. Antes tínhamos 15 ferramentas diferentes, agora temos controle total em um só lugar. Redução de 70% no tempo de auditoria.",
   },
   {
     id: 2,

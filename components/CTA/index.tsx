@@ -147,7 +147,7 @@ const CTA = () => {
               >
                 <span className="text-lg mr-2">📈</span>
                 <span className="text-black font-semibold text-sm">
-                  <strong>ROI comprovado de 2.156%</strong> - Solução validada por empresas líderes
+                  <strong>Solução validada por empresas líderes</strong> - Economia comprovada em tempo de auditoria
                 </span>
               </motion.div>
             </div>

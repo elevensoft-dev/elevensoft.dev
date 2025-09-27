@@ -204,7 +204,7 @@ const Hero = () => {
               >
                 <span className="text-2xl mr-3">📈</span>
                 <span className="dark:text-neutral-300 light:text-neutral-700">
-                  <strong className="text-yellow-400 font-bold">ROI comprovado de 2.156%</strong> - Solução validada por empresas líderes
+                  <strong className="text-yellow-400 font-bold">Solução validada por empresas líderes</strong> - Economia comprovada em tempo de auditoria
                 </span>
               </motion.div>
             </motion.div>

@@ -181,7 +181,7 @@ const Footer = () => {
                 >
                   <span className="text-3xl mr-4">🚀</span>
                   <span className="dark:text-neutral-300 light:text-neutral-700 text-lg">
-                    <strong className="text-yellow-400 font-bold">ROI estimado de 2.156%</strong> - A era da segurança fragmentada acabou
+                    <strong className="text-yellow-400 font-bold">Solução validada por empresas líderes</strong> - A era da segurança fragmentada acabou
                   </span>
                 </motion.div>
               </motion.div>

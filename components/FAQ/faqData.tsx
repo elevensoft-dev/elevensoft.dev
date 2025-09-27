@@ -28,8 +28,8 @@ const faqData: FAQ[] = [
   },
   {
     id: 6,
-    question: "Como funciona o ROI estimado de 2.156% mencionado?",
-    answer: "O ROI de 2.156% é calculado considerando a redução de incidentes de segurança, economia em soluções múltiplas, diminuição de tempo de resposta a ameaças, e proteção de ativos críticos. É baseado em dados reais de empresas que migraram de soluções fragmentadas para a plataforma unificada Elevensoft.",
+    question: "Como funciona a calculadora de ROI na página de preços?",
+    answer: "A calculadora de ROI permite que você insira dados específicos da sua empresa (horas gastas com auditorias e custo por hora da equipe) para calcular a economia real que a Elevensoft pode proporcionar. É uma ferramenta transparente que mostra o valor baseado nos seus próprios números.",
   },
   {
     id: 7,
