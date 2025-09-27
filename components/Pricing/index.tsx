@@ -6,14 +6,14 @@ const Pricing = () => {
   return (
     <>
       {/* Pricing Table Section */}
-      <section className="section-elegant bg-neutral-950">
+      <section className="section-elegant dark:bg-neutral-950 light:bg-neutral-50">
         <div className="container-elegant">
           {/* Section Title */}
           <div className="mx-auto text-center mb-16">
             <h2 className="title-section text-center">
               <span className="gradient-text-hero">Planos de Preços</span>
             </h2>
-            <p className="text-xl text-neutral-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl dark:text-neutral-300 light:text-neutral-700 max-w-2xl mx-auto leading-relaxed">
               Preços simples e transparentes para sua jornada de soberania digital
             </p>
           </div>
