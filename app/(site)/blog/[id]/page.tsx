@@ -154,14 +154,16 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ id: string }> }) =
 
             <div className="lg:w-2/3">
               <div className="animate_top rounded-md border border-stroke bg-white p-7.5 shadow-solid-13 dark:border-strokedark dark:bg-blacksection md:p-10">
-                <div className="mb-10 w-full overflow-hidden ">
-                  <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
+                <div className="mb-10 w-full overflow-hidden rounded-2xl">
+                  <div className="relative aspect-[97/60] w-full sm:aspect-[97/44] overflow-hidden rounded-2xl shadow-2xl">
                     <Image
                       src={blogMetadata?.mainImage || "/images/blog/blog-01.png"}
                       alt={blogMetadata?.title || "Artigo do blog Elevensoft sobre Soberania Digital"}
                       fill
-                      className="rounded-md object-cover object-center"
+                      className="object-cover object-center transition-transform duration-700 hover:scale-105"
                     />
+                    {/* Subtle overlay for modern look */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent"></div>
                   </div>
                 </div>
 

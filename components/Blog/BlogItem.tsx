@@ -27,8 +27,15 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
         viewport={{ once: true }}
         className="animate_top rounded-xl card-modern hover:shadow-[0_0_40px_rgba(255,138,41,0.1)] transition-all duration-300"
       >
-        <Link href={`/blog/${blog._id}`} className="relative block w-full h-32">
-          <Image src={mainImage} alt={`Imagem do artigo: ${title}`} fill className="object-contain rounded-t-xl" />
+        <Link href={`/blog/${blog._id}`} className="relative block w-full h-48 sm:h-52 lg:h-56 overflow-hidden rounded-t-xl">
+          <Image 
+            src={mainImage} 
+            alt={`Imagem do artigo: ${title}`} 
+            fill 
+            className="object-cover transition-transform duration-500 hover:scale-105" 
+          />
+          {/* Overlay gradient for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
         </Link>
 
         <div className="px-4">

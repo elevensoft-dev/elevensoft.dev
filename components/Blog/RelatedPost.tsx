@@ -17,11 +17,18 @@ const RelatedPost = async () => {
               className="mb-7.5 flex flex-wrap gap-4 xl:flex-nowrap 2xl:gap-6"
               key={key}
             >
-              <div className="max-w-45 relative h-18 w-45">
+              <div className="relative h-20 w-20 sm:h-24 sm:w-24 lg:h-28 lg:w-28 flex-shrink-0 overflow-hidden rounded-xl">
                 {post.mainImage ? (
-                  <Image fill src={post.mainImage} alt={`Imagem do artigo relacionado: ${post.title}`} className="object-contain" />
+                  <Image 
+                    fill 
+                    src={post.mainImage} 
+                    alt={`Imagem do artigo relacionado: ${post.title}`} 
+                    className="object-cover transition-transform duration-300 hover:scale-110" 
+                  />
                 ) : (
-                  "No image"
+                  <div className="w-full h-full bg-gradient-to-br from-orange-400 to-yellow-500 flex items-center justify-center text-white font-semibold text-sm">
+                    No Image
+                  </div>
                 )}
               </div>
               <h5 className="text-md font-medium text-white transition-all duration-300 hover:text-orange-400">
