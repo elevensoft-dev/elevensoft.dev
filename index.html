@@ -1,312 +1,360 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Meta Tags -->
-    <title>Eleven Soft | Plataforma Unificada de Segurança para Ativos de Rede</title>
-    <meta name="description" content="A Eleven Soft oferece um ecossistema de segurança com soluções como ESH (PSM) para controle e auditoria de acesso a servidores e ativos de rede. Proteja sua operação e garanta conformidade." />
-    <meta name="keywords" content="PSM, PAM, segurança de servidores, auditoria de acesso, controle de acesso, eleven soft, esh, esut, segurança da informação, conformidade, LGPD, ISO 27001, Brasil" />
-    <meta name="author" content="Eleven Soft" />
+  <!-- SEO Meta Tags -->
+  <title>Eleven Soft | Plataforma Unificada de Segurança para Ativos de Rede</title>
+  <meta name="description"
+    content="A Eleven Soft oferece um ecossistema de segurança com soluções como ESH (PSM) para controle e auditoria de acesso a servidores e ativos de rede. Proteja sua operação e garanta conformidade." />
+  <meta name="keywords"
+    content="PSM, PAM, segurança de servidores, auditoria de acesso, controle de acesso, eleven soft, esh, esut, segurança da informação, conformidade, LGPD, ISO 27001, Brasil" />
+  <meta name="author" content="Eleven Soft" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Eleven Soft" />
-    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="images/favicon/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Eleven Soft" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K8J33FK');</script>
-    <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K8J33FK');</script>
+  <!-- End Google Tag Manager -->
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3LL1X7H9R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3LL1X7H9R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', 'G-RWQ28EGF21');
-    </script>
+    gtag('config', 'G-RWQ28EGF21');
+  </script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111111;
-            color: #E5E7EB;
-        }
-        .glow-orange {
-            box-shadow: 0 0 20px rgba(251, 146, 60, 0.3), 0 0 40px rgba(249, 115, 22, 0.2);
-        }
-    </style>
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111111;
+      color: #E5E7EB;
+    }
+
+    .glow-orange {
+      box-shadow: 0 0 20px rgba(251, 146, 60, 0.3), 0 0 40px rgba(249, 115, 22, 0.2);
+    }
+  </style>
 </head>
+
 <body class="antialiased">
 
-    <!-- ===== Header Start ===== -->
-    <header class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-80 backdrop-blur-sm border-b border-neutral-800">
+  <!-- ===== Header Start ===== -->
+  <header class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-80 backdrop-blur-sm border-b border-neutral-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-2">
+          <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <!--<a href="/#products" class="text-neutral-300 hover:text-orange-500 transition-colors">Produtos</a>-->
+          <!--<a href="/#testimonials" class="text-neutral-300 hover:text-orange-500 transition-colors">Clientes</a>-->
+          <a href="/blog/" class="text-neutral-300 hover:text-orange-500 transition-colors">Blog</a>
+        </nav>
+
+        <!-- CTA and Mobile Menu Button -->
+        <div class="flex items-center space-x-4">
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+            class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+            Agendar Demonstração
+          </a>
+          <button id="mobile-menu-button"
+            class="md:hidden p-2 rounded-md text-neutral-300 hover:bg-neutral-800 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <nav class="flex flex-col space-y-2">
+          <!--<a href="/#products" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Produtos</a>-->
+          <!--<a href="/#testimonials" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Clientes</a>-->
+          <a href="/blog/" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Blog</a>
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+            class="block mt-2 bg-orange-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+            Agendar Demonstração
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- ===== Header End ===== -->
+
+  <main id="main-content">
+    <!-- ===== Home Page Section ===== -->
+    <div id="home-page">
+      <!-- Hero Section -->
+      <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+        <div
+          class="absolute inset-0 bg-grid-neutral-800/40 [mask-image:linear-gradient(to_bottom,white_5%,transparent_90%)]">
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tighter">
+            Plataforma Unificada de <span class="text-orange-500">Segurança Empresarial</span>
+          </h1>
+          <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-neutral-300">
+            Construímos o ecossistema de segurança que protege seus <strong>ativos críticos</strong>, garante
+            <strong>conformidade</strong> e devolve a <strong>tranquilidade</strong> para sua operação.
+          </p>
+          <div class="mt-10">
+            <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+              class="inline-block bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange transform hover:scale-105">
+              Fale com um Especialista
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products" class="py-20 bg-neutral-900/50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <a href="/" class="flex items-center space-x-2">
-                    <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
-                </a>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <!--<a href="/#products" class="text-neutral-300 hover:text-orange-500 transition-colors">Produtos</a>-->
-                    <!--<a href="/#testimonials" class="text-neutral-300 hover:text-orange-500 transition-colors">Clientes</a>-->
-                    <a href="/blog/" class="text-neutral-300 hover:text-orange-500 transition-colors">Blog</a>
-                </nav>
-
-                <!-- CTA and Mobile Menu Button -->
-                <div class="flex items-center space-x-4">
-                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
-                        Agendar Demonstração
-                    </a>
-                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-neutral-300 hover:bg-neutral-800 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Conheça Nosso Ecossistema de Segurança</h2>
+            <p class="mt-4 text-lg text-neutral-400">Soluções integradas, construídas para resolver os desafios reais da
+              sua operação.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- ESH Product Card -->
+            <div
+              class="bg-neutral-800/50 p-8 rounded-2xl border border-orange-500/50 transform hover:-translate-y-2 transition-transform duration-300">
+              <h3 class="text-2xl font-bold text-orange-500">ESH</h3>
+              <p class="mt-2 text-neutral-300 font-semibold">Privileged Session Management</p>
+              <p class="mt-4 text-neutral-400">Controle, grave e audite cada sessão em seus servidores e ativos de rede.
+                A visibilidade que você precisa para qualquer auditoria.</p>
+              <a href="https://esh.elevensoft.dev" target="_blank"
+                class="mt-6 inline-block text-orange-400 font-semibold hover:text-orange-300">Ver detalhes do PSM
+                &rarr;</a>
             </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden pb-4">
-                <nav class="flex flex-col space-y-2">
-                    <!--<a href="/#products" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Produtos</a>-->
-                    <!--<a href="/#testimonials" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Clientes</a>-->
-                    <a href="/blog/" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Blog</a>
-                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="block mt-2 bg-orange-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-colors">
-                        Agendar Demonstração
-                    </a>
-                </nav>
+            <!-- Other Product Cards -->
+            <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
+              <h3 class="text-2xl font-bold text-white">ESUT</h3>
+              <p class="mt-2 text-neutral-300 font-semibold">Controle Preventivo</p>
+              <p class="mt-4 text-neutral-400">Vá além da auditoria. Bloqueie comandos perigosos antes que eles sejam
+                executados e implemente o princípio do menor privilégio.</p>
+              <span class="mt-6 inline-block text-neutral-500 font-semibold">Em breve</span>
             </div>
+            <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
+              <h3 class="text-2xl font-bold text-white">KEYRING</h3>
+              <p class="mt-2 text-neutral-300 font-semibold">Cofre de Credenciais</p>
+              <p class="mt-4 text-neutral-400">Centralize e proteja senhas, chaves de API e segredos em um cofre
+                criptografado com rotação automática.</p>
+              <span class="mt-6 inline-block text-neutral-500 font-semibold">Em breve</span>
+            </div>
+            <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
+              <h3 class="text-2xl font-bold text-white">EL GUARDIAN</h3>
+              <p class="mt-2 text-neutral-300 font-semibold">Proteção de Endpoint</p>
+              <p class="mt-4 text-neutral-400">Monitore e proteja estações de trabalho contra ameaças, garantindo a
+                segurança de ponta a ponta.</p>
+              <span class="mt-6 inline-block text-neutral-500 font-semibold">Em breve</span>
+            </div>
+          </div>
         </div>
-    </header>
-    <!-- ===== Header End ===== -->
+      </section>
 
-    <main id="main-content">
-        <!-- ===== Home Page Section ===== -->
-        <div id="home-page">
-            <!-- Hero Section -->
-            <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
-                <div class="absolute inset-0 bg-grid-neutral-800/40 [mask-image:linear-gradient(to_bottom,white_5%,transparent_90%)]"></div>
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tighter">
-                        Plataforma Unificada de <span class="text-orange-500">Segurança Empresarial</span>
-                    </h1>
-                    <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-neutral-300">
-                        Construímos o ecossistema de segurança que protege seus <strong>ativos críticos</strong>, garante <strong>conformidade</strong> e devolve a <strong>tranquilidade</strong> para sua operação.
-                    </p>
-                    <div class="mt-10">
-                        <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="inline-block bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange transform hover:scale-105">
-                            Fale com um Especialista
-                        </a>
-                    </div>
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">A Tranquilidade de Quem Já Tem o Controle Total</h2>
+            <p class="mt-4 text-lg text-neutral-400">Veja como estamos ajudando gestores de tecnologia a proteger suas
+              operações.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
+              <p class="text-lg text-neutral-300">"O ESH revolucionou o gerenciamento de acessos na SaperX,
+                simplificando processos e economizando horas semanais. Nossa equipe agora foca em inovação."</p>
+              <div class="mt-6 flex items-center">
+                <!-- Placeholder for image -->
+                <div
+                  class="w-12 h-12 rounded-full flex-shrink-0 overflow-clip bg-[url('images/testimonials/saperx.enc')] bg-size-[150%] bg-center"
+                  style="background-size: 120%;">
                 </div>
-            </section>
-
-            <!-- Products Section -->
-            <section id="products" class="py-20 bg-neutral-900/50">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold text-white">Conheça Nosso Ecossistema de Segurança</h2>
-                        <p class="mt-4 text-lg text-neutral-400">Soluções integradas, construídas para resolver os desafios reais da sua operação.</p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <!-- ESH Product Card -->
-                        <div class="bg-neutral-800/50 p-8 rounded-2xl border border-orange-500/50 transform hover:-translate-y-2 transition-transform duration-300">
-                            <h3 class="text-2xl font-bold text-orange-500">ESH</h3>
-                            <p class="mt-2 text-neutral-300 font-semibold">Privileged Session Management</p>
-                            <p class="mt-4 text-neutral-400">Controle, grave e audite cada sessão em seus servidores e ativos de rede. A visibilidade que você precisa para qualquer auditoria.</p>
-                            <a href="https://esh.elevensoft.dev" target="_blank" class="mt-6 inline-block text-orange-400 font-semibold hover:text-orange-300">Ver detalhes do PSM &rarr;</a>
-                        </div>
-                        <!-- Other Product Cards -->
-                        <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
-                            <h3 class="text-2xl font-bold text-white">ESUT</h3>
-                            <p class="mt-2 text-neutral-300 font-semibold">Controle Preventivo</p>
-                            <p class="mt-4 text-neutral-400">Vá além da auditoria. Bloqueie comandos perigosos antes que eles sejam executados e implemente o princípio do menor privilégio.</p>
-                             <span class="mt-6 inline-block text-neutral-500 font-semibold">Em breve</span>
-                        </div>
-                        <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
-                            <h3 class="text-2xl font-bold text-white">KEYRING</h3>
-                            <p class="mt-2 text-neutral-300 font-semibold">Cofre de Credenciais</p>
-                            <p class="mt-4 text-neutral-400">Centralize e proteja senhas, chaves de API e segredos em um cofre criptografado com rotação automática.</p>
-                            <span class="mt-6 inline-block text-neutral-500 font-semibold">Em breve</span>
-                        </div>
-                        <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
-                            <h3 class="text-2xl font-bold text-white">EL GUARDIAN</h3>
-                             <p class="mt-2 text-neutral-300 font-semibold">Proteção de Endpoint</p>
-                            <p class="mt-4 text-neutral-400">Monitore e proteja estações de trabalho contra ameaças, garantindo a segurança de ponta a ponta.</p>
-                             <span class="mt-6 inline-block text-neutral-500 font-semibold">Em breve</span>
-                        </div>
-                    </div>
+                <div class="ml-4">
+                  <p class="font-bold text-white">Ronaldo Sacco</p>
+                  <p class="text-neutral-400">CEO at SaperX</p>
                 </div>
-            </section>
-
-            <!-- Testimonials Section -->
-            <section id="testimonials" class="py-20">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold text-white">A Tranquilidade de Quem Já Tem o Controle Total</h2>
-                        <p class="mt-4 text-lg text-neutral-400">Veja como estamos ajudando gestores de tecnologia a proteger suas operações.</p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
-                            <p class="text-lg text-neutral-300">"O ESH revolucionou o gerenciamento de acessos na SaperX, simplificando processos e economizando horas semanais. Nossa equipe agora foca em inovação."</p>
-                            <div class="mt-6 flex items-center">
-                                <!-- Placeholder for image -->
-                                <div class="w-12 h-12 rounded-full bg-orange-500 flex-shrink-0"></div>
-                                <div class="ml-4">
-                                    <p class="font-bold text-white">Ronaldo Sacco</p>
-                                    <p class="text-neutral-400">CEO at SaperX</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
-                            <p class="text-lg text-neutral-300">"...não dá pra imaginar voltar ao que era antes. Hoje, o ESH garante que tudo está rodando do jeito certo, sem improviso e sem susto."</p>
-                            <div class="mt-6 flex items-center">
-                                <div class="w-12 h-12 rounded-full bg-orange-500 flex-shrink-0"></div>
-                                <div class="ml-4">
-                                    <p class="font-bold text-white">Vitor Corrêa</p>
-                                    <p class="text-neutral-400">CTO at ZR Media</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
-                           <p class="text-lg text-neutral-300">"Foi uma das poucas ferramentas que mostrou valor logo na primeira semana. Conseguimos assistir o replay das sessões, o que trouxe uma segurança enorme."</p>
-                            <div class="mt-6 flex items-center">
-                                <div class="w-12 h-12 rounded-full bg-orange-500 flex-shrink-0"></div>
-                                <div class="ml-4">
-                                    <p class="font-bold text-white">Larissa Souza</p>
-                                    <p class="text-neutral-400">CFO at Trezze Solutions</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-             <!-- Blog Preview Section -->
-            <section id="blog-preview" class="py-20 bg-neutral-900/50">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold text-white">Conteúdos Recentes do Nosso Blog</h2>
-                        <p class="mt-4 text-lg text-neutral-400">Análises e guias para ajudar você a fortalecer sua segurança.</p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Blog Post Preview Card 1 -->
-                        <article class="bg-neutral-800/50 rounded-2xl overflow-hidden group">
-                            <a href="/blog/alternativas-teleport-jumpserver-brasil.html">
-                                <div class="p-6">
-                                    <p class="text-sm text-orange-400">Análise de Mercado</p>
-                                    <h3 class="mt-2 text-xl font-bold text-white group-hover:text-orange-500 transition-colors">Alternativas ao Teleport e JumpServer para empresas no Brasil</h3>
-                                    <p class="mt-3 text-neutral-400">Uma análise de custo, complexidade e suporte para ajudar você a tomar a decisão certa para sua operação.</p>
-                                </div>
-                            </a>
-                        </article>
-                        <!-- Blog Post Preview Card 2 -->
-                         <article class="bg-neutral-800/50 rounded-2xl overflow-hidden group">
-                            <a href="/blog/seguranca-acesso-remoto-guia-ctos.html">
-                                <div class="p-6">
-                                    <p class="text-sm text-orange-400">Guia Prático</p>
-                                    <h3 class="mt-2 text-xl font-bold text-white group-hover:text-orange-500 transition-colors">Como garantir a segurança de acesso com um time remoto: um guia para CTOs</h3>
-                                    <p class="mt-3 text-neutral-400">Passos essenciais para implementar o princípio do menor privilégio e manter a auditoria em dia.</p>
-                                </div>
-                            </a>
-                        </article>
-                        <!-- Blog Post Preview Card 3 -->
-                         <article class="bg-neutral-800/50 rounded-2xl overflow-hidden group">
-                            <a href="/blog/pam-vs-psm-qual-solucao.html">
-                                <div class="p-6">
-                                    <p class="text-sm text-orange-400">Estratégia</p>
-                                    <h3 class="mt-2 text-xl font-bold text-white group-hover:text-orange-500 transition-colors">PAM vs PSM: Qual a solução certa para o estágio atual da sua empresa?</h3>
-                                    <p class="mt-3 text-neutral-400">Entenda as diferenças e saiba quando investir em cada camada de segurança para otimizar seu orçamento.</p>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                     <div class="text-center mt-12">
-                        <a href="/blog" class="inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
-                            Ver todos os artigos
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-             <!-- Final CTA Section -->
-            <section id="final-cta" class="py-20">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Pronto para ter o controle total da sua segurança?</h2>
-                    <p class="mt-4 text-lg text-neutral-400 max-w-2xl mx-auto">Agende uma demonstração gratuita e descubra como a plataforma Eleven Soft pode proteger seus ativos críticos e simplificar sua operação.</p>
-                    <div class="mt-10">
-                        <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="inline-block bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange transform hover:scale-105">
-                            Agendar Demonstração Gratuita
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- ===== Footer Start ===== -->
-    <footer class="bg-black border-t border-neutral-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                <div class="md:col-span-4">
-                    <a href="/" class="flex items-center space-x-2">
-                        <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
-                    </a>
-                    <p class="mt-4 text-neutral-400">A plataforma unificada de segurança que protege seus ativos críticos e garante conformidade.</p>
-                </div>
-                <div class="md:col-span-4">
-                    <h4 class="font-semibold text-white">Produtos</h4>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="https://esh.elevensoft.dev" class="text-neutral-400 hover:text-orange-500">ESH (PSM)</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-orange-500">ESUT</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-orange-500">KEYRING</a></li>
-                    </ul>
-                </div>
-                 <div class="md:col-span-4">
-                    <h4 class="font-semibold text-white">Fale Conosco</h4>
-                    <p class="mt-4 text-neutral-400">Nossa equipe está pronta para ajudar.</p>
-                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="mt-4 inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
-                        Agendar Reunião
-                    </a>
-                </div>
+              </div>
             </div>
-            <div class="mt-16 pt-8 border-t border-neutral-800 text-center text-neutral-500 text-sm">
-                <p>&copy; 2025 Eleven Soft. Todos os direitos reservados. Feito com ❤️ no Brasil.</p>
+            <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
+              <p class="text-lg text-neutral-300">"...não dá pra imaginar voltar ao que era antes. Hoje, o ESH garante
+                que tudo está rodando do jeito certo, sem improviso e sem susto."</p>
+              <div class="mt-6 flex items-center">
+                <div
+                  class="w-12 h-12 rounded-full flex-shrink-0 overflow-clip bg-[url('images/testimonials/zr-media.jpg')] bg-center"
+                  style="background-size: 150%;">
+                </div>
+                <div class="ml-4">
+                  <p class="font-bold text-white">Vitor Corrêa</p>
+                  <p class="text-neutral-400">CTO at ZR Media</p>
+                </div>
+              </div>
             </div>
+            <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
+              <p class="text-lg text-neutral-300">"Foi uma das poucas ferramentas que mostrou valor logo na primeira
+                semana. Conseguimos assistir o replay das sessões, o que trouxe uma segurança enorme."</p>
+              <div class="mt-6 flex items-center">
+                <div
+                  class="w-12 h-12 rounded-full flex-shrink-0 bg-no-repeat bg-[url('images/testimonials/trezze.jpg')] bg-size-[150%] bg-center"
+                  style="background-size: 100%;">
+                </div>
+                <div class="ml-4">
+                  <p class="font-bold text-white">Larissa Souza</p>
+                  <p class="text-neutral-400">CFO at Trezze Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
-    <!-- ===== Footer End ===== -->
+      </section>
 
-    <script>
-        // Lógica do menu mobile
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+      <!-- Blog Preview Section -->
+      <section id="blog-preview" class="py-20 bg-neutral-900/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Conteúdos Recentes do Nosso Blog</h2>
+            <p class="mt-4 text-lg text-neutral-400">Análises e guias para ajudar você a fortalecer sua segurança.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Blog Post Preview Card 1 -->
+            <article class="bg-neutral-800/50 rounded-2xl overflow-hidden group">
+              <a href="/blog/alternativas-teleport-jumpserver-brasil.html">
+                <div class="p-6">
+                  <p class="text-sm text-orange-400">Análise de Mercado</p>
+                  <h3 class="mt-2 text-xl font-bold text-white group-hover:text-orange-500 transition-colors">
+                    Alternativas ao Teleport e JumpServer para empresas no Brasil</h3>
+                  <p class="mt-3 text-neutral-400">Uma análise de custo, complexidade e suporte para ajudar você a tomar
+                    a decisão certa para sua operação.</p>
+                </div>
+              </a>
+            </article>
+            <!-- Blog Post Preview Card 2 -->
+            <article class="bg-neutral-800/50 rounded-2xl overflow-hidden group">
+              <a href="/blog/seguranca-acesso-remoto-guia-ctos.html">
+                <div class="p-6">
+                  <p class="text-sm text-orange-400">Guia Prático</p>
+                  <h3 class="mt-2 text-xl font-bold text-white group-hover:text-orange-500 transition-colors">Como
+                    garantir a segurança de acesso com um time remoto: um guia para CTOs</h3>
+                  <p class="mt-3 text-neutral-400">Passos essenciais para implementar o princípio do menor privilégio e
+                    manter a auditoria em dia.</p>
+                </div>
+              </a>
+            </article>
+            <!-- Blog Post Preview Card 3 -->
+            <article class="bg-neutral-800/50 rounded-2xl overflow-hidden group">
+              <a href="/blog/pam-vs-psm-qual-solucao.html">
+                <div class="p-6">
+                  <p class="text-sm text-orange-400">Estratégia</p>
+                  <h3 class="mt-2 text-xl font-bold text-white group-hover:text-orange-500 transition-colors">PAM vs
+                    PSM: Qual a solução certa para o estágio atual da sua empresa?</h3>
+                  <p class="mt-3 text-neutral-400">Entenda as diferenças e saiba quando investir em cada camada de
+                    segurança para otimizar seu orçamento.</p>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="text-center mt-12">
+            <a href="/blog"
+              class="inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
+              Ver todos os artigos
+            </a>
+          </div>
+        </div>
+      </section>
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+      <!-- Final CTA Section -->
+      <section id="final-cta" class="py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white">Pronto para ter o controle total da sua segurança?</h2>
+          <p class="mt-4 text-lg text-neutral-400 max-w-2xl mx-auto">Agende uma demonstração gratuita e descubra como a
+            plataforma Eleven Soft pode proteger seus ativos críticos e simplificar sua operação.</p>
+          <div class="mt-10">
+            <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+              class="inline-block bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange transform hover:scale-105">
+              Agendar Demonstração Gratuita
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== Footer Start ===== -->
+  <footer class="bg-black border-t border-neutral-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <a href="/" class="flex items-center space-x-2">
+            <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+          </a>
+          <p class="mt-4 text-neutral-400">A plataforma unificada de segurança que protege seus ativos críticos e
+            garante conformidade.</p>
+        </div>
+        <div class="md:col-span-4">
+          <h4 class="font-semibold text-white">Produtos</h4>
+          <ul class="mt-4 space-y-2">
+            <li><a href="https://esh.elevensoft.dev" class="text-neutral-400 hover:text-orange-500">ESH (PSM)</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-orange-500">ESUT</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-orange-500">KEYRING</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-4">
+          <h4 class="font-semibold text-white">Fale Conosco</h4>
+          <p class="mt-4 text-neutral-400">Nossa equipe está pronta para ajudar.</p>
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+            class="mt-4 inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
+            Agendar Reunião
+          </a>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-neutral-800 text-center text-neutral-500 text-sm">
+        <p>&copy; 2025 Eleven Soft. Todos os direitos reservados. Feito com ❤️ no Brasil.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== Footer End ===== -->
+
+  <script>
+    // Lógica do menu mobile
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
+
 </html>
