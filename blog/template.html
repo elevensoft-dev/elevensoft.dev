@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags - REPLACE WITH ACTUAL POST DATA -->
+    <title>Título do Post | Eleven Soft Blog</title>
+    <meta name="description" content="Descrição do post com até 160 caracteres." />
+    <meta name="keywords" content="palavra-chave 1, palavra-chave 2, palavra-chave 3" />
+    <meta name="author" content="Nome do Autor" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Eleven Soft" />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111111;
+            color: #E5E7EB;
+        }
+        .glow-orange {
+            box-shadow: 0 0 20px rgba(251, 146, 60, 0.3), 0 0 40px rgba(249, 115, 22, 0.2);
+        }
+        /* Basic styles for prose content from CMS */
+        .prose-custom h2, .prose-custom h3, .prose-custom h4 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose-custom p {
+            color: #D1D5DB;
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+        .prose-custom ul {
+            list-style-position: inside;
+            list-style-type: disc;
+            color: #D1D5DB;
+            padding-left: 1rem;
+        }
+        .prose-custom li {
+            margin-bottom: 0.75rem;
+        }
+        .prose-custom a {
+            text-decoration: underline;
+        }
+        .prose-custom strong {
+            color: #FDBA74;
+        }
+        .prose-custom code {
+            background-color: #27272A;
+            color: #FDBA74;
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            border-radius: 6px;
+        }
+        .prose-custom pre {
+            background-color: #18181B;
+            border: 1px solid #3F3F46;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        .prose-custom pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ===== Header Start ===== -->
+    <header class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-80 backdrop-blur-sm border-b border-neutral-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/#products" class="text-neutral-300 hover:text-orange-500 transition-colors">Produtos</a>
+                    <a href="/#testimonials" class="text-neutral-300 hover:text-orange-500 transition-colors">Clientes</a>
+                    <a href="/blog/" class="text-orange-500 font-semibold transition-colors">Blog</a>
+                </nav>
+
+                <!-- CTA and Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+                        Agendar Demonstração
+                    </a>
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-neutral-300 hover:bg-neutral-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="/i#products" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Produtos</a>
+                    <a href="/#testimonials" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Clientes</a>
+                    <a href="/blog" class="block px-3 py-2 rounded-md text-white bg-neutral-800">Blog</a>
+                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="block mt-2 bg-orange-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+                        Agendar Demonstração
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ===== Header End ===== -->
+
+    <main>
+        <article class="pt-32 pb-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <!-- Blog Post Header -->
+                <header class="text-center mb-12">
+                    <a href="/blog" class="text-orange-400 hover:text-orange-300 mb-4 inline-block">&larr; Voltar para o Blog</a>
+                    <p class="text-base text-orange-400 font-semibold">CATEGORIA DO POST</p>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-2 leading-tight">Título do Blog Post Vai Aqui</h1>
+                    <div class="mt-6 text-neutral-400">
+                        <span>Por <strong>Nome do Autor</strong></span>
+                        <span class="mx-2">&bull;</span>
+                        <span>Publicado em DD de Mês, AAAA</span>
+                    </div>
+                </header>
+
+                <!-- Blog Post Image -->
+                <div class="mb-12">
+                    <!-- REPLACE with actual image path and alt text -->
+                    <img src="../images/blog/placeholder.webp" alt="Descrição da imagem do post" class="w-full h-auto rounded-2xl object-cover">
+                </div>
+
+                <!-- Blog Post Content -->
+                <div class="prose-custom">
+                    <!--
+                        COLE O CONTEÚDO HTML DO SEU POST AQUI.
+                        Use a estrutura a seguir como guia.
+                    -->
+                    
+                    <p class="text-lg leading-relaxed">Este é o parágrafo de introdução do seu artigo. Ele deve capturar a atenção do leitor e apresentar o problema ou o tema que será discutido. Use <strong>negrito</strong> para destacar os termos mais importantes.</p>
+                    
+                    <h3>Subtítulo da Seção 1</h3>
+                    <p>Desenvolva o primeiro ponto do seu artigo aqui. Explique conceitos, apresente dados ou descreva um processo. Mantenha os parágrafos curtos e diretos para facilitar a leitura.</p>
+                    <ul>
+                        <li>Use listas para organizar informações.</li>
+                        <li>Elas quebram o texto e tornam os dados mais digeríveis.</li>
+                        <li>Cada item da lista deve ser conciso.</li>
+                    </ul>
+
+                    <h3>Subtítulo da Seção 2</h3>
+                    <p>Continue desenvolvendo sua argumentação. Você pode adicionar exemplos de código usando as tags <code>&lt;pre&gt;</code> e <code>&lt;code&gt;</code>, que já estão estilizadas.</p>
+                    <pre><code class="language-bash"># Exemplo de comando
+sudo apt-get update && sudo apt-get upgrade -y</code></pre>
+
+                    <p>Para destacar um comando ou nome de arquivo no meio do texto, use a tag <code>&lt;code&gt;</code> inline, como por exemplo, o arquivo <code>~/.ssh/config</code>.</p>
+                    
+                    <div class="mt-12 p-8 bg-neutral-800/50 rounded-lg text-center border border-orange-500/30">
+                        <h4 class="text-2xl font-bold mb-4 text-white">Este é um Call-to-Action (CTA)</h4>
+                        <p class="mb-6 text-neutral-300">
+                           Use este espaço para conectar o tema do seu artigo com uma solução que você oferece. Convide o leitor a dar o próximo passo.
+                        </p>
+                        <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="inline-block bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+                            Fale com um Especialista
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- ===== Footer Start ===== -->
+    <footer class="bg-black border-t border-neutral-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div class="md:col-span-4">
+                    <a href="/" class="flex items-center space-x-2">
+                        <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+                    </a>
+                    <p class="mt-4 text-neutral-400">A plataforma unificada de segurança que protege seus ativos críticos e garante conformidade.</p>
+                </div>
+                <div class="md:col-span-4">
+                    <h4 class="font-semibold text-white">Produtos</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="https://esh.elevensoft.dev" class="text-neutral-400 hover:text-orange-500">ESH (PSM)</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-orange-500">ESUT</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-orange-500">KEYRING</a></li>
+                    </ul>
+                </div>
+                 <div class="md:col-span-4">
+                    <h4 class="font-semibold text-white">Fale Conosco</h4>
+                    <p class="mt-4 text-neutral-400">Nossa equipe está pronta para ajudar.</p>
+                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="mt-4 inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
+                        Agendar Reunião
+                    </a>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-neutral-800 text-center text-neutral-500 text-sm">
+                <p>&copy; 2025 Eleven Soft. Todos os direitos reservados. Feito com ❤️ no Brasil.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== Footer End ===== -->
+
+    <script>
+        // Lógica do menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
