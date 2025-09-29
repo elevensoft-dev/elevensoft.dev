@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- SEO Meta Tags - REPLACE WITH ACTUAL POST DATA -->
     <title>Título do Post | Eleven Soft Blog</title>
     <meta name="description" content="Descrição do post com até 160 caracteres." />
@@ -17,6 +17,24 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Eleven Soft" />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K8J33FK');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3LL1X7H9R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RWQ28EGF21');
+    </script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -157,9 +175,9 @@
                         COLE O CONTEÚDO HTML DO SEU POST AQUI.
                         Use a estrutura a seguir como guia.
                     -->
-                    
+
                     <p class="text-lg leading-relaxed">Este é o parágrafo de introdução do seu artigo. Ele deve capturar a atenção do leitor e apresentar o problema ou o tema que será discutido. Use <strong>negrito</strong> para destacar os termos mais importantes.</p>
-                    
+
                     <h3>Subtítulo da Seção 1</h3>
                     <p>Desenvolva o primeiro ponto do seu artigo aqui. Explique conceitos, apresente dados ou descreva um processo. Mantenha os parágrafos curtos e diretos para facilitar a leitura.</p>
                     <ul>
@@ -174,7 +192,7 @@
 sudo apt-get update && sudo apt-get upgrade -y</code></pre>
 
                     <p>Para destacar um comando ou nome de arquivo no meio do texto, use a tag <code>&lt;code&gt;</code> inline, como por exemplo, o arquivo <code>~/.ssh/config</code>.</p>
-                    
+
                     <div class="mt-12 p-8 bg-neutral-800/50 rounded-lg text-center border border-orange-500/30">
                         <h4 class="text-2xl font-bold mb-4 text-white">Este é um Call-to-Action (CTA)</h4>
                         <p class="mb-6 text-neutral-300">
@@ -227,7 +245,7 @@ sudo apt-get update && sudo apt-get upgrade -y</code></pre>
         // Lógica do menu mobile
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
