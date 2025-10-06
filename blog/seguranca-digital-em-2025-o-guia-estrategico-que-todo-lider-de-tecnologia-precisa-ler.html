@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Segurança Digital em 2025: O guia estratégico | Eleven Soft Blog</title>
+    <meta name="description" content="Em 2025, a segurança digital é um fator de continuidade. Este guia estratégico aborda IA, ataques automatizados e como proteger acessos privilegiados." />
+    <meta name="keywords" content="segurança digital, cibersegurança, gestão de acessos, ESH, NIST, LGPD, Zero Trust, PAM" />
+    <meta name="author" content="Time Eleven Soft" />
+
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Eleven Soft" />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K8J33FK');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3LL1X7H9R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RWQ28EGF21');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111111;
+            color: #E5E7EB;
+        }
+        .glow-orange {
+            box-shadow: 0 0 20px rgba(251, 146, 60, 0.3), 0 0 40px rgba(249, 115, 22, 0.2);
+        }
+        /* Basic styles for prose content from CMS */
+        .prose-custom h2, .prose-custom h3, .prose-custom h4 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose-custom p {
+            color: #ffffff;
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+        .prose-custom ul {
+            list-style-position: inside;
+            list-style-type: disc;
+            color: #D1D5DB;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose-custom li {
+            margin-bottom: 0.75rem;
+        }
+        .prose-custom a {
+            text-decoration: underline;
+            color: #fffff; /* Orange for links */
+        }
+        .prose-custom strong {
+            color: #FDBA74;
+        }
+        .prose-custom code {
+            background-color: #27272A;
+            color: #FDBA74;
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            border-radius: 6px;
+        }
+        .prose-custom pre {
+            background-color: #18181B;
+            border: 1px solid #3F3F46;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+        .prose-custom pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        .prose-custom table {
+            width: 100%;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            border-collapse: collapse;
+        }
+        .prose-custom th, .prose-custom td {
+            border: 1px solid #3F3F46;
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+        .prose-custom th {
+            background-color: #27272A;
+            color: #FDBA74;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-80 backdrop-blur-sm border-b border-neutral-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/#products" class="text-neutral-300 hover:text-orange-500 transition-colors">Produtos</a>
+                    <a href="/#testimonials" class="text-neutral-300 hover:text-orange-500 transition-colors">Clientes</a>
+                    <a href="/blog/" class="text-orange-500 font-semibold transition-colors">Blog</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+                        Agendar Demonstração
+                    </a>
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-neutral-300 hover:bg-neutral-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="/i#products" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Produtos</a>
+                    <a href="/#testimonials" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Clientes</a>
+                    <a href="/blog" class="block px-3 py-2 rounded-md text-white bg-neutral-800">Blog</a>
+                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="block mt-2 bg-orange-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+                        Agendar Demonstração
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article class="pt-32 pb-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <header class="text-center mb-12">
+                    <a href="/blog" class="text-orange-400 hover:text-orange-300 mb-4 inline-block">&larr; Voltar para o Blog</a>
+                    <p class="text-base text-orange-400 font-semibold uppercase">Segurança Digital</p>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-2 leading-tight">Segurança Digital em 2025: O guia estratégico que todo líder de tecnologia precisa ler</h1>
+                    <div class="mt-6 text-neutral-400">
+                        <span>Por <strong>Time Eleven Soft</strong></span>
+                        <span class="mx-2">&bull;</span>
+                        <span>Publicado em 06 de Outubro, 2025</span>
+                    </div>
+                </header>
+
+                <div class="mb-12">
+                    <img src="../images/blog/placeholder.webp" alt="Visão futurista da segurança digital com códigos, dados e cadeados digitais." class="w-full h-auto rounded-2xl object-cover">
+                </div>
+
+                <div class="prose-custom">
+
+                    <h3>Introdução</h3>
+                    <p>A segurança digital deixou de ser uma especialidade — <strong>virou um fator de continuidade do negócio</strong>. Em 2025, o avanço da IA generativa, o aumento de ataques automatizados e a hiperconectividade entre sistemas criaram o cenário mais hostil da história para quem lidera tecnologia.</p>
+                    <p>Hoje, não basta proteger o perímetro, porque o perímetro já não existe. Os dados estão em nuvem, as equipes estão remotas, os acessos são descentralizados. O desafio real é proteger o que é invisível: as conexões, as credenciais e as ações humanas que acontecem dentro dos seus próprios servidores.</p>
+                    <p>E é aqui que muitos líderes — mesmo os experientes — se perdem:</p>
+                    <ul>
+                        <li>Alguns acreditam que antivírus, firewall e EDR resolvem tudo.</li>
+                        <li>Outros confiam demais no “acesso restrito” e esquecem de auditar.</li>
+                        <li>E há quem ainda delegue a segurança como uma função operacional, e não estratégica.</li>
+                    </ul>
+                    <p>Em 2025, segurança não é mais sobre tecnologia. <strong>É sobre visibilidade, responsabilidade e decisão.</strong></p>
+
+                    <h3>1. O novo cenário de risco</h3>
+                    <p>Os dados são claros e preocupantes:</p>
+                    <ul>
+                        <li>73% das empresas sofreram ao menos um incidente de segurança em 2024.</li>
+                        <li>O tempo médio de recuperação após ransomware no Brasil chega a 23 horas.</li>
+                        <li>O custo médio de um incidente grave ultrapassa R$ 13 milhões.</li>
+                        <li>E o impacto reputacional é imediato: 78% das empresas perdem clientes após uma violação.</li>
+                    </ul>
+                    <p>A principal causa? <strong>Falta de visibilidade sobre acessos privilegiados</strong> — o ponto mais sensível e menos controlado da infraestrutura.</p>
+
+                    <h3>2. As novas frentes de ataque</h3>
+                    <p>A era dos ataques genéricos acabou. O que vemos agora é precisão cirúrgica — e inteligência ofensiva aplicada a cada vetor.</p>
+                    <h4>Supply Chain com IA</h4>
+                    <p>Ataques direcionados ao código-fonte e bibliotecas open-source cresceram 25%. Hoje, a ameaça pode vir disfarçada dentro de uma dependência legítima. <br><strong>📘 Como responder:</strong> implemente SBOM (Software Bill of Materials) e auditoria contínua de integridade.</p>
+                    <h4>Sequestro de Sessões (Session Hijacking)</h4>
+                    <p>67% dos ataques web em 2025 exploram tokens e sessões OAuth. A cada acesso mal monitorado, abre-se uma porta invisível para o invasor. <br><strong>📘 Como responder:</strong> adote Zero Trust e monitoramento contínuo de sessões SSH/RDP.</p>
+                    <h4>Ameaças Internas Inteligentes</h4>
+                    <p>O insider moderno usa IA para esconder rastros e explorar brechas. <br><strong>📘 Como responder:</strong> utilize análise comportamental e correlação de eventos em tempo real.</p>
+                    <h4>Vulnerabilidades em APIs</h4>
+                    <p>Com a aceleração do desenvolvimento, 67% das vulnerabilidades estão nas APIs — hoje, o “ponto cego” de muitas empresas. <br><strong>📘 Como responder:</strong> implemente API Security Gateways, versionamento seguro e testes automatizados.</p>
+                    <p><strong>Conclusão:</strong> o inimigo não está mais só “fora”. Ele pode ser um colaborador, um fornecedor ou uma dependência de software. E o que diferencia quem sobrevive de quem apaga incêndios é a capacidade de monitorar e provar tudo o que acontece.</p>
+
+                    <h3>3. Frameworks que realmente funcionam</h3>
+                    <p>Frameworks não são burocracia — são mapas de maturidade. Os mais reconhecidos, como NIST CSF 2.0, ISO 27001:2022 e CIS Controls v8, criam a base para qualquer programa de segurança sólido.</p>
+                    <h4>Comparativo de Aplicação</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Framework</th>
+                                <th>Aplicação</th>
+                                <th>Benefício</th>
+                                <th>Complexidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CIS Controls v8</td>
+                                <td>Controles técnicos essenciais</td>
+                                <td>Implementação rápida e mensurável</td>
+                                <td>Baixa</td>
+                            </tr>
+                            <tr>
+                                <td>NIST CSF 2.0</td>
+                                <td>Governança e gestão de riscos</td>
+                                <td>Reduz até 52% de incidentes</td>
+                                <td>Média</td>
+                            </tr>
+                            <tr>
+                                <td>ISO 27001:2022</td>
+                                <td>Gestão de segurança da informação</td>
+                                <td>Compliance internacional</td>
+                                <td>Alta</td>
+                            </tr>
+                            <tr>
+                                <td>Zero Trust</td>
+                                <td>Arquitetura moderna de acesso</td>
+                                <td>Proteção granular e adaptativa</td>
+                                <td>Alta</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Estratégia ideal:</strong></p>
+                    <ul>
+                        <li>Comece pelo <strong>CIS Controls v8</strong> (fundação técnica).</li>
+                        <li>Evolua para o <strong>NIST CSF 2.0</strong> (gestão e governança).</li>
+                        <li>Avance para <strong>ISO 27001</strong> (certificação e reconhecimento externo).</li>
+                    </ul>
+
+                    <h3>4. Monitoramento e auditoria: o núcleo da segurança moderna</h3>
+                    <p>Em segurança, o que você não monitora, não existe. E o que você não grava, não pode auditar. A abordagem moderna parte de três pilares:</p>
+                    <ul>
+                        <li><strong>Ver tudo</strong> – cada sessão, comando e credencial.</li>
+                        <li><strong>Detectar em tempo real</strong> – comportamento anômalo, acessos suspeitos, desvios de padrão.</li>
+                        <li><strong>Provar quando necessário</strong> – replay de sessões e relatórios automáticos para auditoria.</li>
+                    </ul>
+                    <p><strong>📊 Indicadores ideais de maturidade:</strong></p>
+                    <ul>
+                        <li><strong>MTTD</strong> (Tempo médio de detecção): &lt; 15 minutos</li>
+                        <li><strong>MTTR</strong> (Tempo médio de resposta): &lt; 4 horas</li>
+                        <li><strong>Falsos positivos:</strong> &lt; 5%</li>
+                        <li><strong>Disponibilidade de logs:</strong> &gt; 99,9%</li>
+                    </ul>
+                    <p><strong>Ferramentas-chaves:</strong></p>
+                    <ul>
+                        <li>Sessões SSH/RDP gravadas e auditáveis</li>
+                        <li>SIEM + correlação de eventos</li>
+                        <li>Alertas automatizados com IA</li>
+                        <li>Relatórios de compliance (LGPD, ISO, SOX)</li>
+                    </ul>
+
+                    <h3>5. ESH: o centro de comando da soberania digital</h3>
+                    <p>O <strong>ESH (Eleven Shell Hub)</strong> foi criado com um propósito claro: entregar controle e visibilidade total sobre acessos privilegiados — sem complexidade e sem depender de dólar.</p>
+                    <p>Enquanto ferramentas estrangeiras exigem equipes inteiras de implantação, o ESH nasce leve, direto e focado no que importa:</p>
+                    <ul>
+                        <li><strong>Controle centralizado:</strong> todos os acessos remotos passam por um ponto seguro.</li>
+                        <li><strong>Monitoramento ao vivo:</strong> sessões SSH e Telnet visíveis em tempo real.</li>
+                        <li><strong>Replay completo:</strong> cada ação é registrada e pode ser revisada com precisão.</li>
+                        <li><strong>Alertas inteligentes:</strong> detecção proativa de comportamentos suspeitos.</li>
+                        <li><strong>Deploy simples:</strong> instalação sem agentes e integração imediata.</li>
+                        <li><strong>Custo previsível:</strong> preço em Reais e suporte local especializado.</li>
+                    </ul>
+                    <p>O ESH é mais que uma ferramenta: <strong>é o centro de comando da infraestrutura crítica</strong> — onde auditoria, prevenção e resposta se unem num único painel.</p>
+
+                    <h3>6. O roadmap da maturidade em segurança</h3>
+                    <p>Segurança não se compra, se constrói. E toda jornada sólida segue quatro fases claras:</p>
+                    <h4>Fase 1 – Fundação (0–3 meses)</h4>
+                    <ul>
+                        <li>Mapear ativos críticos e vulnerabilidades.</li>
+                        <li>Implementar CIS Controls básicos.</li>
+                        <li>Treinar equipe em segurança operacional.</li>
+                    </ul>
+                    <h4>Fase 2 – Monitoramento (3–6 meses)</h4>
+                    <ul>
+                        <li>Implementar o ESH.</li>
+                        <li>Centralizar logs em um SIEM.</li>
+                        <li>Automatizar alertas e auditoria contínua.</li>
+                    </ul>
+                    <h4>Fase 3 – Governança (6–12 meses)</h4>
+                    <ul>
+                        <li>Adotar NIST CSF 2.0 e arquitetura Zero Trust.</li>
+                        <li>Implementar políticas LGPD.</li>
+                        <li>Formalizar plano de resposta a incidentes.</li>
+                    </ul>
+                    <h4>Fase 4 – Otimização (12+ meses)</h4>
+                    <ul>
+                        <li>Integrar Threat Intelligence e Red Team.</li>
+                        <li>Realizar exercícios de resposta simulada.</li>
+                        <li>Medir KPIs de segurança e continuidade.</li>
+                    </ul>
+
+                    <h3>7. Conclusão: segurança como vantagem competitiva</h3>
+                    <p>A segurança deixou de ser um custo para se tornar um diferencial estratégico. Empresas que dominam seus acessos, auditam suas ações e respondem rápido criam confiança — e confiança gera negócio.</p>
+                    <p>O ESH é o símbolo dessa nova fase: uma solução nacional, eficiente e acessível que une controle, auditoria e conformidade em um só lugar. Segurança não é sobre impedir o risco — é sobre saber quando ele acontecer, o que ocorreu e quem foi responsável. É exatamente isso que o ESH entrega.</p>
+                    <p class="text-center text-lg italic text-neutral-300 mt-10">Segurança sem comprometer a inovação. Esse é o novo padrão para quem lidera tecnologia no Brasil.</p>
+
+                    <div class="mt-12 p-8 bg-neutral-800/50 rounded-lg text-center border border-orange-500/30">
+                        <h4 class="text-2xl font-bold mb-4 text-white">Conheça o ESH: O Centro de Comando da sua Segurança</h4>
+                        <p class="mb-6 text-neutral-300">
+                           Unifique controle, auditoria e conformidade. Proteja seus acessos privilegiados com uma solução nacional, eficiente e com custo previsível. Agende uma demonstração e veja na prática.
+                        </p>
+                        <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="inline-block bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+                            Agendar Demonstração do ESH
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-black border-t border-neutral-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div class="md:col-span-4">
+                    <a href="/" class="flex items-center space-x-2">
+                        <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+                    </a>
+                    <p class="mt-4 text-neutral-400">A plataforma unificada de segurança que protege seus ativos críticos e garante conformidade.</p>
+                </div>
+                <div class="md:col-span-4">
+                    <h4 class="font-semibold text-white">Produtos</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="https://esh.elevensoft.dev" class="text-neutral-400 hover:text-orange-500">ESH (PSM)</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-orange-500">ESUT</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-orange-500">KEYRING</a></li>
+                    </ul>
+                </div>
+                 <div class="md:col-span-4">
+                    <h4 class="font-semibold text-white">Fale Conosco</h4>
+                    <p class="mt-4 text-neutral-400">Nossa equipe está pronta para ajudar.</p>
+                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="mt-4 inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
+                        Agendar Reunião
+                    </a>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-neutral-800 text-center text-neutral-500 text-sm">
+                <p>&copy; 2025 Eleven Soft. Todos os direitos reservados. Feito com ❤️ no Brasil.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Lógica do menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
