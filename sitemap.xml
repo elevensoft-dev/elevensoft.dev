@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://www.elevensoft.com.br/</loc>
+        <lastmod>2025-10-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://www.elevensoft.com.br/blog/</loc>
+        <lastmod>2025-10-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://www.elevensoft.com.br/blog/alternativas-ao-teleport-e-jumpserver-para-empresas-brasileiras.html</loc>
+        <lastmod>2025-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.elevensoft.com.br/blog/arquiteturas-seguranca-zero-trust.html</loc>
+        <lastmod>2025-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.elevensoft.com.br/blog/mantenha-suas-sessoes-ssh-vivas-com-o-esh.html</loc>
+        <lastmod>2025-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.elevensoft.com.br/blog/pam-vs-psm-entendendo-a-diferenca-estrategica-para-empresas-em-2025.html</loc>
+        <lastmod>2025-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.elevensoft.com.br/blog/seguranca-digital-em-2025-o-guia-estrategico-que-todo-lider-de-tecnologia-precisa-ler.html</loc>
+        <lastmod>2025-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
