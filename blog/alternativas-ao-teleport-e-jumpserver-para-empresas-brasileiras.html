@@ -1,335 +1,400 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Alternativas ao Teleport e JumpServer para empresas no Brasil | Eleven Soft</title>
-    <meta name="description" content="Uma análise comparativa de Teleport e JumpServer, discutindo alternativas como o ESH, mais adequadas ao contexto brasileiro em custo, complexidade e conformidade com a LGPD." />
-    <meta name="keywords" content="Teleport, JumpServer, ESH, PAM, gestão de acessos, segurança, LGPD, ISO 27001, bastion host, TCO, Brasil" />
-    <meta name="author" content="Equipe Eleven Soft" />
+  <title>Alternativas ao Teleport e JumpServer para empresas no Brasil | Eleven Soft</title>
+  <meta name="description"
+    content="Uma análise comparativa de Teleport e JumpServer, discutindo alternativas como o ESH, mais adequadas ao contexto brasileiro em custo, complexidade e conformidade com a LGPD." />
+  <meta name="keywords"
+    content="Teleport, JumpServer, ESH, PAM, gestão de acessos, segurança, LGPD, ISO 27001, bastion host, TCO, Brasil" />
+  <meta name="author" content="Equipe Eleven Soft" />
 
-    <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Eleven Soft" />
-    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../images/favicon/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Eleven Soft" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K8J33FK');</script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3LL1X7H9R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K8J33FK');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3LL1X7H9R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', 'G-V3LL1X7H9R');
-    </script>
+    gtag('config', 'G-V3LL1X7H9R');
+  </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111111;
-            color: #E5E7EB;
-        }
-        .glow-orange {
-            box-shadow: 0 0 20px rgba(251, 146, 60, 0.3), 0 0 40px rgba(249, 115, 22, 0.2);
-        }
-        /* Basic styles for prose content from CMS */
-        .prose-custom h2, .prose-custom h3, .prose-custom h4 {
-            color: #ffffff;
-            font-weight: 700;
-            margin-top: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .prose-custom p {
-            color: #D1D5DB;
-            line-height: 1.75;
-            margin-bottom: 1.5rem;
-        }
-        .prose-custom ul {
-            list-style-position: inside;
-            list-style-type: disc;
-            color: #D1D5DB;
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        .prose-custom li {
-            margin-bottom: 0.75rem;
-        }
-        .prose-custom a {
-            text-decoration: underline;
-        }
-        .prose-custom strong {
-            color: #FDBA74;
-        }
-        .prose-custom code {
-            background-color: #27272A;
-            color: #FDBA74;
-            padding: 0.2em 0.4em;
-            margin: 0;
-            font-size: 85%;
-            border-radius: 6px;
-        }
-        .prose-custom pre {
-            background-color: #18181B;
-            border: 1px solid #3F3F46;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            overflow-x: auto;
-        }
-        .prose-custom pre code {
-            background-color: transparent;
-            padding: 0;
-        }
-        .prose-custom table {
-            width: 100%;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            border-collapse: collapse;
-            border: 1px solid #3F3F46;
-        }
-        .prose-custom th, .prose-custom td {
-            border: 1px solid #3F3F46;
-            padding: 0.75rem;
-            text-align: left;
-        }
-        .prose-custom th {
-            background-color: #18181B;
-            font-weight: 700;
-        }
-    </style>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111111;
+      color: #E5E7EB;
+    }
+
+    .glow-orange {
+      box-shadow: 0 0 20px rgba(251, 146, 60, 0.3), 0 0 40px rgba(249, 115, 22, 0.2);
+    }
+
+    /* Basic styles for prose content from CMS */
+    .prose-custom h2,
+    .prose-custom h3,
+    .prose-custom h4 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .prose-custom p {
+      color: #D1D5DB;
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .prose-custom ul {
+      list-style-position: inside;
+      list-style-type: disc;
+      color: #D1D5DB;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .prose-custom li {
+      margin-bottom: 0.75rem;
+    }
+
+    .prose-custom a {
+      text-decoration: underline;
+    }
+
+    .prose-custom strong {
+      color: #FDBA74;
+    }
+
+    .prose-custom code {
+      background-color: #27272A;
+      color: #FDBA74;
+      padding: 0.2em 0.4em;
+      margin: 0;
+      font-size: 85%;
+      border-radius: 6px;
+    }
+
+    .prose-custom pre {
+      background-color: #18181B;
+      border: 1px solid #3F3F46;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+
+    .prose-custom pre code {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    .prose-custom table {
+      width: 100%;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      border-collapse: collapse;
+      border: 1px solid #3F3F46;
+    }
+
+    .prose-custom th,
+    .prose-custom td {
+      border: 1px solid #3F3F46;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    .prose-custom th {
+      background-color: #18181B;
+      font-weight: 700;
+    }
+  </style>
 </head>
+
 <body class="antialiased">
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8J33FKL"
-                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8J33FKL" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-    <header class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-80 backdrop-blur-sm border-b border-neutral-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="/" class="flex items-center space-x-2">
-                    <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
-                </a>
+  <header class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-80 backdrop-blur-sm border-b border-neutral-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center space-x-2">
+          <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+        </a>
 
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="/blog/" class="text-orange-500 font-semibold transition-colors">Blog</a>
-                </nav>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="/blog/" class="text-orange-500 font-semibold transition-colors">Blog</a>
+        </nav>
 
-                <div class="flex items-center space-x-4">
-                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
-                        Agendar Demonstração
-                    </a>
-                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-neutral-300 hover:bg-neutral-800 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div id="mobile-menu" class="md:hidden hidden pb-4">
-                <nav class="flex flex-col space-y-2">
-                    <a href="/blog" class="block px-3 py-2 rounded-md text-white bg-neutral-800">Blog</a>
-                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="block mt-2 bg-orange-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-colors">
-                        Agendar Demonstração
-                    </a>
-                </nav>
-            </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+            class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+            Agendar Demonstração
+          </a>
+          <button id="mobile-menu-button"
+            class="md:hidden p-2 rounded-md text-neutral-300 hover:bg-neutral-800 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
         </div>
-    </header>
-    <main>
-        <article class="pt-32 pb-20">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-                <header class="text-center mb-12">
-                    <a href="/blog" class="text-orange-400 hover:text-orange-300 mb-4 inline-block">&larr; Voltar para o Blog</a>
-                    <p class="text-base text-orange-400 font-semibold">Segurança</p>
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-2 leading-tight">Alternativas ao Teleport e JumpServer para empresas no Brasil</h1>
-                    <div class="mt-6 text-neutral-400">
-                        <span>Por <strong>Equipe Eleven Soft</strong></span>
-                        <span class="mx-2">&bull;</span>
-                        <span>Publicado em 29 de Setembro, 2025</span>
-                    </div>
-                </header>
+      </div>
 
-                <div class="mb-12">
-                    <img src="../images/blog/placeholder.webp" alt="Comparativo entre soluções de acesso remoto" class="w-full h-auto rounded-2xl object-cover">
-                </div>
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <nav class="flex flex-col space-y-2">
+          <a href="/blog" class="block px-3 py-2 rounded-md text-white bg-neutral-800">Blog</a>
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+            class="block mt-2 bg-orange-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+            Agendar Demonstração
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <article class="pt-32 pb-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <header class="text-center mb-12">
+          <a href="/blog" class="text-orange-400 hover:text-orange-300 mb-4 inline-block">&larr; Voltar para o Blog</a>
+          <p class="text-base text-orange-400 font-semibold">Segurança</p>
+          <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-2 leading-tight">Alternativas ao Teleport e
+            JumpServer para empresas no Brasil</h1>
+          <div class="mt-6 text-neutral-400">
+            <span>Por <strong>Equipe Eleven Soft</strong></span>
+            <span class="mx-2">&bull;</span>
+            <span>Publicado em 29 de Setembro, 2025</span>
+          </div>
+        </header>
 
-                <div class="prose-custom">
-                    <h3 class="text-2xl font-semibold">Uma análise de custo e complexidade</h3>
-
-                    <h2><strong>Introdução</strong></h2>
-                    <p>A gestão de acessos privilegiados tornou-se um pilar estratégico de segurança para empresas que dependem de infraestrutura digital crítica. O aumento da complexidade de ambientes híbridos, a pressão regulatória (LGPD, ISO 27001) e o risco de incidentes causados por erro humano colocam CTOs e gestores de TI diante de um dilema: <strong>como equilibrar segurança, auditoria e custo em soluções de acesso remoto?</strong></p>
-                    <p>Entre as ferramentas mais citadas no mercado, <strong>Teleport</strong> e <strong>JumpServer</strong> ocupam posições de destaque. Este documento apresenta uma análise comparativa entre essas soluções e discute alternativas mais adequadas ao contexto brasileiro, com foco em <strong>custo total de propriedade (TCO)</strong> e <strong>complexidade de operação</strong>.</p>
-
-                    <h2><strong>Metodologia de Análise</strong></h2>
-                    <p>Para efeito desta análise, foram definidos os seguintes critérios:</p>
-                    <ul>
-                      <li><strong>Modelo de Licenciamento</strong> – OSS, comercial, por usuário ou por recurso.</li>
-                      <li><strong>Protocolos Suportados</strong> – abrangência (SSH, RDP, bancos de dados, Kubernetes, web).</li>
-                      <li><strong>Recursos de Auditoria</strong> – replay de sessões, logs de comando, granularidade.</li>
-                      <li><strong>Arquitetura</strong> – número de componentes, dependências externas, curva de implantação.</li>
-                      <li><strong>Custo Total de Propriedade (TCO)</strong> – inclui licença, infraestrutura necessária, horas de operação e suporte.</li>
-                      <li><strong>Aderência ao Contexto Brasileiro</strong> – suporte local, moeda de cobrança e compliance.</li>
-                    </ul>
-
-                    <h2><strong>Teleport</strong></h2>
-                    <p>O <strong>Teleport</strong>, desenvolvido pela Gravitational, é considerado uma solução de referência no segmento de <strong>Zero Trust Access</strong>.</p>
-                    <ul>
-                      <li><strong>Diferencial técnico</strong>: uso de <strong>certificados efêmeros</strong> (<em>short-lived certificates</em>) para autenticação e autorização, eliminando riscos de credenciais persistentes.</li>
-                      <li><strong>Cobertura de protocolos</strong>: SSH, RDP, Kubernetes, bancos de dados e aplicativos web.</li>
-                      <li><strong>Arquitetura</strong>: baseada em dois serviços principais — <strong>Auth Service</strong> e <strong>Proxy Service</strong> — exigindo infraestrutura dedicada e administração contínua.</li>
-                      <li><strong>Auditoria</strong>: replay completo de sessões e RBAC avançado.</li>
-                      <li><strong>Modelo de Licenciamento</strong>: baseado em <strong>Monthly Active Users (MAU)</strong>, sempre em dólar.</li>
-                      <li><strong>Análise crítica</strong>: adequado para empresas globais com orçamento elevado, mas apresenta barreiras de custo e complexidade para PMEs brasileiras.</li>
-                    </ul>
-
-                    <h2><strong>JumpServer</strong></h2>
-                    <p>O <strong>JumpServer</strong> consolidou-se como o principal <strong>Bastion Host open-source</strong>, oferecendo flexibilidade por meio de uma arquitetura modular.</p>
-                    <ul>
-                      <li><strong>Diferencial técnico</strong>: ampla cobertura de protocolos (SSH, RDP, bancos de dados, Kubernetes, RemoteApp).</li>
-                      <li><strong>Arquitetura</strong>: composta por múltiplos módulos (Core, Koko, Guacamole, Lina/Luna, entre outros), com dependências externas (MySQL/MariaDB e Redis).</li>
-                      <li><strong>Auditoria</strong>: replay de sessões e histórico detalhado de comandos executados.</li>
-                      <li><strong>Modelo de Licenciamento</strong>: versão OSS gratuita e <strong>Enterprise Edition (EE)</strong> com recursos adicionais sob cotação.</li>
-                      <li><strong>Análise crítica</strong>: embora sem custo de licença na versão OSS, o TCO se eleva significativamente devido à necessidade de manutenção contínua, atualizações de segurança e horas-homens de DevOps.</li>
-                    </ul>
-
-                    <h2><strong>Comparativo Direto: Teleport vs JumpServer</strong></h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th><strong>Critério</strong></th>
-                                <th><strong>Teleport</strong></th>
-                                <th><strong>JumpServer</strong></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Licenciamento</strong></td>
-                                <td>Pago por usuário ativo mensal (US$)</td>
-                                <td>OSS gratuito + EE sob cotação</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Protocolos</strong></td>
-                                <td>SSH, RDP, K8s, DB, web</td>
-                                <td>SSH, RDP, DB, K8s, RemoteApp</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Auditoria</strong></td>
-                                <td>Replay completo + RBAC avançado</td>
-                                <td>Replay completo + logs de comandos</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Arquitetura</strong></td>
-                                <td>Auth + Proxy; infra dedicada</td>
-                                <td>Modular; múltiplos serviços + Redis/MySQL</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Custo Total (TCO)</strong></td>
-                                <td>Licença em dólar + infra</td>
-                                <td>OSS gratuito, mas alto custo humano</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Fit Brasil</strong></td>
-                                <td>Baixo (preço em dólar, suporte limitado)</td>
-                                <td>Médio (comunidade ativa, suporte limitado)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <h2><strong>Considerações para o Contexto Brasileiro</strong></h2>
-                    <p>O ambiente brasileiro apresenta fatores críticos que diferenciam a decisão de escolha:</p>
-                    <ul>
-                        <li><strong>Moeda estrangeira</strong>: soluções em dólar elevam a imprevisibilidade financeira.</li>
-                        <li><strong>Suporte local</strong>: ausência de atendimento em português e fuso horário desfavorável impactam na adoção.</li>
-                        <li><strong>Compliance</strong>: exigências da LGPD e ISO 27001 tornam a auditoria obrigatória, mas nem sempre justificam o investimento em um <strong>PAM enterprise</strong>.</li>
-                        <li><strong>Recursos humanos</strong>: times enxutos não conseguem absorver ferramentas de alta complexidade.</li>
-                    </ul>
-
-                    <h2><strong>O ESH como Alternativa Estratégica</strong></h2>
-                    <p>O <strong>ESH (Eleven Soft Host)</strong> posiciona-se como uma alternativa pragmática para empresas brasileiras de médio porte que precisam de <strong>segurança, conformidade e previsibilidade de custos</strong>.</p>
-                    <ul>
-                        <li><strong>Foco</strong>: ativos de rede críticos (servidores, roteadores, OLTs, ONUs).</li>
-                        <li><strong>Arquitetura simplificada</strong>: deploy rápido, sem agentes, sem múltiplos componentes paralelos.</li>
-                        <li><strong>Auditoria</strong>: replay fiel de sessões em formato leve (texto), armazenado em infraestrutura própria.</li>
-                        <li><strong>Custo</strong>: preço em Reais, previsível e acessível para PMEs.</li>
-                        <li><strong>Benefício estratégico</strong>: oferece <strong>segurança robusta</strong> e <strong>conformidade simplificada</strong>, sem a complexidade e o custo associados a PAMs completos.</li>
-                    </ul>
-
-                    <h2><strong>Conclusão</strong></h2>
-                    <p>A análise evidencia que:</p>
-                    <ul>
-                        <li><strong>Teleport</strong> atende empresas globais com alta maturidade e orçamento, mas é pouco viável para PMEs brasileiras.</li>
-                        <li><strong>JumpServer</strong> oferece acessibilidade inicial, mas transfere o custo para a complexidade operacional.</li>
-                        <li><strong>ESH</strong> preenche a lacuna entre essas opções, equilibrando segurança, auditoria e simplicidade, com custo previsível em Reais.</li>
-                    </ul>
-                    <p>Para gestores que precisam conciliar <strong>controle total, conformidade regulatória e eficiência operacional</strong>, o ESH representa uma solução alinhada à realidade brasileira e ao desafio de crescer com segurança.</p>
-                </div>
-
-
-                <div class="mt-12 p-8 bg-neutral-800/50 rounded-lg text-center border border-orange-500/30">
-                  <h4 class="text-2xl font-bold mb-4 text-white">Pronto para Implementar Zero Trust com Inteligência?</h4>
-                  <p class="mb-6 text-neutral-300">
-                  Nossa equipe está preparada para apoiar sua jornada Zero Trust com base em dados reais e experiência comprovada. Vamos construir juntos uma arquitetura de segurança que protege seu negócio e impulsiona sua competitividade.
-                  </p>
-                  <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="inline-block bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
-                    Fale com um Especialista
-                  </a>
-                </div>
-            </div>
-        </article>
-    </main>
-
-    <footer class="bg-black border-t border-neutral-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                <div class="md:col-span-4">
-                    <a href="/" class="flex items-center space-x-2">
-                        <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
-                    </a>
-                    <p class="mt-4 text-neutral-400">A plataforma unificada de segurança que protege seus ativos críticos e garante conformidade.</p>
-                </div>
-                <div class="md:col-span-4">
-                    <h4 class="font-semibold text-white">Produtos</h4>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="https://esh.elevensoft.dev" class="text-neutral-400 hover:text-orange-500">ESH (PSM)</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-orange-500">ESUT</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-orange-500">KEYRING</a></li>
-                    </ul>
-                </div>
-                 <div class="md:col-span-4">
-                    <h4 class="font-semibold text-white">Fale Conosco</h4>
-                    <p class="mt-4 text-neutral-400">Nossa equipe está pronta para ajudar.</p>
-                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="mt-4 inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
-                        Agendar Reunião
-                    </a>
-                </div>
-            </div>
-            <div class="mt-16 pt-8 border-t border-neutral-800 text-center text-neutral-500 text-sm">
-                <p>&copy; 2025 Eleven Soft. Todos os direitos reservados. Feito com ❤️ no Brasil.</p>
-            </div>
+        <div class="mb-12">
+          <img src="../images/blog/placeholder.webp" alt="Comparativo entre soluções de acesso remoto"
+            class="w-full h-auto rounded-2xl object-cover">
         </div>
-    </footer>
-    <script>
-        // Lógica do menu mobile
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+        <div class="prose-custom">
+          <h3 class="text-2xl font-semibold">Uma análise de custo e complexidade</h3>
+
+          <h2><strong>Introdução</strong></h2>
+          <p>A gestão de acessos privilegiados tornou-se um pilar estratégico de segurança para empresas que dependem de
+            infraestrutura digital crítica. O aumento da complexidade de ambientes híbridos, a pressão regulatória
+            (LGPD, ISO 27001) e o risco de incidentes causados por erro humano colocam CTOs e gestores de TI diante de
+            um dilema: <strong>como equilibrar segurança, auditoria e custo em soluções de acesso remoto?</strong></p>
+          <p>Entre as ferramentas mais citadas no mercado, <strong>Teleport</strong> e <strong>JumpServer</strong>
+            ocupam posições de destaque. Este documento apresenta uma análise comparativa entre essas soluções e discute
+            alternativas mais adequadas ao contexto brasileiro, com foco em <strong>custo total de propriedade
+              (TCO)</strong> e <strong>complexidade de operação</strong>.</p>
+
+          <h2><strong>Metodologia de Análise</strong></h2>
+          <p>Para efeito desta análise, foram definidos os seguintes critérios:</p>
+          <ul>
+            <li><strong>Modelo de Licenciamento</strong> – OSS, comercial, por usuário ou por recurso.</li>
+            <li><strong>Protocolos Suportados</strong> – abrangência (SSH, RDP, bancos de dados, Kubernetes, web).</li>
+            <li><strong>Recursos de Auditoria</strong> – replay de sessões, logs de comando, granularidade.</li>
+            <li><strong>Arquitetura</strong> – número de componentes, dependências externas, curva de implantação.</li>
+            <li><strong>Custo Total de Propriedade (TCO)</strong> – inclui licença, infraestrutura necessária, horas de
+              operação e suporte.</li>
+            <li><strong>Aderência ao Contexto Brasileiro</strong> – suporte local, moeda de cobrança e compliance.</li>
+          </ul>
+
+          <h2><strong>Teleport</strong></h2>
+          <p>O <strong>Teleport</strong>, desenvolvido pela Gravitational, é considerado uma solução de referência no
+            segmento de <strong>Zero Trust Access</strong>.</p>
+          <ul>
+            <li><strong>Diferencial técnico</strong>: uso de <strong>certificados efêmeros</strong> (<em>short-lived
+                certificates</em>) para autenticação e autorização, eliminando riscos de credenciais persistentes.</li>
+            <li><strong>Cobertura de protocolos</strong>: SSH, RDP, Kubernetes, bancos de dados e aplicativos web.</li>
+            <li><strong>Arquitetura</strong>: baseada em dois serviços principais — <strong>Auth Service</strong> e
+              <strong>Proxy Service</strong> — exigindo infraestrutura dedicada e administração contínua.</li>
+            <li><strong>Auditoria</strong>: replay completo de sessões e RBAC avançado.</li>
+            <li><strong>Modelo de Licenciamento</strong>: baseado em <strong>Monthly Active Users (MAU)</strong>, sempre
+              em dólar.</li>
+            <li><strong>Análise crítica</strong>: adequado para empresas globais com orçamento elevado, mas apresenta
+              barreiras de custo e complexidade para PMEs brasileiras.</li>
+          </ul>
+
+          <h2><strong>JumpServer</strong></h2>
+          <p>O <strong>JumpServer</strong> consolidou-se como o principal <strong>Bastion Host open-source</strong>,
+            oferecendo flexibilidade por meio de uma arquitetura modular.</p>
+          <ul>
+            <li><strong>Diferencial técnico</strong>: ampla cobertura de protocolos (SSH, RDP, bancos de dados,
+              Kubernetes, RemoteApp).</li>
+            <li><strong>Arquitetura</strong>: composta por múltiplos módulos (Core, Koko, Guacamole, Lina/Luna, entre
+              outros), com dependências externas (MySQL/MariaDB e Redis).</li>
+            <li><strong>Auditoria</strong>: replay de sessões e histórico detalhado de comandos executados.</li>
+            <li><strong>Modelo de Licenciamento</strong>: versão OSS gratuita e <strong>Enterprise Edition (EE)</strong>
+              com recursos adicionais sob cotação.</li>
+            <li><strong>Análise crítica</strong>: embora sem custo de licença na versão OSS, o TCO se eleva
+              significativamente devido à necessidade de manutenção contínua, atualizações de segurança e horas-homens
+              de DevOps.</li>
+          </ul>
+
+          <h2><strong>Comparativo Direto: Teleport vs JumpServer</strong></h2>
+          <table>
+            <thead>
+              <tr>
+                <th><strong>Critério</strong></th>
+                <th><strong>Teleport</strong></th>
+                <th><strong>JumpServer</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Licenciamento</strong></td>
+                <td>Pago por usuário ativo mensal (US$)</td>
+                <td>OSS gratuito + EE sob cotação</td>
+              </tr>
+              <tr>
+                <td><strong>Protocolos</strong></td>
+                <td>SSH, RDP, K8s, DB, web</td>
+                <td>SSH, RDP, DB, K8s, RemoteApp</td>
+              </tr>
+              <tr>
+                <td><strong>Auditoria</strong></td>
+                <td>Replay completo + RBAC avançado</td>
+                <td>Replay completo + logs de comandos</td>
+              </tr>
+              <tr>
+                <td><strong>Arquitetura</strong></td>
+                <td>Auth + Proxy; infra dedicada</td>
+                <td>Modular; múltiplos serviços + Redis/MySQL</td>
+              </tr>
+              <tr>
+                <td><strong>Custo Total (TCO)</strong></td>
+                <td>Licença em dólar + infra</td>
+                <td>OSS gratuito, mas alto custo humano</td>
+              </tr>
+              <tr>
+                <td><strong>Fit Brasil</strong></td>
+                <td>Baixo (preço em dólar, suporte limitado)</td>
+                <td>Médio (comunidade ativa, suporte limitado)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2><strong>Considerações para o Contexto Brasileiro</strong></h2>
+          <p>O ambiente brasileiro apresenta fatores críticos que diferenciam a decisão de escolha:</p>
+          <ul>
+            <li><strong>Moeda estrangeira</strong>: soluções em dólar elevam a imprevisibilidade financeira.</li>
+            <li><strong>Suporte local</strong>: ausência de atendimento em português e fuso horário desfavorável
+              impactam na adoção.</li>
+            <li><strong>Compliance</strong>: exigências da LGPD e ISO 27001 tornam a auditoria obrigatória, mas nem
+              sempre justificam o investimento em um <strong>PAM enterprise</strong>.</li>
+            <li><strong>Recursos humanos</strong>: times enxutos não conseguem absorver ferramentas de alta
+              complexidade.</li>
+          </ul>
+
+          <h2><strong>O ESH como Alternativa Estratégica</strong></h2>
+          <p>O <strong>ESH (Eleven Soft Host)</strong> posiciona-se como uma alternativa pragmática para empresas
+            brasileiras de médio porte que precisam de <strong>segurança, conformidade e previsibilidade de
+              custos</strong>.</p>
+          <ul>
+            <li><strong>Foco</strong>: ativos de rede críticos (servidores, roteadores, OLTs, ONUs).</li>
+            <li><strong>Arquitetura simplificada</strong>: deploy rápido, sem agentes, sem múltiplos componentes
+              paralelos.</li>
+            <li><strong>Auditoria</strong>: replay fiel de sessões em formato leve (texto), armazenado em infraestrutura
+              própria.</li>
+            <li><strong>Custo</strong>: preço em Reais, previsível e acessível para PMEs.</li>
+            <li><strong>Benefício estratégico</strong>: oferece <strong>segurança robusta</strong> e
+              <strong>conformidade simplificada</strong>, sem a complexidade e o custo associados a PAMs completos.</li>
+          </ul>
+
+          <h2><strong>Conclusão</strong></h2>
+          <p>A análise evidencia que:</p>
+          <ul>
+            <li><strong>Teleport</strong> atende empresas globais com alta maturidade e orçamento, mas é pouco viável
+              para PMEs brasileiras.</li>
+            <li><strong>JumpServer</strong> oferece acessibilidade inicial, mas transfere o custo para a complexidade
+              operacional.</li>
+            <li><strong>ESH</strong> preenche a lacuna entre essas opções, equilibrando segurança, auditoria e
+              simplicidade, com custo previsível em Reais.</li>
+          </ul>
+          <p>Para gestores que precisam conciliar <strong>controle total, conformidade regulatória e eficiência
+              operacional</strong>, o ESH representa uma solução alinhada à realidade brasileira e ao desafio de crescer
+            com segurança.</p>
+        </div>
+
+
+        <div class="mt-12 p-8 bg-neutral-800/50 rounded-lg text-center border border-orange-500/30">
+          <h4 class="text-2xl font-bold mb-4 text-white">Pronto para Implementar Zero Trust com Inteligência?</h4>
+          <p class="mb-6 text-neutral-300">
+            Nossa equipe está preparada para apoiar sua jornada Zero Trust com base em dados reais e experiência
+            comprovada. Vamos construir juntos uma arquitetura de segurança que protege seu negócio e impulsiona sua
+            competitividade.
+          </p>
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+            class="inline-block bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+            Fale com um Especialista
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-black border-t border-neutral-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <a href="/" class="flex items-center space-x-2">
+            <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+          </a>
+          <p class="mt-4 text-neutral-400">A plataforma unificada de segurança que protege seus ativos críticos e
+            garante conformidade.</p>
+        </div>
+        <div class="md:col-span-4">
+          <h4 class="font-semibold text-white">Produtos</h4>
+          <ul class="mt-4 space-y-2">
+            <li><a href="https://esh.elevensoft.dev" class="text-neutral-400 hover:text-orange-500">ESH (PSM)</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-orange-500">ESUT</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-orange-500">KEYRING</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-4">
+          <h4 class="font-semibold text-white">Fale Conosco</h4>
+          <p class="mt-4 text-neutral-400">Nossa equipe está pronta para ajudar.</p>
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+            class="mt-4 inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
+            Agendar Reunião
+          </a>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-neutral-800 text-center text-neutral-500 text-sm">
+        <p>&copy; 2025 Eleven Soft. Todos os direitos reservados. Feito com ❤️ no Brasil.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Lógica do menu mobile
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
+
 </html>

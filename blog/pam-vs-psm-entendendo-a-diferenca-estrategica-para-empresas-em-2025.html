@@ -1,373 +1,427 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>PAM vs PSM: A Diferença Estratégica para Empresas em 2025 | Eleven Soft Blog</title>
-    <meta name="description" content="Entenda a diferença estratégica entre PAM (Privileged Access Management) e PSM (Privileged Session Management) e por que a combinação de ambos é crucial para a segurança." />
-    <meta name="keywords" content="PAM, PSM, Gestão de Acessos Privilegiados, ESH, LGPD, NIST, CIS Controls, Segurança da Informação" />
-    <meta name="author" content="Time Eleven Soft" />
+  <title>PAM vs PSM: A Diferença Estratégica para Empresas em 2025 | Eleven Soft Blog</title>
+  <meta name="description"
+    content="Entenda a diferença estratégica entre PAM (Privileged Access Management) e PSM (Privileged Session Management) e por que a combinação de ambos é crucial para a segurança." />
+  <meta name="keywords"
+    content="PAM, PSM, Gestão de Acessos Privilegiados, ESH, LGPD, NIST, CIS Controls, Segurança da Informação" />
+  <meta name="author" content="Time Eleven Soft" />
 
-    <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Eleven Soft" />
-    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../images/favicon/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Eleven Soft" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K8J33FK');</script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3LL1X7H9R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-V3LL1X7H9R');
-    </script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K8J33FK');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3LL1X7H9R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V3LL1X7H9R');
+  </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111111;
-            color: #E5E7EB;
-        }
-        .glow-orange {
-            box-shadow: 0 0 20px rgba(251, 146, 60, 0.3), 0 0 40px rgba(249, 115, 22, 0.2);
-        }
-        /* Basic styles for prose content from CMS */
-        .prose-custom h2, .prose-custom h3, .prose-custom h4 {
-            color: #ffffff;
-            font-weight: 700;
-            margin-top: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .prose-custom p {
-            color: #D1D5DB;
-            line-height: 1.75;
-            margin-bottom: 1.5rem;
-        }
-        .prose-custom ul {
-            list-style-position: inside;
-            list-style-type: disc;
-            color: #D1D5DB;
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        .prose-custom li {
-            margin-bottom: 0.75rem;
-        }
-        .prose-custom a {
-            text-decoration: underline;
-            color: #ffffff;
-        }
-        .prose-custom strong {
-            color: #FDBA74;
-        }
-        .prose-custom code {
-            background-color: #27272A;
-            color: #FDBA74;
-            padding: 0.2em 0.4em;
-            margin: 0;
-            font-size: 85%;
-            border-radius: 6px;
-        }
-        .prose-custom pre {
-            background-color: #18181B;
-            border: 1px solid #3F3F46;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            overflow-x: auto;
-            margin-bottom: 1.5rem;
-        }
-        .prose-custom pre code {
-            background-color: transparent;
-            padding: 0;
-        }
-        .prose-custom table {
-            width: 100%;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            border-collapse: collapse;
-        }
-        .prose-custom th, .prose-custom td {
-            border: 1px solid #3F3F46;
-            padding: 0.75rem 1rem;
-            text-align: left;
-        }
-        .prose-custom th {
-            background-color: #27272A;
-            color: #FDBA74;
-            font-weight: 600;
-        }
-    </style>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111111;
+      color: #E5E7EB;
+    }
+
+    .glow-orange {
+      box-shadow: 0 0 20px rgba(251, 146, 60, 0.3), 0 0 40px rgba(249, 115, 22, 0.2);
+    }
+
+    /* Basic styles for prose content from CMS */
+    .prose-custom h2,
+    .prose-custom h3,
+    .prose-custom h4 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .prose-custom p {
+      color: #D1D5DB;
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .prose-custom ul {
+      list-style-position: inside;
+      list-style-type: disc;
+      color: #D1D5DB;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .prose-custom li {
+      margin-bottom: 0.75rem;
+    }
+
+    .prose-custom a {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+
+    .prose-custom strong {
+      color: #FDBA74;
+    }
+
+    .prose-custom code {
+      background-color: #27272A;
+      color: #FDBA74;
+      padding: 0.2em 0.4em;
+      margin: 0;
+      font-size: 85%;
+      border-radius: 6px;
+    }
+
+    .prose-custom pre {
+      background-color: #18181B;
+      border: 1px solid #3F3F46;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    .prose-custom pre code {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    .prose-custom table {
+      width: 100%;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      border-collapse: collapse;
+    }
+
+    .prose-custom th,
+    .prose-custom td {
+      border: 1px solid #3F3F46;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    .prose-custom th {
+      background-color: #27272A;
+      color: #FDBA74;
+      font-weight: 600;
+    }
+  </style>
 </head>
+
 <body class="antialiased">
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8J33FKL"
-                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8J33FKL" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
 
-    <header class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-80 backdrop-blur-sm border-b border-neutral-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="/" class="flex items-center space-x-2">
-                    <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
-                </a>
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="/#products" class="text-neutral-300 hover:text-orange-500 transition-colors">Produtos</a>
-                    <a href="/#testimonials" class="text-neutral-300 hover:text-orange-500 transition-colors">Clientes</a>
-                    <a href="/blog/" class="text-orange-500 font-semibold transition-colors">Blog</a>
-                </nav>
-                <div class="flex items-center space-x-4">
-                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
-                        Agendar Demonstração
-                    </a>
-                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-neutral-300 hover:bg-neutral-800 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div id="mobile-menu" class="md:hidden hidden pb-4">
-                <nav class="flex flex-col space-y-2">
-                    <a href="/i#products" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Produtos</a>
-                    <a href="/#testimonials" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Clientes</a>
-                    <a href="/blog" class="block px-3 py-2 rounded-md text-white bg-neutral-800">Blog</a>
-                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="block mt-2 bg-orange-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-colors">
-                        Agendar Demonstração
-                    </a>
-                </nav>
-            </div>
+  <header class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-80 backdrop-blur-sm border-b border-neutral-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center space-x-2">
+          <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="/#products" class="text-neutral-300 hover:text-orange-500 transition-colors">Produtos</a>
+          <a href="/#testimonials" class="text-neutral-300 hover:text-orange-500 transition-colors">Clientes</a>
+          <a href="/blog/" class="text-orange-500 font-semibold transition-colors">Blog</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+            class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+            Agendar Demonstração
+          </a>
+          <button id="mobile-menu-button"
+            class="md:hidden p-2 rounded-md text-neutral-300 hover:bg-neutral-800 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
         </div>
-    </header>
-    <main>
-        <article class="pt-32 pb-20">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-                <header class="text-center mb-12">
-                    <a href="/blog" class="text-orange-400 hover:text-orange-300 mb-4 inline-block">&larr; Voltar para o Blog</a>
-                    <p class="text-base text-orange-400 font-semibold uppercase">Gestão de Acessos</p>
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-2 leading-tight">PAM vs PSM: Entendendo a Diferença Estratégica para Empresas em 2025</h1>
-                    <div class="mt-6 text-neutral-400">
-                        <span>Por <strong>Time Eleven Soft</strong></span>
-                        <span class="mx-2">&bull;</span>
-                        <span>Publicado em 10 de Outubro, 2025</span>
-                    </div>
-                </header>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <nav class="flex flex-col space-y-2">
+          <a href="/i#products" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Produtos</a>
+          <a href="/#testimonials" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Clientes</a>
+          <a href="/blog" class="block px-3 py-2 rounded-md text-white bg-neutral-800">Blog</a>
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+            class="block mt-2 bg-orange-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+            Agendar Demonstração
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <article class="pt-32 pb-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <header class="text-center mb-12">
+          <a href="/blog" class="text-orange-400 hover:text-orange-300 mb-4 inline-block">&larr; Voltar para o Blog</a>
+          <p class="text-base text-orange-400 font-semibold uppercase">Gestão de Acessos</p>
+          <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-2 leading-tight">PAM vs PSM: Entendendo a
+            Diferença Estratégica para Empresas em 2025</h1>
+          <div class="mt-6 text-neutral-400">
+            <span>Por <strong>Time Eleven Soft</strong></span>
+            <span class="mx-2">&bull;</span>
+            <span>Publicado em 10 de Outubro, 2025</span>
+          </div>
+        </header>
 
-                <div class="mb-12">
-                    <img src="/images/blog/pam_psm_blog.webp" alt="Ilustração comparando um cofre de senhas (PAM) com um monitor de sessões de segurança (PSM)" class="w-full h-auto rounded-2xl object-cover">
-                </div>
-
-                <div class="prose-custom">
-
-                    <h3>Introdução</h3>
-                    <p>Em 2025, <strong>74% das violações de segurança envolvem credenciais privilegiadas comprometidas</strong>, gerando prejuízos médios de R$ 4,45 milhões por incidente. Neste artigo, explicamos de forma prática e estratégica a diferença entre PAM (Privileged Access Management) e PSM (Privileged Session Management) — e como escolher (ou combinar) as abordagens certas pode determinar o sucesso da sua estratégia de segurança.</p>
-                    <p><em>Baseado em 156 implementações reais, frameworks NIST, CIS Controls e dados do Verizon Data Breach Investigations Report 2025.</em></p>
-
-                    <h3>1. O Panorama Crítico dos Acessos Privilegiados</h3>
-                    <p>Os acessos privilegiados são o coração da infraestrutura corporativa — e também o ponto mais visado pelos atacantes. De acordo com o Verizon DBIR 2025:</p>
-                    <p><strong>📊 Estatísticas-chave</strong></p>
-                    <ul>
-                        <li>74% das violações envolvem credenciais privilegiadas</li>
-                        <li>R$ 4,45 milhões é o custo médio por incidente</li>
-                        <li>287 dias é o tempo médio para detectar uma violação</li>
-                        <li>89% das empresas não monitoram sessões privilegiadas</li>
-                    </ul>
-                    <p><strong>⚠️ Riscos comuns</strong></p>
-                    <ul>
-                        <li><strong>Insider Threats:</strong> 34% dos incidentes são internos</li>
-                        <li><strong>Credential Theft:</strong> 67% usam credenciais roubadas</li>
-                        <li><strong>Lateral Movement:</strong> 45% envolvem movimentação interna</li>
-                        <li><strong>Compliance:</strong> multas LGPD até R$ 50 milhões</li>
-                    </ul>
-                    <p>Conclusão: proteger acessos privilegiados não é uma escolha — <strong>é uma necessidade estratégica</strong>.</p>
-
-                    <h3>2. PAM — O Guardião das Credenciais</h3>
-                    <p>O Privileged Access Management (PAM) atua no controle de quem tem acesso privilegiado e quando esse acesso ocorre. Seu foco é gerenciar, proteger e auditar credenciais de alto privilégio, reduzindo superfícies de ataque.</p>
-                    <p><strong>🔐 Principais componentes:</strong></p>
-                    <ul>
-                        <li><strong>Vaulting:</strong> armazenamento seguro e criptografado de senhas.</li>
-                        <li><strong>Rotation:</strong> rotação automática de credenciais.</li>
-                        <li><strong>Provisioning & Discovery:</strong> descoberta e provisionamento de contas.</li>
-                        <li><strong>Just-in-Time (JIT):</strong> acessos temporários sob demanda.</li>
-                        <li><strong>Least Privilege:</strong> acesso mínimo necessário.</li>
-                        <li><strong>MFA e RBAC:</strong> autenticação multifator e controle por função.</li>
-                    </ul>
-                    <p class="text-center text-lg italic text-neutral-300 my-8 p-4 bg-neutral-800/50 rounded-lg">💡 Em resumo: o PAM protege as chaves. Ele responde à pergunta: <strong>“Quem pode acessar o quê, e quando?”</strong></p>
-
-                    <h3>3. PSM — O Observador das Sessões</h3>
-                    <p>O Privileged Session Management (PSM) responde à pergunta complementar: <strong>“O que está sendo feito durante esse acesso?”</strong> Ele monitora, grava e analisa sessões privilegiadas em tempo real — garantindo visibilidade e prova do que ocorre nos ambientes críticos.</p>
-                    <p><strong>🎥 Principais capacidades:</strong></p>
-                    <ul>
-                        <li><strong>Session Recording:</strong> gravação completa das sessões (SSH, RDP, DB).</li>
-                        <li><strong>Live Monitoring:</strong> acompanhamento em tempo real.</li>
-                        <li><strong>Behavioral Analytics:</strong> detecção de comportamento anômalo.</li>
-                        <li><strong>Session Replay e Forensics:</strong> replay fiel e análise pós-incidente.</li>
-                        <li><strong>Compliance Reporting:</strong> relatórios automáticos e trilhas de auditoria.</li>
-                    </ul>
-                    <p class="text-center text-lg italic text-neutral-300 my-8 p-4 bg-neutral-800/50 rounded-lg">💡 Em resumo: o PSM protege a ação. Ele garante que cada comando possa ser auditado e comprovado.</p>
-
-                    <h3>4. PAM vs PSM — O Enfoque Estratégico</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Aspecto</th>
-                                <th>PAM</th>
-                                <th>PSM</th>
-                                <th>Abordagem Híbrida</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Foco</strong></td>
-                                <td>Gestão de credenciais</td>
-                                <td>Monitoramento de sessões</td>
-                                <td>Proteção completa</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Objetivo</strong></td>
-                                <td>Controle de quem acessa</td>
-                                <td>Auditoria do que é feito</td>
-                                <td>End-to-end</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Benefício principal</strong></td>
-                                <td>Controle granular</td>
-                                <td>Auditoria forense</td>
-                                <td>Conformidade total</td>
-                            </tr>
-                            <tr>
-                                <td><strong>ROI médio</strong></td>
-                                <td>287% em 18 meses</td>
-                                <td>234% em 12 meses</td>
-                                <td>456% em 24 meses</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>📈 Segundo o Gartner Magic Quadrant 2025, empresas que implementam <strong>PAM + PSM reduzem incidentes em 67%</strong> e atingem maturidade de compliance 2,5x maior.</p>
-
-                    <h3>5. Compliance e Regulamentações</h3>
-                    <p>Tanto PAM quanto PSM são essenciais para atender padrões como LGPD, SOX, PCI-DSS e GDPR.</p>
-                    <h4>PAM na LGPD:</h4>
-                    <ul>
-                        <li>Controle granular de quem acessa dados pessoais.</li>
-                        <li>Auditoria de acessos e relatórios automáticos.</li>
-                        <li>Aplicação do princípio da necessidade.</li>
-                    </ul>
-                    <h4>PSM na LGPD:</h4>
-                    <ul>
-                        <li>Gravação de sessões com dados pessoais.</li>
-                        <li>Detecção de uso indevido em tempo real.</li>
-                        <li>Evidências completas para auditoria e investigação.</li>
-                    </ul>
-                    <p>💡 Conclusão: sem PAM e PSM, é impossível demonstrar conformidade real.</p>
-
-                    <h3>6. ESH — A Solução Brasileira de PSM Avançado</h3>
-                    <p>O <strong>ESH (Eleven Shell Hub)</strong> representa uma nova geração de soluções PSM no mercado nacional — combinando auditoria total, monitoramento contínuo e simplicidade operacional.</p>
-                    <p><strong>🔍 Diferenciais do ESH:</strong></p>
-                    <ul>
-                        <li>🎥 Gravação completa de sessões (SSH, RDP, DB).</li>
-                        <li>👁️ Monitoramento em tempo real com alertas inteligentes.</li>
-                        <li>📊 Relatórios automáticos de auditoria e compliance.</li>
-                        <li>⚡ Deploy rápido e sem agentes.</li>
-                        <li>🇧🇷 Foco total em LGPD e regulamentações brasileiras.</li>
-                        <li>💰 Custo previsível em Reais — sem variação cambial.</li>
-                    </ul>
-                    <p>👉 Em resumo: o ESH entrega a essência do PSM — <strong>visibilidade e auditoria total, de forma leve, acessível e sob medida para empresas brasileiras.</strong></p>
-
-                    <h3>7. Casos Reais — O Custo da Falta de Controle</h3>
-                    <h4>Caso 1 — Ex-funcionário e vazamento de dados</h4>
-                    <ul>
-                        <li>Credenciais administrativas mantidas após desligamento.</li>
-                        <li>Sessões não monitoradas por 6 meses.</li>
-                        <li>Exfiltração de 2,3 milhões de registros.</li>
-                        <li><strong>Multa LGPD: R$ 12 milhões.</strong></li>
-                    </ul>
-                    <p><strong>Como PAM e PSM evitariam:</strong> Revogação automática de credenciais, monitoramento contínuo e detecção de comportamento suspeito.</p>
-
-                    <h4>Caso 2 — Insider Threat em sistema crítico</h4>
-                    <ul>
-                        <li>Acesso excessivo sem justificativa.</li>
-                        <li>Modificação de dados por 3 meses.</li>
-                        <li>Perda de confiança e exposição de dados sensíveis.</li>
-                    </ul>
-                    <p><strong>Como PAM e PSM evitariam:</strong> Princípio do menor privilégio, acesso Just-in-Time e replay completo de atividades.</p>
-
-                    <h3>8. Conclusão — Segurança Completa é PAM + PSM</h3>
-                    <p>Em 2025, PAM e PSM são os dois lados da mesma moeda. Um protege as credenciais, o outro protege as ações. Juntos, formam a base da segurança moderna e da conformidade real.</p>
-                    <p><strong>Takeaways:</strong></p>
-                    <ul>
-                        <li>PAM controla <strong>quem</strong> acessa.</li>
-                        <li>PSM audita <strong>o que</strong> é feito.</li>
-                        <li>A abordagem híbrida oferece proteção total e ROI superior.</li>
-                        <li>O <strong>ESH</strong> entrega o que o mercado precisa: PSM completo, em português, com suporte local e preço em Reais.</li>
-                    </ul>
-
-                    <div class="mt-12 p-8 bg-neutral-800/50 rounded-lg text-center border border-orange-500/30">
-                        <h4 class="text-2xl font-bold mb-4 text-white">ESH: O PSM Avançado para o Mercado Brasileiro</h4>
-                        <p class="mb-6 text-neutral-300">
-                           Garanta visibilidade e auditoria total sobre suas sessões privilegiadas. O ESH entrega a essência do PSM de forma leve, acessível e com custo em Reais. Agende sua demonstração.
-                        </p>
-                        <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="inline-block bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
-                            Demonstração do ESH
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </article>
-    </main>
-
-    <footer class="bg-black border-t border-neutral-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                <div class="md:col-span-4">
-                    <a href="/" class="flex items-center space-x-2">
-                        <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
-                    </a>
-                    <p class="mt-4 text-neutral-400">A plataforma unificada de segurança que protege seus ativos críticos e garante conformidade.</p>
-                </div>
-                <div class="md:col-span-4">
-                    <h4 class="font-semibold text-white">Produtos</h4>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="https://esh.elevensoft.dev" class="text-neutral-400 hover:text-orange-500">ESH (PSM)</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-orange-500">ESUT</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-orange-500">KEYRING</a></li>
-                    </ul>
-                </div>
-                 <div class="md:col-span-4">
-                    <h4 class="font-semibold text-white">Fale Conosco</h4>
-                    <p class="mt-4 text-neutral-400">Nossa equipe está pronta para ajudar.</p>
-                    <a href="https://meetings.hubspot.com/eleven-soft" target="_blank" class="mt-4 inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
-                        Agendar Reunião
-                    </a>
-                </div>
-            </div>
-            <div class="mt-16 pt-8 border-t border-neutral-800 text-center text-neutral-500 text-sm">
-                <p>&copy; 2025 Eleven Soft. Todos os direitos reservados. Feito com ❤️ no Brasil.</p>
-            </div>
+        <div class="mb-12">
+          <img src="/images/blog/pam_psm_blog.webp"
+            alt="Ilustração comparando um cofre de senhas (PAM) com um monitor de sessões de segurança (PSM)"
+            class="w-full h-auto rounded-2xl object-cover">
         </div>
-    </footer>
-    <script>
-        // Lógica do menu mobile
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+        <div class="prose-custom">
+
+          <h3>Introdução</h3>
+          <p>Em 2025, <strong>74% das violações de segurança envolvem credenciais privilegiadas comprometidas</strong>,
+            gerando prejuízos médios de R$ 4,45 milhões por incidente. Neste artigo, explicamos de forma prática e
+            estratégica a diferença entre PAM (Privileged Access Management) e PSM (Privileged Session Management) — e
+            como escolher (ou combinar) as abordagens certas pode determinar o sucesso da sua estratégia de segurança.
+          </p>
+          <p><em>Baseado em 156 implementações reais, frameworks NIST, CIS Controls e dados do Verizon Data Breach
+              Investigations Report 2025.</em></p>
+
+          <h3>1. O Panorama Crítico dos Acessos Privilegiados</h3>
+          <p>Os acessos privilegiados são o coração da infraestrutura corporativa — e também o ponto mais visado pelos
+            atacantes. De acordo com o Verizon DBIR 2025:</p>
+          <p><strong>📊 Estatísticas-chave</strong></p>
+          <ul>
+            <li>74% das violações envolvem credenciais privilegiadas</li>
+            <li>R$ 4,45 milhões é o custo médio por incidente</li>
+            <li>287 dias é o tempo médio para detectar uma violação</li>
+            <li>89% das empresas não monitoram sessões privilegiadas</li>
+          </ul>
+          <p><strong>⚠️ Riscos comuns</strong></p>
+          <ul>
+            <li><strong>Insider Threats:</strong> 34% dos incidentes são internos</li>
+            <li><strong>Credential Theft:</strong> 67% usam credenciais roubadas</li>
+            <li><strong>Lateral Movement:</strong> 45% envolvem movimentação interna</li>
+            <li><strong>Compliance:</strong> multas LGPD até R$ 50 milhões</li>
+          </ul>
+          <p>Conclusão: proteger acessos privilegiados não é uma escolha — <strong>é uma necessidade
+              estratégica</strong>.</p>
+
+          <h3>2. PAM — O Guardião das Credenciais</h3>
+          <p>O Privileged Access Management (PAM) atua no controle de quem tem acesso privilegiado e quando esse acesso
+            ocorre. Seu foco é gerenciar, proteger e auditar credenciais de alto privilégio, reduzindo superfícies de
+            ataque.</p>
+          <p><strong>🔐 Principais componentes:</strong></p>
+          <ul>
+            <li><strong>Vaulting:</strong> armazenamento seguro e criptografado de senhas.</li>
+            <li><strong>Rotation:</strong> rotação automática de credenciais.</li>
+            <li><strong>Provisioning & Discovery:</strong> descoberta e provisionamento de contas.</li>
+            <li><strong>Just-in-Time (JIT):</strong> acessos temporários sob demanda.</li>
+            <li><strong>Least Privilege:</strong> acesso mínimo necessário.</li>
+            <li><strong>MFA e RBAC:</strong> autenticação multifator e controle por função.</li>
+          </ul>
+          <p class="text-center text-lg italic text-neutral-300 my-8 p-4 bg-neutral-800/50 rounded-lg">💡 Em resumo: o
+            PAM protege as chaves. Ele responde à pergunta: <strong>“Quem pode acessar o quê, e quando?”</strong></p>
+
+          <h3>3. PSM — O Observador das Sessões</h3>
+          <p>O Privileged Session Management (PSM) responde à pergunta complementar: <strong>“O que está sendo feito
+              durante esse acesso?”</strong> Ele monitora, grava e analisa sessões privilegiadas em tempo real —
+            garantindo visibilidade e prova do que ocorre nos ambientes críticos.</p>
+          <p><strong>🎥 Principais capacidades:</strong></p>
+          <ul>
+            <li><strong>Session Recording:</strong> gravação completa das sessões (SSH, RDP, DB).</li>
+            <li><strong>Live Monitoring:</strong> acompanhamento em tempo real.</li>
+            <li><strong>Behavioral Analytics:</strong> detecção de comportamento anômalo.</li>
+            <li><strong>Session Replay e Forensics:</strong> replay fiel e análise pós-incidente.</li>
+            <li><strong>Compliance Reporting:</strong> relatórios automáticos e trilhas de auditoria.</li>
+          </ul>
+          <p class="text-center text-lg italic text-neutral-300 my-8 p-4 bg-neutral-800/50 rounded-lg">💡 Em resumo: o
+            PSM protege a ação. Ele garante que cada comando possa ser auditado e comprovado.</p>
+
+          <h3>4. PAM vs PSM — O Enfoque Estratégico</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Aspecto</th>
+                <th>PAM</th>
+                <th>PSM</th>
+                <th>Abordagem Híbrida</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Foco</strong></td>
+                <td>Gestão de credenciais</td>
+                <td>Monitoramento de sessões</td>
+                <td>Proteção completa</td>
+              </tr>
+              <tr>
+                <td><strong>Objetivo</strong></td>
+                <td>Controle de quem acessa</td>
+                <td>Auditoria do que é feito</td>
+                <td>End-to-end</td>
+              </tr>
+              <tr>
+                <td><strong>Benefício principal</strong></td>
+                <td>Controle granular</td>
+                <td>Auditoria forense</td>
+                <td>Conformidade total</td>
+              </tr>
+              <tr>
+                <td><strong>ROI médio</strong></td>
+                <td>287% em 18 meses</td>
+                <td>234% em 12 meses</td>
+                <td>456% em 24 meses</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>📈 Segundo o Gartner Magic Quadrant 2025, empresas que implementam <strong>PAM + PSM reduzem incidentes em
+              67%</strong> e atingem maturidade de compliance 2,5x maior.</p>
+
+          <h3>5. Compliance e Regulamentações</h3>
+          <p>Tanto PAM quanto PSM são essenciais para atender padrões como LGPD, SOX, PCI-DSS e GDPR.</p>
+          <h4>PAM na LGPD:</h4>
+          <ul>
+            <li>Controle granular de quem acessa dados pessoais.</li>
+            <li>Auditoria de acessos e relatórios automáticos.</li>
+            <li>Aplicação do princípio da necessidade.</li>
+          </ul>
+          <h4>PSM na LGPD:</h4>
+          <ul>
+            <li>Gravação de sessões com dados pessoais.</li>
+            <li>Detecção de uso indevido em tempo real.</li>
+            <li>Evidências completas para auditoria e investigação.</li>
+          </ul>
+          <p>💡 Conclusão: sem PAM e PSM, é impossível demonstrar conformidade real.</p>
+
+          <h3>6. ESH — A Solução Brasileira de PSM Avançado</h3>
+          <p>O <strong>ESH (Eleven Shell Hub)</strong> representa uma nova geração de soluções PSM no mercado nacional —
+            combinando auditoria total, monitoramento contínuo e simplicidade operacional.</p>
+          <p><strong>🔍 Diferenciais do ESH:</strong></p>
+          <ul>
+            <li>🎥 Gravação completa de sessões (SSH, RDP, DB).</li>
+            <li>👁️ Monitoramento em tempo real com alertas inteligentes.</li>
+            <li>📊 Relatórios automáticos de auditoria e compliance.</li>
+            <li>⚡ Deploy rápido e sem agentes.</li>
+            <li>🇧🇷 Foco total em LGPD e regulamentações brasileiras.</li>
+            <li>💰 Custo previsível em Reais — sem variação cambial.</li>
+          </ul>
+          <p>👉 Em resumo: o ESH entrega a essência do PSM — <strong>visibilidade e auditoria total, de forma leve,
+              acessível e sob medida para empresas brasileiras.</strong></p>
+
+          <h3>7. Casos Reais — O Custo da Falta de Controle</h3>
+          <h4>Caso 1 — Ex-funcionário e vazamento de dados</h4>
+          <ul>
+            <li>Credenciais administrativas mantidas após desligamento.</li>
+            <li>Sessões não monitoradas por 6 meses.</li>
+            <li>Exfiltração de 2,3 milhões de registros.</li>
+            <li><strong>Multa LGPD: R$ 12 milhões.</strong></li>
+          </ul>
+          <p><strong>Como PAM e PSM evitariam:</strong> Revogação automática de credenciais, monitoramento contínuo e
+            detecção de comportamento suspeito.</p>
+
+          <h4>Caso 2 — Insider Threat em sistema crítico</h4>
+          <ul>
+            <li>Acesso excessivo sem justificativa.</li>
+            <li>Modificação de dados por 3 meses.</li>
+            <li>Perda de confiança e exposição de dados sensíveis.</li>
+          </ul>
+          <p><strong>Como PAM e PSM evitariam:</strong> Princípio do menor privilégio, acesso Just-in-Time e replay
+            completo de atividades.</p>
+
+          <h3>8. Conclusão — Segurança Completa é PAM + PSM</h3>
+          <p>Em 2025, PAM e PSM são os dois lados da mesma moeda. Um protege as credenciais, o outro protege as ações.
+            Juntos, formam a base da segurança moderna e da conformidade real.</p>
+          <p><strong>Takeaways:</strong></p>
+          <ul>
+            <li>PAM controla <strong>quem</strong> acessa.</li>
+            <li>PSM audita <strong>o que</strong> é feito.</li>
+            <li>A abordagem híbrida oferece proteção total e ROI superior.</li>
+            <li>O <strong>ESH</strong> entrega o que o mercado precisa: PSM completo, em português, com suporte local e
+              preço em Reais.</li>
+          </ul>
+
+          <div class="mt-12 p-8 bg-neutral-800/50 rounded-lg text-center border border-orange-500/30">
+            <h4 class="text-2xl font-bold mb-4 text-white">ESH: O PSM Avançado para o Mercado Brasileiro</h4>
+            <p class="mb-6 text-neutral-300">
+              Garanta visibilidade e auditoria total sobre suas sessões privilegiadas. O ESH entrega a essência do PSM
+              de forma leve, acessível e com custo em Reais. Agende sua demonstração.
+            </p>
+            <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+              class="inline-block bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+              Demonstração do ESH
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-black border-t border-neutral-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <a href="/" class="flex items-center space-x-2">
+            <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+          </a>
+          <p class="mt-4 text-neutral-400">A plataforma unificada de segurança que protege seus ativos críticos e
+            garante conformidade.</p>
+        </div>
+        <div class="md:col-span-4">
+          <h4 class="font-semibold text-white">Produtos</h4>
+          <ul class="mt-4 space-y-2">
+            <li><a href="https://esh.elevensoft.dev" class="text-neutral-400 hover:text-orange-500">ESH (PSM)</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-orange-500">ESUT</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-orange-500">KEYRING</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-4">
+          <h4 class="font-semibold text-white">Fale Conosco</h4>
+          <p class="mt-4 text-neutral-400">Nossa equipe está pronta para ajudar.</p>
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+            class="mt-4 inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
+            Agendar Reunião
+          </a>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-neutral-800 text-center text-neutral-500 text-sm">
+        <p>&copy; 2025 Eleven Soft. Todos os direitos reservados. Feito com ❤️ no Brasil.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Lógica do menu mobile
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
+
 </html>
