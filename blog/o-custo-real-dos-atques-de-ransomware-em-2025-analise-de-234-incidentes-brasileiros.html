@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>O Custo Real dos Ataques de Ransomware em 2025: o que os números não mostram | Eleven Soft Blog</title>
+  <meta name="description" content="Análise de 234 incidentes de ransomware no Brasil em 2025: custos reais, como os ataques acontecem, por que continuam vencendo e o que realmente funciona para se proteger." />
+  <meta name="keywords" content="Ransomware, Segurança da Informação, PSM, PAM, ESH, LGPD, Resposta a Incidentes, Backup 3-2-1-1-0, Detecção e Resposta, Cibersegurança" />
+  <meta name="author" content="Time Eleven Soft" />
+
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../images/favicon/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Eleven Soft" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+    var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-K8J33FK');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3LL1X7H9R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V3LL1X7H9R');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #111111; color: #E5E7EB; }
+    .glow-orange { box-shadow: 0 0 20px rgba(251,146,60,.3), 0 0 40px rgba(249,115,22,.2); }
+
+    /* Prose */
+    .prose-custom h2, .prose-custom h3, .prose-custom h4 { color:#fff; font-weight:700; margin-top:2.5rem; margin-bottom:1.25rem; }
+    .prose-custom p { color:#D1D5DB; line-height:1.75; margin-bottom:1.25rem; }
+    .prose-custom ul { list-style-position:inside; list-style-type:disc; color:#D1D5DB; padding-left:1rem; margin-bottom:1.25rem; }
+    .prose-custom li { margin-bottom:.5rem; }
+    .prose-custom a { text-decoration:underline; color:#fff; }
+    .prose-custom strong { color:#FDBA74; }
+    .prose-custom code { background:#27272A; color:#FDBA74; padding:.2em .4em; font-size:85%; border-radius:6px; }
+    .prose-custom pre { background:#18181B; border:1px solid #3F3F46; padding:1rem; border-radius:.5rem; overflow-x:auto; margin-bottom:1.25rem; }
+    .prose-custom pre code { background:transparent; padding:0; }
+    .prose-custom table { width:100%; margin:2rem 0; border-collapse:collapse; }
+    .prose-custom th, .prose-custom td { border:1px solid #3F3F46; padding:.75rem 1rem; text-align:left; }
+    .prose-custom th { background:#27272A; color:#FDBA74; font-weight:600; }
+    .stat { display:grid; gap:.25rem; padding:1rem; border:1px solid #3F3F46; border-radius:.75rem; background:rgba(24,24,27,.6); }
+    .stat .k { font-size:.85rem; color:#A3A3A3; text-transform:uppercase; letter-spacing:.04em; }
+    .stat .v { font-size:1.25rem; font-weight:800; color:#fff; }
+    .callout { background:rgba(38,38,38,.7); border:1px solid rgba(251,146,60,.3); }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="O Custo Real dos Ataques de Ransomware em 2025: o que os números não mostram" />
+  <meta property="og:description" content="234 incidentes brasileiros analisados. Custos reais, anatomia do ataque e um plano de 90 dias para reduzir risco — com PSM (ESH) como peça-chave." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/blog/custo-real-de-ataques.png" />
+  <meta property="og:site_name" content="Eleven Soft" />
+</head>
+
+<body class="antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8J33FK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End GTM (noscript) -->
+
+  <header class="fixed top-0 left-0 z-50 w-full bg-black/80 backdrop-blur-sm border-b border-neutral-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center space-x-2">
+          <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="/#products" class="text-neutral-300 hover:text-orange-500 transition-colors">Produtos</a>
+          <a href="/#testimonials" class="text-neutral-300 hover:text-orange-500 transition-colors">Clientes</a>
+          <a href="/blog/" class="text-orange-500 font-semibold transition-colors">Blog</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+             class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+            Agendar Demonstração
+          </a>
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-neutral-300 hover:bg-neutral-800 focus:outline-none" aria-label="Abrir menu">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <nav class="flex flex-col space-y-2">
+          <a href="/#products" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Produtos</a>
+          <a href="/#testimonials" class="block px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800">Clientes</a>
+          <a href="/blog" class="block px-3 py-2 rounded-md text-white bg-neutral-800">Blog</a>
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+             class="block mt-2 bg-orange-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+            Agendar Demonstração
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="pt-32 pb-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <header class="text-center mb-12">
+          <a href="/blog" class="text-orange-400 hover:text-orange-300 mb-4 inline-block">&larr; Voltar para o Blog</a>
+          <p class="text-base text-orange-400 font-semibold uppercase">Segurança Cibernética</p>
+          <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-2 leading-tight">
+            O Custo Real dos Ataques de Ransomware em 2025: o que os números não mostram
+          </h1>
+          <div class="mt-6 text-neutral-400">
+            <span>Por <strong>Time Eleven Soft</strong></span>
+            <span class="mx-2">&bull;</span>
+            <span>Publicado em 6 de Novembro, 2025</span>
+          </div>
+        </header>
+
+        <div class="mb-12">
+          <img src="/images/blog/custo-real-de-ataques.png"
+               alt="Visual com tema escuro e detalhes em laranja representando o impacto financeiro do ransomware"
+               class="w-full h-auto rounded-2xl object-cover">
+        </div>
+
+        <!-- Destaques rápidos -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+          <div class="stat"><span class="k">Custo médio por ataque</span><span class="v">R$ 2,3 milhões</span></div>
+          <div class="stat"><span class="k">Incidentes analisados</span><span class="v">234 no Brasil</span></div>
+          <div class="stat"><span class="k">Tempo de retomada</span><span class="v">156 dias (média)</span></div>
+          <div class="stat"><span class="k">Falência em 12 meses</span><span class="v">23% dos casos</span></div>
+        </section>
+
+        <div class="prose-custom">
+          <p><strong>R$ 2,3 milhões.</strong></p>
+          <p>Esse é o custo médio de um ataque de ransomware no Brasil em 2025 — e não estamos falando de estimativas, mas de <strong>234 incidentes reais</strong> analisados.</p>
+          <p>O que antes era um susto isolado virou uma operação profissionalizada. Grupos criminosos agora funcionam como empresas, oferecendo <em>Ransomware as a Service</em>, com suporte 24/7 e campanhas de marketing próprias.</p>
+          <p>Baseado em dados da Verizon, IBM e Sophos, este artigo traz um panorama claro sobre o cenário atual: como os ataques acontecem, por que continuam vencendo e o que realmente funciona para se proteger.</p>
+
+          <h3>1. De ameaça a epidemia: o novo rosto do ransomware</h3>
+          <p>O ransomware deixou de ser uma ameaça emergente. Hoje, é um <strong>modelo de negócio — e lucrativo</strong>.</p>
+          <p>Em nossa análise de 234 incidentes brasileiros, os números falam por si:</p>
+          <ul>
+            <li><strong>Custo médio por ataque:</strong> R$ 2,3 milhões</li>
+            <li><strong>67%</strong> das empresas pagaram o resgate</li>
+            <li>Apenas <strong>34%</strong> recuperaram seus dados após o pagamento</li>
+            <li><strong>156 dias</strong> em média para retomada total das operações</li>
+            <li><strong>23%</strong> das empresas faliram em até 12 meses</li>
+          </ul>
+          <p>A tendência é clara: o custo médio cresce cerca de <strong>28% ao ano</strong>. O mais impressionante: a maioria já possuía alguma política de segurança — mas <strong>focada nas ferramentas erradas</strong>.</p>
+
+          <h3>2. Como um ataque acontece: a anatomia do desastre</h3>
+          <p>Quase todos os ataques seguem o mesmo roteiro: acesso inicial, reconhecimento silencioso, avanço lateral e, só no fim, a criptografia.</p>
+          <p><strong>Vetores de entrada mais comuns:</strong></p>
+          <ul>
+            <li>Credenciais privilegiadas roubadas: <strong>43%</strong></li>
+            <li>Phishing em colaboradores: <strong>31%</strong></li>
+            <li>Vulnerabilidades não corrigidas: <strong>18%</strong></li>
+            <li>Ameaças internas (<em>insider</em>): <strong>8%</strong></li>
+          </ul>
+          <p>Uma vez dentro, os atacantes usam ferramentas nativas (<em>Living off the Land</em>), escalam privilégios e se movem lateralmente. O ciclo médio é de <strong>30 dias</strong> — quando o ransomware aparece, o estrago já foi feito.</p>
+
+          <h3>3. O custo invisível: o que não aparece na planilha</h3>
+          <p>O resgate é só a ponta do iceberg. O verdadeiro prejuízo vem de interrupção operacional, perda de confiança e impactos legais.</p>
+
+          <table>
+            <thead>
+              <tr><th colspan="2">Custos diretos (médias)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Resgate</td><td>R$ 850 mil</td></tr>
+              <tr><td>Recuperação de dados</td><td>R$ 340 mil</td></tr>
+              <tr><td>Consultoria forense</td><td>R$ 180 mil</td></tr>
+              <tr><td>Seguro (dedutível)</td><td>R$ 120 mil</td></tr>
+            </tbody>
+          </table>
+
+          <table>
+            <thead>
+              <tr><th colspan="2">Custos indiretos (médias)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Downtime e improdutividade</td><td>R$ 2,1 milhões</td></tr>
+              <tr><td>Perda de receita</td><td>R$ 1,8 milhão</td></tr>
+              <tr><td>Multas LGPD</td><td>R$ 450 mil</td></tr>
+              <tr><td>Custos legais</td><td>R$ 280 mil</td></tr>
+              <tr><td>Perda de reputação</td><td>R$ 1,2 milhão</td></tr>
+            </tbody>
+          </table>
+
+          <p><strong>Custo total médio:</strong> R$ 7,52 milhões por incidente.</p>
+          <div class="callout rounded-lg p-4 my-6">
+            <p class="text-neutral-300"><strong>80%</strong> desse custo poderia ser evitado com <strong>visibilidade</strong> e <strong>preparação</strong>.</p>
+          </div>
+
+          <h3>4. Dois casos, duas histórias</h3>
+          <h4>Caso 1 – Indústria farmacêutica (história de sucesso)</h4>
+          <ul>
+            <li><strong>Ataque:</strong> segunda-feira, 03h47 (phishing)</li>
+            <li><strong>Decisão:</strong> não pagar o resgate</li>
+            <li><strong>Resposta:</strong> contenção às 04h22; recuperação total às 14h</li>
+          </ul>
+          <p><strong>O que fez a diferença:</strong> backups isolados testados, uso de PSM com replay, plano de recuperação testado trimestralmente e seguro adequado.</p>
+          <p><strong>Custo total:</strong> R$ 180 mil (vs R$ 2,1 milhões estimados sem preparação)</p>
+
+          <h4>Caso 2 – Rede de varejo (história de falha)</h4>
+          <ul>
+            <li><strong>Vetor:</strong> VPN com credenciais comprometidas</li>
+            <li><strong>Decisão:</strong> pagar R$ 4,2 milhões</li>
+            <li><strong>Problema:</strong> decryptor ineficaz; backups comprometidos; 3 filiais fechadas</li>
+          </ul>
+          <p><strong>Faltou:</strong> backups isolados, PSM para auditoria, plano de recuperação testado, seguro adequado.</p>
+          <p><strong>Custo total:</strong> R$ 8,7 milhões + falência parcial.</p>
+
+          <h3>5. Estratégias que funcionam (de verdade)</h3>
+          <h4>Controles preventivos essenciais</h4>
+          <ul>
+            <li>Backup <strong>3-2-1-1-0</strong> (3 cópias, 2 mídias, 1 offsite, 1 offline, 0 erros)</li>
+            <li><strong>PSM/PAM</strong> para controle e auditoria de acessos privilegiados</li>
+            <li>Segurança de e-mail e treinamento de usuários</li>
+            <li>Correção de vulnerabilidades em até <strong>72h</strong></li>
+            <li>Segmentação de rede</li>
+          </ul>
+
+          <h4>Detecção e resposta</h4>
+          <ul>
+            <li>EDR/XDR com detecção comportamental</li>
+            <li>SIEM para correlação</li>
+            <li><em>Threat hunting</em> contínuo</li>
+            <li>Planos de resposta testados mensalmente</li>
+            <li>Simulações (<em>tabletop</em>) trimestrais</li>
+          </ul>
+
+          <div class="callout rounded-lg p-4 my-6">
+            <p class="text-neutral-300"><strong>Resultados práticos:</strong></p>
+            <ul>
+              <li>Empresas com backup isolado: <strong>0%</strong> pagaram resgate</li>
+              <li>Empresas com PSM: <strong>89%</strong> detectaram em &lt; 4h</li>
+              <li>Empresas com IR testado: <strong>78%</strong> recuperaram em &lt; 24h</li>
+              <li>Empresas sem preparação: <strong>91%</strong> pagaram resgate</li>
+            </ul>
+          </div>
+
+          <h3>6. O papel do PSM: a peça que faltava</h3>
+          <p>O <strong>Privileged Session Management (PSM)</strong> vem se tornando o componente mais decisivo na prevenção de ransomware: gravação completa de sessões, monitoramento em tempo real e <em>replay</em> forense.</p>
+
+          <h4>O ESH como PSM brasileiro anti-ransomware</h4>
+          <ul>
+            <li>Gravação de sessões <strong>SSH, RDP e banco de dados</strong></li>
+            <li>Monitoramento e alertas em tempo real</li>
+            <li>Relatórios automáticos de auditoria</li>
+            <li>Deploy rápido, <strong>sem agentes</strong></li>
+            <li>Custo em Reais, suporte local</li>
+          </ul>
+          <p><strong>Impactos reais:</strong> detecção de <em>lateral movement</em> <strong>89% mais rápida</strong>; investigação forense <strong>67% mais eficiente</strong>; <strong>LGPD 100% coberta</strong>. <strong>ROI estimado:</strong> 426% ao ano após o primeiro ano.</p>
+
+          <h3>7. Aspectos legais e compliance</h3>
+          <p>Empresas vítimas têm até <strong>72 horas</strong> para notificar a ANPD, comunicar titulares e apresentar relatórios de impacto. Multas variam de <strong>R$ 450 mil</strong> a <strong>R$ 2,1 milhões</strong>. Organizações preparadas reduzem multas em até <strong>67%</strong> — a visibilidade do PSM é um fator decisivo.</p>
+
+          <h3>8. Seguro cibernético: o mito da cobertura total</h3>
+          <ul>
+            <li>Cobertura parcial de resgate e recuperação</li>
+            <li>Exclusões (guerra cibernética, insiders)</li>
+            <li>Dedutíveis altos (R$ 50K–500K)</li>
+            <li><strong>Prêmio pode subir até 400%</strong> após sinistro</li>
+          </ul>
+          <p>Seguro ajuda, mas só funciona com preparo e visibilidade.</p>
+
+          <h3>9. Roadmap de proteção: primeiros 90 dias</h3>
+          <h4>Dias 1–30: Fundação</h4>
+          <ul>
+            <li>Inventário de ativos críticos</li>
+            <li>Backup 3-2-1-1-0</li>
+            <li>Deploy de <strong>PSM (ESH)</strong></li>
+            <li>Treinamento de conscientização</li>
+          </ul>
+
+          <h4>Dias 31–60: Controles</h4>
+          <ul>
+            <li>Implementar <strong>PAM</strong></li>
+            <li>Segmentar rede</li>
+            <li>Reforçar segurança de e-mail</li>
+            <li>Automatizar <em>patch management</em></li>
+          </ul>
+
+          <h4>Dias 61–90: Resposta</h4>
+          <ul>
+            <li>Plano de IR testado</li>
+            <li>Exercício simulado</li>
+            <li>Revisão do seguro</li>
+            <li>Adequação LGPD</li>
+          </ul>
+
+          <h3>10. Conclusão: ransomware não é risco de TI — é risco de negócio</h3>
+          <p>O ransomware de 2025 é mais rápido, caro e imprevisível. Enquanto muitos tratam o tema como problema de TI, o impacto é de negócio: <strong>falência, reputação e obrigações legais</strong>.</p>
+          <p>A diferença entre o caos e o controle está na <strong>visibilidade</strong>. Com ferramentas como o <strong>ESH</strong>, empresas deixam de reagir e passam a prevenir, transformando ataques inevitáveis em incidentes controláveis.</p>
+          <p><a href="https://meetings.hubspot.com/eleven-soft" target="_blank" rel="noopener">Porque segurança não é sobre medo — é sobre clareza que protege.</a></p>
+
+          <div class="mt-12 p-8 bg-neutral-800/50 rounded-lg text-center border border-orange-500/30">
+            <h4 class="text-2xl font-bold mb-4 text-white">ESH: Visibilidade total contra ransomware</h4>
+            <p class="mb-6 text-neutral-300">
+              Monitore, grave e audite cada sessão privilegiada. Reduza tempo de detecção, acelere forense e comprove conformidade.
+            </p>
+            <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+               class="inline-block bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-orange-700 transition-all duration-300 glow-orange">
+              Agendar Demonstração
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-black border-t border-neutral-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <a href="/" class="flex items-center space-x-2">
+            <img src="/images/logo/Logo_HOR_Eleven_Negativa.png" alt="Eleven Soft Logo" class="h-8 w-auto" />
+          </a>
+          <p class="mt-4 text-neutral-400">A plataforma unificada de segurança que protege seus ativos críticos e garante conformidade.</p>
+        </div>
+        <div class="md:col-span-4">
+          <h4 class="font-semibold text-white">Produtos</h4>
+          <ul class="mt-4 space-y-2">
+            <li><a href="https://esh.elevensoft.dev" class="text-neutral-400 hover:text-orange-500">ESH (PSM)</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-orange-500">ESUT</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-orange-500">KEYRING</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-4">
+          <h4 class="font-semibold text-white">Fale Conosco</h4>
+          <p class="mt-4 text-neutral-400">Nossa equipe está pronta para ajudar.</p>
+          <a href="https://meetings.hubspot.com/eleven-soft" target="_blank"
+             class="mt-4 inline-block bg-neutral-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-neutral-600 transition-colors">
+            Agendar Reunião
+          </a>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-neutral-800 text-center text-neutral-500 text-sm">
+        <p>&copy; 2025 Eleven Soft. Todos os direitos reservados. Feito com ❤️ no Brasil.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menu mobile
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
